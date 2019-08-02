@@ -1,0 +1,563 @@
+09:43:34 main INFO [standard] Module default-logger started.Time used 138 ms.
+09:43:34 main INFO [standard] Module class-factory starting...
+09:43:34 main INFO [standard] Module class-factory started.Time used 0 ms.
+09:43:34 main INFO [standard] Module serialization starting...
+09:43:34 main INFO [standard] Module serialization started.Time used 2 ms.
+09:43:34 main INFO [standard] Module json-serialization starting...
+09:43:34 main INFO [standard] Module json-serialization started.Time used 40 ms.
+09:43:34 main INFO [standard] Module workspace starting...
+09:43:34 main INFO [standard] Module workspace-register starting...
+09:43:34 main INFO [standard] Module workspace-register started.Time used 0 ms.
+09:43:34 main INFO [standard] Module workspace started.Time used 9 ms.
+09:43:34 main INFO [standard] Module atom starting...
+09:43:34 main INFO [standard] Module atom started.Time used 0 ms.
+09:43:34 main INFO [standard] Module xmlable starting...
+09:43:34 main INFO [standard] Module xmlable started.Time used 0 ms.
+09:43:34 main INFO [standard] Module basic started.Time used 2152 ms.
+09:43:42 main INFO [standard] Module designer-workspace-provider starting...
+09:43:42 main INFO [standard] Module designer-workspace-provider started.Time used 10 ms.
+09:43:42 main INFO [standard] Module env-based starting...
+09:43:42 main INFO [standard] Module core starting...
+09:43:42 main INFO [standard] Module base-res starting...
+09:43:42 main INFO [standard] Module base-res started.Time used 0 ms.
+09:43:42 main INFO [standard] Module basedb starting...
+09:43:44 pool-12-thread-1 ERROR [com.fr.third.alibaba.druid.pool.DruidDataSource] testOnBorrow is true, validationQuery not set
+09:43:44 pool-12-thread-1 INFO [com.fr.third.alibaba.druid.pool.DruidDataSource] {dataSource-1} inited
+09:43:47 main INFO [standard] Module basedb started.Time used 4834 ms.
+09:43:47 main INFO [standard] Module configuration starting...
+09:43:47 main INFO [standard] Module configuration started.Time used 5 ms.
+09:43:47 main INFO [standard] Module restriction starting...
+09:43:47 main INFO [standard] Module restriction started.Time used 10 ms.
+09:43:47 main INFO [standard] Module log starting...
+09:43:47 main INFO [standard] Module logger starting...
+09:43:47 main INFO [standard] Module logger started.Time used 419 ms.
+09:43:47 main INFO [standard] Module log started.Time used 419 ms.
+09:43:47 main INFO [standard] Module cluster starting...
+09:43:47 main INFO [standard] Module prepare starting...
+09:43:47 main INFO [standard] Module ticker-seller starting...
+09:43:47 main INFO [standard] Module ticker-seller started.Time used 0 ms.
+09:43:47 main INFO [standard] Module prepare started.Time used 25 ms.
+09:43:47 main INFO [standard] Module standalone-mode starting...
+09:43:47 main INFO [standard] 提示代码：12400001 使用wmic csproduct list full获取机器信息来验证是否注册
+09:43:48 main INFO [standard] Module standalone-mode started.Time used 289 ms.
+09:43:48 main INFO [standard] Module cluster started.Time used 384 ms.
+09:43:48 main INFO [standard] Module general-ehcache starting...
+09:43:48 main INFO [standard] Module general-ehcache started.Time used 340 ms.
+09:43:48 main INFO [standard] Module cluster-collections starting...
+09:43:48 main INFO [standard] Module cluster-collections started.Time used 0 ms.
+09:43:48 main INFO [standard] Module config-rpc starting...
+09:43:48 main INFO [standard] Module config-rpc started.Time used 0 ms.
+09:43:48 main INFO [standard] Module state starting...
+09:43:48 main INFO [standard] Module state started.Time used 9 ms.
+09:43:48 main INFO [standard] Module plugin starting...
+09:43:49 main INFO [standard] Plugin engine is started.
+09:43:49 main INFO [standard] Module plugin-db starting...
+09:43:49 main INFO [standard] Module plugin-db started.Time used 3 ms.
+09:43:49 main INFO [standard] Module plugin started.Time used 1230 ms.
+09:43:49 main INFO [standard] Module resource starting...
+09:43:50 main INFO [standard] cache invalidate com.fr.io.config.ResourceModuleConfig
+09:43:50 main ERROR [standard] LOCAL_ENV is not exist for service !
+09:43:50 main INFO [standard] cache invalidate com.fr.io.config.ResourceModuleConfig
+09:43:50 main INFO [standard] Repository switch from NULL to LOCAL_ENV success!
+09:43:50 main INFO [standard] Resource module is started!
+09:43:50 main INFO [standard] Module resource-sync starting...
+09:43:50 main INFO [standard] cache invalidate com.fr.io.sync.ehcache.config.ResourceCacheConfig
+09:43:50 main INFO [standard] Module resource-sync started.Time used 20 ms.
+09:43:50 main INFO [standard] Module resource started.Time used 408 ms.
+09:43:50 main INFO [standard] Module license starting...
+09:43:50 main INFO [standard] Plugin engine is stopped.
+09:43:50 main INFO [standard] Plugin engine is started.
+09:43:50 main INFO [standard] Module license started.Time used 394 ms.
+09:43:50 main INFO [standard] Module scheduler starting...
+09:43:50 main INFO [standard] DialectProvider:com.fr.data.core.db.dialect.DialectProviderImpl registered
+09:43:50 main INFO [com.fr.third.alibaba.druid.pool.DruidDataSource] {dataSource-2} inited
+09:43:50 main INFO [standard] Scheduler has been started...
+09:43:50 main INFO [standard] Module scheduler started.Time used 254 ms.
+09:43:50 main INFO [standard] Module attachment starting...
+09:43:50 main INFO [standard] Module attachment started.Time used 15 ms.
+09:43:50 main INFO [standard] Module cluster-assist starting...
+09:43:50 main INFO [standard] Module cluster-assist started.Time used 0 ms.
+09:43:50 main INFO [standard] Module start-swift starting...
+09:43:50 main INFO [standard] cache invalidate com.fr.io.base.WebInfResourceFolders
+09:43:50 main INFO [standard] cache invalidate com.fr.io.base.WebInfResourceFolders
+09:43:50 main INFO [standard] cache invalidate com.fr.io.base.WebInfResourceFolders
+09:43:50 main INFO [standard] swift engine started
+09:43:50 main INFO [standard] Module start-swift started.Time used 96 ms.
+09:43:50 main INFO [standard] Module intelligence starting...
+09:43:50 main INFO [standard] Module start-log starting...
+09:43:50 main INFO [standard] Module start-log started.Time used 3 ms.
+09:43:50 main INFO [standard] Module start-intelligence starting...
+09:43:50 main INFO [standard] Module start-intelligence started.Time used 0 ms.
+09:43:50 main INFO [standard] Module cloud-analysis starting...
+09:43:50 main INFO [standard] cache invalidate com.fr.io.base.WebInfResourceFolders
+09:43:50 main INFO [standard] ADD JOB: NAME_EXPORT
+09:43:50 main INFO [standard] Module cloud-analysis started.Time used 172 ms.
+09:43:50 main INFO [standard] Module log-recovery starting...
+09:43:51 main INFO [standard] Module log-recovery started.Time used 14 ms.
+09:43:51 main INFO [standard] Module intelligence started.Time used 192 ms.
+09:43:51 main INFO [standard] Module core started.Time used 8599 ms.
+09:43:51 main INFO [standard] Module datasource starting...
+09:43:51 main INFO [standard] Module datasource started.Time used 0 ms.
+09:43:51 main INFO [standard] Module function-base starting...
+09:43:51 main INFO [standard] Module chart-base starting...
+09:43:51 main INFO [standard] Module com.fr.chart.module.ChartModule is started.
+09:43:51 main INFO [standard] Module chart-base started.Time used 282 ms.
+09:43:51 main INFO [standard] Module report-base starting...
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 Thread-16 INFO [standard] 
+Microsoft Windows [版本 6.1.7601]
+
+09:43:52 main INFO [standard] Module com.fr.form.module.FormModule is started.
+09:43:53 main INFO [standard] Module com.fr.page.module.PageModule is started.
+09:43:53 main INFO [standard] Module com.fr.view.module.ViewModule is started.
+09:43:53 main INFO [standard] Module com.fr.write.module.WriteModule is started.
+09:43:53 main INFO [standard] Module com.fr.report.enhancement.engine.write.module.WriteEnhanceModule is started.
+09:43:53 main INFO [standard] Module com.fr.report.module.EngineModule is started.
+09:43:53 main INFO [standard] Module report-base started.Time used 2506 ms.
+09:43:53 main INFO [standard] Module form-base starting...
+09:43:53 main INFO [standard] Module form-base started.Time used 0 ms.
+09:43:53 main INFO [standard] Module function-base started.Time used 2790 ms.
+09:43:53 main INFO [standard] Module designer starting...
+09:43:56 main INFO [standard] Module designer-app starting...
+09:43:56 main INFO [standard] Module designer-app started.Time used 2 ms.
+09:43:56 main INFO [standard] Module chart starting...
+09:43:57 main INFO [standard] Module chart started.Time used 1063 ms.
+09:43:57 main INFO [standard] Module designer started.Time used 3589 ms.
+09:43:57 main INFO [standard] Module env-based started.Time used 14981 ms.
+09:43:57 pool-18-thread-1 INFO [standard] Module emb-server starting...
+09:43:58 pool-18-thread-2 INFO [standard] 正在打开ListOfQuotations.cpt，请等待...
+09:43:58 main INFO [standard] Module start-finish starting...
+09:43:58 main INFO [standard] Module start-finish started.Time used 3 ms.
+09:43:58 main INFO [standard] Module designer-startup started.Time used 26172 ms.
+09:43:59 pool-15-thread-2 INFO [standard] [127.0.0.1:60890] start
+09:43:59 pool-15-thread-1 INFO [standard] [127.0.0.1:60880] start
+09:43:59 pool-15-thread-1 INFO [standard] inject css success
+09:43:59 pool-15-thread-2 INFO [standard] inject css success
+09:43:59 CommonExecutor-1-thread-1 ERROR [com.fr.third.alibaba.druid.pool.DruidDataSource] testOnBorrow is true, validationQuery not set
+09:43:59 CommonExecutor-1-thread-1 INFO [com.fr.third.alibaba.druid.pool.DruidDataSource] {dataSource-3} inited
+09:44:01 pool-18-thread-2 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.ListOfQuotationsDataSource
+09:44:01 pool-18-thread-2 ERROR [standard] cn.bidlink.report.app.datasource.purchase.ListOfQuotationsDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.ListOfQuotationsDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.start.BaseDesigner.openFile(Unknown Source)
+	at com.fr.start.BaseDesigner.showDesignerFrame(Unknown Source)
+	at com.fr.start.BaseDesigner.show(Unknown Source)
+	at com.fr.start.module.DesignerStartup$2.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+09:44:01 pool-18-thread-2 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.ListOfQuotationsWithPurchasesDataSource
+09:44:01 pool-18-thread-2 ERROR [standard] cn.bidlink.report.app.datasource.purchase.ListOfQuotationsWithPurchasesDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.ListOfQuotationsWithPurchasesDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.start.BaseDesigner.openFile(Unknown Source)
+	at com.fr.start.BaseDesigner.showDesignerFrame(Unknown Source)
+	at com.fr.start.BaseDesigner.show(Unknown Source)
+	at com.fr.start.module.DesignerStartup$2.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+09:44:01 pool-18-thread-2 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource
+09:44:01 pool-18-thread-2 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.start.BaseDesigner.openFile(Unknown Source)
+	at com.fr.start.BaseDesigner.showDesignerFrame(Unknown Source)
+	at com.fr.start.BaseDesigner.show(Unknown Source)
+	at com.fr.start.module.DesignerStartup$2.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+09:44:02 CommonExecutor-1-thread-1 INFO [standard] invoked public abstract void com.fr.intelli.record.scene.Metric.pretreatment(java.util.List) throws java.lang.Exception=[Ljava.lang.Object;@1425de7e
+09:44:06 localhost-startStop-1 INFO [standard] Module server starting...
+09:44:06 localhost-startStop-1 INFO [standard] Module websocket starting...
+09:44:10 pool-18-thread-2 INFO [standard] "ListOfQuotations.cpt"已经打开!
+09:44:12 pool-18-thread-2 INFO [standard] 模板文件树刷新成功!
+09:44:13 nioEventLoopGroup-2-1 INFO [standard] WebSocket server started at port:38888
+09:44:13 localhost-startStop-1 INFO [standard] Module websocket started.Time used 6259 ms.
+09:44:13 localhost-startStop-1 INFO [standard] Module decision starting...
+09:44:13 localhost-startStop-1 INFO [standard] Module servlet-init starting...
+09:44:13 localhost-startStop-1 INFO [standard] Module servlet-init started.Time used 251 ms.
+09:44:13 localhost-startStop-1 INFO [standard] Module db starting...
+09:44:13 localhost-startStop-1 ERROR [com.fr.third.alibaba.druid.pool.DruidDataSource] testOnBorrow is true, validationQuery not set
+09:44:13 localhost-startStop-1 INFO [com.fr.third.alibaba.druid.pool.DruidDataSource] {dataSource-4} inited
+09:44:13 localhost-startStop-1 INFO [standard] Using cache: com.fr.third.org.hibernate.cache.spi.UpdateTimestampsCache
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.third.org.hibernate.cache.internal.StandardQueryCache
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.report.entity.OffsetIPRelativeEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.controller.provider.expander.entity.ProcessExpandAuthorityObjectEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.system.entity.message.MessageEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.workflow.bean.WorkflowLog
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.AuthorityObjectEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.HomePageExpandAuthorityObjectEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.schedule.base.entity.output.BaseOutputActionEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.report.entity.RemoteDesignAuthorityEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.DepRoleEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.system.entity.LoginDetailInfoEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.system.entity.AuthPreferenceCfgEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.schedule.base.entity.ScheduleRecordEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.report.entity.ParamsTemplateEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.workflow.bean.entity.WorkflowTaskEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.system.entity.FavoriteEntryEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.AuthorityEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.DepartmentEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.CustomRoleEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.system.entity.LoginLockEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.report.entity.PrintOffsetEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.schedule.base.entity.ScheduleOutputEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.workflow.bean.entity.WorkflowEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.ExtraPropertyEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.schedule.base.entity.ScheduleTaskEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.workflow.bean.entity.WorkflowTaskImplEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.UserRoleMiddleEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.workflow.bean.WorkflowStashData
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.PostEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.mobile.entity.MobileDeviceEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.report.write.entity.WriteStashEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.system.entity.BackupNodeEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.workflow.bean.WorkflowNode
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.controller.provider.expander.entity.ReportExpandAuthorityObjectEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.security.entity.BlockIpEntity
+09:44:14 localhost-startStop-1 INFO [standard] Using cache: com.fr.decision.authority.entity.UserEntity
+09:44:14 localhost-startStop-1 INFO [standard] Module db started.Time used 1281 ms.
+09:44:14 localhost-startStop-1 INFO [standard] Module authority starting...
+09:44:14 localhost-startStop-1 INFO [standard] Authority refer initialize OK
+09:44:15 localhost-startStop-1 INFO [standard] Module authority started.Time used 256 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module webservice starting...
+09:44:15 localhost-startStop-1 INFO [standard] cpu monitor choose jdk monitor
+09:44:15 localhost-startStop-1 INFO [standard] cache invalidate com.fr.decision.config.BackupConfig
+09:44:15 localhost-startStop-1 INFO [standard] cache invalidate com.fr.io.base.WebInfResourceFolders
+09:44:15 localhost-startStop-1 INFO [standard] cache invalidate com.fr.decision.config.BackupConfig
+09:44:15 localhost-startStop-1 INFO [standard] cache invalidate com.fr.decision.config.BackupConfig
+09:44:15 localhost-startStop-1 INFO [standard] cache invalidate com.fr.decision.config.BackupConfig
+09:44:15 localhost-startStop-1 INFO [standard] Module url-alias starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module url-alias started.Time used 2 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module register-service starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module register-service started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module system-monitor starting...
+09:44:15 localhost-startStop-1 INFO [standard] ADD JOB: realtimeusage
+09:44:15 localhost-startStop-1 INFO [standard] Module system-monitor started.Time used 10 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module log-search starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module log-search started.Time used 12 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module backup starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module backup started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module plugin-service starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module plugin-service started.Time used 2 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module webservice started.Time used 552 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module message starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module message started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module profiler starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module profiler started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module decision started.Time used 2382 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module server-workspace starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module server starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module netty-server starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module netty-server started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module server started.Time used 3 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module server-register starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module server-register started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module socket-log-appender starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module socket-log-appender started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module config-notify starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module config-notify started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module server-workspace started.Time used 13 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module schedule starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module schedule started.Time used 13 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module report starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module report-write starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module report-write started.Time used 8 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module report-analysis starting...
+09:44:15 localhost-startStop-1 INFO [standard] ADD JOB: tplinfo
+09:44:15 localhost-startStop-1 INFO [standard] Module report-analysis started.Time used 23 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module report started.Time used 135 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module decision-report starting...
+09:44:15 localhost-startStop-1 INFO [standard] cache invalidate com.fr.decision.config.BackupConfig
+09:44:15 localhost-startStop-1 INFO [standard] Module decision-workflow starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module decision-workflow started.Time used 30 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module decision-report started.Time used 46 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module schedule-report starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module schedule-report started.Time used 12 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module obsolete-compatible starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module obsolete-compatible started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module finebi-start starting...
+09:44:15 localhost-startStop-1 INFO [standard] Module finebi-start started.Time used 0 ms.
+09:44:15 localhost-startStop-1 INFO [standard] Module server started.Time used 8867 ms.
+09:44:17 pool-18-thread-1 INFO [standard] Module emb-server started.Time used 20168 ms.
+09:47:26 AWT-EventQueue-0 INFO [standard] 模板ListOfQuotations.cpt已经关闭。
+09:47:26 AWT-EventQueue-0 INFO [standard] "WorkBook1"已经打开!
+09:50:15 Thread-23 INFO [standard] 正在打开ListOfQuotationsWithPurchase2Supplier.cpt，请等待...
+09:50:15 Thread-23 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurProductDataSource
+09:50:15 Thread-23 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurProductDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurProductDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.design.utils.DesignUtils$1.run(Unknown Source)
+09:50:15 Thread-23 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurQuteTitleDataSource
+09:50:15 Thread-23 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurQuteTitleDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurQuteTitleDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.design.utils.DesignUtils$1.run(Unknown Source)
+09:50:15 Thread-23 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurQuteValueDataSource
+09:50:15 Thread-23 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurQuteValueDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurQuteValueDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.design.utils.DesignUtils$1.run(Unknown Source)
+09:50:15 Thread-23 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsSupplierTitleDataSource
+09:50:15 Thread-23 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsSupplierTitleDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsSupplierTitleDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.design.utils.DesignUtils$1.run(Unknown Source)
+09:50:15 Thread-23 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurColPriceDataSource
+09:50:15 Thread-23 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurColPriceDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurColPriceDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.design.utils.DesignUtils$1.run(Unknown Source)
+09:50:15 Thread-23 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurColTitleDataSource
+09:50:15 Thread-23 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurColTitleDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseQuotationsPurColTitleDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.design.utils.DesignUtils$1.run(Unknown Source)
+09:50:15 Thread-23 INFO [standard] 模板WorkBook1已经关闭。
+09:50:16 Thread-23 INFO [standard] "ListOfQuotationsWithPurchase2Supplier.cpt"已经打开!
+10:20:51 Thread-23 INFO [standard] 正在打开purchaseSupplierPurDetailDataSource.cpt，请等待...
+10:20:51 Thread-23 ERROR [standard] ClassName: cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource
+10:20:51 Thread-23 ERROR [standard] cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource
+java.lang.ClassNotFoundException: cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource
+	at com.fr.invoke.ClassFactory.classForName(Unknown Source)
+	at com.fr.stable.StableUtils.classForName(Unknown Source)
+	at com.fr.general.GeneralUtils.classForName(Unknown Source)
+	at com.fr.data.impl.ClassTableData.createTableData(Unknown Source)
+	at com.fr.data.impl.ClassTableData.getParameters(Unknown Source)
+	at com.fr.data.operator.DataOperator.getTableDataParameters(Unknown Source)
+	at com.fr.main.impl.WorkBookHelper.getParameters(Unknown Source)
+	at com.fr.main.impl.WorkBook.getParameters(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.getLatestParameters(Unknown Source)
+	at com.fr.design.DesignModelAdapter.updateCachedParameter(Unknown Source)
+	at com.fr.design.DesignModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.WorkBookModelAdapter.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.createDesignModel(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JTemplate.<init>(Unknown Source)
+	at com.fr.design.mainframe.JWorkBook.<init>(Unknown Source)
+	at com.fr.design.mainframe.app.AbstractWorkBookApp.openTemplate(Unknown Source)
+	at com.fr.design.mainframe.JTemplateFactory.createJTemplate(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openFile(Unknown Source)
+	at com.fr.design.mainframe.DesignerFrame.openTemplate(Unknown Source)
+	at com.fr.design.utils.DesignUtils$1.run(Unknown Source)
+10:20:52 Thread-23 INFO [standard] "purchaseSupplierPurDetailDataSource.cpt"已经打开!
+10:20:55 AWT-EventQueue-0 INFO [standard] 模板ListOfQuotationsWithPurchase2Supplier.cpt已经关闭。
+10:20:55 AWT-EventQueue-0 INFO [standard] "purchaseSupplierPurDetailDataSource.cpt"已经打开!
+10:21:04 AWT-EventQueue-0 INFO [standard] no reu file exists!
+10:21:28 AWT-EventQueue-0 INFO [standard] ClassFilePath:file:/D:/软件/帆软10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-core-10.0.jar!/com/fr/function
+10:21:28 AWT-EventQueue-0 INFO [standard] ClassFilePath:file:/D:/软件/帆软10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-report-engine-10.0.jar!/com/fr/function
+10:21:28 AWT-EventQueue-0 INFO [standard] ClassFilePath:/D:/软件/帆软10.0/FineReport_10.0/webapps/webroot/WEB-INF/classes/com/fr/function
+10:21:28 AWT-EventQueue-0 ERROR [standard] Unable to load library 'E:\bmp\WltRS': Native library (win32-x86-64/E:\bmp\WltRS.dll) not found in resource path ([file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/.install4j/i4jruntime.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/charsets.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/jce.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/jfxswt.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/jsse.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/management-agent.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/resources.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/rt.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/jre/lib/tools.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/aspectjrt.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/engine.io-client-0.7.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/fine-report-designer-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/json-20090211.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/jxbrowser-6.22.2.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/jxbrowser-win64-6.22.2.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/okhttp-3.0.1.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/okhttp-ws-3.0.1.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/okio-1.6.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/lib/socket.io-client-0.7.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/annotations-api.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/bootstrap.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/catalina-ant.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/catalina-ha.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/catalina-storeconfig.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/catalina-tribes.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/catalina.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/commons-daemon.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/ecj-4.4.2.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/ecj-4.6.3.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/el-api.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/jasper-el.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/jasper.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/jaspic-api.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/jsp-api.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/servlet-api.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-api.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-coyote.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-dbcp.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-i18n-es.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-i18n-fr.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-i18n-ja.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-jdbc.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-jni.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-juli.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-util-scan.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-util.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat-websocket.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/tomcat7-websocket.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/server/lib/websocket-api.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-accumulator-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-activator-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-core-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-datasource-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-decision-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-decision-report-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-report-engine-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-schedule-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-schedule-report-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-swift-log-adaptor-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-third-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/fine-webui-10.0.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/ifxjdbc.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/JavaPNS_2.2.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/jtds-1.2.2.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/jzlib-1.1.3.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/mysql-connector-java-5.1.39-bin.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/netty-all-4.1.17.Final.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/ojdbc14.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/sqlite-jdbc.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/sqljdbc.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/sybase.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/lib/visualvm-2.3.jar, file:/D:/%e8%bd%af%e4%bb%b6/%e5%b8%86%e8%bd%af10.0/FineReport_10.0/webapps/webroot/WEB-INF/classes/, file:/C:/Users/Administrator/AppData/Local/Temp/byteBuddyAgent2091159176062712707.jar, file:/C:/Users/Administrator/AppData/Local/Temp/ehcache-sizeof-agent7322765072652113338.jar])
+10:21:28 AWT-EventQueue-0 ERROR [standard] com/sap/conn/jco/JCoException
+10:21:28 AWT-EventQueue-0 ERROR [standard] org/jfree/chart/title/Title
+10:21:28 AWT-EventQueue-0 ERROR [standard] AbstractTableData
+10:21:28 AWT-EventQueue-0 ERROR [standard] org/krysalis/barcode4j/output/CanvasProvider

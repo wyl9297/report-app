@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:d="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- Dubbo 基础属性配置-->
+    <d:application name="${pom.application.name}" owner="${pom.application.name}"/>
+    <d:consumer proxy="${pom.dubbo.proxy}" loadbalance="roundrobin" timeout="${pom.dubbo.consumer.timeout}"
+                check="true"/>
+
+    <d:registry id="defaultRegistryAddress" address="${pom.dubbo.default.registry.address}" default="true" protocol="zookeeper" timeout="100000"/>
+
+    <!-- 组织权限、用户中心  Start-->
+    <d:reference id="aclService"  registry="defaultRegistryAddress"  interface="cn.bidlink.resacl.dal.service.DubboAclService" />
+    <d:reference id="userService" registry="defaultRegistryAddress" interface="cn.bidlink.usercenter.server.service.DubboTRegUserService"/>
+    <d:reference id="dubboTRegCompanyService" registry="defaultRegistryAddress" interface="cn.bidlink.usercenter.server.service.DubboTRegCompanyService"/>
+    <d:reference id="dubboAppsetPrintCompanySetService" registry="defaultRegistryAddress" interface="cn.bidlink.procurement.appset.dal.service.DubboAppsetPrintCompanySetService" check="false"/>
+    <!-- 组织权限、用户中心  end-->
+
+
+
+
+</beans>

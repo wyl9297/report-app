@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+<!--
+
+    1.后台自定义传递值
+    后台：modelAndView.addObject("msg","123123");传递值
+    前台：<p th:text="${msg}">...</p>
+
+    2.父模板(index.html)传递值
+    父模板：
+    备注：前端人员开发前端脚本
+    <div th:replace="common/footer :: footer_html ('param1','param2')">
+        <div >
+            &copy; 必联科技  xxxxxx (前端代码区域)
+        </div>
+    </div>
+
+    子模板：
+    备注：开发人员通过模板标签语言渲染页面加载数据
+    <div th:fragment="footer_html (param1,param2)">
+     &copy; 必联科技
+    <p th:text="${param1}">...</p>
+    <p th:text="${param2}">...</p>
+</div>
+
+
+-->
+
+<div th:fragment="footer_html (param1,param2)">
+    &copy; 必联科技
+    <p th:text="${param1}">...</p>
+    <p th:text="${param2}">...</p>
+    <p th:text="${msg}">...</p>
+</div>
+
+</body>
+</html>

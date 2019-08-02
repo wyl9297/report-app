@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
+<TableDataMap>
+<TableData name="test1" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.sample.DemoDataSource"/>
+</TableData>
+</TableDataMap>
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
+<ReportPageAttr>
+<HR/>
+<FR/>
+<HC/>
+<FC/>
+</ReportPageAttr>
+<ColumnPrivilegeControl/>
+<RowPrivilegeControl/>
+<RowHeight defaultValue="723900">
+<![CDATA[1143000,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
+<ColumnWidth defaultValue="2743200">
+<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<CellElementList>
+<C c="0" r="0">
+<O>
+<![CDATA[采购品名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="0">
+<O>
+<![CDATA[采购品编码]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="0">
+<O>
+<![CDATA[采购品计量单位]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="0">
+<O>
+<![CDATA[采购数量]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="4" r="0">
+<O>
+<![CDATA[采购项目列表]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="0">
+<O>
+<![CDATA[报价情况]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="1">
+<O t="DSColumn">
+<Attributes dsName="test1" columnName="name"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="1" r="1">
+<O t="DSColumn">
+<Attributes dsName="test1" columnName="code"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="2" r="1">
+<O t="DSColumn">
+<Attributes dsName="test1" columnName="unitName"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="3" r="1">
+<O t="DSColumn">
+<Attributes dsName="test1" columnName="purchaseAmount"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="4" r="1">
+<O t="DSColumn">
+<Attributes dsName="test1" columnName="projectItemId"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="5" r="1">
+<O t="DSColumn">
+<Attributes dsName="test1" columnName="quoteStatusStr"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+</CellElementList>
+<ReportAttrSet>
+<ReportSettings headerHeight="0" footerHeight="0">
+<PaperSetting/>
+<Background name="ColorBackground" color="-1"/>
+</ReportSettings>
+</ReportAttrSet>
+<PrivilegeControl/>
+</Report>
+<ReportParameterAttr>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<PWTitle>
+<![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<StyleList/>
+<DesignerVersion DesignerVersion="KAA"/>
+<PreviewType PreviewType="0"/>
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
+<TemplateIdAttMark TemplateId="e127d255-ba99-4159-9ccf-c482cde71a5a"/>
+</TemplateIdAttMark>
+</WorkBook>

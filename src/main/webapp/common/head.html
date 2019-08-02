@@ -1,0 +1,35 @@
+<head th:fragment="header (title)" xmlns:th="http://www.w3.org/1999/xhtml">
+    <!-- head公共meta定义 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <title th:text="${title}"></title>
+
+    <!--引用公共的样式文件-->
+    <link rel="stylesheet"  href="../../static/common/scripts/bootstrap/css/bootstrap.css"
+          th:href="@{${application.ctxPathStatic}+'/static/common/scripts/bootstrap/css/bootstrap.css'}"/>
+    <link rel="stylesheet" href="../../static/common/scripts/bs-table/bootstrap-table.css"
+          th:href="@{${application.ctxPathStatic}+'/static/common/scripts/bs-table/bootstrap-table.css'}"/>
+    <!-- 页面基础样式 -->
+    <link rel="stylesheet" href="../../static/common/css/yc_base.css"
+          th:href="@{${application.ctxPathStatic}+'/static/common/css/yc_base.css'}"/>
+    <link rel="stylesheet" href="../../static/common/css/yc_skin.css"
+          th:href="@{${application.ctxPathStatic}+'/static/common/css/yc_skin.css'}"/>
+    <link rel="stylesheet" href="../../static/common/scripts/jstree/themes/default/style.min.css"
+          th:href="@{${application.ctxPathStatic}+'/static/common/scripts/jstree/themes/default/style.min.css'}"/>
+    <!-- icon 字体 -->
+    <link rel="stylesheet" href="../../static/common/font/iconfont/iconfont.css"
+          th:href="@{${application.ctxPathStatic}+'/static/common/font/iconfont/iconfont.css'}"/>
+
+    <!--引用公共的JS文件-->
+    <script type="text/javascript" src="../../static/common/scripts/jquery/jquery-1.9.1.min.js"
+            th:src="@{${application.ctxPathStatic}+'/static/common/scripts/jquery/jquery-1.9.1.min.js'}"></script>
+    <script type="text/javascript" src="../../static/common/scripts/bootstrap/js/bootstrap.min.js"
+            th:src="@{${application.ctxPathStatic}+'/static/common/scripts/bootstrap/js/bootstrap.min.js'}"></script>
+    <!-- 表格控件 -->
+    <script type="text/javascript" src="../../static/common/scripts/bs-table/bootstrap-table.js"
+            th:src="@{${application.ctxPathStatic}+'/static/common/scripts/bs-table/bootstrap-table.js'}"></script>
+    <script type="text/javascript" src="../../static/common/scripts/bs-table/locale/bootstrap-table-zh-CN.js"
+            th:src="@{${application.ctxPathStatic}+'/static/common/scripts/bs-table/locale/bootstrap-table-zh-CN.js'}"></script>
+
+</head>
+

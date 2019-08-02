@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>cn.bidlink</groupId>
+        <artifactId>upgrader</artifactId>
+        <version>2.1.4-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.bidlink.report</groupId>
+    <artifactId>report-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>report-app</name>
+    <url>http://maven.apache.org</url>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://repo.bidlink.cn/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://repo.bidlink.cn/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <scm>
+        <connection>scm:git:http://gitlab.bidlink.cn/datacenter/report-app.git</connection>
+        <developerConnection>scm:http://gitlab.bidlink.cn/datacenter/report-app.git</developerConnection>
+        <url>http://gitlab.bidlink.cn/datacenter/report-app</url>
+    </scm>
+
+
+    <properties>
+        <custom-user-dal-version>1.0.0-SNAPSHOT</custom-user-dal-version>
+        <canary-search-client.version>4.10.3.Final-SNAPSHOT</canary-search-client.version>
+    </properties>
+
+
+    <dependencies>
+        <!-- 基础平台 framework -->
+        <dependency>
+            <!-- pom文件是强引用了很多需要的jar(包含spring boot,pac4j,cas,shiro,framework-common,framework-util等等的jar包的)，无需要重复声明引用-->
+            <groupId>cn.bidlink.framework</groupId>
+            <artifactId>bidlink-framework-boot-starter-saas2</artifactId>
+            <!--解决RestTemplate的冲突问题-->
+            <exclusions>
+                <exclusion>
+                    <artifactId>kryo</artifactId>
+                    <groupId>com.esotericsoftware.kryo</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>commons-httpclient</artifactId>
+                    <groupId>commons-httpclient</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>commons-lang</artifactId>
+                    <groupId>commons-lang</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.procurement.purchase</groupId>
+            <artifactId>purchase-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>log4j</artifactId>
+                    <groupId>log4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>approve-cloud-service</artifactId>
+                    <groupId>cn.bidlink.procurement.approve</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>cn.bidlink.procurement.bidding</groupId>
+            <artifactId>bidding-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.bidlink.procurement.auction</groupId>
+            <artifactId>auction-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>approve-cloud-service</artifactId>
+                    <groupId>cn.bidlink.procurement.approve</groupId>
+                </exclusion>
+            </exclusions>
+            <!--            <exclusions>
+                            <exclusion>
+                                <groupId>*</groupId>
+                                <artifactId>*</artifactId>
+                            </exclusion>
+                        </exclusions>-->
+        </dependency>
+        <dependency>
+            <groupId>cn.bidlink.procurement.vendue</groupId>
+            <artifactId>vendue-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.procurement.order</groupId>
+            <artifactId>order-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.procurement.contract</groupId>
+            <artifactId>contract-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.bidlink.user-setting</groupId>
+            <artifactId>custom-use-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.appset</groupId>
+            <artifactId>appset-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.framework</groupId>
+            <artifactId>bidlink-framework-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>asm</artifactId>
+                    <groupId>org.ow2.asm</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.framework</groupId>
+            <artifactId>bidlink-framework-cloud-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>asm</artifactId>
+                    <groupId>org.ow2.asm</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.framework</groupId>
+            <artifactId>bidlink-framework-cloud-starter-swagger</artifactId>
+        </dependency>
+
+        <!--           上传文件的依赖           -->
+        <dependency>
+            <groupId>cn.bidlink.dfs</groupId>
+            <artifactId>cloud-rest-upload-core</artifactId>
+            <version>0.0.5-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-core</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-activator</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-core</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-datasource</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-decision</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-decision-report</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-report-engine</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-schedule</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-schedule-report</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-swift-log-adaptor</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-third</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fine</groupId>
+            <artifactId>fine-webui</artifactId>
+            <version>10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.17.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.bidlink.appset</groupId>
+            <artifactId>appset-dal-service</artifactId>
+            <version>${version}</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>cn.bidlink.report</groupId>
+            <artifactId>report-dal-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
+        </dependency>
+        <!-- ASM字节码处理框架 -->
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>7.0</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>-->
+    </dependencies>
+
+    <build>
+        <finalName>${pom.application.name}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>bin/*.*</exclude>
+                    <exclude>assemble-descriptor.xml</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <!-- 将bin 下面的脚本文件 单独 提出，不打入jar包 -->
+            <resource>
+                <directory>src/main/resources/bin</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <targetPath>${project.build.directory}/bin</targetPath>
+            </resource>
+            <!-- 在当前目录下创建config目录放置SpringBoot的 "属性" 配置文件 -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>application.properties</include>
+                </includes>
+                <targetPath>${project.build.directory}/config</targetPath>
+            </resource>
+        </resources>
+        <plugins>
+            <!--版本管理 与 发布 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.0-beta-7</version>
+                <configuration>
+                    <providerImplementations>
+                        <git>jgit</git>
+                    </providerImplementations>
+                    <username>username</username>
+                    <password>password</password>
+                    <tagBase>${project.artifactId}-${project.version}</tagBase>
+                    <goals>-f pom.xml deploy</goals>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-jgit</artifactId>
+                        <version>1.9.5</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <!-- spring boot 插件 -可打成单独可运行的JAR  spring.boot.version 已声明-->
+            <!--<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <configuration>
+                    <mainClass>cn.bidlink.report.app.Application</mainClass>
+                    <layout>JAR</layout>
+                    &lt;!&ndash; 如果没有该项配置，devtools不会起作用，即应用不会restart &ndash;&gt;
+                    <fork>true</fork>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
+            <!-- 发布插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+            <!-- assembly打包插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <finalName>${pom.application.name}</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>src/main/resources/assemble-descriptor.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-binary-pacakge</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <!-- 开发环境的通用配置 -->
+        <profile>
+            <id>local</id>
+            <properties>
+                <pom.server.port>8767</pom.server.port>
+                <pom.management.port>4087</pom.management.port>
+                <pom.application.name>report-app</pom.application.name>
+
+                <!-- SpringSession共享 redis 客户端配置 Start -->
+                <pom.spring.redis.database>0</pom.spring.redis.database>
+                <pom.spring.redis.pool.max-idle>8</pom.spring.redis.pool.max-idle>
+                <pom.spring.redis.pool.min-idle>0</pom.spring.redis.pool.min-idle>
+                <pom.spring.redis.pool.max-active>8</pom.spring.redis.pool.max-active>
+                <pom.spring.redis.pool.max-wait>-1</pom.spring.redis.pool.max-wait>
+                <pom.spring.redis.sentinel.master>redisMaster</pom.spring.redis.sentinel.master>
+                <pom.spring.redis.sentinel.nodes>testredis:26380,testredis:26381,testredis:26382
+                </pom.spring.redis.sentinel.nodes>
+
+                <pom.dubbo.default.registry.address>zookeeper://testzookeeper:2181</pom.dubbo.default.registry.address>
+                <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
+                <pom.dubbo.proxy>jdk</pom.dubbo.proxy>
+                <pom.cas.server>https://testpassport.longdaoyun.com</pom.cas.server>
+                <!--  FIXME 10.9.2.150 为开发时本机的IP-->
+                <pom.local.server>http://127.0.0.1:${pom.server.port}</pom.local.server>
+                <pom.log.level>info</pom.log.level>
+                <pom.log.dir>logs</pom.log.dir>
+                <pom.log.appender>STDOUT</pom.log.appender>
+                <!--10.9.2.150为本机的vpn的IP   用以区别 正式和测试开发环境的浮点IP-->
+                <pom.cloud.eureka.instance.config>eureka.instance.hostname=10.8.0.154</pom.cloud.eureka.instance.config>
+                <!--Spring Cloud 服务的注册中心 -->
+                <pom.cloud.eureka.serviceUrl>http://testeureka:8035/eureka</pom.cloud.eureka.serviceUrl>
+                <!--       aclService.getResTreeByParentId(systemAlias, parentId，方法使用         -->
+                <pom.acl.parentId>935031902891630592</pom.acl.parentId>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <!-- 测试环境的通用配置 -->
+        <profile>
+            <id>test</id>
+            <properties>
+                <pom.server.port>8767</pom.server.port>
+                <pom.management.port>4087</pom.management.port>
+                <pom.application.name>report-app</pom.application.name>
+                <pom.spring.redis.database>0</pom.spring.redis.database>
+                <pom.spring.redis.pool.max-idle>8</pom.spring.redis.pool.max-idle>
+                <pom.spring.redis.pool.min-idle>0</pom.spring.redis.pool.min-idle>
+                <pom.spring.redis.pool.max-active>8</pom.spring.redis.pool.max-active>
+                <pom.spring.redis.pool.max-wait>-1</pom.spring.redis.pool.max-wait>
+                <pom.spring.redis.sentinel.master>redisMaster</pom.spring.redis.sentinel.master>
+                <pom.spring.redis.sentinel.nodes>testredis:26380,testredis:26381,testredis:26382
+                </pom.spring.redis.sentinel.nodes>
+                <pom.dubbo.default.registry.address>zookeeper://testzookeeper:2181</pom.dubbo.default.registry.address>
+                <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
+                <pom.dubbo.proxy>javassist</pom.dubbo.proxy>
+                <pom.cas.server>https://testpassport.longdaoyun.com</pom.cas.server>
+                <pom.local.server>http://testreport.longdaoyun.com</pom.local.server>
+                <pom.log.level>info</pom.log.level>
+                <pom.log.dir>/var/log/cgxt</pom.log.dir>
+                <pom.log.appender>RollingFile</pom.log.appender>
+                <!--10.9.2.46为本机的vpn的IP   用以区别 正式和测试开发环境的浮点IP-->
+                <pom.cloud.eureka.instance.config>eureka.instance.preferIpAddress=true
+                </pom.cloud.eureka.instance.config>
+                <pom.cloud.eureka.serviceUrl>http://testeureka:8035/eureka</pom.cloud.eureka.serviceUrl>
+                <pom.acl.parentId>935031902891630592</pom.acl.parentId>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>performance</id>
+            <properties>
+                <pom.server.port>8767</pom.server.port>
+                <pom.management.port>4087</pom.management.port>
+                <pom.application.name>report-app</pom.application.name>
+
+                <pom.spring.redis.database>0</pom.spring.redis.database>
+                <pom.spring.redis.pool.max-idle>8</pom.spring.redis.pool.max-idle>
+                <pom.spring.redis.pool.min-idle>0</pom.spring.redis.pool.min-idle>
+                <pom.spring.redis.pool.max-active>8</pom.spring.redis.pool.max-active>
+                <pom.spring.redis.pool.max-wait>-1</pom.spring.redis.pool.max-wait>
+                <pom.spring.redis.sentinel.master>redisMaster</pom.spring.redis.sentinel.master>
+                <pom.spring.redis.sentinel.nodes>10.0.3.91:26380,10.0.3.91:26381,10.0.3.91:26382</pom.spring.redis.sentinel.nodes>
+
+                <pom.dubbo.default.registry.address>zookeeper://10.0.3.92:2181</pom.dubbo.default.registry.address>
+                <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
+                <pom.dubbo.proxy>javassist</pom.dubbo.proxy>
+                <pom.cas.server>https://demopassport.longdaoyun.com</pom.cas.server>
+                <pom.local.server>http://demoreport.longdaoyun.com</pom.local.server>
+                <pom.log.level>info</pom.log.level>
+                <pom.log.dir>logs</pom.log.dir>
+
+                <!--10.9.2.46为本机的vpn的IP   用以区别 正式和测试开发环境的浮点IP-->
+                <pom.cloud.eureka.instance.config>eureka.instance.preferIpAddress=true</pom.cloud.eureka.instance.config>
+                <pom.cloud.eureka.serviceUrl>http://10.0.3.57:8035/eureka</pom.cloud.eureka.serviceUrl>
+                <pom.acl.parentId>935031902891630592</pom.acl.parentId>
+            </properties>
+        </profile>
+
+        <!-- 正式环境的通用配置 -->
+        <profile>
+            <id>product</id>
+            <properties>
+                <pom.server.port>8767</pom.server.port>
+                <pom.management.port>4087</pom.management.port>
+                <pom.application.name>report-app</pom.application.name>
+
+                <pom.spring.redis.database>0</pom.spring.redis.database>
+                <pom.spring.redis.pool.max-idle>8</pom.spring.redis.pool.max-idle>
+                <pom.spring.redis.pool.min-idle>0</pom.spring.redis.pool.min-idle>
+                <pom.spring.redis.pool.max-active>8</pom.spring.redis.pool.max-active>
+                <pom.spring.redis.pool.max-wait>-1</pom.spring.redis.pool.max-wait>
+                <pom.spring.redis.sentinel.master>redisMaster</pom.spring.redis.sentinel.master>
+                <pom.spring.redis.sentinel.nodes>
+                    redis-01.internal.cg-xt.com:26379,redis-02.internal.cg-xt.com:26379,redis-03.internal.cg-xt.com:26379
+                </pom.spring.redis.sentinel.nodes>
+
+                <pom.dubbo.default.registry.address>
+                    zookeeper://zookeeper-01.internal.cg-xt.com:2181?backup=zookeeper-02.internal.cg-xt.com:2181,zookeeper-03.internal.cg-xt.com:2181
+                </pom.dubbo.default.registry.address>
+                <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
+                <pom.dubbo.proxy>javassist</pom.dubbo.proxy>
+
+                <pom.cas.server>https://passport.longdaoyun.com</pom.cas.server>
+                <pom.local.server>http://report.longdaoyun.com</pom.local.server>
+                <pom.log.level>info</pom.log.level>
+                <pom.log.dir>/var/log/cgxt</pom.log.dir>
+                <pom.log.appender>JsonFile</pom.log.appender>
+                <!--10.9.2.46为本机的vpn的IP   用以区别 正式和测试开发环境的浮点IP-->
+                <pom.cloud.eureka.instance.config>eureka.instance.preferIpAddress=true
+                </pom.cloud.eureka.instance.config>
+                <pom.cloud.eureka.serviceUrl>
+                    http://eureka-01.internal.cg-xt.com:8080/eureka,http://eureka-02.internal.cg-xt.com:8080/eureka,http://eureka-03.internal.cg-xt.com:8080/eureka
+                </pom.cloud.eureka.serviceUrl>
+                <pom.acl.parentId>1009998468552478720</pom.acl.parentId>
+            </properties>
+        </profile>
+    </profiles>
+
+
+</project>

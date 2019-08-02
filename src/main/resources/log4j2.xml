@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="${pom.application.name}" packages="" monitorInterval="3">
+	<Appenders>
+		<!-- 控制台输出 -->
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%highlight{%d{yyyy/MM/dd HH:mm:ss SSS} %-5p [${pom.application.name}] [%t] [%c.%M(%F:%L)] %m%n}{FATAL=Bright Red, ERROR=Bright Magenta, WARN=Bright Yellow, INFO=Bright Green, DEBUG=Bright Cyan, TRACE=Bright White}" />
+		</Console>
+		<!-- 本地日志文件输出 -->
+		<RollingFile name="JsonFile" fileName="${pom.log.dir}/${pom.application.name}.log"
+					 filePattern="${pom.log.dir}/${pom.application.name}-%d{MM-dd-yyyy}-%i.log">
+			<JsonLayout eventEol="true" compact = "true" stacktraceAsString="true">
+				<KeyValuePair key="timestamp" value="$${date:yyyy-MM-dd HH:mm:ss.SSS}" />
+				<KeyValuePair key="appName" value="${pom.application.name}" />
+			</JsonLayout>
+			<DefaultRolloverStrategy>
+				<Delete basePath="${pom.log.dir}" maxDepth="30">
+					<IfFileName glob="${pom.application.name}-*-*.log" />
+					<!-- 指定保留多少天的日志 -->
+					<IfLastModified age="7d" />
+				</Delete>
+			</DefaultRolloverStrategy>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<!-- size根据实际的日志量填写 -->
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+
+		<!-- 本地日志文件输出 -->
+		<RollingFile name="RollingFile" fileName="${pom.log.dir}/${pom.application.name}.log"
+					 filePattern="${pom.log.dir}/${pom.application.name}-%d{MM-dd-yyyy}-%i.log">
+			<PatternLayout>
+				<PatternLayout pattern="%highlight{%d{yyyy/MM/dd HH:mm:ss SSS} %-5p [${pom.application.name}] [%t] [%c.%M(%F:%L)] %m%n}{FATAL=Bright Red, ERROR=Bright Magenta, WARN=Bright Yellow, INFO=Bright Green, DEBUG=Bright Cyan, TRACE=Bright White}" />
+			</PatternLayout>
+			<DefaultRolloverStrategy>
+				<Delete basePath="${pom.log.dir}" maxDepth="30">
+					<IfFileName glob="${pom.application.name}-*-*.log" />
+					<!-- 指定保留多少天的日志 -->
+					<IfLastModified age="7d" />
+				</Delete>
+			</DefaultRolloverStrategy>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<!-- size根据实际的日志量填写 -->
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+
+	</Appenders>
+	<Loggers>
+		<!-- 第三方日志系统 -->
+		<logger name="org.springframework" level="warn" additivity="false">
+			<AppenderRef ref="${pom.log.appender}" />
+		</logger>
+		<logger name="org.apache" level="warn" additivity="false">
+			<AppenderRef ref="${pom.log.appender}" />
+		</logger>
+
+		<!-- 根日志记录级别 -->
+		<Root level="${pom.log.level}">
+			<AppenderRef ref="${pom.log.appender}" />
+		</Root>
+	</Loggers>
+</Configuration>

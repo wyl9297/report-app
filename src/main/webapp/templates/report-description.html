@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>企业级互联网采购与供应交易平台</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <!-- BUI 分页样式 -->
+
+    <!-- 交易专场 样式 -->
+    <link rel="stylesheet" name="theme" href="" />
+</head>
+<style type="text/css">
+    html, body {
+        margin:0;
+        padding:0;
+    }
+    table.gridtable {
+         font-family: verdana,arial,sans-serif;
+         font-size:11px;
+         color:#333333;
+         border-width: 1px;
+         border-color: #666666;
+         border-collapse: collapse;
+     }
+    table.gridtable th {
+       border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+    }
+    table.gridtable td {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+    }
+</style>
+<body>
+   <!-- <ul th:each="lm : ${list}">
+        <li th:each="entry : ${lm}" th:text="${entry.key}" ></li>
+        <li th:each="entry : ${lm}" th:text="${entry.value}"></li>
+    </ul>-->
+   <center>
+       <p style="color: red;">注1：水印的参数统一为：FineWaterMark | 动态列的参数统一为：templateId 和 projectId  均区分大小写 </p>
+       <table class="gridtable" style="margin-top: 20px;">
+       <tr>
+           <th>序号</th>
+           <th>报表访问路径</th>
+           <th>描述</th>
+       </tr>
+       <tr th:each="m,iterStat : ${map}">
+           <td style="text-align: center" th:text="${iterStat.index + 1}"></td>
+           <td th:text="'/reportGateway' + '/' + 'reportWindow' + '/' + ${m.key}"></td>
+           <td th:text="${m.value}"></td>
+       </tr>
+        </table>
+    </center>
+</body>
+</html>

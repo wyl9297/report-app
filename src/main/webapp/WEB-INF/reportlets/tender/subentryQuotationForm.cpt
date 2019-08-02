@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
+<TableDataMap>
+<TableData name="purchases" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.tender.SubentryQuotationFormWithPurchasesDataSource"/>
+</TableData>
+<TableData name="title" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.tender.SubentryQuotationFormWithTitleDataSource"/>
+</TableData>
+<TableData name="value" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.tender.SubentryQuotationFormWithQuoteItemDataSource"/>
+</TableData>
+<TableData name="supplier" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.tender.SubentryQuotationFormWithSupplierDataSource"/>
+</TableData>
+</TableDataMap>
+<ElementCaseMobileAttr>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+</ElementCaseMobileAttr>
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
+<ReportPageAttr>
+<HR F="0" T="0"/>
+<FR/>
+<HC F="0" T="1"/>
+<FC/>
+</ReportPageAttr>
+<ColumnPrivilegeControl/>
+<RowPrivilegeControl/>
+<RowHeight defaultValue="723900">
+<![CDATA[875520,875520,723900]]></RowHeight>
+<ColumnWidth defaultValue="2743200">
+<![CDATA[1584960,2743200,2743200,2743200,2743200,2743200,2743200,3779520,3322320,3124200,2743200,2743200,2743200,2743200,2743200,2743200,3200400,3718560,3657600,2971800,3322320,2743200]]></ColumnWidth>
+<CellElementList>
+<C c="0" r="0" s="0">
+<O>
+<![CDATA[序号]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="0" s="1">
+<O>
+<![CDATA[采购品名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="0" s="1">
+<O>
+<![CDATA[采购品编码]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="0" s="1">
+<O>
+<![CDATA[规格型号]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("规格型号", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="4" r="0" s="1">
+<O>
+<![CDATA[技术参数]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="0" s="1">
+<O>
+<![CDATA[数量]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="0" s="1">
+<O>
+<![CDATA[计量单位]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="0" s="1">
+<O>
+<![CDATA[市场参考价(元)]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="8" r="0" s="1">
+<O>
+<![CDATA[计划总价(元)]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="9" r="0" s="1">
+<O>
+<![CDATA[申报人、电话\t]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("申报人、电话", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="10" r="0" s="1">
+<O>
+<![CDATA[申报企业]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("申报企业", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="11" r="0" s="1">
+<O>
+<![CDATA[使用单位]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("使用单位", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="12" r="0" s="1">
+<O>
+<![CDATA[用途]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("用途", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="13" r="0" s="1">
+<O>
+<![CDATA[需求日期]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("需求日期", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="14" r="0" s="1">
+<O>
+<![CDATA[采购品备注]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="15" r="0" s="1">
+<O>
+<![CDATA[添加时间]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("添加时间", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="16" r="0" s="1">
+<O>
+<![CDATA[投标人名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="17" r="0" s="1">
+<O>
+<![CDATA[报价单价（元）]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="0" s="1">
+<O>
+<![CDATA[报价总计（元）]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="0" s="1">
+<O>
+<![CDATA[差异额（元）]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="0" s="1">
+<O>
+<![CDATA[差异率（%）]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="0" s="2">
+<O t="DSColumn">
+<Attributes dsName="title" columnName="title"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand dir="1"/>
+</C>
+<C c="0" r="1" s="3">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=&B2]]></Attributes>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0" leftParentDefault="false" left="B2"/>
+</C>
+<C c="1" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="name"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 100]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="4320000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="2" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="code"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="3" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="spec"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 250]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("规格型号", split($Columns, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="8640000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="4" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="techParameters"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 250]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="8640000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="5" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="purchaseAmount"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Present class="com.fr.base.present.FormulaPresent">
+<Content>
+<![CDATA[=FORMAT($$$, "#,##0.0000")]]></Content>
+</Present>
+<Expand dir="0"/>
+</C>
+<C c="6" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="unitName"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="7" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="marketPrice"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Present class="com.fr.base.present.FormulaPresent">
+<Content>
+<![CDATA[=FORMAT($$$, "#,##0.0000")]]></Content>
+</Present>
+<Expand dir="0"/>
+</C>
+<C c="8" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="totalPlanPrice"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Present class="com.fr.base.present.FormulaPresent">
+<Content>
+<![CDATA[=FORMAT($$$, "#,##0.0000")]]></Content>
+</Present>
+<Expand dir="0"/>
+</C>
+<C c="9" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="appliedPersonAndPhone"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="10" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="appliedEnterprise"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="11" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="useDept"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="12" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="purpose"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 250]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("用途", split($Columns, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="8640000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="13" r="1" s="4">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=FORMAT(purchases.select(needTime), "yyyy-MM-dd")]]></Attributes>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="14" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="purchases" columnName="comment"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[id]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="bidProjectItemId"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 250]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($Columns, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="8640000"/>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性2]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 500]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($Columns, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="14400000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="15" r="1" s="4">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=FORMAT(purchases.select(createTime), "yyyy-MM-dd HH:mm:ss")]]></Attributes>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="16" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="supplier" columnName="supplierName"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[bidProjectItemId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchases" columnName="id"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="17" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="supplier" columnName="quoteUnitPrice"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[bidProjectItemId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchases" columnName="id"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Present class="com.fr.base.present.FormulaPresent">
+<Content>
+<![CDATA[=FORMAT($$$, "#,##0.0000")]]></Content>
+</Present>
+<Expand dir="0" leftParentDefault="false" left="Q2"/>
+</C>
+<C c="18" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="supplier" columnName="quoteTotalPrice"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[bidProjectItemId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchases" columnName="id"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Present class="com.fr.base.present.FormulaPresent">
+<Content>
+<![CDATA[=FORMAT($$$, "#,##0.0000")]]></Content>
+</Present>
+<Expand dir="0" leftParentDefault="false" left="Q2"/>
+</C>
+<C c="19" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="supplier" columnName="differenceAmount"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[bidProjectItemId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchases" columnName="id"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Present class="com.fr.base.present.FormulaPresent">
+<Content>
+<![CDATA[=FORMAT($$$, "#,##0.0000")]]></Content>
+</Present>
+<Expand dir="0" leftParentDefault="false" left="Q2"/>
+</C>
+<C c="20" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="supplier" columnName="differenceRatio"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[bidProjectItemId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchases" columnName="id"/>
+</Compare>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Present class="com.fr.base.present.FormulaPresent"/>
+<Expand dir="0" leftParentDefault="false" left="Q2"/>
+</C>
+<C c="21" r="1" s="4">
+<O t="DSColumn">
+<Attributes dsName="value" columnName="value"/>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[key]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="title" columnName="key"/>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[supplierId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplier" columnName="supplierId"/>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[bidProjectItemId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchases" columnName="id"/>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[directoryId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchases" columnName="directoryId"/>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition"/>
+</Highlight>
+</HighlightList>
+<Present class="com.fr.base.present.FormulaPresent"/>
+<Expand dir="1"/>
+</C>
+</CellElementList>
+<ReportAttrSet>
+<ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
+<PaperSetting orientation="1">
+<PaperSize width="31680000" height="54720000"/>
+<Margin top="1440000" left="2743200" bottom="1440000" right="2743200"/>
+</PaperSetting>
+<Background name="ColorBackground" color="-1"/>
+</ReportSettings>
+<Header reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList>
+<HFElement className="com.fr.base.headerfooter.PageNumberHFElement">
+<FRFont name="SimSun" style="0" size="72"/>
+<![CDATA[1]]></HFElement>
+<HFElement className="com.fr.base.headerfooter.TextHFElement">
+<FRFont name="SimSun" style="0" size="72"/>
+<![CDATA[/]]></HFElement>
+<HFElement className="com.fr.base.headerfooter.NumberOfPageHFElement">
+<FRFont name="SimSun" style="0" size="72"/>
+<![CDATA[100]]></HFElement>
+</CenterList>
+<RightList/>
+</Footer>
+</ReportAttrSet>
+<PrivilegeControl/>
+</Report>
+<ReportParameterAttr>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<PWTitle>
+<![CDATA[参数]]></PWTitle>
+<Parameter>
+<Attributes name="FineWaterMark"/>
+<O>
+<![CDATA[隆道云]]></O>
+</Parameter>
+<Parameter>
+<Attributes name="quoteTurn"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
+</ReportParameterAttr>
+<StyleList>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="1" size="72"/>
+<Background name="ColorBackground" color="-657929"/>
+<Border>
+<Top style="2" color="-16777216"/>
+<Bottom style="2" color="-16777216"/>
+<Left style="2" color="-16777216"/>
+<Right style="1" color="-16777216"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="1" size="72"/>
+<Background name="ColorBackground" color="-657929"/>
+<Border>
+<Top style="2" color="-16777216"/>
+<Bottom style="2" color="-16777216"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="1" size="72"/>
+<Background name="ColorBackground" color="-657929"/>
+<Border>
+<Top style="2" color="-16777216"/>
+<Bottom style="2" color="-16777216"/>
+<Right style="1" color="-16777216"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="华文细黑" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="2"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="华文细黑" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+</StyleList>
+<DesignerVersion DesignerVersion="KAA"/>
+<PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
+<TemplateIdAttMark TemplateId="ee1dcaf9-ebff-4ae7-ac1d-6e7634266e9b"/>
+</TemplateIdAttMark>
+</WorkBook>

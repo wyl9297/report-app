@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>企业级互联网采购与供应交易平台</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <!-- BUI 分页样式 -->
+
+    <!-- 交易专场 样式 -->
+    <link rel="stylesheet" name="theme" href="" />
+    <script type="text/javascript" charset="utf-8" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<style type="text/css">
+    html, body {
+        margin:0;
+        padding:0;
+    }
+</style>
+<script type="text/javascript">
+    $(function(){
+        adaptive();
+        $(window).resize(function(){
+            setTimeout(function () {
+                //do nothing
+            },50);
+            adaptive();
+        })
+    })
+    function adaptive() {
+        var height = $(window).height();
+        var width = $(window).width();
+        $("#iframe").height(height - 5);
+        $("#iframe").width(width);
+    }
+</script>
+<body>
+     <iframe id="iframe" frameborder="0" padding="0" margin="0" position="absolute" allowfullscreen="true" th:src="${path}"></iframe>
+</body>
+</html>
