@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>企业级互联网采购与供应交易平台</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" name="theme" href="" />
+    <script type="text/javascript" charset="utf-8" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .apply-record{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .apply-record .tab{
+            height:60px;
+            border-bottom: 2px solid #dddee1;
+            box-sizing: border-box;
+            text-align:center;
+            background-color: #383d44;
+            color: hsla(0,0%,100%,.7);
+        }
+        .apply-record .tab .tab-item{
+            list-style:none;
+            display:inline-block;
+            line-height:30px;
+            text-align:center;
+            font-size:12px;
+            cursor: pointer;
+            box-sizing: border-box;
+            padding: 0px 30px;
+            border-radius: 3px;
+            margin-top: 13px;
+        }
+        .apply-record .tab .tab-item.active{
+            font-weight: 700;
+            background-color: #f95b5c;
+            color: #fff;
+        }
+        .apply-record .tab .tab-item.mouse{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div style="display: none" id="pathInput" th:text="${params}"></div>
+<div class="apply-record">
+    <ul class="tab" id='tabBox'></ul>
+    <iframe id="iframe" frameborder="0" padding="0" margin="0" position="absolute" allowfullscreen="true"></iframe>
+</div>
+</body>
+<script type="text/javascript">
+     $(function(){
+         adaptive();
+         $(window).resize(function(){
+             setTimeout(function () {
+                 //do nothing
+             },50);
+             adaptive();
+         });
+         var val = $("#pathInput").text();
+         var result = getMetadata(val);
+         var tabItems=JSON.parse(result);
+
+         var activeIndex = 0;
+         for( var i in tabItems ){
+             var active = '';
+             var item =tabItems[i];
+             if( item.active == 'true' ){
+                 active = 'active';
+                 activeIndex = i;
+             }
+             var tabItem = $('<li class="tab-item '+ active +'">'+item.name+'</li>').attr({ url: item.url});
+             $('#tabBox').append(tabItem);
+         }
+
+         $('#iframe').attr('src',tabItems[activeIndex].url);
+
+         $(".apply-record .tab .tab-item").mouseover(function() {
+             $(this).addClass("mouse").siblings().removeClass("mouse");
+         }).mouseout(function(){
+             $(this).removeClass("mouse");
+         });
+
+         $(".apply-record .tab .tab-item").click(function() {
+             $(this).addClass("active").siblings().removeClass("active");
+             $('#iframe').attr('src',$(this).attr('url'));
+         });
+     });
+     function adaptive() {
+         var height = $(window).height();
+         var width = $(window).width();
+         $("#iframe").height(height);
+         $("#iframe").width(width);
+     }
+     function getMetadata(param) {
+         var res ;
+         $.ajax({
+             url:"../../getMultiReportMetaData?" + param,    //请求的url地址
+             dataType:"json",   //返回格式为html/json/xml
+             async:false,//请求是否异步，默认为异步
+            // data:param,
+             type:"POST",   //请求方式
+             beforeSend:function(){
+                 //请求前的处理
+             },
+             success:function(result){
+                 res = result;
+                 return res;
+             },
+             complete:function(){
+                 return res;//请求完成的处理
+             },
+             error:function(msg){
+
+             }
+         });
+         return res;
+     }
+</script>
+</html>

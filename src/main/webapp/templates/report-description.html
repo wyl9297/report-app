@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-
+    <script type="text/javascript" charset="utf-8" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- BUI 分页样式 -->
 
     <!-- 交易专场 样式 -->
@@ -46,7 +46,8 @@
         <li th:each="entry : ${lm}" th:text="${entry.value}"></li>
     </ul>-->
    <center>
-       <p style="color: red;">注1：水印的参数统一为：FineWaterMark | 动态列的参数统一为：templateId 和 projectId  均区分大小写 </p>
+       <p style="color: red;">注1：水印的参数统一为：FineWaterMark | 动态列的参数统一为：templateId 和 projectId | 动态列扩展参数 ExtendParam  均区分大小写 </p>
+       <p style="color: red;">如果主业务id不叫projectId 则需要添加参数 PrimaryId 指定主业务id的key （如招标项目的主业务id为subProjectId 则添加参数PrimaryId=subProjectId）</p>
        <table class="gridtable" style="margin-top: 20px;">
        <tr>
            <th>序号</th>
@@ -59,6 +60,42 @@
            <td th:text="${m.value}"></td>
        </tr>
         </table>
+
+       <p style="color: red;">注：默认页签参数：Active=${页签名称}  均区分大小写 </p>
+       <table  class="gridtable" id="multi_report" style="margin-top: 10px;margin-bottom: 20%">
+           <tr>
+               <th style="height: 30px" colspan="5">多报表集成页面</th>
+           </tr>
+           <tr>
+               <th>序号</th>
+               <th>报表访问路径</th>
+               <th>页签名称</th>
+               <th>实际路径</th>
+               <th>描述</th>
+           </tr>
+       </table>
     </center>
 </body>
+<script  type="text/javascript">
+    $(function(){
+        $.ajax({
+            url:"getMultiHtml",    //请求的url地址
+            dataType:"html",   //返回格式为html
+            async:false,//请求是否异步，默认为异步，这也是ajax重要特性
+            type:"POST",   //请求方式
+            beforeSend:function(){
+                //请求前的处理
+            },
+            success:function(result){
+                $("#multi_report").append(result);
+            },
+            complete:function(){
+                //请求完成的处理
+            },
+            error:function(){
+                //请求出错处理
+            }
+        });
+    })
+</script>
 </html>
