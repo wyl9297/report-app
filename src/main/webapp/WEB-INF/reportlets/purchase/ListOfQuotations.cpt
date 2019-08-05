@@ -158,7 +158,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1066800,875520,875520,875520,875520,875520,875520,875520,875520,875520,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1584960,2743200,3108960,2743200,3992880,2743200,3291840,2743200,3291840,2743200,2987040,2743200,2743200,3048000,3200400,3048000,3048000,3200400,3048000,2743200]]></ColumnWidth>
+<![CDATA[1584960,2743200,3108960,2743200,3992880,2743200,3291840,2743200,3291840,2743200,2987040,2743200,2743200,3048000,3200400,3048000,3048000,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="17" s="0">
 <O>
@@ -210,14 +210,6 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="17" r="3">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="18" r="3">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="4" cs="8" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
@@ -235,14 +227,6 @@
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
-</C>
-<C c="17" r="4">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="18" r="4">
-<PrivilegeControl/>
-<Expand/>
 </C>
 <C c="0" r="5" cs="8" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
@@ -262,14 +246,6 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="17" r="5">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="18" r="5">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="6" cs="8" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
@@ -288,14 +264,6 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="17" r="6">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="18" r="6">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="7" cs="8" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
@@ -313,14 +281,6 @@
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
-</C>
-<C c="17" r="7">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="18" r="7">
-<PrivilegeControl/>
-<Expand/>
 </C>
 <C c="0" r="8" s="7">
 <O>
@@ -559,11 +519,6 @@
 </Highlight>
 </HighlightList>
 <Expand dir="1" leftParentDefault="false" left="A4" upParentDefault="false"/>
-</C>
-<C c="17" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="9" s="10">
 <O t="XMLable" class="com.fr.base.Formula">
@@ -973,11 +928,6 @@
 <Present class="com.fr.base.present.FormulaPresent"/>
 <Expand dir="1" leftParentDefault="false" left="B10"/>
 </C>
-<C c="17" r="9">
-<PrivilegeControl/>
-<CellPageAttr/>
-<Expand/>
-</C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
@@ -1092,8 +1042,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="2" color="-16777216"/>
 </Border>
@@ -1160,6 +1110,12 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="f97bf8f8-7b9c-40f0-9e87-a8730a2e7fcb"/>
 </TemplateIdAttMark>

@@ -1,6 +1,7 @@
 
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.model.vo.purchase.QuoteSeparatelyVo;
 import cn.bidlink.report.app.service.PurchaseProxyService;
@@ -11,23 +12,18 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author <a href="mailto:xinyuli@ebnew.com">wisdom</a>
- * @version Ver 1.0
- * @description:采购项目：成交定价采购品-供应商维度 对应供应商表头
- * @Date 2019/7/11
- *
- */
+ * @ClassName PurchaseQuotationsSupplierTitleDataSource
+ * @Author 从尧
+ * @Description 采购项目 报价一览表 采购品-供应商维度
+ * @Date 2019-07-10 11:29
+ * @Version 1.0
+ **/
 public class PurchaseQuotationsSupplierTitleDataSource extends AbstractBaseTableData {
 
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId"),
-                new Parameter("handStatus"),
-                new Parameter("viewFlag"),
-                new Parameter("supplierIds"),
-                new Parameter("exportFlag")
+                new Parameter("projectId")
         };
     }
 
@@ -41,7 +37,7 @@ public class PurchaseQuotationsSupplierTitleDataSource extends AbstractBaseTable
 
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         List<QuoteSeparatelyVo> quoteSeparatelyVos = purchaseProxyService.priceSupplierTitle(Long.valueOf(param.get("projectId")),
-                Long.valueOf(param.get("companyId")), 1, true);
+                UserContext.getCompanyId(), 1, true);
         return quoteSeparatelyVos;
     }
 

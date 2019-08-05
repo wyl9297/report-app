@@ -460,7 +460,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                             }
                             //key":"multi_supplier_11113173863(json内容)
                             if (key.contains("_")){
-                                Long supplierId = Long.valueOf(key.substring(key.length() - 11, key.length()));
+                                Long supplierId = Long.valueOf(key.substring(15));
                                 quoteSeparatelyVo.setSupplierId(supplierId);
                             }
                             objects.add(quoteSeparatelyVo);
@@ -504,7 +504,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     // 报价一览表采购品-供应商  成交定价-采购品供应商  共用查询接口
     @Override
     public DealItemSupplierVo quotationPricing(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag) {
-        DealItemSupplierVo itemSupplierVoList = dealItemSupplierRestService.findItemSupplierVoList(projectId, companyId, userId, handStatus, viewFlag, null, null);
+        DealItemSupplierVo itemSupplierVoList = dealItemSupplierRestService.findItemSupplierVoList(projectId, companyId, userId, handStatus, viewFlag, null, true);
         return itemSupplierVoList;
     }
 
@@ -572,7 +572,9 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                                     }
                                     quoteSeparatelyVo.setSupplierId(Long.valueOf(String.valueOf(supplierList.get("supplierId"))));
                                     quoteSeparatelyVo.setSupplierProjectItemId(Long.valueOf(String.valueOf(supplierList.get("supplierProjectItemId"))));
-                                    quoteSeparatelyVo.setDirectoryId(Long.valueOf(String.valueOf(table.get("directoryId"))));
+                                    if(table.get("directoryId") != null){
+                                        quoteSeparatelyVo.setDirectoryId(Long.valueOf(String.valueOf(table.get("directoryId"))));
+                                    }
                                     quoteSeparatelyVo.setProjectItemId(Long.valueOf(String.valueOf(table.get("projectItemId"))));
 
                                     bidding.add(quoteSeparatelyVo);
@@ -590,7 +592,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
 
     @Override
     public List<QuoteSeparatelyVo> priceSupplierTitle(Long projectId, Long companyId,Integer handStatus, Boolean viewFlag) {
-        String dealItemSupplierTitlePro = quotedPriceRestService.getDealItemSupplierTitlePro(projectId, companyId, handStatus, viewFlag, null, null);
+        String dealItemSupplierTitlePro = quotedPriceRestService.getDealItemSupplierTitlePro(projectId, companyId, handStatus, viewFlag, null, true);
         List<QuoteSeparatelyVo> objects = new ArrayList<>();
         List<QuoteSeparatelyVo> objectsnull = new ArrayList<>();
         if (StringUtils.isNotBlank(dealItemSupplierTitlePro)){
@@ -609,7 +611,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                     }
 
                     if (key.contains("_")){
-                        Long supplierId = Long.valueOf(key.substring(key.length() - 11, key.length()));
+                        Long supplierId = Long.valueOf(key.substring(15));
                         quoteSeparatelyVo.setSupplierId(supplierId);
                     }
                     objects.add(quoteSeparatelyVo);

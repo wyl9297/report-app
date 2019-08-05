@@ -1,6 +1,7 @@
 
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.procurement.purchase.cloud.vo.DealItemSupplierVo;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.service.PurchaseProxyService;
@@ -24,13 +25,7 @@ public class PurchaseClinchDealPricePurDealTotPriceDataSource extends AbstractBa
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId"),
-                new Parameter("userId"),
-                new Parameter("handStatus"),
-                new Parameter("viewFlag"),
-                new Parameter("supplierIds"),
-                new Parameter("exportFlag")
+                new Parameter("projectId")
         };
     }
 
@@ -44,7 +39,7 @@ public class PurchaseClinchDealPricePurDealTotPriceDataSource extends AbstractBa
 
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         DealItemSupplierVo supplierVo = purchaseProxyService.quotationPricing(Long.valueOf(param.get("projectId")),
-                Long.valueOf(param.get("companyId")), Long.valueOf(param.get("userId")), 2, false);
+                UserContext.getCompanyId(), UserContext.getUserId(), 2, false);
         List<DealItemSupplierVo> tableData = new ArrayList<>();
         BigDecimal dealTotalPrice = supplierVo.getDealTotalPrice();
         DealItemSupplierVo dealItemSupplierVo = new DealItemSupplierVo();

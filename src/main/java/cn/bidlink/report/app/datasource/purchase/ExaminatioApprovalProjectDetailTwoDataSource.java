@@ -1,6 +1,7 @@
 
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeParamDto;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.model.vo.purchase.TaskRecodeDtoVO;
@@ -23,9 +24,7 @@ public class ExaminatioApprovalProjectDetailTwoDataSource extends AbstractBaseTa
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("companyId"),
                 new Parameter("projectId"),
-                new Parameter("executor"),
                 new Parameter("module")
         };
     }
@@ -42,8 +41,8 @@ public class ExaminatioApprovalProjectDetailTwoDataSource extends AbstractBaseTa
 
         ApproveRecodeParamDto approveRecodeParamDto = new ApproveRecodeParamDto();
         approveRecodeParamDto.setProjectId(Long.valueOf(param.get("projectId")));
-        approveRecodeParamDto.setCompanyId(Long.valueOf(param.get("companyId")));
-        approveRecodeParamDto.setExecutor(param.get("executor"));
+        approveRecodeParamDto.setCompanyId(UserContext.getCompanyId());
+        //approveRecodeParamDto.setExecutor(param.get("executor"));
         approveRecodeParamDto.setModule(Integer.parseInt(param.get("module")));
         List<TaskRecodeDtoVO> workflowApproveProjectDetailTwo = project.findWorkflowApproveProjectDetailTwo(approveRecodeParamDto);
 
