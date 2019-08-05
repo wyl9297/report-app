@@ -123,7 +123,7 @@
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
-<HR/>
+<HR F="12" T="12"/>
 <FR/>
 <HC/>
 <FC/>
@@ -133,7 +133,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,1143000,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,3352800,2743200,2743200,3276600,2590800,2743200,2743200,2743200,3238500,2743200]]></ColumnWidth>
+<![CDATA[2743200,3352800,3314700,3543300,3352800,3314700,3505200,3695700,2590800,2743200,2743200,2743200,3238500,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="8" s="0">
 <O t="DSColumn">
@@ -420,7 +420,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) != 1)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) = 1)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -433,6 +433,12 @@
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 3)]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="1">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[ROWCOUNT("orderPurchaseDetail") = 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -480,93 +486,19 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) != 1)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) = 1)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 6, orderInvoiceDetail.select(cargoStatus) != 5)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 6 , orderInvoiceDetail.select(cargoStatus)!=5)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 3)]]></Formula>
-</Condition>
-</JoinCondition>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
-</Highlight>
-</HighlightList>
-<Expand/>
-</C>
-<C c="1" r="12" s="0">
-<O>
-<![CDATA[采购品编码]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="2" r="12" s="0">
-<O>
-<![CDATA[采购品名称]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="3" r="12" s="0">
-<O>
-<![CDATA[计量单位]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="4" r="12" s="0">
-<O>
-<![CDATA[数量]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="5" r="12" s="0">
-<O>
-<![CDATA[单价]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="6" r="12" s="0">
-<O>
-<![CDATA[单品总价]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="7" r="12" s="0">
-<O>
-<![CDATA[技术参数/材质]]></O>
-<PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[INARRAY("技术参数/材质", split($Columns, ",")) = 0]]></Formula>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
-</Highlight>
-</HighlightList>
-<Expand/>
-</C>
-<C c="8" r="12" s="0">
-<O>
-<![CDATA[规格/型号]]></O>
-<PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[INARRAY("规格/型号", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 7 , orderInvoiceDetail.select(cargoStatus)!=3)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -576,10 +508,80 @@
 </Condition>
 </JoinCondition>
 </Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="1" r="12" s="0">
+<O>
+<![CDATA[采购品编码]]></O>
+<PrivilegeControl/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="2" r="12" s="0">
+<O>
+<![CDATA[采购品名称]]></O>
+<PrivilegeControl/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="3" r="12" s="0">
+<O>
+<![CDATA[计量单位]]></O>
+<PrivilegeControl/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="4" r="12" s="0">
+<O>
+<![CDATA[数量]]></O>
+<PrivilegeControl/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="5" r="12" s="0">
+<O>
+<![CDATA[单价（元）]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[orderDetail.select(projectType) == 1]]></Formula>
+</Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="6" r="12" s="0">
+<O>
+<![CDATA[单品总价（元）]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[orderDetail.select(projectType) == 1]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="7" r="12" s="0">
+<O>
+<![CDATA[技术参数/材质]]></O>
+<PrivilegeControl/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
+</C>
+<C c="8" r="12" s="0">
+<O>
+<![CDATA[规格/型号]]></O>
+<PrivilegeControl/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="9" r="12" s="0">
 <O>
@@ -589,24 +591,14 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("备注", split($Columns, ",")) = 0]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="1">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[ROWCOUNT("orderPurchaseDetail") = 0]]></Formula>
-</Condition>
-</JoinCondition>
+<![CDATA[orderDetail.select(projectType) == 1]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="10" r="12" s="0">
 <O>
@@ -633,7 +625,7 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="11" r="12" s="0">
 <O>
@@ -660,7 +652,7 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="12" r="12" s="0">
 <O>
@@ -687,7 +679,7 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="13" r="12" s="0">
 <O>
@@ -714,7 +706,7 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="14" r="12" s="0">
 <O>
@@ -741,7 +733,7 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="15" r="12" s="0">
 <O>
@@ -768,7 +760,7 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="16" r="12" s="0">
 <O t="DSColumn">
@@ -804,7 +796,7 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand dir="1"/>
+<Expand dir="1" leftParentDefault="false" upParentDefault="false" up="A12"/>
 </C>
 <C c="0" r="13" s="1">
 <O t="XMLable" class="com.fr.base.Formula">
@@ -844,7 +836,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) != 1)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) = 1)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -857,6 +849,12 @@
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 3)]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="1">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[ROWCOUNT("orderPurchaseDetail") = 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -963,19 +961,9 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 250]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[INARRAY("技术参数/材质", split($Columns, ",")) != 0]]></Formula>
-</Condition>
-</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -996,19 +984,9 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 250]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[INARRAY("规格/型号", split($Columns, ",")) != 0]]></Formula>
-</Condition>
-</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -1029,19 +1007,9 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 250]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[INARRAY("备注", split($Columns, ",")) != 0]]></Formula>
-</Condition>
-</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -1050,19 +1018,9 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性2]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 500]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[INARRAY("备注", split($Columns, ",")) != 0]]></Formula>
-</Condition>
-</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="14400000"/>
@@ -1248,12 +1206,12 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A12" upParentDefault="false" up="A12"/>
+<Expand dir="0" leftParentDefault="false" left="A12" upParentDefault="false" up="A12"/>
 </C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings pageOrder="1" headerHeight="0" footerHeight="720000">
-<PaperSetting>
+<PaperSetting orientation="1">
 <Margin top="986400" left="1447200" bottom="986400" right="1447200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
@@ -1306,7 +1264,7 @@
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="1"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -1316,7 +1274,7 @@
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="1"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="2" imageLayout="1">

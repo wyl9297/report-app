@@ -1,6 +1,7 @@
 
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.procurement.purchase.cloud.dto.ProjectDto;
 import cn.bidlink.procurement.purchase.cloud.service.ProjectRestService;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
@@ -23,8 +24,7 @@ public class PurchaseClinchDealPriceProjectBaseDataSource extends AbstractBaseTa
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId")
+                new Parameter("projectId")
         };
     }
 
@@ -37,7 +37,7 @@ public class PurchaseClinchDealPriceProjectBaseDataSource extends AbstractBaseTa
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
 
         ProjectRestService dataService = dataServiceFactory.getDataService(ProjectRestService.class);
-        ProjectDto projectBase = dataService.getProjectBase(Long.valueOf(param.get("projectId")), Long.valueOf(param.get("companyId")));
+        ProjectDto projectBase = dataService.getProjectBase(Long.valueOf(param.get("projectId")), UserContext.getCompanyId());
         List<ProjectDto> projectDetail = new ArrayList<>();
         List<ProjectDto> projectDetailNull = new ArrayList<>();
         if ( null != projectBase && !"".equals(projectBase)){

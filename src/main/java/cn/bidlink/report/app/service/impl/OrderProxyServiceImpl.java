@@ -119,7 +119,6 @@ public class OrderProxyServiceImpl implements OrderProxyService {
         if (null != orderCargoPrintList && orderCargoPrintList.size() > 0){
             orderCargoPrintList.forEach(orderList ->{
                 List<OrderCargoItem> orderItems = orderList.getOrderCargoItems();
-                //OrderCargoItem orderCargoItem = new OrderCargoItem();
                 orderItems.forEach(items ->{
 
                     OrderCargoItemVO orderCargoItem = new OrderCargoItemVO();
@@ -163,9 +162,11 @@ public class OrderProxyServiceImpl implements OrderProxyService {
                     //计算单品总价（单价*货单的发货量）
                     BigDecimal quoteUnitPrice = items.getQuoteUnitPrice();
                     BigDecimal cargoSendNumber = items.getCargoSendNumber();
-                    BigDecimal multiply = quoteUnitPrice.multiply(cargoSendNumber);
-                    BigDecimal bigDecimal = multiply.setScale(4, BigDecimal.ROUND_HALF_UP);
-                    orderCargoItem.setQuoteTotalPrice(bigDecimal);
+                    if( quoteUnitPrice != null){
+                        BigDecimal multiply = quoteUnitPrice.multiply(cargoSendNumber);
+                        BigDecimal bigDecimal = multiply.setScale(2, BigDecimal.ROUND_HALF_UP);
+                        orderCargoItem.setQuoteTotalPrice(bigDecimal);
+                    }
 
                     orderCargoItems.add(orderCargoItem);
 
@@ -224,7 +225,7 @@ public class OrderProxyServiceImpl implements OrderProxyService {
         List<OrderCargoItemQuteItemVO> orderCargoItems = new ArrayList<>();
         OrderDetailDto orderDetail = orderListResultService.getOrderDetail(mainId, companyId);
         String quoteSubItem = orderDetail.getQuoteSubItem();
-        if (null != quoteSubItem && !"null".equals(quoteSubItem) && !quoteSubItem.isEmpty()) {
+        if (null != quoteSubItem && !"null".equals(quoteSubItem) && !quoteSubItem.isEmpty() && !" ".equals(quoteSubItem)) {
             LinkedHashMap<String, Object> quote = JSON.parseObject(quoteSubItem, LinkedHashMap.class);
             for (String s : quote.keySet()) {
                 LinkedHashMap <String , Object> it = JSON.parseObject(String.valueOf(quote.get(s)) , LinkedHashMap.class);

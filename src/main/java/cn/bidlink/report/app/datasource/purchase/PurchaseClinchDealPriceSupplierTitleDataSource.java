@@ -1,6 +1,7 @@
 
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.model.vo.purchase.QuoteSeparatelyVo;
 import cn.bidlink.report.app.service.PurchaseProxyService;
@@ -22,12 +23,7 @@ public class PurchaseClinchDealPriceSupplierTitleDataSource extends AbstractBase
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId"),
-                new Parameter("handStatus"),
-                new Parameter("viewFlag"),
-                new Parameter("supplierIds"),
-                new Parameter("exportFlag")
+                new Parameter("projectId")
         };
     }
 
@@ -41,7 +37,7 @@ public class PurchaseClinchDealPriceSupplierTitleDataSource extends AbstractBase
 
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         List<QuoteSeparatelyVo> quoteSeparatelyVos = purchaseProxyService.priceSupplierTitle(Long.valueOf(param.get("projectId")),
-                Long.valueOf(param.get("companyId")), 2, false);
+                UserContext.getCompanyId(), 2, false);
         return quoteSeparatelyVos;
     }
 

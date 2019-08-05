@@ -708,7 +708,7 @@
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="1"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">

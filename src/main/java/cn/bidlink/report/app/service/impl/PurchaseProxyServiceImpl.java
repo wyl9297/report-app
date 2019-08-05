@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -53,6 +54,9 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     private Logger logger = LoggerFactory.getLogger(TenderProxyServiceImpl.class);
     @Autowired
     private DealItemSupplierRestService dealItemSupplierRestService;
+
+    @Autowired
+    private ProjectBargainRestService projectBargainRestService;
 
     @Override
     public List<Map<String, Object>> getSupplierQuoteData(Long projectId, Long companyId) {
@@ -460,7 +464,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                             }
                             //key":"multi_supplier_11113173863(json内容)
                             if (key.contains("_")){
-                                Long supplierId = Long.valueOf(key.substring(key.length() - 11, key.length()));
+                                Long supplierId = Long.valueOf(key.substring(15));
                                 quoteSeparatelyVo.setSupplierId(supplierId);
                             }
                             objects.add(quoteSeparatelyVo);
@@ -504,7 +508,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     // 报价一览表采购品-供应商  成交定价-采购品供应商  共用查询接口
     @Override
     public DealItemSupplierVo quotationPricing(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag) {
-        DealItemSupplierVo itemSupplierVoList = dealItemSupplierRestService.findItemSupplierVoList(projectId, companyId, userId, handStatus, viewFlag, null, null);
+        DealItemSupplierVo itemSupplierVoList = dealItemSupplierRestService.findItemSupplierVoList(projectId, companyId, userId, handStatus, viewFlag, null, true);
         return itemSupplierVoList;
     }
 
@@ -514,7 +518,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
         List<QuoteSeparatelyVo> bidding = new ArrayList<>();
         List<QuoteSeparatelyVo> biddingNull = new ArrayList<>();
         List<Map<String, Object>> tableData = itemSupplierVoList.getTableData();
-        if ( !"null".equals(tableData) && tableData.size()>0){
+        if ( null != tableData && !"null".equals(tableData) && tableData.size()>0){
             //得到每一个采购品
             tableData.forEach(table->{
                 List<LinkedHashMap<String, Object>> supplier = (List<LinkedHashMap<String, Object>>) table.get("supplierChildrenColumns");
@@ -549,7 +553,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
         List<QuoteSeparatelyVo> bidding = new ArrayList<>();
         List<QuoteSeparatelyVo> biddingNull = new ArrayList<>();
         List<Map<String, Object>> tableData = itemSupplierVoList.getTableData();
-        if ( !"null".equals(tableData) && tableData.size()>0){
+        if ( null != tableData && !"null".equals(tableData) && tableData.size()>0){
             //得到每一个采购品
             tableData.forEach(table->{
                 List<LinkedHashMap<String, Object>> supplier = (List<LinkedHashMap<String, Object>>) table.get("supplierList");
@@ -565,14 +569,16 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                                     QuoteSeparatelyVo quoteSeparatelyVo = new QuoteSeparatelyVo();
                                     quoteSeparatelyVo.setKey(sho);
                                     String o = String.valueOf(show.get(sho));
-                                    if ( !"".equals(o) && o != null){
+                                    if ( !"null".equals(o) && o != null){
                                         quoteSeparatelyVo.setValue(o);
                                     }else {
                                         quoteSeparatelyVo.setValue("");
                                     }
                                     quoteSeparatelyVo.setSupplierId(Long.valueOf(String.valueOf(supplierList.get("supplierId"))));
                                     quoteSeparatelyVo.setSupplierProjectItemId(Long.valueOf(String.valueOf(supplierList.get("supplierProjectItemId"))));
-                                    quoteSeparatelyVo.setDirectoryId(Long.valueOf(String.valueOf(table.get("directoryId"))));
+                                    if(table.get("directoryId") != null){
+                                        quoteSeparatelyVo.setDirectoryId(Long.valueOf(String.valueOf(table.get("directoryId"))));
+                                    }
                                     quoteSeparatelyVo.setProjectItemId(Long.valueOf(String.valueOf(table.get("projectItemId"))));
 
                                     bidding.add(quoteSeparatelyVo);
@@ -590,10 +596,10 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
 
     @Override
     public List<QuoteSeparatelyVo> priceSupplierTitle(Long projectId, Long companyId,Integer handStatus, Boolean viewFlag) {
-        String dealItemSupplierTitlePro = quotedPriceRestService.getDealItemSupplierTitlePro(projectId, companyId, handStatus, viewFlag, null, null);
+        String dealItemSupplierTitlePro = quotedPriceRestService.getDealItemSupplierTitlePro(projectId, companyId, handStatus, viewFlag, null, true);
         List<QuoteSeparatelyVo> objects = new ArrayList<>();
         List<QuoteSeparatelyVo> objectsnull = new ArrayList<>();
-        if (StringUtils.isNotBlank(dealItemSupplierTitlePro)){
+        if (!"[]".equals(dealItemSupplierTitlePro)  && StringUtils.isNotBlank(dealItemSupplierTitlePro) ){
 
             JSONArray jsonObject = JSONArray.fromObject(dealItemSupplierTitlePro);
             List<Map<String, Object>> mapListJson = (List<Map<String, Object>>) jsonObject;
@@ -609,7 +615,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                     }
 
                     if (key.contains("_")){
-                        Long supplierId = Long.valueOf(key.substring(key.length() - 11, key.length()));
+                        Long supplierId = Long.valueOf(key.substring(15));
                         quoteSeparatelyVo.setSupplierId(supplierId);
                     }
                     objects.add(quoteSeparatelyVo);
@@ -619,5 +625,87 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
         }else {
             return objectsnull;
         }
+    }
+
+    @Override
+    public List<Map<String, String>> getBargainItemList(Long projectId, Long companyId) {
+        List<Map<String,String>> list = new ArrayList<>();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //查询数据并返回
+        List<BargainAllListVo> allBargainItemList = projectBargainRestService.findAllBargainItemList(projectId, companyId);
+        allBargainItemList.forEach(bargainAllListVo -> {
+            List<ProjectSupplierDimensionItemDetailVO> itemList = bargainAllListVo.getItemList();
+            itemList.forEach( projectSupplierDimensionItemDetailVO -> {
+                Map<String,String> map = new HashMap(13,1);
+                map.put("supplierName" , bargainAllListVo.getSupplierName());
+                map.put("itemName", projectSupplierDimensionItemDetailVO.getName());
+                map.put("spec", projectSupplierDimensionItemDetailVO.getSpec());
+                map.put("purchaseAmount", projectSupplierDimensionItemDetailVO.getPurchaseAmount().toString());
+                map.put("unitName", projectSupplierDimensionItemDetailVO.getUnitName());
+                map.put("quoteUnitPrice", projectSupplierDimensionItemDetailVO.getQuoteUnitPrice().toString());
+                map.put("afterPrice", projectSupplierDimensionItemDetailVO.getAfterPrice().toString());
+                map.put("purchaseRemark", projectSupplierDimensionItemDetailVO.getPurchaseRemark());
+                map.put("bargainTime", simpleDateFormat.format(projectSupplierDimensionItemDetailVO.getCreateTime()));
+                map.put("needConfirm", projectSupplierDimensionItemDetailVO.getNeedConfirm() == 1 ? "是" : "否" );
+                map.put("supplierItemId" , projectSupplierDimensionItemDetailVO.getProjectItemId().toString() );
+                map.put("supplierId" , projectSupplierDimensionItemDetailVO.getSupplierId().toString() );
+                if ( null != projectSupplierDimensionItemDetailVO.getSupplierConfirmTime() ) {
+                    map.put("supplierConfirmTime",simpleDateFormat.format(projectSupplierDimensionItemDetailVO.getSupplierConfirmTime()));
+                }
+                list.add(map);
+            });
+        });
+        return list;
+    }
+
+    @Override
+    public List<Map<String, String>> getBargainInfoList(Long projectId, Long companyId) {
+        List<Map<String,String>> list = new ArrayList<>();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //查询数据并返回
+        List<BargainAllListVo> allBargainItemList = projectBargainRestService.findAllBargainItemList(projectId, companyId);
+        allBargainItemList.forEach(bargainAllListVo -> {
+            List<ProjectSupplierDimensionItemDetailVO> itemList = bargainAllListVo.getItemList();
+            itemList.forEach( projectSupplierDimensionItemDetailVO -> {
+                List<ProjectBargainVo> bargainList = projectSupplierDimensionItemDetailVO.getBargainList();
+                bargainList.forEach(projectBargainVo -> {
+                    Map<String,String> map = new HashMap(11,1);
+                    map.put("supplierItemId" , projectSupplierDimensionItemDetailVO.getProjectItemId().toString() );
+                    map.put("supplierId" , projectSupplierDimensionItemDetailVO.getSupplierId().toString() );
+                    map.put("beforePrice", projectBargainVo.getBeforePrice().toString());
+                    map.put("afterPrice", projectBargainVo.getAfterPrice().toString());
+                    map.put("startMan", bargainAllListVo.getCreateUserName()); //发起人
+                    map.put("bargainTime", simpleDateFormat.format(projectSupplierDimensionItemDetailVO.getCreateTime())); //议价时间
+                    map.put("needConfirm", projectBargainVo.getNeedConfirm() == 1 ? "是" : "否" ); //是否要求确认
+                    if ( null != projectBargainVo.getSupplierConfirmTime() ) {
+                        map.put("supplierConfirmTime",simpleDateFormat.format(projectBargainVo.getSupplierConfirmTime()));//确认时间
+                    }
+                    Integer bargainStatus = projectBargainVo.getBargainStatus();
+                    if ( null != bargainStatus ) {
+                        switch(bargainStatus){
+                            case 1 :
+                                map.put("bargainStatus","待确认");
+                                break;
+                            case 2 :
+                                map.put("bargainStatus","已确认");
+                                break;
+                            case 3 :
+                                map.put("bargainStatus","已拒绝");
+                                break;
+                            case 4 :
+                                map.put("bargainStatus","已撤回");
+                                break;
+                            case 5 :
+                                map.put("bargainStatus","未确认");
+                                break;
+                        };
+                    }
+                    map.put("bargainReason" , projectBargainVo.getPurchaseRemark() ); //议价原因
+                    map.put("response" , projectBargainVo.getSupplierRemark() ); //反馈备注
+                    list.add(map);
+                });
+            });
+        });
+        return list;
     }
 }

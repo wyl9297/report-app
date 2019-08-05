@@ -15,8 +15,10 @@ import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 招标项目数据源组装逻辑代理类
@@ -190,7 +192,19 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     }else {
                         String foItValue = String.valueOf(formItem.get("value"));
                         if ( !"null".equals(foItValue) && StringUtils.isNotEmpty(foItValue)){
-                            biddingResultDynamicChangeVo.setValue(foItValue);
+                            if("金额".equals(it.get("typeName"))){
+                                DecimalFormat df2=new DecimalFormat("#,##0.0000"); //保留四位小数
+                                String str = ObjectUtils.toString(foItValue, "");
+                                boolean isNull = StringUtils.isNotBlank(str);
+                                if(!StringUtils.isEmpty(str)){
+                                    BigDecimal bigDecimal = new BigDecimal(str);
+                                    biddingResultDynamicChangeVo.setValue(isNull ? df2.format(bigDecimal) : "");
+                                }else{
+                                    biddingResultDynamicChangeVo.setValue("");
+                                }
+                            }else{
+                                biddingResultDynamicChangeVo.setValue(foItValue);
+                            }
                         }
 
                     }
@@ -255,7 +269,19 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     }else {
                         String foItValue = String.valueOf(formItem.get("value"));
                         if ( !"null".equals(foItValue) && StringUtils.isNotEmpty(foItValue)){
-                            biddingResultDynamicChangeVo.setValue(foItValue);
+                            if("金额".equals(it.get("typeName"))){
+                                DecimalFormat df2=new DecimalFormat("#,##0.0000"); //保留四位小数
+                                String str = ObjectUtils.toString(foItValue, "");
+                                boolean isNull = StringUtils.isNotBlank(str);
+                                if(!StringUtils.isEmpty(str)){
+                                    BigDecimal bigDecimal = new BigDecimal(str);
+                                    biddingResultDynamicChangeVo.setValue(isNull ? df2.format(bigDecimal) : "");
+                                }else{
+                                    biddingResultDynamicChangeVo.setValue("");
+                                }
+                            }else{
+                                biddingResultDynamicChangeVo.setValue(foItValue);
+                            }
                         }
 
                     }
@@ -401,11 +427,22 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     if (t.equals("交货地点")){
                         String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
                         biddingResultDynamicChangeVo.setValue(foItValue);
-
                     }else {
                         String foItValue = String.valueOf(formItem.get("value"));
                         if ( !"null".equals(foItValue) && StringUtils.isNotEmpty(foItValue)){
-                            biddingResultDynamicChangeVo.setValue(foItValue);
+                            if("金额".equals(it.get("typeName"))){
+                                DecimalFormat df2=new DecimalFormat("#,##0.0000"); //保留四位小数
+                                String str = ObjectUtils.toString(foItValue, "");
+                                boolean isNull = StringUtils.isNotBlank(str);
+                                if(!StringUtils.isEmpty(str)){
+                                    BigDecimal bigDecimal = new BigDecimal(str);
+                                    biddingResultDynamicChangeVo.setValue(isNull ? df2.format(bigDecimal) : "");
+                                }else{
+                                    biddingResultDynamicChangeVo.setValue("");
+                                }
+                            }else{
+                                biddingResultDynamicChangeVo.setValue(foItValue);
+                            }
                         }
                     }
 

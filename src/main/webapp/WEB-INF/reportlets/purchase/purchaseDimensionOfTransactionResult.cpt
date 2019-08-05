@@ -128,6 +128,90 @@
 </ToolBars>
 <WebPage isPage="true" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
+<WebWriteContent>
+<ToolBars>
+<ToolBarManager>
+<Location>
+<Embed position="1"/>
+</Location>
+<ToolBar>
+<Widget class="com.fr.report.web.button.write.Submit">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[${i18n('Fine-Engine_Report_Utils_Submit')}]]></Text>
+<IconName>
+<![CDATA[submit]]></IconName>
+<Verify failVerifySubmit="false" value="true"/>
+<Sheet onlySubmitSelect="false"/>
+</Widget>
+<Widget class="com.fr.report.web.button.write.Verify">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[${i18n('Fine-Engine_Report_Verify_Data')}]]></Text>
+<IconName>
+<![CDATA[verify]]></IconName>
+</Widget>
+<Widget class="com.fr.report.web.button.NewPrint">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[${i18n('Fine-Engine_Print')}]]></Text>
+<IconName>
+<![CDATA[print]]></IconName>
+</Widget>
+<Widget class="com.fr.report.web.button.Export">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[${i18n('Export')}]]></Text>
+<IconName>
+<![CDATA[export]]></IconName>
+<Buttons pdf="true" excelP="true" excelO="true" excelS="true" word="true" image="true" html="true"/>
+</Widget>
+<Widget class="com.fr.report.web.button.Email">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[${i18n('Fine-Engine_Report_Email')}]]></Text>
+<IconName>
+<![CDATA[email]]></IconName>
+<EmailButton customConsignee="true" consigneeByDepartment="false" consigneeByRole="false"/>
+</Widget>
+<Widget class="com.fr.report.web.button.write.AppendColumnRow">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[${i18n('Fine-Engine_Add_Record')}]]></Text>
+<IconName>
+<![CDATA[appendrow]]></IconName>
+</Widget>
+<Widget class="com.fr.report.web.button.write.ShowCellValue">
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<widgetValue/>
+<LabelAttr verticalcenter="true" textalign="0" autoline="false"/>
+<FRFont name="SimSun" style="0" size="72"/>
+<border style="0" color="-723724"/>
+</Widget>
+</ToolBar>
+</ToolBarManager>
+</ToolBars>
+<EditRowColor setColor="false"/>
+<WebWrite SheetPosition="3"/>
+<RptLocation isShowAtLeft="true"/>
+<UnloadCheck/>
+<ShowWidgets/>
+<OtherAttr autoStash="false"/>
+</WebWriteContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
 <ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
@@ -142,7 +226,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[875520,875520,875520,875520,875520,875520,723900,875520,875520,723900,723900,875520,2255520,723900]]></RowHeight>
+<![CDATA[875520,722880,722880,722880,722880,722880,723900,1143000,875520,723900,723900,875520,2255520,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[3017520,3169920,2743200,3017520,3108960,2743200,2743200,3810000,3322320,2956560,2743200,2743200,2987040,2743200,3200400,3390900,3596640,3596640,2971800,3474720,3505200,3383280,3688080,2743200]]></ColumnWidth>
 <CellElementList>
@@ -150,6 +234,7 @@
 <O>
 <![CDATA[成交结果(采购品维度)]]></O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="0" r="1" s="1">
@@ -166,6 +251,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
 <C c="0" r="2" s="1">
@@ -182,6 +268,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
 <C c="0" r="3" s="1">
@@ -198,6 +285,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
 <C c="0" r="4" s="1">
@@ -214,6 +302,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
 <C c="0" r="5" s="3">
@@ -230,6 +319,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
 <C c="0" r="7" s="5">
@@ -260,7 +350,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("规格型号", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("规格型号", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -277,7 +367,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("技术参数", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("技术参数", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -312,7 +402,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("申报人、电话", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("申报人、电话", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -329,7 +419,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("申报企业", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("申报企业", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -346,7 +436,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("使用单位", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("使用单位", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -363,7 +453,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("用途", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("用途", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -380,7 +470,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("需求日期", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("需求日期", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -397,7 +487,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("采购品备注", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("采购品备注", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -441,7 +531,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)=0]]></Formula>
+<![CDATA[len($$$) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -550,7 +640,7 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("规格型号", split($Columns, ",")) != 0]]></Formula>
+<![CDATA[INARRAY("规格型号", split($ckbx, ",")) != 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -584,7 +674,7 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("技术参数", split($Columns, ",")) != 0]]></Formula>
+<![CDATA[INARRAY("技术参数", split($ckbx, ",")) != 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -684,7 +774,7 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("用途", split($Columns, ",")) != 0]]></Formula>
+<![CDATA[INARRAY("用途", split($ckbx, ",")) != 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -727,7 +817,7 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("采购品备注", split($Columns, ",")) != 0]]></Formula>
+<![CDATA[INARRAY("采购品备注", split($ckbx, ",")) != 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -748,7 +838,7 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("采购品备注", split($Columns, ",")) != 0]]></Formula>
+<![CDATA[INARRAY("采购品备注", split($ckbx, ",")) != 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -946,7 +1036,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)>250]]></Formula>
+<![CDATA[len($$$) > 250]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -990,13 +1080,86 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="1" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
+<ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
+<Parameters/>
+<Layout class="com.fr.form.ui.container.WParameterLayout">
+<WidgetName name="para"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Margin top="0" left="0" bottom="0" right="0"/>
+<Border>
+<border style="0" color="-723724" borderRadius="0" type="0" borderStyle="0"/>
+<WidgetTitle>
+<O>
+<![CDATA[新建标题]]></O>
+<FRFont name="SimSun" style="0" size="72"/>
+<Position pos="0"/>
+</WidgetTitle>
+<Alpha alpha="1.0"/>
+</Border>
+<Background name="ColorBackground" color="-526086"/>
+<LCAttr vgap="0" hgap="0" compInterval="0"/>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.parameter.FormSubmitButton">
+<WidgetName name="formSubmit0"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[查询]]></Text>
+<Hotkeys>
+<![CDATA[enter]]></Hotkeys>
+</InnerWidget>
+<BoundsAttr x="674" y="8" width="80" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.CheckBoxGroup">
+<WidgetName name="ckbx"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.FormulaDictionary">
+<FormulaDict>
+<![CDATA[=split("规格型号,技术参数,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注",",")]]></FormulaDict>
+</Dictionary>
+<widgetValue>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=ARRAY($Columns)]]></Attributes>
+</O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="9" y="8" width="643" height="21"/>
+</Widget>
+<Sorted sorted="false"/>
+<MobileWidgetList>
+<Widget widgetName="ckbx"/>
+<Widget widgetName="formSubmit0"/>
+</MobileWidgetList>
+<Display display="true"/>
+<DelayDisplayContent delay="false"/>
+<UseParamsTemplate use="true"/>
+<Position position="1"/>
+<Design_Width design_width="773"/>
+<NameTagModified/>
+<WidgetNameTagMap/>
+<ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
+</Layout>
+<DesignAttr width="773" height="41"/>
+</ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
 <O>
 <![CDATA[隆道云]]></O>
+</Parameter>
+<Parameter>
+<Attributes name="Columns"/>
+<O>
+<![CDATA[]]></O>
 </Parameter>
 </ReportParameterAttr>
 <StyleList>
@@ -1005,16 +1168,16 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="2" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
 <Left style="2" color="-16777216"/>
-<Right style="2"/>
+<Right style="2" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="1"/>
 <Left style="2"/>
 <Right style="1"/>
@@ -1034,7 +1197,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="2" color="-16777216"/>
 <Right style="1" color="-16777216"/>
@@ -1055,7 +1218,7 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="2" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
 <Left style="2" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
@@ -1065,7 +1228,7 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="2" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
 <Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
@@ -1075,9 +1238,9 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="2" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
 <Left style="1" color="-16777216"/>
-<Right style="2" color="-16777216"/>
+<Right style="2"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">

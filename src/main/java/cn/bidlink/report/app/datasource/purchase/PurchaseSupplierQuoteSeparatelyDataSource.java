@@ -1,6 +1,7 @@
 
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.report.app.model.vo.purchase.QuoteSeparatelyVo;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.service.PurchaseProxyService;
@@ -38,10 +39,8 @@ public class PurchaseSupplierQuoteSeparatelyDataSource extends AbstractBaseTable
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
-        String pageNum = param.get("pageNum");
-        String pageSize = param.get("pageSize");
         List<QuoteSeparatelyVo> itemSupplierQuoteInfoWithTableDate =
-                purchaseProxyService.findItemSupplierQuoteInfoWithTableDate(Long.valueOf(Long.valueOf(param.get("companyId"))), Long.valueOf(Long.valueOf(param.get("projectId"))), Boolean.getBoolean(param.get("quoteResult")),"".equals(pageNum) ? 0 : Integer.valueOf(pageNum), "".equals(pageSize) ? 0 : Integer.valueOf(pageSize));
+                purchaseProxyService.findItemSupplierQuoteInfoWithTableDate(UserContext.getCompanyId(), Long.valueOf(Long.valueOf(param.get("projectId"))), Boolean.getBoolean(param.get("quoteResult")),0, 100);
         return itemSupplierQuoteInfoWithTableDate;
     }
 

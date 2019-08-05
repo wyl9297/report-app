@@ -1,5 +1,6 @@
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.model.vo.purchase.ProjectSupplierDealVo;
 import cn.bidlink.report.app.service.PurchaseProxyService;
@@ -20,9 +21,7 @@ public class TransactionPricingPurchasesWithSupplierDataSource extends AbstractB
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId"),
-                new Parameter("showUnConfirmed")
+                new Parameter("projectId")
         };
     }
 
@@ -34,14 +33,11 @@ public class TransactionPricingPurchasesWithSupplierDataSource extends AbstractB
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        //fixme 以下是demo示例 老司机请直接删除
         //获取服务
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         //获取报表查询的参数
         String projectId = param.get("projectId");
-        String companyId = param.get("companyId");
-        String showUnConfirmed = param.get("showUnConfirmed");
-        List<ProjectSupplierDealVo> processedDealList = purchaseProxyService.findProcessedDealList(Long.parseLong(projectId), Long.parseLong(companyId), Boolean.parseBoolean(showUnConfirmed));
+        List<ProjectSupplierDealVo> processedDealList = purchaseProxyService.findProcessedDealList(Long.parseLong(projectId), UserContext.getCompanyId(), true);
         return processedDealList;
     }
 }

@@ -146,9 +146,9 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[952500,723900,723900,723900,723900,876300,876300,875520,723900,876300,876300,723900]]></RowHeight>
+<![CDATA[952500,723900,723900,723900,723900,723900,723900,723900,723900,876300,876300,875520,723900,876300,876300,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1066800,4206240,3848100,4320000,4320000,3291840,2895600,2895600,2895600,3505200,3505200,2895600,3352800,4533900,3230880,3657600,3695700,3779520,3383280,3390900,3657600,3619500,3619500,3619500,3086100,2857500,4724400,2743200]]></ColumnWidth>
+<![CDATA[1066800,4206240,3848100,4320000,4320000,3291840,2895600,2895600,2895600,3505200,3505200,2895600,3352800,4533900,3230880,3657600,3695700,3779520,3383280,3390900,3657600,3619500,3619500,3619500,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="2" s="0">
 <PrivilegeControl/>
@@ -163,12 +163,76 @@
 </C>
 <C c="0" r="1" cs="2" s="2">
 <O>
+<![CDATA[项目名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="1" cs="22" s="3">
+<O t="DSColumn">
+<Attributes dsName="project" columnName="projectName"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="2" cs="2" s="2">
+<O>
+<![CDATA[项目编码]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="2" cs="22" s="3">
+<O t="DSColumn">
+<Attributes dsName="project" columnName="projectCode"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="3" cs="2" s="2">
+<O>
+<![CDATA[建项人]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="3" cs="22" s="3">
+<O t="DSColumn">
+<Attributes dsName="project" columnName="createUserName"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="4" cs="2" s="2">
+<O>
+<![CDATA[建项时间]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="4" cs="22" s="3">
+<O t="DSColumn">
+<Attributes dsName="project" columnName="createTime"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="5" cs="2" s="2">
+<O>
 <![CDATA[成交合计（元）]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="2" r="1" cs="22" s="3">
+<C c="2" r="5" cs="22" s="3">
 <O t="DSColumn">
 <Attributes dsName="project" columnName="dealTotalPrice"/>
 <Complex/>
@@ -179,14 +243,14 @@
 <CellPageAttr/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="2" cs="2" s="2">
+<C c="0" r="6" cs="2" s="2">
 <O>
 <![CDATA[节资额合计（元）]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="2" r="2" cs="22" s="3">
+<C c="2" r="6" cs="22" s="3">
 <O t="DSColumn">
 <Attributes dsName="project" columnName="totalPriceSaving"/>
 <Complex/>
@@ -197,14 +261,14 @@
 <CellPageAttr/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="3" cs="2" s="4">
+<C c="0" r="7" cs="2" s="4">
 <O>
 <![CDATA[节资率合计（%）]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="2" r="3" cs="22" s="5">
+<C c="2" r="7" cs="22" s="5">
 <O t="DSColumn">
 <Attributes dsName="project" columnName="totalPriceSavingRatio"/>
 <Complex/>
@@ -215,71 +279,71 @@
 <CellPageAttr/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="4">
+<C c="0" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="4">
+<C c="1" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="4">
+<C c="2" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="4">
+<C c="3" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="4">
+<C c="4" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="4">
+<C c="5" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="4">
+<C c="6" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="4">
+<C c="7" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="8" r="4">
+<C c="8" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="9" r="4">
+<C c="9" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="10" r="4">
+<C c="10" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="11" r="4">
+<C c="11" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="12" r="4">
+<C c="12" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="13" r="4">
+<C c="13" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="14" r="4">
+<C c="14" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="15" r="4">
+<C c="15" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="5" cs="7" s="6">
+<C c="0" r="9" cs="7" s="6">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="supplierName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -295,7 +359,7 @@
 <CellPageAttr/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="5" cs="17" s="7">
+<C c="7" r="9" cs="17" s="7">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="quoteTime"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -311,19 +375,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
-<C c="24" r="5">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="25" r="5">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="26" r="5">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="6" cs="7" s="8">
+<C c="0" r="10" cs="7" s="8">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="dealTotalPricePrinting"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -339,7 +391,7 @@
 <CellPageAttr/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="6" cs="17" s="9">
+<C c="7" r="10" cs="17" s="9">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="supplierPriceSavingRatio"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -355,37 +407,25 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
-<C c="24" r="6">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="25" r="6">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="26" r="6">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="7" s="10">
+<C c="0" r="11" s="10">
 <O>
 <![CDATA[序号]]></O>
 <PrivilegeControl/>
-<Expand upParentDefault="false" up="A6"/>
+<Expand upParentDefault="false" up="A10"/>
 </C>
-<C c="1" r="7" s="11">
+<C c="1" r="11" s="11">
 <O>
 <![CDATA[采购品名称]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="2" r="7" s="11">
+<C c="2" r="11" s="11">
 <O>
 <![CDATA[采购品编码]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="3" r="7" s="11">
+<C c="3" r="11" s="11">
 <O>
 <![CDATA[规格型号]]></O>
 <PrivilegeControl/>
@@ -395,14 +435,14 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("规格型号", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("规格型号", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="4" r="7" s="11">
+<C c="4" r="11" s="11">
 <O>
 <![CDATA[技术参数]]></O>
 <PrivilegeControl/>
@@ -412,32 +452,32 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("技术参数", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("技术参数", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="5" r="7" s="11">
+<C c="5" r="11" s="11">
 <O>
 <![CDATA[数量]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="6" r="7" s="11">
+<C c="6" r="11" s="11">
 <O>
 <![CDATA[计量单位]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="7" r="7" s="11">
+<C c="7" r="11" s="11">
 <O>
 <![CDATA[计划单价(元)]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="8" r="7" s="11">
+<C c="8" r="11" s="11">
 <O>
 <![CDATA[申报人、电话]]></O>
 <PrivilegeControl/>
@@ -447,14 +487,14 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("申报人、电话", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("申报人、电话", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="9" r="7" s="11">
+<C c="9" r="11" s="11">
 <O>
 <![CDATA[申报企业]]></O>
 <PrivilegeControl/>
@@ -464,14 +504,14 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("申报企业", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("申报企业", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="10" r="7" s="11">
+<C c="10" r="11" s="11">
 <O>
 <![CDATA[使用单位]]></O>
 <PrivilegeControl/>
@@ -481,14 +521,14 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("使用单位", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("使用单位", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="11" r="7" s="11">
+<C c="11" r="11" s="11">
 <O>
 <![CDATA[用途]]></O>
 <PrivilegeControl/>
@@ -498,14 +538,14 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("用途", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("用途", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="12" r="7" s="11">
+<C c="12" r="11" s="11">
 <O>
 <![CDATA[需求日期]]></O>
 <PrivilegeControl/>
@@ -515,14 +555,14 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("需求日期", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("需求日期", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="13" r="7" s="11">
+<C c="13" r="11" s="11">
 <O>
 <![CDATA[采购品备注]]></O>
 <PrivilegeControl/>
@@ -532,26 +572,26 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("采购品备注", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("采购品备注", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="14" r="7" s="11">
+<C c="14" r="11" s="11">
 <O>
 <![CDATA[报价单价（元）]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="15" r="7" s="11">
+<C c="15" r="11" s="11">
 <O>
 <![CDATA[报价总计（元）]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="16" r="7" s="11">
+<C c="16" r="11" s="11">
 <O t="DSColumn">
 <Attributes dsName="purchaseSubItem" columnName="title"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -570,64 +610,64 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)=0]]></Formula>
+<![CDATA[len($$$) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand dir="1" leftParentDefault="false" left="A6"/>
+<Expand dir="1" leftParentDefault="false" left="A10"/>
 </C>
-<C c="17" r="7" s="11">
+<C c="17" r="11" s="11">
 <O>
 <![CDATA[成交数量]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="18" r="7" s="11">
+<C c="18" r="11" s="11">
 <O>
 <![CDATA[成交比例（%）]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="19" r="7" s="11">
+<C c="19" r="11" s="11">
 <O>
 <![CDATA[成交单价（元）]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="20" r="7" s="11">
+<C c="20" r="11" s="11">
 <O>
 <![CDATA[成交总价（元）]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="21" r="7" s="11">
+<C c="21" r="11" s="11">
 <O>
 <![CDATA[节资额（元）]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="22" r="7" s="11">
+<C c="22" r="11" s="11">
 <O>
 <![CDATA[节资率（%）]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="23" r="7" s="12">
+<C c="23" r="11" s="12">
 <O>
 <![CDATA[成交说明]]></O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="A8"/>
+<Expand leftParentDefault="false" left="A12"/>
 </C>
-<C c="0" r="8" s="13">
+<C c="0" r="12" s="13">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=&B9]]></Attributes>
+<![CDATA[=&B13]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="B9"/>
+<Expand leftParentDefault="false" left="B13"/>
 </C>
-<C c="1" r="8" s="14">
+<C c="1" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="name"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -648,9 +688,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="A6" upParentDefault="false" up="A6"/>
+<Expand dir="0" leftParentDefault="false" left="A10" upParentDefault="false" up="A10"/>
 </C>
-<C c="2" r="8" s="14">
+<C c="2" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="code"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -663,9 +703,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="3" r="8" s="14">
+<C c="3" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="spec"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -691,9 +731,9 @@
 </HighlightAction>
 </Highlight>
 </HighlightList>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="4" r="8" s="14">
+<C c="4" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="techParameters"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -717,9 +757,9 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="5" r="8" s="14">
+<C c="5" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="purchaseAmount"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -732,9 +772,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="6" r="8" s="14">
+<C c="6" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="unitName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -747,9 +787,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="7" r="8" s="14">
+<C c="7" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="planPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -762,9 +802,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="8" r="8" s="14">
+<C c="8" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="appliedPersonAndPhone"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -777,9 +817,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="9" r="8" s="14">
+<C c="9" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="appliedEnterprise"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -792,9 +832,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="10" r="8" s="14">
+<C c="10" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="useDept"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -807,9 +847,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="11" r="8" s="14">
+<C c="11" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="purpose"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -835,9 +875,9 @@
 </HighlightAction>
 </Highlight>
 </HighlightList>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="12" r="8" s="14">
+<C c="12" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="needTime"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -850,9 +890,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="13" r="8" s="14">
+<C c="13" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="comment"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -869,9 +909,19 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$)>250  列宽为60]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($Columns, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -880,18 +930,28 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性2]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 500]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($ckbx, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="14400000"/>
 </HighlightAction>
 </Highlight>
 </HighlightList>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="14" r="8" s="14">
+<C c="14" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="quoteUnitPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -904,9 +964,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="15" r="8" s="14">
+<C c="15" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="quoteTotalPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -919,9 +979,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="16" r="8" s="15">
+<C c="16" r="12" s="15">
 <O t="DSColumn">
 <Attributes dsName="quoteSeparate" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -970,7 +1030,7 @@
 <PrivilegeControl/>
 <Expand dir="1"/>
 </C>
-<C c="17" r="8" s="14">
+<C c="17" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="dealAmount"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -983,9 +1043,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="18" r="8" s="14">
+<C c="18" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="dealRation"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -998,9 +1058,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="19" r="8" s="14">
+<C c="19" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="dealUnitPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -1013,9 +1073,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="20" r="8" s="14">
+<C c="20" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="dealTotalPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -1028,9 +1088,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="21" r="8" s="14">
+<C c="21" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="priceSaving"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -1043,9 +1103,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="22" r="8" s="14">
+<C c="22" r="12" s="14">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="priceSavingRatio"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -1058,9 +1118,9 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="23" r="8" s="16">
+<C c="23" r="12" s="16">
 <O t="DSColumn">
 <Attributes dsName="item" columnName="dealDescription"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -1086,9 +1146,9 @@
 </HighlightAction>
 </Highlight>
 </HighlightList>
-<Expand dir="0" leftParentDefault="false" left="B9"/>
+<Expand dir="0" leftParentDefault="false" left="B13"/>
 </C>
-<C c="0" r="9" cs="24" s="17">
+<C c="0" r="13" cs="24" s="17">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="quoteTotalTitle"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -1108,9 +1168,20 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand dir="0" leftParentDefault="false" left="A6" upParentDefault="false" up="A6"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand dir="0" leftParentDefault="false" left="A10" upParentDefault="false" up="A10"/>
 </C>
-<C c="0" r="10" cs="24" s="18">
+<C c="0" r="14" cs="24" s="18">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="quoteTotalItem"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -1130,7 +1201,18 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand dir="0" leftParentDefault="false" left="A6" upParentDefault="false" up="A6"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand dir="0" leftParentDefault="false" left="A10" upParentDefault="false" up="A10"/>
 </C>
 </CellElementList>
 <ReportAttrSet>
@@ -1166,9 +1248,77 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="1" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
+<ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
+<Parameters/>
+<Layout class="com.fr.form.ui.container.WParameterLayout">
+<WidgetName name="para"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Margin top="0" left="0" bottom="0" right="0"/>
+<Border>
+<border style="0" color="-723724" borderRadius="0" type="0" borderStyle="0"/>
+<WidgetTitle>
+<O>
+<![CDATA[新建标题]]></O>
+<FRFont name="SimSun" style="0" size="72"/>
+<Position pos="0"/>
+</WidgetTitle>
+<Alpha alpha="1.0"/>
+</Border>
+<Background name="ColorBackground" color="-526086"/>
+<LCAttr vgap="0" hgap="0" compInterval="0"/>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.parameter.FormSubmitButton">
+<WidgetName name="formSubmit0"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[查询]]></Text>
+<Hotkeys>
+<![CDATA[enter]]></Hotkeys>
+</InnerWidget>
+<BoundsAttr x="638" y="9" width="80" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.CheckBoxGroup">
+<WidgetName name="ckbx"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.FormulaDictionary">
+<FormulaDict>
+<![CDATA[=split("规格型号,技术参数,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注",",")]]></FormulaDict>
+</Dictionary>
+<widgetValue>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=ARRAY($Columns)]]></Attributes>
+</O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="0" y="9" width="623" height="21"/>
+</Widget>
+<Sorted sorted="false"/>
+<MobileWidgetList>
+<Widget widgetName="ckbx"/>
+<Widget widgetName="formSubmit0"/>
+</MobileWidgetList>
+<Display display="true"/>
+<DelayDisplayContent delay="false"/>
+<UseParamsTemplate use="true"/>
+<Position position="1"/>
+<Design_Width design_width="736"/>
+<NameTagModified/>
+<WidgetNameTagMap/>
+<ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
+</Layout>
+<DesignAttr width="736" height="35"/>
+</ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
 <O>
@@ -1186,8 +1336,8 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="1"/>
-<Left style="2"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="2" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -1195,7 +1345,7 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="1"/>
+<Bottom style="1" color="-16777216"/>
 <Right style="2"/>
 </Border>
 </Style>
@@ -1203,7 +1353,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="1"/>
 <Left style="2"/>
 <Right style="1"/>
@@ -1213,9 +1363,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="1"/>
-<Left style="1" color="-16777216"/>
+<Left style="1"/>
 <Right style="2"/>
 </Border>
 </Style>
@@ -1223,7 +1373,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="2" color="-16777216"/>
 <Right style="1" color="-16777216"/>
@@ -1233,7 +1383,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="1"/>
 <Right style="2"/>
@@ -1253,8 +1403,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="2" color="-16777216"/>
 </Border>
@@ -1333,10 +1483,10 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">

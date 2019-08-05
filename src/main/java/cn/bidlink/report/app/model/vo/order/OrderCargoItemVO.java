@@ -94,55 +94,55 @@ public class OrderCargoItemVO implements java.io.Serializable {
      * @字段:need_time DATETIME(19)
      */
     @JsonFormat(pattern="yyyy-MM-dd",timezone="GMT+8")
-    private java.util.Date needTime;
+    private Date needTime;
 
 
     /** 非数据库字段，查询时使用 */
-    private java.util.Date needTimeBegin;
+    private Date needTimeBegin;
 
     /** 非数据库字段，查询时使用 */
-    private java.util.Date needTimeEnd;
+    private Date needTimeEnd;
     /**
      * @描述:单价
      * @字段:quote_unit_price DECIMAL(20)
      */
-    private java.math.BigDecimal quoteUnitPrice;
+    private BigDecimal quoteUnitPrice;
 
     /**
      * @描述:子订单发货数量
      * @字段:send_number DECIMAL(20)
      */
-    private java.math.BigDecimal sendNumber;
+    private BigDecimal sendNumber;
 
     /**
      * @描述:货单的发货量
      * @字段:cargo_send_number DECIMAL(20)
      */
-    private java.math.BigDecimal cargoSendNumber;
+    private BigDecimal cargoSendNumber;
 
     /**
      * @描述:签收量
      * @字段:sign_number DECIMAL(20)
      */
-    private java.math.BigDecimal signNumber;
+    private BigDecimal signNumber;
 
     /**
      * @描述:退货数量
      * @字段:refund_number DECIMAL(20)
      */
-    private java.math.BigDecimal refundNumber;
+    private BigDecimal refundNumber;
 
     /**
      * @描述:实际的价格
      * @字段:actual_price DECIMAL(20)
      */
-    private java.math.BigDecimal actualPrice;
+    private BigDecimal actualPrice;
 
     /**
      * @描述:税率
      * @字段:tax_rate DECIMAL(20)
      */
-    private java.math.BigDecimal taxRate;
+    private BigDecimal taxRate;
 
     /**
      * @描述:生成订单的来源id
@@ -219,14 +219,14 @@ public class OrderCargoItemVO implements java.io.Serializable {
      * @字段:create_time DATETIME(19)
      */
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    private java.util.Date createTime;
+    private Date createTime;
 
 
     /** 非数据库字段，查询时使用 */
-    private java.util.Date createTimeBegin;
+    private Date createTimeBegin;
 
     /** 非数据库字段，查询时使用 */
-    private java.util.Date createTimeEnd;
+    private Date createTimeEnd;
     /**
      * @描述:修改人id
      * @字段:update_user_id BIGINT(19)
@@ -244,14 +244,14 @@ public class OrderCargoItemVO implements java.io.Serializable {
      * @字段:update_time DATETIME(19)
      */
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    private java.util.Date updateTime;
+    private Date updateTime;
 
 
     /** 非数据库字段，查询时使用 */
-    private java.util.Date updateTimeBegin;
+    private Date updateTimeBegin;
 
     /** 非数据库字段，查询时使用 */
-    private java.util.Date updateTimeEnd;
+    private Date updateTimeEnd;
 
     /**
      * @描述:是否删除，0否1是，默认0
@@ -267,7 +267,7 @@ public class OrderCargoItemVO implements java.io.Serializable {
     /**
      * 单品总价(新添加)
      */
-    private java.math.BigDecimal quoteTotalPrice;
+    private BigDecimal quoteTotalPrice;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;

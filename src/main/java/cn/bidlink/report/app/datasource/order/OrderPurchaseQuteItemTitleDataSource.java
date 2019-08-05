@@ -21,7 +21,7 @@ public class OrderPurchaseQuteItemTitleDataSource extends AbstractBaseTableData 
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("mainId"),
+                new Parameter("orderId"),
                 new Parameter("companyId")
         };
     }
@@ -35,7 +35,7 @@ public class OrderPurchaseQuteItemTitleDataSource extends AbstractBaseTableData 
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
 
         OrderProxyService orderCargoRestService = dataServiceFactory.getDataService(OrderProxyService.class);
-        Long mainId = Long.valueOf(param.get("mainId"));
+        Long mainId = Long.valueOf(param.get("orderId"));
         Long companyId = Long.valueOf(param.get("companyId"));
         List<OrderCargoItemQuteItemVO> orderCargoQuteTitleItems = orderCargoRestService.getOrderCargoQuteTitleItems(mainId, companyId);
         return orderCargoQuteTitleItems;

@@ -1,5 +1,6 @@
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.procurement.purchase.cloud.service.ProjectRestService;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
@@ -20,8 +21,7 @@ public class PurchaseSubItemDataSource extends AbstractBaseTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId")
+                new Parameter("projectId")
         };
     }
 
@@ -34,8 +34,7 @@ public class PurchaseSubItemDataSource extends AbstractBaseTableData {
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         ProjectRestService projectRestService = dataServiceFactory.getDataService(ProjectRestService.class);
         Long projectId = Long.valueOf(param.get("projectId"));
-        Long companyId = Long.valueOf(param.get("companyId"));
-        List<Map<String, Object>> printingSubItem = projectRestService.findPrintingSubItem(projectId, companyId);
+        List<Map<String, Object>> printingSubItem = projectRestService.findPrintingSubItem(projectId, UserContext.getCompanyId());
         return printingSubItem;
     }
 

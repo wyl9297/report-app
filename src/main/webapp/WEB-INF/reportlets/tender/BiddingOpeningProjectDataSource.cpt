@@ -265,13 +265,13 @@
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
+<FRFont name="华文细黑" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="1" color="-16777216"/>
+<Right style="1"/>
 </Border>
 </Style>
 </StyleList>

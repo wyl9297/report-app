@@ -132,11 +132,11 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,722880,723900,1295400,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,722880,723900,1005840,875520,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2895600,2743200,2743200,2743200,2743200,3352800,3848100,3657600,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2895600,2743200,2743200,2743200,2743200,3444240,3413760,3543300,3657600,2743200,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="7" s="0">
+<C c="0" r="0" cs="8" s="0">
 <O>
 <![CDATA[成交定价(采购品供应商维度)]]></O>
 <PrivilegeControl/>
@@ -148,7 +148,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="1" cs="6" s="1">
+<C c="1" r="1" cs="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="name"/>
 <Complex/>
@@ -164,7 +164,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="2" cs="6" s="1">
+<C c="1" r="2" cs="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="code"/>
 <Complex/>
@@ -180,7 +180,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="3" cs="6" s="1">
+<C c="1" r="3" cs="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createUserName"/>
 <Complex/>
@@ -196,7 +196,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="4" cs="6" s="1">
+<C c="1" r="4" cs="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createTime"/>
 <Complex/>
@@ -212,7 +212,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="5" cs="6" s="1">
+<C c="1" r="5" cs="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="dealTotPrice" columnName="dealTotalPrice"/>
 <Complex/>
@@ -287,6 +287,23 @@
 </C>
 <C c="5" r="7" s="0">
 <O>
+<![CDATA[计划单价（元）]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("计划单价", split($Columns, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="6" r="7" s="0">
+<O>
 <![CDATA[市场参考价(元)]]></O>
 <PrivilegeControl/>
 <HighlightList>
@@ -302,11 +319,11 @@
 </HighlightList>
 <Expand/>
 </C>
-<C c="6" r="7" s="2">
+<C c="7" r="7" s="2">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="7" s="0">
+<C c="8" r="7" s="0">
 <O t="DSColumn">
 <Attributes dsName="supplierTitle" columnName="title"/>
 <Complex/>
@@ -426,9 +443,9 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="8" s="3">
+<C c="6" r="8" s="1">
 <O t="DSColumn">
-<Attributes dsName="quteTitle" columnName="title"/>
+<Attributes dsName="purchaseProduct" columnName="marketPrice"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
@@ -436,7 +453,28 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="8" s="1">
+<C c="7" r="8" s="3">
+<O t="DSColumn">
+<Attributes dsName="quteTitle" columnName="title"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$)=0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="8" r="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="quteValue" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -494,7 +532,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="9" cs="7" s="4">
+<C c="0" r="9" cs="8" s="4">
 <O t="DSColumn">
 <Attributes dsName="colTitle" columnName="title"/>
 <Complex/>
@@ -504,7 +542,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="9" s="1">
+<C c="8" r="9" s="1">
 <O t="DSColumn">
 <Attributes dsName="colPrice" columnName="value"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -529,7 +567,6 @@
 <ReportAttrSet>
 <ReportSettings pageOrder="1" headerHeight="0" footerHeight="720000">
 <PaperSetting>
-<PaperSize width="121104000" height="171216000"/>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
@@ -579,9 +616,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>
@@ -589,9 +626,9 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>
@@ -609,9 +646,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>
@@ -619,9 +656,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>

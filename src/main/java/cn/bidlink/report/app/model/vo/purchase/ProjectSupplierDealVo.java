@@ -27,12 +27,12 @@ public class ProjectSupplierDealVo {
     /**
      * 报价单价
      */
-    private java.math.BigDecimal quoteUnitPrice;
+    private BigDecimal quoteUnitPrice;
 
     /**
      * 报价总价
      */
-    private java.math.BigDecimal quoteTotalPrice;
+    private BigDecimal quoteTotalPrice;
 
     /**
      * 采购品自定义报项
@@ -43,22 +43,22 @@ public class ProjectSupplierDealVo {
      * @描述:成交单价
      * @字段:deal_unit_price DECIMAL(12)
      */
-    private java.math.BigDecimal dealUnitPrice;
+    private BigDecimal dealUnitPrice;
 
     /**
      * 成交数量
      */
-    private java.math.BigDecimal dealAmount;
+    private BigDecimal dealAmount;
 
     /**
      * 成交比例
      */
-    private java.math.BigDecimal dealRation;
+    private BigDecimal dealRation;
 
     /**
      * 成交总额
      */
-    private java.math.BigDecimal dealTotalPrice;
+    private BigDecimal dealTotalPrice;
 
     /**
      * 成交说明
@@ -68,7 +68,7 @@ public class ProjectSupplierDealVo {
     /**
      *  成交总额(针对项目)
      */
-    private java.math.BigDecimal dealTotalPriceWithProject;
+    private BigDecimal dealTotalPriceWithProject;
 
     public Long getSupplierId() {
         return supplierId;

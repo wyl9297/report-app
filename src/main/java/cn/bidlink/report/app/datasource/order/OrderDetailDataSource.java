@@ -22,21 +22,21 @@ public class OrderDetailDataSource extends AbstractBaseTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("mainId"),
+                new Parameter("orderId"),
                 new Parameter("companyId")
         };
     }
 
     @Override
     protected String[] getColumn() {
-        return new String[]{ "orderCode" , "createUserName" , "createTime" , "orderName" , "orderSource" , "projectName" , "orderTotalPrice" ,"orderStatus" , "arriveTime" , "addressUserName","addressName","addressPhone","supplierName","supplierUserName","supplierPhone","supplierLoginName"};
+        return new String[]{ "orderCode" , "createUserName" , "createTime" , "orderName" , "orderSource" , "projectName" , "orderTotalPrice" ,"orderStatus" , "arriveTime" , "addressUserName","addressName","addressPhone","supplierName","supplierUserName","supplierPhone","supplierLoginName","projectType"};
     }
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
 
         OrderListResultService orderListResultService = dataServiceFactory.getDataService(OrderListResultService.class);
-        Long mainId = Long.valueOf(param.get("mainId"));
+        Long mainId = Long.valueOf(param.get("orderId"));
         Long companyId = Long.valueOf(param.get("companyId"));
         OrderDetailDto orderDetail = orderListResultService.getOrderDetail(mainId, companyId);
 

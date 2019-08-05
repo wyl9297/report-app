@@ -29,7 +29,7 @@ public class AuctionProjectDetailsVendueDataSource extends AbstractBaseTableData
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"code", "name", "vendueStartTime", "vendueEndTime", "createUserName" ,"createTime"};
+        return new String[]{"code", "name", "vendueStartTime", "vendueEndTime", "createUserName" ,"createTime","quoteType"};
     }
 
     @Override

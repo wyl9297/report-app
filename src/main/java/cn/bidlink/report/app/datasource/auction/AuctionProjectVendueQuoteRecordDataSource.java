@@ -24,15 +24,13 @@ public class AuctionProjectVendueQuoteRecordDataSource extends AbstractBaseTable
     protected Parameter[] getParameter() {
         return new Parameter[]{
                 new Parameter("projectId"),
-                new Parameter("companyId"),
-                new Parameter("pageNum"),
-                new Parameter("pageSize")
+                new Parameter("companyId")
         };
     }
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"id", "supplierId", "supplierName", "quotePrice", "quotePriceStr" ,"quoteTime","quoteTimeStr"};
+        return new String[]{"id", "supplierId", "supplierName", "quotePrice", "quotePriceStr" ,"quoteTime","quoteTimeStr","quoteAmountStr"};
     }
 
     @Override
@@ -42,12 +40,10 @@ public class AuctionProjectVendueQuoteRecordDataSource extends AbstractBaseTable
 
         Long projectId = Long.valueOf(param.get("projectId"));
         Long companyId = Long.valueOf(param.get("companyId"));
-        int pageNum = Integer.parseInt(param.get("pageNum"));
-        int pageSize = Integer.parseInt(param.get("pageSize"));
 
         //保价记录为空时返回自定义空list
         List<ProjectQuoteRecodeDto> list = new ArrayList<>();
-        ProjectViewQuoteRecodesDto quoteRecodes = vendueProjectViewRestService.getQuoteRecodes(projectId, companyId, pageNum, 3000);
+        ProjectViewQuoteRecodesDto quoteRecodes = vendueProjectViewRestService.getQuoteRecodes(projectId, companyId, 1, 3000);
         List<ProjectQuoteRecodeDto> tableData = quoteRecodes.getTableData();
         if (tableData != null && tableData.size()>0){
             return tableData;

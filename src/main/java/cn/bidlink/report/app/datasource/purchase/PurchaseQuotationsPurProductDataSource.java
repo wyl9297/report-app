@@ -1,34 +1,31 @@
 
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.procurement.purchase.cloud.vo.DealItemSupplierVo;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.report.app.model.vo.purchase.ClinchDealVo;
 import cn.bidlink.report.app.service.PurchaseProxyService;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import com.fr.base.Parameter;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 /**
- * @author <a href="mailto:xinyuli@ebnew.com">wisdom</a>
- * @version Ver 1.0
- * @description:采购项目：成交定价采购品-供应商维度 采购品数据集
- * @Date 2019/7/11
- *
- */
+ * @ClassName PurchaseQuotationsPurProductDataSource
+ * @Author 从尧
+ * @Description 采购项目 报价一览表 采购品-供应商维度
+ * @Date 2019-07-10 11:29
+ * @Version 1.0
+ **/
 public class PurchaseQuotationsPurProductDataSource extends AbstractBaseTableData {
 
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId"),
-                new Parameter("userId"),
-                new Parameter("handStatus"),
-                new Parameter("viewFlag"),
-                new Parameter("supplierIds"),
-                new Parameter("exportFlag")
+                new Parameter("projectId")
         };
     }
 
@@ -42,9 +39,15 @@ public class PurchaseQuotationsPurProductDataSource extends AbstractBaseTableDat
 
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         DealItemSupplierVo itemSupplierVoList = purchaseProxyService.quotationPricing(Long.valueOf(param.get("projectId")),
-                Long.valueOf(param.get("companyId")), Long.valueOf(param.get("userId")), 1, true);
+                UserContext.getCompanyId(), UserContext.getUserId(), 1, true);
         List<Map<String, Object>> tableData = itemSupplierVoList.getTableData();
-        return tableData;
+        List<ClinchDealVo> tableDatanull = new ArrayList<>();
+        if (null != tableData && tableData.size()>0){
+            return tableData;
+        }else {
+            return tableDatanull;
+        }
+
 
     }
 

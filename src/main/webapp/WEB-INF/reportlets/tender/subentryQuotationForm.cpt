@@ -31,7 +31,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[875520,875520,723900]]></RowHeight>
+<![CDATA[875520,875520,723900,723900,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[1584960,2743200,2743200,2743200,2743200,2743200,2743200,3779520,3322320,3124200,2743200,2743200,2743200,2743200,2743200,2743200,3200400,3718560,3657600,2971800,3322320,2743200]]></ColumnWidth>
 <CellElementList>
@@ -949,7 +949,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
+<Top style="2"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="2" color="-16777216"/>
 <Right style="1" color="-16777216"/>
@@ -959,7 +959,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
+<Top style="2"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="1"/>
 <Right style="1"/>
@@ -969,7 +969,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
+<Top style="2"/>
 <Bottom style="2" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
