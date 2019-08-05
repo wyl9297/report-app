@@ -240,6 +240,10 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseClinchDealPriceProjectBaseDataSource"/>
 </TableData>
+<TableData name="checkBoxValue" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseQuotationItemSupplierChekBoxValue"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -884,9 +888,14 @@
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
-<Dictionary class="com.fr.data.impl.FormulaDictionary">
-<FormulaDict>
-<![CDATA[=split("规格型号,数量,计量单位,市场参考价,计划单价",",")]]></FormulaDict>
+<Dictionary class="com.fr.data.impl.TableDataDictionary">
+<FormulaDictAttr kiName="value" viName="value"/>
+<TableDataDictAttr>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[checkBoxValue]]></Name>
+</TableData>
+</TableDataDictAttr>
 </Dictionary>
 <widgetValue>
 <O t="XMLable" class="com.fr.base.Formula">
@@ -895,7 +904,7 @@
 </O>
 </widgetValue>
 </InnerWidget>
-<BoundsAttr x="12" y="10" width="386" height="21"/>
+<BoundsAttr x="99" y="10" width="307" height="21"/>
 </Widget>
 <Sorted sorted="false"/>
 <MobileWidgetList>
