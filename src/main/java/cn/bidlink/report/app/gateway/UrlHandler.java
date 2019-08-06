@@ -27,7 +27,7 @@ public class UrlHandler implements ApplicationListener {
 
     private static final Map<String,String> urlMap = new HashMap();
 
-    private static final Map<String,Map> multiUrlMap = new HashMap();
+    private static final Map<String,Map> multiUrlMap = new LinkedHashMap<>();
 
     public static final Map<String,String> detailMap = new LinkedHashMap<>();
 
