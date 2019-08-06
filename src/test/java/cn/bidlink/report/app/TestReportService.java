@@ -6,8 +6,10 @@ import cn.bidlink.framework.common.entity.TableData;
 import cn.bidlink.procurement.approve.cloud.service.RestWorkflowApproveService;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeDto;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeParamDto;
+import cn.bidlink.procurement.bidding.cloud.service.BidSubProjectRestService;
 import cn.bidlink.procurement.bidding.cloud.service.BidSupplierItemRestService;
 import cn.bidlink.procurement.bidding.cloud.service.BidViewRestService;
+import cn.bidlink.procurement.bidding.dal.entity.BidSubProject;
 import cn.bidlink.procurement.order.cloud.dto.OrderDetailDto;
 import cn.bidlink.procurement.order.cloud.service.OrderCargoRestService;
 import cn.bidlink.procurement.order.cloud.service.OrderListResultService;
@@ -89,6 +91,9 @@ public class TestReportService extends TestBase{
 
     @Autowired
     private BidSupplierItemRestService bidSupplierItemRestService;
+
+    @Autowired
+    private BidSubProjectRestService bidSubProjectRestService;
 
     /**
      * 统计报价相关项  单元测试
@@ -383,6 +388,28 @@ public class TestReportService extends TestBase{
         approveRecodeParamDto.setModule(3);
         ServiceResult<Map<String, List<List<ApproveRecodeDto>>>> workflowApproveApproveRecodes = restWorkflowApproveService.findWorkflowApproveApproveRecodes(approveRecodeParamDto);
         System.out.println(workflowApproveApproveRecodes);
+
+    }
+
+    /**
+     * 采购项目：审批导出项目基本信息
+     * cn.bidlink.procurement.purchase.cloud.service.ProjectRestService#getProjectBase
+     */
+    @Test
+    public void testFindBidSubProjectByPk(){
+        BidSubProject bidSubProjectByPk = bidSubProjectRestService.findBidSubProjectByPk(328920271245279269L);
+        System.out.println(bidSubProjectByPk);
+
+    }
+
+    /**
+     * 招标项目：审批导出项目基本信息
+     * cn.bidlink.procurement.purchase.cloud.service.ProjectRestService#getProjectBase
+     */
+    @Test
+    public void testGetBidReportDetail(){
+        BidSubProject bidSubProjectByPk = bidSubProjectRestService.getBidReportDetail(216941622867263488L);
+        System.out.println(bidSubProjectByPk);
 
     }
 

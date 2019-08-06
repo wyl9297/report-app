@@ -13,6 +13,10 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.tender.BiddingOpeningDynamicChangeDataSource"/>
 </TableData>
+<TableData name="projectBiddingBase" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.tender.BiddingBaseDataSource"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -106,29 +110,115 @@
 <ReportPageAttr>
 <HR/>
 <FR/>
-<HC/>
+<HC F="0" T="1"/>
 <FC/>
 </ReportPageAttr>
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,800100,723900,723900,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,800100,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1440000,3600000,3888000,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2895600,3600000,3888000,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" s="0">
+<C c="0" r="0" cs="3" s="0">
+<O>
+<![CDATA[开标一览表]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="1" s="0">
+<O>
+<![CDATA[项目名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="1" cs="2" s="1">
+<O t="DSColumn">
+<Attributes dsName="projectBiddingBase" columnName="projectName"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="2" s="0">
+<O>
+<![CDATA[项目编号]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="2" cs="2" s="1">
+<O t="DSColumn">
+<Attributes dsName="projectBiddingBase" columnName="projectCode"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="3" s="0">
+<O>
+<![CDATA[开标时间]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="3" cs="2" s="1">
+<O t="DSColumn">
+<Attributes dsName="projectBiddingBase" columnName="bidOpenTimeStr"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="4" s="0">
+<O>
+<![CDATA[建项人]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="4" cs="2" s="1">
+<O t="DSColumn">
+<Attributes dsName="projectBiddingBase" columnName="createUserName"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="5" s="0">
+<O>
+<![CDATA[联系方式]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="5" cs="2" s="1">
+<O t="DSColumn">
+<Attributes dsName="projectBiddingBase" columnName="linkPhone"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="6" s="0">
 <O>
 <![CDATA[序号]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="0" s="0">
+<C c="1" r="6" s="0">
 <O>
 <![CDATA[投标人名称]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="0" s="0">
+<C c="2" r="6" s="0">
 <O t="DSColumn">
 <Attributes dsName="openKeyTitle" columnName="title"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -154,15 +244,15 @@
 </HighlightList>
 <Expand dir="1"/>
 </C>
-<C c="0" r="1" s="1">
+<C c="0" r="7" s="2">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=seq()]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B2"/>
+<Expand dir="0" leftParentDefault="false" left="B8"/>
 </C>
-<C c="1" r="1" s="1">
+<C c="1" r="7" s="2">
 <O t="DSColumn">
 <Attributes dsName="biddingOpeningProject" columnName="supplierName"/>
 <Complex/>
@@ -172,7 +262,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="1" s="1">
+<C c="2" r="7" s="2">
 <O t="DSColumn">
 <Attributes dsName="biddingOpeningDynamic" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -262,6 +352,16 @@
 <Bottom style="1"/>
 <Left style="1"/>
 <Right style="1" color="-16777216"/>
+</Border>
+</Style>
+<Style horizontal_alignment="2" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">

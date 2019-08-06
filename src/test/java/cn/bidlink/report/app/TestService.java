@@ -1,6 +1,7 @@
 package cn.bidlink.report.app;
 
 import cn.bidlink.framework.common.entity.TableData;
+import cn.bidlink.procurement.bidding.cloud.dto.SaveSubProjectVo;
 import cn.bidlink.procurement.bidding.cloud.service.BidSubProjectRestService;
 import cn.bidlink.procurement.bidding.cloud.service.BidSupplierItemRestService;
 import cn.bidlink.procurement.bidding.cloud.service.BidViewRestService;
@@ -159,5 +160,12 @@ public class TestService extends TestBase{
     public void test3(){
         List<Map<String, Object>> quoteItem = bidSubProjectRestService.findQuoteItem(326719515641512069L);
         print(quoteItem);
+    }
+
+    // 招标项目 项目基本信息
+    @Test
+    public void testFindBidSubProjectByPk(){
+        SaveSubProjectVo bidSubDetail = bidSubProjectRestService.getBidSubDetail(11113174093L, 328920271245279269L);
+        print(bidSubDetail);
     }
 }
