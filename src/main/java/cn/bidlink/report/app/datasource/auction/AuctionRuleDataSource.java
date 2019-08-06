@@ -1,8 +1,8 @@
 package cn.bidlink.report.app.datasource.auction;
 
 import cn.bidlink.framework.boot.web.context.UserContext;
-import cn.bidlink.procurement.auction.cloud.service.ProjectRestService;
-import cn.bidlink.procurement.auction.cloud.vo.ProjectVo;
+import cn.bidlink.procurement.auction.cloud.service.AuctionRuleRestService;
+import cn.bidlink.procurement.auction.cloud.vo.AuctionRuleVo;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import com.fr.base.Parameter;
@@ -18,32 +18,31 @@ import java.util.Map;
  * @Date 2019/5/31 15:40
  * @Version 1.0
  **/
-public class AuctionProject extends AbstractBaseTableData {
+public class AuctionRuleDataSource extends AbstractBaseTableData {
 
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId")
+                new Parameter("projectId")
         };
     }
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"code", "name", "createUserName","createTime" , "auctionEndTimeStr", "auctionStartTimeStr" , "projectType", "projectTypeValue"};
+        return new String[]{"auctionTypeValue", "auctionSpaceValue", "quoteRangeValue","delayRuleValue" , "depreciateValueStr", "delayRuleValue" , "quoteSecrecyTypeValue"};
     }
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         //获取服务
-        ProjectRestService projectRestService = dataServiceFactory.getDataService(ProjectRestService.class);
+        AuctionRuleRestService auctionRuleRestService = dataServiceFactory.getDataService(AuctionRuleRestService.class);
         //获取报表查询的参数
         Long projectId = Long.valueOf(param.get("projectId"));
         Long companyId = UserContext.getCompanyId();
+        AuctionRuleVo rule = auctionRuleRestService.getRule(projectId, companyId);
         //查询数据并返回
-        ProjectVo projectDetail = projectRestService.getProjectDetail(projectId, companyId);
-        List<Object> list = new ArrayList<>();
-        list.add(projectDetail);
+        List<AuctionRuleVo> list = new ArrayList<>();
+        list.add(rule);
         return list;
     }
 

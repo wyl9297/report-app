@@ -1,16 +1,14 @@
 package cn.bidlink.report.app.controller;
 
 import cn.bidlink.framework.boot.web.context.UserContext;
-import cn.bidlink.procurement.auction.cloud.service.AuctionProjectItemRestService;
-import cn.bidlink.procurement.auction.cloud.service.AuctionSupplierDealResultService;
-import cn.bidlink.procurement.auction.cloud.service.AuctionSupplierItemService;
-import cn.bidlink.procurement.auction.cloud.service.ProjectRestService;
+import cn.bidlink.framework.common.entity.TableData;
+import cn.bidlink.procurement.auction.cloud.dto.ProjectQuoteRecodeSearchDto;
+import cn.bidlink.procurement.auction.cloud.service.*;
+import cn.bidlink.procurement.auction.cloud.vo.QuoteRecodeVo;
 import cn.bidlink.procurement.bidding.cloud.service.BidSupplierItemRestService;
 import cn.bidlink.procurement.contract.cloud.service.ContractItemRestService;
 import cn.bidlink.procurement.contract.cloud.service.ContractProjectService;
-import cn.bidlink.procurement.purchase.cloud.dto.BargainAllListVo;
 import cn.bidlink.procurement.purchase.cloud.service.DealPriceSupplierDimensionRestService;
-import cn.bidlink.procurement.purchase.cloud.service.ProjectBargainRestService;
 import cn.bidlink.report.app.service.ContractProxyService;
 import cn.bidlink.report.app.service.TenderProxyService;
 import cn.bidlink.usercenter.server.service.DubboTRegCompanyService;
@@ -66,19 +64,23 @@ public class ReportController {
     ContractProjectService contractProjectService;
 
     @Autowired
-    ProjectBargainRestService projectBargainRestService;
+    AuctionRuleRestService auctionRuleRestService;
+
+    @Autowired
+    AuctionSupplierQuoteRecodeService auctionSupplierQuoteRecodeService;
 
 
     @RequestMapping(value = "success")
     @ResponseBody
     public String success(HttpServletRequest request, HttpServletResponse response) {
-        List<BargainAllListVo> allBargainItemList
-                = projectBargainRestService.findAllBargainItemList(321219646428545050L, UserContext.getCompanyId());
-        return "success";
-    }
+        //List<Map<String, String>> contractHeadAndTailData = contractProxyService.getContractHeadAndTailData(11113173803L, 329289751465033810L, 11113177048L)
+        /*AuctionRuleVo rule = auctionRuleRestService.getRule(328533501085221452L, UserContext.getCompanyId());*/
 
-    @RequestMapping(value = "contractMainPrint")
-    public String contractMainPrint(HttpServletRequest request, HttpServletResponse response) {
+        ProjectQuoteRecodeSearchDto projectQuoteRecodeSearchDto = new ProjectQuoteRecodeSearchDto();
+        projectQuoteRecodeSearchDto.setProjectId(328533501085221452L);
+        projectQuoteRecodeSearchDto.setCompanyId(UserContext.getCompanyId());
+        TableData<QuoteRecodeVo> supplierQuoteRecode = auctionSupplierQuoteRecodeService.getSupplierQuoteRecode(projectQuoteRecodeSearchDto);
+        List<QuoteRecodeVo> tableData = supplierQuoteRecode.getTableData();
         return "success";
     }
 
