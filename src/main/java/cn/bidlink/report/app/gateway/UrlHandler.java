@@ -79,6 +79,8 @@ public class UrlHandler implements ApplicationListener {
                         Pattern pattern = Pattern.compile("(?<=\\$\\{)(.+?)(?=\\})");
                         Matcher matcher = pattern.matcher(value);
                         Map<String,String> map = new LinkedHashMap();
+                        String[] n = name.split("\\.");
+                        String multiKey = pathBuilder.append(n[3]).append("/").append(n[4]).toString();
                         while(matcher.find()){
                             keyBuilder.delete(0,keyBuilder.length());
                             if ( StringUtils.isNotEmpty(matcher.group())){
@@ -95,15 +97,14 @@ public class UrlHandler implements ApplicationListener {
                                         String[] v = split[1].split("\\.");
                                         map.put(keyBuilder.append(v[0]).append("/").append(v[1]).toString(),split[0]);
                                         if ( split.length > 2 ){
-                                            templateIdMap.put(keyBuilder.toString(),split[2]);
+                                            templateIdMap.put(multiKey + "/" + keyBuilder.toString(),split[2]);
                                         }
                                     }
                                 }
                             }
                         }
                         if( map.size() > 0 ){
-                            String[] n = name.split("\\.");
-                            multiUrlMap.put(pathBuilder.append(n[3]).append("/").append(n[4]).toString(),map);
+                            multiUrlMap.put(multiKey,map);
                             logger.info("多报表页面路径：{} 添加完毕！" , pathBuilder.toString());
                         }
                         map = null;

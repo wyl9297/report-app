@@ -103,7 +103,7 @@ public class ReportGateway {
                 continue;
             }
             Map<String, String> map = new HashMap<>();
-            String url = reportViewResolver(UrlHandler.getTemplateId(key),request, key);
+            String url = reportViewResolver(UrlHandler.getTemplateId(SpecialPath + "/" + key),request, key);
             map.put("url",url);
             map.put("name",value);
             if ( StringUtils.isNotEmpty(Active) && Active.equals(value) ) {
