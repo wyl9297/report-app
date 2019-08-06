@@ -1007,9 +1007,19 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 250]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[orderDetail.select(projectType) != 1]]></Formula>
+</Condition>
+</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -1018,9 +1028,19 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性2]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 500]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[orderDetail.select(projectType) != 1]]></Formula>
+</Condition>
+</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="14400000"/>

@@ -127,7 +127,7 @@ public class OrderProxyServiceImpl implements OrderProxyService {
                     orderCargoItem.setCode(items.getCode());
                     orderCargoItem.setSpec(items.getSpec());
                     orderCargoItem.setUnitName(items.getUnitName());
-                    orderCargoItem.setComment(items.getComment());
+                    orderCargoItem.setComment(items.getItemComment());
                     orderCargoItem.setItemComment(items.getItemComment());
                     orderCargoItem.setUseDept(items.getUseDept());
                     orderCargoItem.setTechParameters(items.getTechParameters());
