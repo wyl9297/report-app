@@ -165,6 +165,11 @@ public class ReportGateway {
                         if ("templateId".equals(key)) {
                             templateId = strings[0];
                         }
+                        if ( StringUtils.isNotEmpty(templateId) && templateId.contains("&") ) {
+                            String[] oriId = templateId.split("&");
+                            templateId = oriId[0];
+                            extendParam = oriId[1];
+                        }
                         String result = appendShowColumns(templateId,primaryId,extendParam);
                         if( StringUtils.isNotEmpty(result) ){
                             sb.append("&").append("Columns").append("=").append(result);
@@ -227,6 +232,10 @@ public class ReportGateway {
         switch(module){
             case "purchase" :
                 set = purchaseProjectRestService.findReportFormTab(projectId, companyId);
+                break;
+            case "auction" :
+                set = new LinkedHashSet<>();
+                set.add("");
                 break;
         };
         return set;
