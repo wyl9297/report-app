@@ -1,5 +1,6 @@
 package cn.bidlink.report.app.datasource.purchase;
 
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.framework.common.entity.ResponseObj;
 import cn.bidlink.procurement.purchase.cloud.service.DealPriceSupplierDimensionRestService;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
@@ -21,8 +22,7 @@ public class TransactionPricingItemDataSource extends AbstractBaseTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("companyId")
+                new Parameter("projectId")
         };
     }
 
@@ -38,7 +38,7 @@ public class TransactionPricingItemDataSource extends AbstractBaseTableData {
         DealPriceSupplierDimensionRestService dealPriceSupplierDimensionRestService
                 = dataServiceFactory.getDataService(DealPriceSupplierDimensionRestService.class);
         ResponseObj responseObj1
-                = dealPriceSupplierDimensionRestService.findPreDealSupplierItemList(Long.valueOf(param.get("projectId")), Long.valueOf(param.get("companyId")));
+                = dealPriceSupplierDimensionRestService.findPreDealSupplierItemList(Long.valueOf(param.get("projectId")), UserContext.getCompanyId());
         Map responseObjData1 = (Map)responseObj1.getData();
         List projectItemList = (List)responseObjData1.get("projectItemList");
         return projectItemList;
