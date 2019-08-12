@@ -1,6 +1,7 @@
 package cn.bidlink.report.app.service.impl;
 
 import cn.bidlink.base.ServiceResult;
+import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.framework.common.entity.TableData;
 import cn.bidlink.procurement.approve.cloud.service.RestWorkflowApproveService;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeDto;
@@ -12,6 +13,7 @@ import cn.bidlink.procurement.purchase.cloud.vo.DealItemSupplierVo;
 import cn.bidlink.report.app.model.vo.purchase.*;
 import cn.bidlink.report.app.service.PurchaseProxyService;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import net.sf.json.JSONArray;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.StringUtils;
@@ -707,5 +709,46 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
             });
         });
         return list;
+    }
+
+    @Override
+    public List<Map<String,String>> totalQuoteTitle(Long projectId) {
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, UserContext.getCompanyId(), UserContext.getUserId(), 1, true);
+        String quoteTotalItems = itemSupplierVoList.getQuoteTotalItems();
+        Map map = ((List<Map>) JSONObject.parse(quoteTotalItems)).get(0);
+        Map tableBody = ((List<Map>) map.get("tableBody")).get(0);
+        List<Map<String,String>> list = (List<Map<String,String>>) tableBody.get("show");
+        list.forEach(m -> {
+            String unit = m.get("unit");
+            if ( StringUtils.isNotEmpty(unit) ) {
+                String title = m.get("title");
+                m.put("title" , title + "（" + unit + "）" );
+            }
+        });
+        return list;
+    }
+
+    @Override
+    public List<Map> totalQuoteValue(Long projectId) {
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, UserContext.getCompanyId(), UserContext.getUserId(), 1, true);
+        String quoteTotalItems = itemSupplierVoList.getQuoteTotalItems();
+        Map map1 = ((List<Map>) JSONObject.parse(quoteTotalItems)).get(0);
+        List<Map> list = (List<Map>) map1.get("tableBody");
+        List<Map> arrayList = new ArrayList<>();
+        list.forEach( map -> {
+            if ( !"supplierChildrenColumns".equals(map.get("key")) ) {
+                Map<String,String> show = (Map) map.get("show");
+                show.forEach((k,v) -> {
+                    if ( !"supplierId".equals(k)) {
+                        Map<String, String> m = new HashMap<>();
+                        m.put("supplierId",show.get("supplierId"));
+                        m.put("key",k);
+                        m.put("value",v);
+                        arrayList.add(m);
+                    }
+                });
+            }
+        });
+        return arrayList;
     }
 }
