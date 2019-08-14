@@ -715,40 +715,47 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     public List<Map<String,String>> totalQuoteTitle(Long projectId) {
         DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, UserContext.getCompanyId(), UserContext.getUserId(), 1, true);
         String quoteTotalItems = itemSupplierVoList.getQuoteTotalItems();
-        Map map = ((List<Map>) JSONObject.parse(quoteTotalItems)).get(0);
-        Map tableBody = ((List<Map>) map.get("tableBody")).get(0);
-        List<Map<String,String>> list = (List<Map<String,String>>) tableBody.get("show");
-        list.forEach(m -> {
-            String unit = m.get("unit");
-            if ( StringUtils.isNotEmpty(unit) ) {
-                String title = m.get("title");
-                m.put("title" , title + "（" + unit + "）" );
-            }
-        });
-        return list;
+        List<Map> mapList = (List<Map>) JSONObject.parse(quoteTotalItems);
+        if ( mapList.size() > 0 ) {
+            Map map = mapList.get(0);
+            Map tableBody = ((List<Map>) map.get("tableBody")).get(0);
+            List<Map<String,String>> list = (List<Map<String,String>>) tableBody.get("show");
+            list.forEach(m -> {
+                String unit = m.get("unit");
+                if ( StringUtils.isNotEmpty(unit) ) {
+                    String title = m.get("title");
+                    m.put("title" , title + "（" + unit + "）" );
+                }
+            });
+            return list;
+        }
+        return new ArrayList<>();
     }
 
     @Override
     public List<Map> totalQuoteValue(Long projectId) {
         DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, UserContext.getCompanyId(), UserContext.getUserId(), 1, true);
         String quoteTotalItems = itemSupplierVoList.getQuoteTotalItems();
-        Map map1 = ((List<Map>) JSONObject.parse(quoteTotalItems)).get(0);
-        List<Map> list = (List<Map>) map1.get("tableBody");
         List<Map> arrayList = new ArrayList<>();
-        list.forEach( map -> {
-            if ( !"supplierChildrenColumns".equals(map.get("key")) ) {
-                Map<String,String> show = (Map) map.get("show");
-                show.forEach((k,v) -> {
-                    if ( !"supplierId".equals(k)) {
-                        Map<String, String> m = new HashMap<>();
-                        m.put("supplierId",show.get("supplierId"));
-                        m.put("key",k);
-                        m.put("value",v);
-                        arrayList.add(m);
-                    }
-                });
-            }
-        });
+        List<Map> mapList = (List<Map>) JSONObject.parse(quoteTotalItems);
+        if ( mapList.size() > 0 ) {
+            Map map1 = mapList.get(0);
+            List<Map> list = (List<Map>) map1.get("tableBody");
+            list.forEach( map -> {
+                if ( !"supplierChildrenColumns".equals(map.get("key")) ) {
+                    Map<String,String> show = (Map) map.get("show");
+                    show.forEach((k,v) -> {
+                        if ( !"supplierId".equals(k)) {
+                            Map<String, String> m = new HashMap<>();
+                            m.put("supplierId",show.get("supplierId"));
+                            m.put("key",k);
+                            m.put("value",v);
+                            arrayList.add(m);
+                        }
+                    });
+                }
+            });
+        }
         return arrayList;
     }
 }
