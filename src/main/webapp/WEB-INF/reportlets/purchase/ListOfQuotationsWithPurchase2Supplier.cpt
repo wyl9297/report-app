@@ -378,7 +378,7 @@
 <![CDATA[报价一览表[采购品维度-供应商维度]A]]></O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="2"/>
-<CellPageAttr/>
+<CellPageAttr repeat="false"/>
 <Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="1" s="0">
@@ -396,7 +396,7 @@
 </O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="2"/>
-<CellPageAttr/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="2" s="0">
@@ -414,7 +414,7 @@
 </O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="2"/>
-<CellPageAttr/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="3" s="0">
@@ -432,7 +432,7 @@
 </O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="2"/>
-<CellPageAttr/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="4" s="0">
@@ -450,7 +450,7 @@
 </O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="2"/>
-<CellPageAttr/>
+<CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="5" s="0">
@@ -792,12 +792,6 @@
 <O>
 <![CDATA[总报价项]]></O>
 <PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-</Highlight>
-</HighlightList>
 <Expand/>
 </C>
 <C c="7" r="7" s="0">
@@ -1055,10 +1049,10 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 </StyleList>

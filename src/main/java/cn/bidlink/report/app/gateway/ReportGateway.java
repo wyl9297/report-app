@@ -195,11 +195,7 @@ public class ReportGateway {
     }
 
     private String appendShowColumns(String templateId, Long projectId , String extendParam) {
-        String v = projectId + "," + UserContext.getCompanyId();
-        if (StringUtils.isNotEmpty(extendParam)){
-            v = v + "," + extendParam;
-        }
-        ResponseResult responseResult = queryConfigurationCloudService.queryCustomConf(UserContext.getUserId(), UserContext.getCompanyId(), templateId, v );
+        ResponseResult responseResult = queryConfigurationCloudService.queryCustomConf(UserContext.getUserId(), UserContext.getCompanyId(), templateId, extendParam );
         Boolean success = responseResult.getSuccess();
         if (!success) {
             logger.info("查询动态列配置失败 {} , {}" , templateId,projectId);
