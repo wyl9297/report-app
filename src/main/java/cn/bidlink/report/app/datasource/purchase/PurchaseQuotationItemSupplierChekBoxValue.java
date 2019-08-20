@@ -26,7 +26,8 @@ public class PurchaseQuotationItemSupplierChekBoxValue extends AbstractBaseTable
     protected Parameter[] getParameter() {
         return new Parameter[]{
                 new Parameter("viewlet"),
-                new Parameter("ExtendParam")
+                new Parameter("ExtendParam"),
+                new Parameter("projectId")
         };
     }
 
@@ -40,13 +41,14 @@ public class PurchaseQuotationItemSupplierChekBoxValue extends AbstractBaseTable
         QueryConfigurationCloudService queryConfigurationCloudService = dataServiceFactory.getDataService(QueryConfigurationCloudService.class);
         String viewlet = param.get("viewlet");
         String extendParam = param.get("ExtendParam");
+        String projectId = param.get("projectId");
         String templateId = null;
         if ( "purchase/purchaseClinchDealPriceDataSource.cpt".equals(viewlet) ) {
             templateId = "T-CGXM-CJDJ-CLLB-20190701930100127";
         } else {
             templateId = "T-CGXM-CKBJ-CGLB-20190704993100130";
         }
-        ResponseResult responseResult = queryConfigurationCloudService.queryCustomConf(UserContext.getUserId(), UserContext.getCompanyId(), templateId, extendParam);
+        ResponseResult responseResult = queryConfigurationCloudService.queryCustomConf(UserContext.getUserId(), UserContext.getCompanyId(), templateId, projectId + "," +  UserContext.getCompanyId() + ",true");
         Boolean success = responseResult.getSuccess();
         if (!success) {
             throw new RuntimeException("查询动态列配置失败");
