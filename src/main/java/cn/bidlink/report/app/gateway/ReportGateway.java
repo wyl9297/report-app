@@ -4,9 +4,9 @@ import cn.bidlink.base.ServiceResult;
 import cn.bidlink.custom.use.cloud.response.ResponseResult;
 import cn.bidlink.custom.use.cloud.service.cloud.QueryConfigurationCloudService;
 import cn.bidlink.framework.boot.web.context.UserContext;
-import cn.bidlink.framework.common.entity.ResponseObj;
 import cn.bidlink.procurement.appset.dal.service.DubboAppsetPrintCompanySetService;
 import cn.bidlink.procurement.purchase.cloud.service.ProjectRestService;
+import cn.bidlink.report.app.individuation.ReportUrlAppender;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.BooleanUtils;
@@ -14,6 +14,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 报表访问网关
@@ -169,6 +172,23 @@ public class ReportGateway {
                             String[] oriId = templateId.split("&");
                             templateId = oriId[0];
                             extendParam = oriId[1];
+                            //扩展列参数查询
+                            if ( StringUtils.isNotEmpty(extendParam) ) {
+                                Pattern pattern = Pattern.compile("(?<=\\[)(.+?)(?=\\])");
+                                Matcher matcher = pattern.matcher(extendParam);
+                                while(matcher.find()){
+                                    String group = matcher.group();
+                                    String parameter = null;
+                                    if ( "companyId".equals(group) ){
+                                        parameter = UserContext.getCompanyId().toString();
+                                    } else if ( "userId".equals(group) ) {
+                                        parameter = UserContext.getUserId().toString();
+                                    } else {
+                                        parameter = request.getParameter(group);
+                                    }
+                                    extendParam = extendParam.replace("[" + group + "]",parameter);
+                                }
+                            }
                         }
                         String result = appendShowColumns(templateId,primaryId,extendParam);
                         if( StringUtils.isNotEmpty(result) ){
@@ -190,6 +210,13 @@ public class ReportGateway {
             logger.error("获取水印失败 错误内容 {}" , fineWaterMark.getMessage());
         } else if(StringUtils.isNotEmpty(fineWaterMark.getResult())) {
             sb.append("&").append("FineWaterMark").append("=").append(fineWaterMark.getResult());
+        }
+        //报表定制化接口
+        if (UrlHandler.urlAppenderMap.containsKey(confUrl)) {
+            ReportUrlAppender reportUrlAppender = UrlHandler.urlAppenderMap.get(confUrl);
+            if ( reportUrlAppender.confirm(request,confUrl,templateId,sb) ) {
+                sb = reportUrlAppender.urlPostProcesser(request, confUrl, templateId, sb);
+            }
         }
         return sb.toString();
     }

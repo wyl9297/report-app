@@ -14,28 +14,28 @@
             margin: 0;
         }
         .apply-record{
-            width: 100%;
             margin: 0 auto;
+            position: relative;
         }
         .apply-record .tab{
             height:60px;
-            border-bottom: 2px solid #dddee1;
-            box-sizing: border-box;
-            text-align:center;
-            background-color: #383d44;
             color: hsla(0,0%,100%,.7);
+            text-align: center;
+            transform:translate(0,0);
+            transition: transform .5s ease-in-out;
+            display: inline-block;
         }
         .apply-record .tab .tab-item{
             list-style:none;
             display:inline-block;
             line-height:30px;
             text-align:center;
-            font-size:12px;
+            font-size:14px;
             cursor: pointer;
             box-sizing: border-box;
-            padding: 0px 30px;
+            padding: 0px 20px;
             border-radius: 3px;
-            margin-top: 13px;
+            margin-top: 15px;
         }
         .apply-record .tab .tab-item.active{
             font-weight: 700;
@@ -45,13 +45,66 @@
         .apply-record .tab .tab-item.mouse{
             color: #fff;
         }
+        .itemBox{
+            text-align: center;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        .navBox{
+            background-color: #383d44;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .navBox span{
+            position: absolute;
+            top: 18px;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+        .navBox span.left{
+            left: 5px;
+        }
+        .navBox span.right{
+            right: 5px;
+        }
+        .shade{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            position: absolute;
+            top: 25px;
+            display: none;
+        }
+        .shade-left{
+            left: 7px;
+        }
+        .shade-right{
+            right: 7px;
+        }
     </style>
 </head>
 <body>
 <div style="display: none" id="pathInput" th:text="${params}"></div>
-<div class="apply-record">
+<!--<div class="apply-record">
     <ul class="tab" id='tabBox'></ul>
     <iframe id="iframe" frameborder="0" padding="0" margin="0" position="absolute" allowfullscreen="true"></iframe>
+</div>-->
+<div class="apply-record">
+    <div class="navBox">
+        <span class="left"> &lt; </span>
+        <div class="shade shade-left"></div>
+        <div class="itemBox" id='itemBox'>
+            <ul class="tab" id='tabBox'>
+            </ul>
+        </div>
+        <span class="right"> &gt; </span>
+        <div class="shade shade-right"></div>
+    </div>
+    <iframe id="iframe" frameborder="0" scrolling="no" src=""></iframe>
 </div>
 </body>
 <script type="text/javascript">
@@ -60,6 +113,12 @@
          $(window).resize(function(){
              setTimeout(function () {
                  //do nothing
+                 var navWidth = $('#tabBox').width();//整体宽度
+                 var containerWidth = $('#itemBox').width();//容器宽度
+                 if(navWidth>containerWidth) $('.navBox span').css('display','block');
+                 else $('.navBox span').css('display','none');
+                 $('#tabBox').css("transform","translate("+0+"px,0px)");
+                 $('#tabBox').css('text-align','center')
              },50);
              adaptive();
          });
@@ -91,6 +150,52 @@
              $(this).addClass("active").siblings().removeClass("active");
              $('#iframe').attr('src',$(this).attr('url'));
          });
+
+         var navWidth = $('#tabBox').width();//整体宽度
+         var containerWidth = $('#itemBox').width();//容器宽度
+         if(navWidth>containerWidth) $('.navBox span').css('display','block');
+
+         function leftEvent(){
+             var navWidth = $('#tabBox').width();//整体宽度
+             var containerWidth = $('#itemBox').width();//容器宽度
+             var currentOffset = Number($('#tabBox').css("transform").replace(/[^0-9\-,]/g,'').split(',')[4]);
+             var distance = navWidth-containerWidth-Math.abs(currentOffset);
+             if(currentOffset>=0){
+                 return;
+             }else{
+                 if(Math.abs(currentOffset)>300){
+                     var newOffset = currentOffset+300;
+                     $('#tabBox').css("transform","translate("+newOffset+"px,0px)");
+                 }else{
+                     $('#tabBox').css("transform","translate("+0+"px,0px)");
+                 }
+             };
+         };
+
+         $('.left').bind('click',function(){
+             $('.shade-left').css('display','inline-block');
+             leftEvent();
+             setTimeout(function(){
+                 $('.shade-left').css('display','none');
+
+             },1000)
+
+         });
+
+         $('.right').on('click',function(event){
+             var navWidth = $('#tabBox').width();//整体宽度
+             var containerWidth = $('#itemBox').width();//容器宽度
+
+             var currentOffset = Number($('#tabBox').css("transform").replace(/[^0-9\-,]/g,'').split(',')[4]);
+             var distance = navWidth-containerWidth-Math.abs(currentOffset);
+
+             if( distance>0 ){
+                 var newOffset = Math.abs(distance)>300?currentOffset-300:currentOffset-distance;
+                 $('#tabBox').css("transform","translate("+newOffset+"px,0px)");
+             } else {
+                 return;
+             }
+         })
      });
      function adaptive() {
          var height = $(window).height();

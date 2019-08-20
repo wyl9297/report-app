@@ -162,7 +162,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1066800,722880,722880,722880,722880,722880,722880,875520,875520,875520,875520,875520,875520,875520,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,3390900,2743200]]></ColumnWidth>
+<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,3048000,3009900,3390900,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="17" s="0">
 <O>
@@ -1066,7 +1066,7 @@
 <ReportAttrSet>
 <ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
 <PaperSetting>
-<PaperSize width="54720000" height="28800000"/>
+<PaperSize width="51840000" height="36000000"/>
 <Margin top="720000" left="864000" bottom="720000" right="864000"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
