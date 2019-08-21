@@ -28,10 +28,7 @@ public class CurrencyFlagUtil extends AbstractBaseTableData {
 
     @Override
     protected Parameter[] getParameter() {
-        return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("module")
-        };
+        return new Parameter[]{};
     }
 
     @Override
