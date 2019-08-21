@@ -29,7 +29,7 @@ public class TransactionResultItemDataSource extends AbstractBaseTableData {
     protected String[] getColumn() {
         return new String[]{"code" , "name" , "spec" , "techParameters" , "unitName" , "comment" , "purpose" , "dealUnitPrice" , "useDept" ,  "priceSaving" , "dealRation" , "needTime" , "dealDescription" ,
                 "planPrice" , "appliedEnterprise" , "appliedPersonAndPhone" , "dealTotalPrice" , "dealAmount" , "quoteUnitPrice" , "priceSavingRatio" , "purchaseAmount" , "quoteTotalPrice" ,
-                "supplierListCode" , "supplierId" , "projectItemId"};
+                "supplierListCode" , "supplierId" , "projectItemId", "currency"};
     }
 
     @Override

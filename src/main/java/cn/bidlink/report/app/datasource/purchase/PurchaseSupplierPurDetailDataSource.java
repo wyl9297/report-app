@@ -32,7 +32,7 @@ public class PurchaseSupplierPurDetailDataSource extends AbstractBaseTableData {
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"id" ,"projectId" ,"directoryId" ,"companyId" ,"name", "code", "spec", "techParameters", "purchaseAmount", "unitName", "marketPrice", "appliedPersonAndPhone", "appliedEnterprise", "useDept", "purpose", "needTime", "comment"};
+        return new String[]{"id" ,"projectId" ,"directoryId" ,"companyId" ,"name", "code", "spec", "techParameters", "purchaseAmount", "unitName", "marketPrice", "appliedPersonAndPhone", "appliedEnterprise", "useDept", "purpose", "needTime", "comment", "currency"};
     }
 
     @Override
