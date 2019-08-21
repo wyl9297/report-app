@@ -655,6 +655,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                 map.put("needConfirm", projectSupplierDimensionItemDetailVO.getNeedConfirm() == 1 ? "是" : "否" );
                 map.put("supplierItemId" , projectSupplierDimensionItemDetailVO.getProjectItemId().toString() );
                 map.put("supplierId" , projectSupplierDimensionItemDetailVO.getSupplierId().toString() );
+                map.put("currency" , projectSupplierDimensionItemDetailVO.getCurrency() );
                 if ( null != projectSupplierDimensionItemDetailVO.getSupplierConfirmTime() ) {
                     map.put("supplierConfirmTime",simpleDateFormat.format(projectSupplierDimensionItemDetailVO.getSupplierConfirmTime()));
                 }

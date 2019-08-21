@@ -70,6 +70,8 @@ public class ProjectSupplierDealVo {
      */
     private BigDecimal dealTotalPriceWithProject;
 
+    private String currency;
+
     public Long getSupplierId() {
         return supplierId;
     }
@@ -164,5 +166,13 @@ public class ProjectSupplierDealVo {
 
     public void setDealTotalPriceWithProject(BigDecimal dealTotalPriceWithProject) {
         this.dealTotalPriceWithProject = dealTotalPriceWithProject;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 }

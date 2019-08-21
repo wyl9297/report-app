@@ -1298,12 +1298,6 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
-<Text>
-<![CDATA[=$FineWaterMark]]></Text>
-</WatermarkAttr>
-</WatermarkAttr>
 <PrintSettings class="com.fr.base.print.PrintSettingsAttrMark">
 <PrintSettings printType="0" valid="true">
 <NoClientPrintAttr>
@@ -1323,6 +1317,12 @@
 </NativePrintAttr>
 </PrintSettings>
 </PrintSettings>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="f5997312-6a55-4e48-8494-846ce7096785"/>
 </TemplateIdAttMark>
