@@ -1,6 +1,10 @@
 package cn.bidlink.report.app;
 
+import cn.bidlink.base.ServiceResult;
 import cn.bidlink.framework.common.entity.TableData;
+import cn.bidlink.procurement.appset.dal.dto.AppsetPrivilegeControlDto;
+import cn.bidlink.procurement.appset.dal.enums.PrivilegeEnum;
+import cn.bidlink.procurement.appset.dal.service.DubboAppsetPrivilegeModuleNodeControlService;
 import cn.bidlink.procurement.bidding.cloud.dto.SaveSubProjectVo;
 import cn.bidlink.procurement.bidding.cloud.service.BidSubProjectRestService;
 import cn.bidlink.procurement.bidding.cloud.service.BidSupplierItemRestService;
@@ -52,6 +56,9 @@ public class TestService extends TestBase{
     @Autowired
     private BidSubProjectRestService bidSubProjectRestService;
 
+    @Autowired
+//    @Qualifier(value = "dubboAppsetPrivilegeModuleNodeControlService")
+    private DubboAppsetPrivilegeModuleNodeControlService dubboAppsetPrivilegeModuleNodeControlService ;
     /**
      * 统计报价相关项  单元测试
      */
@@ -123,7 +130,7 @@ public class TestService extends TestBase{
 
     @Test
     public void testGetSupplierQuoteData(){
-        Map<String, Object> supplierQuoteData = quotedPriceRestService.getSupplierQuoteData(315453103186903420L,11113173881L);
+        Map<String, Object> supplierQuoteData = quotedPriceRestService.getSupplierQuoteData(325946881467220650L,11113174218L);
         // 实际截止时间：realQuoteStopTime
         print(supplierQuoteData);
     }
@@ -167,5 +174,12 @@ public class TestService extends TestBase{
     public void testFindBidSubProjectByPk(){
         SaveSubProjectVo bidSubDetail = bidSubProjectRestService.getBidSubDetail(11113174093L, 328920271245279269L);
         print(bidSubDetail);
+    }
+
+    @Test
+    public void test123(){
+        ServiceResult<List<AppsetPrivilegeControlDto>> controlServiceResult = dubboAppsetPrivilegeModuleNodeControlService.findPrivilegeListByModuleCode(PrivilegeEnum.PrivileModuleEnum.PURCHASE.getCode(), 11113173881L);
+        List<AppsetPrivilegeControlDto> result = controlServiceResult.getResult();
+        print(result);
     }
 }

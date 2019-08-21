@@ -2,15 +2,11 @@ package cn.bidlink.report.app.service.impl;
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.framework.boot.web.context.UserContext;
-import cn.bidlink.framework.common.entity.ResponseObj;
 import cn.bidlink.framework.common.entity.TableData;
 import cn.bidlink.procurement.approve.cloud.service.RestWorkflowApproveService;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeDto;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeParamDto;
 import cn.bidlink.procurement.approve.dal.dto.TaskRecodeDto;
-import cn.bidlink.procurement.appset.dal.dto.AppsetPrivilegeControlDto;
-import cn.bidlink.procurement.appset.dal.enums.PrivilegeEnum;
-import cn.bidlink.procurement.appset.dal.service.DubboAppsetPrivilegeModuleNodeControlService;
 import cn.bidlink.procurement.purchase.cloud.dto.*;
 import cn.bidlink.procurement.purchase.cloud.service.*;
 import cn.bidlink.procurement.purchase.cloud.vo.DealItemSupplierVo;
@@ -260,6 +256,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                 item.setQuoteTotalPrice((String) supMap.get("quoteTotalPrice"));
                 item.setSupplierId((String) supMap.get("supplierId"));
                 item.setDealDescription((String) supMap.get("dealDescription"));
+                item.setCurrency((String) supMap.get("currency"));
                 list.add(item);
             });
         });
