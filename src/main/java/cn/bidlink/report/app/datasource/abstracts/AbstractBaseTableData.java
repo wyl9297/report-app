@@ -172,6 +172,10 @@ public abstract class AbstractBaseTableData extends AbstractTableData {
             return true;
         } else if ( "java.math.BigDecimal".equals(typeclass1)  ){
             return true;
+        }else if("java.lang.Boolean".equals(typeclass1)){
+            return  true;
+        }else if("boolean".equals(typeclass1)){
+            return  true;
         }
         return false;
     }

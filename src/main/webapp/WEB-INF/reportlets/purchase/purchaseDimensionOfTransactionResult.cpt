@@ -230,7 +230,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[875520,722880,722880,722880,722880,722880,723900,1143000,875520,723900,875520,2255520,723900]]></RowHeight>
+<![CDATA[875520,722880,722880,722880,722880,722880,723900,1143000,875520,875520,2255520,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[2743200,3169920,2743200,3017520,3108960,2743200,2743200,3810000,3322320,2956560,2743200,2743200,2987040,2743200,3200400,3390900,3390900,3596640,3596640,2971800,3474720,3505200,3383280,3688080,2743200]]></ColumnWidth>
 <CellElementList>
@@ -520,7 +520,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[flag.select(flag) = true]]></Formula>
+<![CDATA[flag.select(flag) == false]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -1076,24 +1076,6 @@
 </Highlight>
 </HighlightList>
 <Expand dir="0"/>
-</C>
-<C c="0" r="9">
-<O t="DSColumn">
-<Attributes dsName="flag" columnName="flag"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
-</O>
-<PrivilegeControl/>
-<Expand dir="0"/>
-</C>
-<C c="1" r="9">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=flag.select(flag)]]></Attributes>
-</O>
-<PrivilegeControl/>
-<Expand/>
 </C>
 </CellElementList>
 <ReportAttrSet>
