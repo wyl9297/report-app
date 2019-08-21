@@ -58,6 +58,10 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseClinchDealPriceProjectBaseDataSource"/>
 </TableData>
+<TableData name="flag" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.utils.CurrencyFlagUtil"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -560,6 +564,17 @@
 <O>
 <![CDATA[币种]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[flag.select(flag) == false]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand leftParentDefault="false" left="A10"/>
 </C>
 <C c="16" r="9" s="0">
@@ -965,8 +980,14 @@
 <Expand dir="0" leftParentDefault="false" left="B11"/>
 </C>
 <C c="15" r="10" s="4">
+<O t="DSColumn">
+<Attributes dsName="item" columnName="currency"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B11"/>
+<Expand dir="0"/>
 </C>
 <C c="16" r="10" s="4">
 <O t="DSColumn">
