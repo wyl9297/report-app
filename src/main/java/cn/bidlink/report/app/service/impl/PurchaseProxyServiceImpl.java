@@ -64,8 +64,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     @Autowired
     private ProjectBargainRestService projectBargainRestService;
 
-    @Autowired
-    private DubboAppsetPrivilegeModuleNodeControlService dubboAppsetPrivilegeModuleNodeControlService;
+
 
     @Override
     public List<Map<String, Object>> getSupplierQuoteData(Long projectId, Long companyId) {
@@ -113,25 +112,6 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
         return temp;
     }
 
-
-    public ResponseObj getCurrencyFlag(Long companyId) {
-
-        ServiceResult<List<AppsetPrivilegeControlDto>> controlServiceResult = dubboAppsetPrivilegeModuleNodeControlService.findPrivilegeListByModuleCode(PrivilegeEnum.PrivileModuleEnum.PURCHASE.getCode(), companyId);
-        if (!controlServiceResult.getSuccess()){
-            logger.error("调用dubboAppsetPrivilegeModuleNodeControlService.findPrivilegeListByModuleCode接口时发生异常");
-            throw new RuntimeException("err_code"+controlServiceResult.getCode()+",err_msg"+controlServiceResult.getMessage());
-        }
-        List<AppsetPrivilegeControlDto> result = controlServiceResult.getResult();
-        boolean flag = false;
-        for (int i = 0; i < result.size() ; i++) {
-            if (result.get(i).getModuleNodeCode().equals(35)){
-
-                flag = result.get(i).getIsChoose().equals(1);
-            }
-        }
-
-        return ResponseObj.SUCCESS(flag);
-    }
 
     @Override
     public List<QuoteSeparatelyVo> findItemSupplierQuoteInfoWithTableDate(Long companyId, Long projectId, Boolean quoteResult, Integer pageNum, Integer pageSize) {
