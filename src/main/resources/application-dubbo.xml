@@ -17,6 +17,7 @@
     <d:reference id="userService" registry="defaultRegistryAddress" interface="cn.bidlink.usercenter.server.service.DubboTRegUserService"/>
     <d:reference id="dubboTRegCompanyService" registry="defaultRegistryAddress" interface="cn.bidlink.usercenter.server.service.DubboTRegCompanyService"/>
     <d:reference id="dubboAppsetPrintCompanySetService" registry="defaultRegistryAddress" interface="cn.bidlink.procurement.appset.dal.service.DubboAppsetPrintCompanySetService" check="false"/>
+    <d:reference id="dubboAppsetPrivilegeModuleNodeControlService" registry="defaultRegistryAddress" interface="cn.bidlink.procurement.appset.dal.service.DubboAppsetPrivilegeModuleNodeControlService" check="false"/>
     <!-- 组织权限、用户中心  end-->
 
 
