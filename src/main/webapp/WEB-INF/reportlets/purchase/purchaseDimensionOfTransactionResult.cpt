@@ -342,6 +342,17 @@
 <O>
 <![CDATA[采购品编码]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品编码", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="3" r="7" s="6">
@@ -394,6 +405,17 @@
 <O>
 <![CDATA[市场参考价（元）]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("市场参考价", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="8" r="7" s="6">
@@ -508,6 +530,17 @@
 <O>
 <![CDATA[报价单价（元）]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("报价单价", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="16" r="7" s="6">
@@ -531,6 +564,17 @@
 <O>
 <![CDATA[报价总计（元）]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("报价总价", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="18" r="7" s="6">
@@ -569,6 +613,17 @@
 <O>
 <![CDATA[成交比例(%)]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("成交比例", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="21" r="7" s="6">
@@ -587,6 +642,17 @@
 <O>
 <![CDATA[成交说明]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("成交说明", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="0" r="8" s="8">
@@ -1146,7 +1212,7 @@
 <Hotkeys>
 <![CDATA[enter]]></Hotkeys>
 </InnerWidget>
-<BoundsAttr x="674" y="8" width="80" height="21"/>
+<BoundsAttr x="1207" y="20" width="80" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.CheckBoxGroup">
@@ -1156,7 +1222,7 @@
 </WidgetAttr>
 <Dictionary class="com.fr.data.impl.FormulaDictionary">
 <FormulaDict>
-<![CDATA[=split("规格型号,技术参数,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注",",")]]></FormulaDict>
+<![CDATA[=split("采购品编码,规格型号,技术参数,市场参考价,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注,报价单价,报价总价,成交比例,成交说明",",")]]></FormulaDict>
 </Dictionary>
 <widgetValue>
 <O t="XMLable" class="com.fr.base.Formula">
@@ -1164,8 +1230,9 @@
 <![CDATA[=ARRAY($Columns)]]></Attributes>
 </O>
 </widgetValue>
+<ChooseAll/>
 </InnerWidget>
-<BoundsAttr x="9" y="8" width="643" height="21"/>
+<BoundsAttr x="9" y="20" width="1184" height="21"/>
 </Widget>
 <Sorted sorted="false"/>
 <MobileWidgetList>
@@ -1176,12 +1243,12 @@
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
 <Position position="1"/>
-<Design_Width design_width="773"/>
+<Design_Width design_width="1293"/>
 <NameTagModified/>
 <WidgetNameTagMap/>
 <ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
-<DesignAttr width="773" height="41"/>
+<DesignAttr width="1293" height="54"/>
 </ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
