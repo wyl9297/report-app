@@ -6,6 +6,9 @@ import cn.bidlink.framework.common.entity.TableData;
 import cn.bidlink.procurement.approve.cloud.service.RestWorkflowApproveService;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeDto;
 import cn.bidlink.procurement.approve.dal.dto.ApproveRecodeParamDto;
+import cn.bidlink.procurement.appset.dal.dto.AppsetPrivilegeControlDto;
+import cn.bidlink.procurement.appset.dal.enums.PrivilegeEnum;
+import cn.bidlink.procurement.appset.dal.service.DubboAppsetPrivilegeModuleNodeControlService;
 import cn.bidlink.procurement.bidding.cloud.service.BidSubProjectRestService;
 import cn.bidlink.procurement.bidding.cloud.service.BidSupplierItemRestService;
 import cn.bidlink.procurement.bidding.cloud.service.BidViewRestService;
@@ -94,6 +97,10 @@ public class TestReportService extends TestBase{
 
     @Autowired
     private BidSubProjectRestService bidSubProjectRestService;
+
+    @Autowired
+    private DubboAppsetPrivilegeModuleNodeControlService dubboAppsetPrivilegeModuleNodeControlService;
+
 
     /**
      * 统计报价相关项  单元测试
@@ -410,6 +417,17 @@ public class TestReportService extends TestBase{
     public void testGetBidReportDetail(){
         BidSubProject bidSubProjectByPk = bidSubProjectRestService.getBidReportDetail(216941622867263488L);
         System.out.println(bidSubProjectByPk);
+
+    }
+
+    /**
+     * 采购项目：统一增加币种
+     * cn.bidlink.procurement.purchase.cloud.service.ProjectRestService#getProjectBase
+     */
+    @Test
+    public void testGetDubboAppsetPrivilegeModuleNodeControlService(){
+        ServiceResult<List<AppsetPrivilegeControlDto>> controlServiceResult = dubboAppsetPrivilegeModuleNodeControlService.findPrivilegeListByModuleCode(PrivilegeEnum.PrivileModuleEnum.PURCHASE.getCode(), 11113174493L);
+        System.out.println(controlServiceResult);
 
     }
 

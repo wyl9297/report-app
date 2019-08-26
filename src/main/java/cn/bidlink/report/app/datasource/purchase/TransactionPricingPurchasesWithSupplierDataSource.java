@@ -28,7 +28,7 @@ public class TransactionPricingPurchasesWithSupplierDataSource extends AbstractB
     @Override
     protected String[] getColumn() {
         return new String[]{"supplierName", "quoteUnitPrice", "quoteTotalPrice", "dealAmount", "dealRation", "dealTotalPrice", "projectItemId",
-                "dealUnitPrice", "dealDescription", "supplierId", "dealTotalPriceWithProject"};
+                "dealUnitPrice", "dealDescription", "supplierId", "dealTotalPriceWithProject" , "currency"};
     }
 
     @Override

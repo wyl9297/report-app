@@ -60,6 +60,8 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     @Autowired
     private ProjectBargainRestService projectBargainRestService;
 
+
+
     @Override
     public List<Map<String, Object>> getSupplierQuoteData(Long projectId, Long companyId) {
         Map<String, Object> supplierQuoteData = quotedPriceRestService.getSupplierQuoteData(Long.valueOf(projectId), Long.valueOf(companyId));
@@ -105,6 +107,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
         }
         return temp;
     }
+
 
     @Override
     public List<QuoteSeparatelyVo> findItemSupplierQuoteInfoWithTableDate(Long companyId, Long projectId, Boolean quoteResult, Integer pageNum, Integer pageSize) {
@@ -253,6 +256,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                 item.setQuoteTotalPrice((String) supMap.get("quoteTotalPrice"));
                 item.setSupplierId((String) supMap.get("supplierId"));
                 item.setDealDescription((String) supMap.get("dealDescription"));
+                item.setCurrency((String) supMap.get("currency"));
                 list.add(item);
             });
         });
@@ -651,6 +655,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                 map.put("needConfirm", projectSupplierDimensionItemDetailVO.getNeedConfirm() == 1 ? "是" : "否" );
                 map.put("supplierItemId" , projectSupplierDimensionItemDetailVO.getProjectItemId().toString() );
                 map.put("supplierId" , projectSupplierDimensionItemDetailVO.getSupplierId().toString() );
+                map.put("currency" , projectSupplierDimensionItemDetailVO.getCurrency() );
                 if ( null != projectSupplierDimensionItemDetailVO.getSupplierConfirmTime() ) {
                     map.put("supplierConfirmTime",simpleDateFormat.format(projectSupplierDimensionItemDetailVO.getSupplierConfirmTime()));
                 }

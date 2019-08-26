@@ -162,9 +162,9 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1066800,722880,722880,722880,722880,722880,722880,875520,875520,875520,875520,875520,875520,875520,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,3048000,3009900,3390900,2743200]]></ColumnWidth>
+<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,3048000,3048000,3009900,3390900,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="17" s="0">
+<C c="0" r="0" cs="18" s="0">
 <O>
 <![CDATA[报价一览表[供应商维度]A]]></O>
 <PrivilegeControl/>
@@ -177,7 +177,7 @@
 <PrivilegeControl/>
 <Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="1" r="1" cs="16" s="2">
+<C c="1" r="1" cs="17" s="2">
 <O t="DSColumn">
 <Attributes dsName="project" columnName="name"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -197,7 +197,7 @@
 <PrivilegeControl/>
 <Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="1" r="2" cs="16" s="2">
+<C c="1" r="2" cs="17" s="2">
 <O t="DSColumn">
 <Attributes dsName="project" columnName="code"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -217,7 +217,7 @@
 <PrivilegeControl/>
 <Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="1" r="3" cs="16" s="2">
+<C c="1" r="3" cs="17" s="2">
 <O t="DSColumn">
 <Attributes dsName="project" columnName="createUserName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -237,7 +237,7 @@
 <PrivilegeControl/>
 <Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="1" r="4" cs="16" s="2">
+<C c="1" r="4" cs="17" s="2">
 <O t="DSColumn">
 <Attributes dsName="project" columnName="createTime"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -251,7 +251,7 @@
 <CellPageAttr repeat="false"/>
 <Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="0" r="5" cs="17" s="3">
+<C c="0" r="5" cs="18" s="3">
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="supplierQuotedInfo"/>
 <Complex/>
@@ -262,7 +262,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="0" r="6" cs="17" s="4">
+<C c="0" r="6" cs="18" s="4">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE("实际截止时间：", ds1.group(realQuoteStopTime))]]></Attributes>
@@ -285,7 +285,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
-<C c="8" r="7" cs="9" s="6">
+<C c="8" r="7" cs="10" s="6">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="已报价采购品: " + ds1.select(haveQuoteProjectItemCount)]]></Attributes>
@@ -303,7 +303,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="8" r="8" cs="9" s="8">
+<C c="8" r="8" cs="10" s="8">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="联系人： " + ds1.select(linkMan)]]></Attributes>
@@ -321,7 +321,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="8" r="9" cs="9" s="8">
+<C c="8" r="9" cs="10" s="8">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="邀请状态： " + ds1.select(inviteFlag)]]></Attributes>
@@ -339,7 +339,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="8" r="10" cs="9" s="8">
+<C c="8" r="10" cs="10" s="8">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="最近报价时间: " + ds1.select(quoteTime)]]></Attributes>
@@ -357,7 +357,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0" leftParentDefault="false" upParentDefault="false"/>
 </C>
-<C c="8" r="11" cs="9" s="8">
+<C c="8" r="11" cs="10" s="8">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="报价合计(元): " + ds1.select(quoteTotalPrice)]]></Attributes>
@@ -561,12 +561,30 @@
 </C>
 <C c="15" r="12" s="10">
 <O>
+<![CDATA[币种]]></O>
+<PrivilegeControl/>
+<CellPageAttr repeat="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[flag.select(flag) == false]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand leftParentDefault="false" left="A8" upParentDefault="false"/>
+</C>
+<C c="16" r="12" s="10">
+<O>
 <![CDATA[报价总计(元)]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand leftParentDefault="false" left="A8" upParentDefault="false"/>
 </C>
-<C c="16" r="12" s="10">
+<C c="17" r="12" s="10">
 <O t="DSColumn">
 <Attributes dsName="purchaseSubItem" columnName="title"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -962,6 +980,17 @@
 </C>
 <C c="15" r="13" s="13">
 <O t="DSColumn">
+<Attributes dsName="ds2" columnName="currency"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr/>
+<Expand dir="0"/>
+</C>
+<C c="16" r="13" s="13">
+<O t="DSColumn">
 <Attributes dsName="ds2" columnName="quoteTotalPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
@@ -976,7 +1005,7 @@
 <CellPageAttr/>
 <Expand dir="0" leftParentDefault="false" left="A13" upParentDefault="false"/>
 </C>
-<C c="16" r="13" s="13">
+<C c="17" r="13" s="13">
 <O t="DSColumn">
 <Attributes dsName="quoteSeparate" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">

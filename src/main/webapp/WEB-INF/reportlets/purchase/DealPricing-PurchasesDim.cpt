@@ -21,6 +21,10 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseClinchDealPriceProjectBaseDataSource"/>
 </TableData>
+<TableData name="flag" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.utils.CurrencyFlagUtil"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -122,9 +126,9 @@
 <RowHeight defaultValue="723900">
 <![CDATA[952500,875520,875520,875520,875520,1143000,875520,875520,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[3383280,2743200,2743200,2743200,2743200,3352800,3848100,3657600,2895600,2743200,4533900,2895600,3657600,3695700,4084320,3413760,3390900,3657600,3619500,3474720,3474720,3474720,3627120,2743200]]></ColumnWidth>
+<![CDATA[3383280,2743200,2743200,2743200,2743200,3352800,3848100,3657600,2895600,2743200,4533900,2895600,3657600,3695700,4084320,3413760,3413760,3390900,3657600,3619500,3474720,3474720,3474720,3627120,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="23" s="0">
+<C c="0" r="0" cs="24" s="0">
 <O>
 <![CDATA[成交定价（采购品维度）]]></O>
 <PrivilegeControl/>
@@ -136,7 +140,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="1" cs="22" s="1">
+<C c="1" r="1" cs="23" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="name"/>
 <Complex/>
@@ -152,7 +156,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="2" cs="22" s="1">
+<C c="1" r="2" cs="23" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="code"/>
 <Complex/>
@@ -168,7 +172,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="3" cs="22" s="1">
+<C c="1" r="3" cs="23" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createUserName"/>
 <Complex/>
@@ -184,7 +188,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="4" cs="22" s="1">
+<C c="1" r="4" cs="23" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createTime"/>
 <Complex/>
@@ -200,7 +204,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="5" cs="22" s="1">
+<C c="1" r="5" cs="23" s="1">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=supplier.group(dealTotalPriceWithProject)]]></Attributes>
@@ -397,11 +401,28 @@
 </C>
 <C c="16" r="6" s="0">
 <O>
+<![CDATA[币种]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[flag.select(flag) == false]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand leftParentDefault="false" left="A7"/>
+</C>
+<C c="17" r="6" s="0">
+<O>
 <![CDATA[报价总价(元)]]></O>
 <PrivilegeControl/>
 <Expand leftParentDefault="false" left="A7"/>
 </C>
-<C c="17" r="6" s="0">
+<C c="18" r="6" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseSubItem" columnName="title"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -427,31 +448,31 @@
 </HighlightList>
 <Expand dir="1"/>
 </C>
-<C c="18" r="6" s="0">
+<C c="19" r="6" s="0">
 <O>
 <![CDATA[成交数量]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="19" r="6" s="0">
+<C c="20" r="6" s="0">
 <O>
 <![CDATA[成交比例（%）]]></O>
 <PrivilegeControl/>
 <Expand leftParentDefault="false" left="A7"/>
 </C>
-<C c="20" r="6" s="0">
+<C c="21" r="6" s="0">
 <O>
 <![CDATA[成交单价（元）]]></O>
 <PrivilegeControl/>
 <Expand leftParentDefault="false" left="A7"/>
 </C>
-<C c="21" r="6" s="0">
+<C c="22" r="6" s="0">
 <O>
 <![CDATA[成交总价（元）]]></O>
 <PrivilegeControl/>
 <Expand leftParentDefault="false" left="A7"/>
 </C>
-<C c="22" r="6" s="0">
+<C c="23" r="6" s="0">
 <O>
 <![CDATA[成交说明]]></O>
 <PrivilegeControl/>
@@ -822,6 +843,17 @@
 </C>
 <C c="16" r="7" s="1">
 <O t="DSColumn">
+<Attributes dsName="supplier" columnName="currency"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="17" r="7" s="1">
+<O t="DSColumn">
 <Attributes dsName="supplier" columnName="quoteTotalPrice"/>
 <Condition class="com.fr.data.condition.CommonCondition">
 <CNUMBER>
@@ -844,7 +876,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="17" r="7" s="1">
+<C c="18" r="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="quoteSeparate" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -895,7 +927,7 @@
 <Present class="com.fr.base.present.FormulaPresent"/>
 <Expand dir="1"/>
 </C>
-<C c="18" r="7" s="1">
+<C c="19" r="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="dealAmount"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -919,7 +951,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="19" r="7" s="1">
+<C c="20" r="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="dealRation"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -943,7 +975,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="20" r="7" s="1">
+<C c="21" r="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="dealUnitPrice"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -967,7 +999,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="21" r="7" s="1">
+<C c="22" r="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="dealTotalPrice"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -991,7 +1023,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="22" r="7" s="1">
+<C c="23" r="7" s="1">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="dealDescription"/>
 <Condition class="com.fr.data.condition.CommonCondition">

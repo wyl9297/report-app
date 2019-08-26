@@ -28,7 +28,7 @@ public class ListOfQuotationsWithPurchasesDataSource extends AbstractBaseTableDa
     protected String[] getColumn() {
         return new String[]{"supplierName", "subTaxPriceExcluded", "code","purpose", "subLabourCost", "subCombinedPrice","useDept", "spec", "subTax","techParameters",
                 "subManagementCost", "needTime","planPrice", "appliedEnterprise", "appliedPersonAndPhone","unitName", "index","quoteUnitPrice","subProfit", "purchaseAmount",
-                "quoteTotalPrice", "subMaterialCost", "subMachineryCost","name","comment", "subTaxPrice" , "supplierListCode" , "projectItemId" , "supplierId"};
+                "quoteTotalPrice", "subMaterialCost", "subMachineryCost","name","comment", "subTaxPrice" , "supplierListCode" , "projectItemId" , "supplierId", "currency"};
     }
 
     @Override

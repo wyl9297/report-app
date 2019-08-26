@@ -1,14 +1,11 @@
 package cn.bidlink.report.app.datasource.purchase;
 
 import cn.bidlink.framework.boot.web.context.UserContext;
-import cn.bidlink.procurement.purchase.cloud.dto.BargainAllListVo;
-import cn.bidlink.procurement.purchase.cloud.dto.ProjectSupplierDimensionItemDetailVO;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.service.PurchaseProxyService;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import com.fr.base.Parameter;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -31,7 +28,7 @@ public class BargainItemDataSource extends AbstractBaseTableData {
     @Override
     protected String[] getColumn() {
         return new String[]{"supplierName" , "itemName" , "spec" , "purchaseAmount" , "unitName" , "quoteUnitPrice" , "supplierId",
-                "afterPrice" , "purchaseRemark" , "supplierItemId" , "needConfirm" , "bargainTime" , "supplierConfirmTime"};
+                "afterPrice" , "purchaseRemark" , "supplierItemId" , "needConfirm" , "bargainTime" , "supplierConfirmTime" , "currency"};
     }
 
     @Override
