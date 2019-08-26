@@ -161,11 +161,22 @@ public class OrderProxyServiceImpl implements OrderProxyService {
                     orderCargoItem.setIsDelete(items.getIsDelete());
                     //计算单品总价（单价*货单的发货量）
                     BigDecimal quoteUnitPrice = items.getQuoteUnitPrice();
+                    //发货数量
                     BigDecimal cargoSendNumber = items.getCargoSendNumber();
+                    //签收数量
+                    BigDecimal signNumber = items.getSignNumber();
+                    //单品总价展示数值，如果有签收数量，是签收数量*单价，如果没有，是发货数量*单价
                     if( quoteUnitPrice != null){
-                        BigDecimal multiply = quoteUnitPrice.multiply(cargoSendNumber);
-                        BigDecimal bigDecimal = multiply.setScale(2, BigDecimal.ROUND_HALF_UP);
-                        orderCargoItem.setQuoteTotalPrice(bigDecimal);
+                        if (signNumber != null){
+                            BigDecimal multiply = quoteUnitPrice.multiply(signNumber);
+                            BigDecimal bigDecimal = multiply.setScale(2, BigDecimal.ROUND_HALF_UP);
+                            orderCargoItem.setQuoteTotalPrice(bigDecimal);
+                        }else {
+                            BigDecimal multiply = quoteUnitPrice.multiply(cargoSendNumber);
+                            BigDecimal bigDecimal = multiply.setScale(2, BigDecimal.ROUND_HALF_UP);
+                            orderCargoItem.setQuoteTotalPrice(bigDecimal);
+                        }
+
                     }
 
                     orderCargoItems.add(orderCargoItem);
