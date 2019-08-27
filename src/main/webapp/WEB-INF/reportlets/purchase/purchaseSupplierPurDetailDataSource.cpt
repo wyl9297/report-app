@@ -35,6 +35,10 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource"/>
 </TableData>
+<TableData name="flag" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.utils.CurrencyFlagUtil"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -136,7 +140,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <RowHeight defaultValue="723900">
 <![CDATA[875520,722880,722880,722880,722880,723900,875520,875520,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,3390900,3048000,3314700,2971800,2743200]]></ColumnWidth>
+<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,3390900,3390900,3048000,2971800,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="22" s="0">
 <O>
@@ -406,7 +410,6 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <O>
 <![CDATA[币种]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -418,7 +421,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand leftParentDefault="false" left="A8" upParentDefault="false"/>
+<Expand/>
 </C>
 <C c="18" r="6" s="6">
 <O>
@@ -802,34 +805,23 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </C>
 <C c="17" r="7" s="9">
 <O t="DSColumn">
-<Attributes dsName="purchase" columnName="currency"/>
+<Attributes dsName="supplier" columnName="currency"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="18" r="7" s="9">
+<O t="DSColumn">
+<Attributes dsName="supplier" columnName="quoteTotalPrice"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <PrivilegeControl/>
 <CellPageAttr/>
-<Expand dir="0"/>
-</C>
-<C c="18" r="7" s="9">
-<O t="DSColumn">
-<Attributes dsName="supplier" columnName="quoteTotalPrice"/>
-<Condition class="com.fr.data.condition.CommonCondition">
-<CNUMBER>
-<![CDATA[0]]></CNUMBER>
-<CNAME>
-<![CDATA[projectItemId]]></CNAME>
-<Compare op="0">
-<SimpleDSColumn dsName="purchase" columnName="id"/>
-</Compare>
-</Condition>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Result>
-<![CDATA[$$$]]></Result>
-<Parameters/>
-</O>
-<PrivilegeControl/>
 <Expand dir="0"/>
 </C>
 <C c="19" r="7" s="9">
@@ -926,6 +918,10 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </O>
 <PrivilegeControl/>
 <Expand dir="0"/>
+</C>
+<C c="7" r="15">
+<PrivilegeControl/>
+<Expand/>
 </C>
 </CellElementList>
 <ReportAttrSet>
