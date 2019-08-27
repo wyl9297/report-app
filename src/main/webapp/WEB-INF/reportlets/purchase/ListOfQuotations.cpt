@@ -43,6 +43,10 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource"/>
 </TableData>
+<TableData name="flag" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.utils.CurrencyFlagUtil"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
