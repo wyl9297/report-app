@@ -29,7 +29,7 @@ public class OrderDetailDataSource extends AbstractBaseTableData {
 
     @Override
     protected String[] getColumn() {
-        return new String[]{ "orderCode" , "createUserName" , "createTime" , "orderName" , "orderSource" , "projectName" , "orderTotalPrice" ,"orderStatus" , "arriveTime" , "addressUserName","addressName","addressPhone","supplierName","supplierUserName","supplierPhone","supplierLoginName","projectType"};
+        return new String[]{ "orderCode" , "createUserName" , "createTime" , "orderName" , "orderSource" , "projectName" , "orderTotalPrice" ,"orderStatus" , "arriveTime" , "addressUserName","addressName","addressPhone","supplierName","supplierUserName","supplierPhone","supplierLoginName","projectType","hasDeliveryCargo"};
     }
 
     @Override

@@ -35,6 +35,10 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseSupplierProjuctDataSource"/>
 </TableData>
+<TableData name="flag" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.utils.CurrencyFlagUtil"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -134,11 +138,11 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[875520,722880,722880,722880,722880,723900,875520,723900,723900,723900,723900]]></RowHeight>
+<![CDATA[875520,722880,722880,722880,722880,723900,875520,875520,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,3390900,3314700,2971800,2743200]]></ColumnWidth>
+<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,3810000,3124200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,3390900,3390900,3048000,2971800,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="21" s="0">
+<C c="0" r="0" cs="22" s="0">
 <O>
 <![CDATA[报价一览表[采购品维度]A]]></O>
 <PrivilegeControl/>
@@ -150,7 +154,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="1" cs="20" s="2">
+<C c="1" r="1" cs="21" s="2">
 <O t="DSColumn">
 <Attributes dsName="projuct" columnName="name"/>
 <Complex/>
@@ -166,7 +170,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="2" cs="20" s="2">
+<C c="1" r="2" cs="21" s="2">
 <O t="DSColumn">
 <Attributes dsName="projuct" columnName="code"/>
 <Complex/>
@@ -182,7 +186,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="3" cs="20" s="2">
+<C c="1" r="3" cs="21" s="2">
 <O t="DSColumn">
 <Attributes dsName="projuct" columnName="createUserName"/>
 <Complex/>
@@ -198,7 +202,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="4" cs="20" s="4">
+<C c="1" r="4" cs="21" s="4">
 <O t="DSColumn">
 <Attributes dsName="projuct" columnName="createTime"/>
 <Complex/>
@@ -404,11 +408,28 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </C>
 <C c="17" r="6" s="6">
 <O>
+<![CDATA[币种]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[flag.select(flag) == false]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="18" r="6" s="6">
+<O>
 <![CDATA[报价总计（元）]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="18" r="6" s="6">
+<C c="19" r="6" s="6">
 <O t="DSColumn">
 <Attributes dsName="purchaseSubItem" columnName="title"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -427,20 +448,20 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)=0]]></Formula>
+<![CDATA[len($$$) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
 </HighlightList>
 <Expand dir="1"/>
 </C>
-<C c="19" r="6" s="6">
+<C c="20" r="6" s="6">
 <O>
 <![CDATA[邀请状态]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="20" r="6" s="7">
+<C c="21" r="6" s="7">
 <O>
 <![CDATA[供应商来源]]></O>
 <PrivilegeControl/>
@@ -784,26 +805,26 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </C>
 <C c="17" r="7" s="9">
 <O t="DSColumn">
-<Attributes dsName="supplier" columnName="quoteTotalPrice"/>
-<Condition class="com.fr.data.condition.CommonCondition">
-<CNUMBER>
-<![CDATA[0]]></CNUMBER>
-<CNAME>
-<![CDATA[projectItemId]]></CNAME>
-<Compare op="0">
-<SimpleDSColumn dsName="purchase" columnName="id"/>
-</Compare>
-</Condition>
+<Attributes dsName="supplier" columnName="currency"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Result>
-<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
 <C c="18" r="7" s="9">
+<O t="DSColumn">
+<Attributes dsName="supplier" columnName="quoteTotalPrice"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr/>
+<Expand dir="0"/>
+</C>
+<C c="19" r="7" s="9">
 <O t="DSColumn">
 <Attributes dsName="quoteSeparate" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -852,7 +873,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <PrivilegeControl/>
 <Expand dir="1"/>
 </C>
-<C c="19" r="7" s="9">
+<C c="20" r="7" s="9">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="inviteFlag"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -875,7 +896,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="20" r="7" s="2">
+<C c="21" r="7" s="2">
 <O t="DSColumn">
 <Attributes dsName="supplier" columnName="supplierSource"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -897,6 +918,10 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </O>
 <PrivilegeControl/>
 <Expand dir="0"/>
+</C>
+<C c="7" r="15">
+<PrivilegeControl/>
+<Expand/>
 </C>
 </CellElementList>
 <ReportAttrSet>
@@ -1119,6 +1144,12 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <PrintSettings class="com.fr.base.print.PrintSettingsAttrMark">
 <PrintSettings printType="0" valid="true">
 <NoClientPrintAttr>
@@ -1138,12 +1169,6 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </NativePrintAttr>
 </PrintSettings>
 </PrintSettings>
-<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
-<Text>
-<![CDATA[=$FineWaterMark]]></Text>
-</WatermarkAttr>
-</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="f5997312-6a55-4e48-8494-846ce7096785"/>
 </TemplateIdAttMark>

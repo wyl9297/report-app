@@ -31,7 +31,7 @@ public class PurchaseDimensionOfTransactionResult extends AbstractBaseTableData 
                 "name", "comment", "planPrice", "projectId", "appliedEnterprise", "appliedPersonAndPhone", "subTaxPriceExcluded", "subLabourCost", "dealUnitPrice",
                 "subCombinedPrice", "subTax", "dealRation", "quoteAmount", "subManagementCost", "planPrice", "dealTotalPrice", "supplierName", "dealAmount",
                 "quoteUnitPrice", "subProfit", "quoteTotalPrice", "subMaterialCost", "subMachineryCost", "haveBargain", "subTaxPrice", "projectItemId", "projectId",
-                "supplierId" , "dealDescription" , "needTime"};
+                "supplierId" , "dealDescription" , "needTime" , "currency"};
     }
 
     @Override

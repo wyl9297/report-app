@@ -13,6 +13,10 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.BargainInfoDataSource"/>
 </TableData>
+<TableData name="flag" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.utils.CurrencyFlagUtil"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -132,9 +136,9 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1066800,952500,952500,952500,952500,723900,990600,951840,875520,875520,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1584960,4876800,3009900,3200400,3848100,3771900,3771900,2971800,3124200,3048000,2971800,2743200,3352800,3467100,2743200]]></ColumnWidth>
+<![CDATA[1584960,4876800,3009900,3200400,3848100,2834640,3771900,3771900,2971800,3124200,3048000,2971800,2743200,3352800,3467100,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="14" s="0">
+<C c="0" r="0" cs="15" s="0">
 <O>
 <![CDATA[议价信息]]></O>
 <PrivilegeControl/>
@@ -146,7 +150,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="1" cs="12" s="2">
+<C c="2" r="1" cs="13" s="2">
 <O t="DSColumn">
 <Attributes dsName="projectInfo" columnName="name"/>
 <Complex/>
@@ -162,7 +166,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="2" cs="12" s="2">
+<C c="2" r="2" cs="13" s="2">
 <O t="DSColumn">
 <Attributes dsName="projectInfo" columnName="code"/>
 <Complex/>
@@ -178,7 +182,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="3" cs="12" s="2">
+<C c="2" r="3" cs="13" s="2">
 <O t="DSColumn">
 <Attributes dsName="projectInfo" columnName="createUserName"/>
 <Complex/>
@@ -194,7 +198,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="4" cs="12" s="2">
+<C c="2" r="4" cs="13" s="2">
 <O t="DSColumn">
 <Attributes dsName="projectInfo" columnName="createTimeStr"/>
 <Complex/>
@@ -204,7 +208,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="6" cs="14" s="3">
+<C c="0" r="6" cs="15" s="3">
 <O t="DSColumn">
 <Attributes dsName="bargainItem" columnName="supplierName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -249,53 +253,70 @@
 </C>
 <C c="5" r="7" s="0">
 <O>
-<![CDATA[议价前单价（元）]]></O>
+<![CDATA[币种]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[flag.select(flag) == false]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="6" r="7" s="0">
 <O>
-<![CDATA[议价后单价（元）]]></O>
+<![CDATA[议价前单价（元）]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="7" r="7" s="0">
 <O>
-<![CDATA[发起人]]></O>
+<![CDATA[议价后单价（元）]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="8" r="7" s="0">
 <O>
-<![CDATA[议价时间]]></O>
+<![CDATA[发起人]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="9" r="7" s="0">
 <O>
-<![CDATA[是否要求确认]]></O>
+<![CDATA[议价时间]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="10" r="7" s="0">
 <O>
-<![CDATA[确认时间]]></O>
+<![CDATA[是否要求确认]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="11" r="7" s="0">
 <O>
-<![CDATA[议价状态]]></O>
+<![CDATA[确认时间]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="12" r="7" s="0">
 <O>
-<![CDATA[议价原因]]></O>
+<![CDATA[议价状态]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="13" r="7" s="0">
+<O>
+<![CDATA[议价原因]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="7" s="0">
 <O>
 <![CDATA[反馈备注]]></O>
 <PrivilegeControl/>
@@ -359,6 +380,18 @@
 </C>
 <C c="5" r="8" s="2">
 <O t="DSColumn">
+<Attributes dsName="bargainItem" columnName="currency"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand leftParentDefault="false" left="A7"/>
+</C>
+<C c="6" r="8" s="2">
+<O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="beforePrice"/>
 <Condition class="com.fr.data.condition.ListCondition">
 <JoinCondition join="0">
@@ -374,6 +407,8 @@
 </JoinCondition>
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
 <CNAME>
 <![CDATA[supplierId]]></CNAME>
 <Compare op="0">
@@ -393,7 +428,7 @@
 <PrivilegeControl/>
 <Expand dir="0" leftParentDefault="false" left="B9"/>
 </C>
-<C c="6" r="8" s="2">
+<C c="7" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="afterPrice"/>
 <Complex/>
@@ -405,7 +440,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="8" s="2">
+<C c="8" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="startMan"/>
 <Complex/>
@@ -417,7 +452,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="8" r="8" s="2">
+<C c="9" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="bargainTime"/>
 <Complex/>
@@ -429,7 +464,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="9" r="8" s="2">
+<C c="10" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="needConfirm"/>
 <Complex/>
@@ -441,7 +476,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="10" r="8" s="2">
+<C c="11" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="supplierConfirmTime"/>
 <Complex/>
@@ -453,7 +488,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="11" r="8" s="2">
+<C c="12" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="bargainStatus"/>
 <Complex/>
@@ -465,7 +500,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="12" r="8" s="2">
+<C c="13" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="bargainReason"/>
 <Complex/>
@@ -477,7 +512,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="13" r="8" s="2">
+<C c="14" r="8" s="2">
 <O t="DSColumn">
 <Attributes dsName="bargainInfo" columnName="response"/>
 <Complex/>
@@ -573,10 +608,10 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 </StyleList>

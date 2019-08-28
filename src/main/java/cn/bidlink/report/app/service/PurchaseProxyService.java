@@ -58,4 +58,8 @@ public interface PurchaseProxyService {
     List<Map<String,String>> getBargainItemList(Long projectId, Long companyId);
 
     List<Map<String,String>> getBargainInfoList(Long projectId, Long companyId);
+
+    List<Map<String,String>> totalQuoteTitle(Long projectId);
+
+    List<Map> totalQuoteValue(Long projectId);
 }

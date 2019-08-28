@@ -1,10 +1,14 @@
 package cn.bidlink.report.app.gateway;
 
 
+import cn.bidlink.report.app.annotation.Individuation;
+import cn.bidlink.report.app.individuation.ReportUrlAppender;
 import cn.bidlink.report.app.utils.OrderedProperties;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -33,6 +37,8 @@ public class UrlHandler implements ApplicationListener {
 
     public static final Map<String,String> templateIdMap = new HashMap<>();
 
+    public static final Map<String,ReportUrlAppender> urlAppenderMap = new HashMap<>();
+
     public static final StringBuilder multiDetailHtml = new StringBuilder();
 
     private final String prefix = "report.gateway.route.";
@@ -42,6 +48,9 @@ public class UrlHandler implements ApplicationListener {
     private final String frRealPath = "../../../ReportServer?viewlet=";
 
     private Logger logger = LoggerFactory.getLogger(UrlHandler.class);
+
+    @Autowired
+    ApplicationContext applicationContext;
 
     @Override
     public void onApplicationEvent(ApplicationEvent event) {
@@ -115,11 +124,33 @@ public class UrlHandler implements ApplicationListener {
                     }
                 });
                 appendMultiTableHtml();
+
+                individuationUrl();
+
             }
         }
     }
 
-    private static void appendMultiTableHtml(){
+    private void individuationUrl(){
+        Map<String, ReportUrlAppender> beans = applicationContext.getBeansOfType(ReportUrlAppender.class);
+        Iterator<String> iterator = beans.keySet().iterator();
+        while (iterator.hasNext()){
+            String key = iterator.next();
+            ReportUrlAppender reportUrlAppender = beans.get(key);
+            Individuation annotation = reportUrlAppender.getClass().getAnnotation(Individuation.class);
+            if ( null == annotation ) {
+                throw new RuntimeException("报表系统启动失败:" + reportUrlAppender.getClass().getName() + "类未声明【Individuation】注解 ");
+            }
+            String value = annotation.value();
+            value = value.replace(".", "/");
+            if ( urlAppenderMap.containsKey(value) ) {
+                throw new RuntimeException("报表系统启动失败:" + value + "在注解【Individuation】 声明超过一次");
+            }
+            urlAppenderMap.put(value,reportUrlAppender);
+        }
+    }
+
+    private void appendMultiTableHtml(){
         int index = 1;
         for (Map.Entry<String, Map> entry : multiUrlMap.entrySet()) {
             String key = entry.getKey();

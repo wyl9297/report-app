@@ -33,6 +33,18 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseClinchDealPriceProjectBaseDataSource"/>
 </TableData>
+<TableData name="totalTitle" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.purchaseTotalQuoteTitle"/>
+</TableData>
+<TableData name="totalValue" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.purchaseTotalQuoteValue"/>
+</TableData>
+<TableData name="checkBoxValue" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.PurchaseQuotationItemSupplierChekBoxValue"/>
+</TableData>
 </TableDataMap>
 <ReportWebAttr>
 <ServerPrinter/>
@@ -136,7 +148,7 @@
 <ColumnWidth defaultValue="2743200">
 <![CDATA[2895600,2743200,2743200,2743200,2743200,3444240,3413760,3543300,3657600,2743200,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="8" s="0">
+<C c="0" r="0" cs="9" s="0">
 <O>
 <![CDATA[成交定价(采购品供应商维度)]]></O>
 <PrivilegeControl/>
@@ -148,7 +160,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="1" cs="7" s="1">
+<C c="1" r="1" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="name"/>
 <Complex/>
@@ -164,7 +176,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="2" cs="7" s="1">
+<C c="1" r="2" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="code"/>
 <Complex/>
@@ -180,7 +192,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="3" cs="7" s="1">
+<C c="1" r="3" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createUserName"/>
 <Complex/>
@@ -196,7 +208,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="4" cs="7" s="1">
+<C c="1" r="4" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createTime"/>
 <Complex/>
@@ -212,7 +224,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="5" cs="7" s="1">
+<C c="1" r="5" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="dealTotPrice" columnName="dealTotalPrice"/>
 <Complex/>
@@ -244,7 +256,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("规格型号", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("规格型号", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -261,7 +273,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("数量", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("数量", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -278,7 +290,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("计量单位", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("计量单位", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -295,7 +307,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("计划单价", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("计划单价", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -312,7 +324,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("市场参考价", split($Columns, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("市场参考价", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -402,7 +414,7 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("规格型号", split($Columns, ",")) != 0]]></Formula>
+<![CDATA[INARRAY("规格型号", split($ckbx, ",")) != 0]]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -453,7 +465,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="8" s="3">
+<C c="7" r="8" s="0">
 <O t="DSColumn">
 <Attributes dsName="quteTitle" columnName="title"/>
 <Complex/>
@@ -467,7 +479,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)=0]]></Formula>
+<![CDATA[len($$$) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -532,7 +544,59 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="9" cs="8" s="4">
+<C c="0" r="9" cs="7" s="3">
+<O>
+<![CDATA[总报价项]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="7" r="9" s="0">
+<O t="DSColumn">
+<Attributes dsName="totalTitle" columnName="title"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="8" r="9" s="1">
+<O t="DSColumn">
+<Attributes dsName="totalValue" columnName="value"/>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[supplierId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="supplierTitle" columnName="supplierId"/>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
+<CNAME>
+<![CDATA[key]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="totalTitle" columnName="key"/>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="10" cs="8" s="3">
 <O t="DSColumn">
 <Attributes dsName="colTitle" columnName="title"/>
 <Complex/>
@@ -542,7 +606,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="8" r="9" s="1">
+<C c="8" r="10" s="1">
 <O t="DSColumn">
 <Attributes dsName="colPrice" columnName="value"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -565,8 +629,9 @@
 </C>
 </CellElementList>
 <ReportAttrSet>
-<ReportSettings pageOrder="1" headerHeight="0" footerHeight="720000">
+<ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
 <PaperSetting>
+<PaperSize width="50400000" height="36000000"/>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
@@ -597,9 +662,82 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="1" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
+<ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
+<Parameters/>
+<Layout class="com.fr.form.ui.container.WParameterLayout">
+<WidgetName name="para"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Margin top="0" left="0" bottom="0" right="0"/>
+<Border>
+<border style="0" color="-723724" borderRadius="0" type="0" borderStyle="0"/>
+<WidgetTitle>
+<O>
+<![CDATA[新建标题]]></O>
+<FRFont name="SimSun" style="0" size="72"/>
+<Position pos="0"/>
+</WidgetTitle>
+<Alpha alpha="1.0"/>
+</Border>
+<Background name="ColorBackground" color="-526086"/>
+<LCAttr vgap="0" hgap="0" compInterval="0"/>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.CheckBoxGroup">
+<WidgetName name="ckbx"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.TableDataDictionary">
+<FormulaDictAttr kiName="value" viName="value"/>
+<TableDataDictAttr>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[checkBoxValue]]></Name>
+</TableData>
+</TableDataDictAttr>
+</Dictionary>
+<widgetValue>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=ARRAY($Columns)]]></Attributes>
+</O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="72" y="13" width="293" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.parameter.FormSubmitButton">
+<WidgetName name="formSubmit0"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[查询]]></Text>
+<Hotkeys>
+<![CDATA[enter]]></Hotkeys>
+</InnerWidget>
+<BoundsAttr x="406" y="13" width="80" height="21"/>
+</Widget>
+<Sorted sorted="false"/>
+<MobileWidgetList>
+<Widget widgetName="ckbx"/>
+<Widget widgetName="formSubmit0"/>
+</MobileWidgetList>
+<Display display="true"/>
+<DelayDisplayContent delay="false"/>
+<UseParamsTemplate use="true"/>
+<Position position="1"/>
+<Design_Width design_width="960"/>
+<NameTagModified/>
+<WidgetNameTagMap/>
+<ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
+</Layout>
+<DesignAttr width="960" height="40"/>
+</ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
 <O>
@@ -616,10 +754,10 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -642,24 +780,14 @@
 <Right style="1"/>
 </Border>
 </Style>
-<Style horizontal_alignment="2" imageLayout="1">
-<FRFont name="微软雅黑" style="1" size="72"/>
-<Background name="ColorBackground" color="-657929"/>
-<Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
-</Border>
-</Style>
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 </StyleList>

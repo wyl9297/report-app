@@ -81,6 +81,8 @@ public class PurchasesWithSupplierItemVO {
 
     private String directoryId;
 
+    private String currency;
+
     public String getMarketPrice() {
         return marketPrice;
     }
@@ -375,5 +377,13 @@ public class PurchasesWithSupplierItemVO {
 
     public void setDirectoryId(String directoryId) {
         this.directoryId = directoryId;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 }
