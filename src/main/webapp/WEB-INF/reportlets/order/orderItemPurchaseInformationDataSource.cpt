@@ -954,6 +954,20 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[orderInvoiceDetail.select(cargoStatus)==2]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O>
+<![CDATA[   ]]></O>
+</HighlightAction>
+</Highlight>
+</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="6" r="13" s="1">
@@ -1311,16 +1325,16 @@
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="1" color="-16777216"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>
