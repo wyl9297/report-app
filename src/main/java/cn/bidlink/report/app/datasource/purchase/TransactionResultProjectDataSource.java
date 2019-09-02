@@ -28,7 +28,7 @@ public class TransactionResultProjectDataSource extends AbstractBaseTableData {
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"projectCode", "projectName" ,"totalPriceSaving", "dealTotalPrice","totalPriceSavingRatio","createUserName","createTime"};
+        return new String[]{"projectCode", "projectName" ,"totalPriceSaving", "dealTotalPrice","totalPriceSavingRatio","createUserName","createTime", "applyReason"};
     }
 
     @Override

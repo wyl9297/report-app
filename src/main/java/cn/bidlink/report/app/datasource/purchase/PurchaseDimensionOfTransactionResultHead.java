@@ -27,7 +27,7 @@ public class PurchaseDimensionOfTransactionResultHead extends AbstractBaseTableD
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"pName", "pCode", "pCreateUserName" , "dealTotalPrice" ,"pCreateTime", "planPriceTitle"};
+        return new String[]{"pName", "pCode", "pCreateUserName" , "dealTotalPrice" ,"pCreateTime", "planPriceTitle", "applyReason"};
     }
 
     @Override
