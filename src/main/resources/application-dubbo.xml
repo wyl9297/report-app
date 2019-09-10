@@ -20,7 +20,7 @@
     <d:reference id="dubboAppsetPrivilegeModuleNodeControlService" registry="defaultRegistryAddress" interface="cn.bidlink.procurement.appset.dal.service.DubboAppsetPrivilegeModuleNodeControlService" check="false"/>
     <!-- 组织权限、用户中心  end-->
 
-
+    <d:reference id="supplierPurchaseStatisticsService" registry="defaultRegistryAddress" interface="cn.bidlink.report.server.service.SupplierPurchaseStatisticsService" check="false"/>
 
 
 </beans>
