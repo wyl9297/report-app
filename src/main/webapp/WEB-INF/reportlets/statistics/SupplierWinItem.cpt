@@ -117,7 +117,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[952500,875520,875520,875520,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[3581400,4953000,4648200,5143500,5105400,4648200,4953000,4648200,5143500,5105400,2743200]]></ColumnWidth>
+<![CDATA[2987040,4754880,4023360,4389120,4968240,4145280,4236720,4084320,4389120,4297680,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="10" s="0">
 <O>
@@ -132,12 +132,14 @@
 <Expand/>
 </C>
 <C c="1" r="1" cs="4" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=supplierWinItem.select(supplierName)]]></Attributes>
+<O t="DSColumn">
+<Attributes dsName="supplierWinItem" columnName="supplierName"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0"/>
+<Expand/>
 </C>
 <C c="5" r="1" s="0">
 <O>
@@ -146,11 +148,23 @@
 <Expand/>
 </C>
 <C c="6" r="1" cs="4" s="2">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=sum(I4)]]></Attributes>
+<O t="DSColumn">
+<Attributes dsName="supplierWinItem" columnName="dealTotalPrice"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
+<FN>
+<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
+<Parameters/>
 </O>
 <PrivilegeControl/>
+<Present class="com.fr.base.present.FormulaPresent">
+<Content>
+<![CDATA[=round($$$,2)]]></Content>
+</Present>
 <Expand/>
 </C>
 <C c="0" r="2" s="0">
@@ -219,7 +233,7 @@
 <PrivilegeControl/>
 <Expand leftParentDefault="false" left="A3"/>
 </C>
-<C c="0" r="3" s="1">
+<C c="0" r="3" s="3">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B4]]></Attributes>
@@ -228,7 +242,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B4"/>
 </C>
-<C c="1" r="3" s="1">
+<C c="1" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="projectName"/>
 <Complex/>
@@ -239,7 +253,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="3" s="1">
+<C c="2" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="winBidTime"/>
 <Complex/>
@@ -250,7 +264,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="3" s="1">
+<C c="3" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="directoryName"/>
 <Complex/>
@@ -261,7 +275,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="3" s="1">
+<C c="4" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="spec"/>
 <Complex/>
@@ -272,7 +286,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="5" r="3" s="1">
+<C c="5" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="planAmount"/>
 <Complex/>
@@ -283,7 +297,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="3" s="1">
+<C c="6" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="dealPrice"/>
 <Complex/>
@@ -294,7 +308,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="3" s="1">
+<C c="7" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="dealAmount"/>
 <Complex/>
@@ -305,7 +319,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="8" r="3" s="1">
+<C c="8" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="dealTotalPrice"/>
 <Complex/>
@@ -316,7 +330,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="9" r="3" s="1">
+<C c="9" r="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="supplierWinItem" columnName="projectSource"/>
 <Complex/>
@@ -325,12 +339,13 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
-<Expand dir="0"/>
+<Expand dir="0" leftParentDefault="false" left="B4"/>
 </C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
-<PaperSetting>
+<PaperSetting orientation="1">
+<PaperSize width="31680000" height="47520000"/>
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
@@ -387,7 +402,7 @@
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="华文细黑" style="0" size="72"/>
+<FRFont name="微软雅黑" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
 <Top style="1"/>
@@ -396,14 +411,21 @@
 <Right style="1"/>
 </Border>
 </Style>
-<Style imageLayout="1">
+<Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="华文细黑" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 </StyleList>
