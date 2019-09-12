@@ -22,7 +22,8 @@ public class PurchaseDealStatisticalDetailProjectDataSource extends AbstractBase
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("directoryId")
+                new Parameter("directoryId"),
+                new Parameter("supplierName")
         };
     }
 
@@ -34,7 +35,10 @@ public class PurchaseDealStatisticalDetailProjectDataSource extends AbstractBase
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         PurchaseDealStatisticalService purchaseDealStatisticalService = dataServiceFactory.getDataService(PurchaseDealStatisticalService.class);
-        ServiceResult<List<PurchaseNewProjectWideTable>> findPurchaseDealStatisticalDetailProject = purchaseDealStatisticalService.findPurchaseDealStatisticalDetailProject(Long.valueOf(param.get("directoryId")));
+        PurchaseNewProjectWideTable purchaseNewProjectWideTable = new PurchaseNewProjectWideTable();
+        purchaseNewProjectWideTable.setCompanyId(Long.valueOf(param.get("directoryId")));
+        purchaseNewProjectWideTable.setSupplierName(param.get("supplierName"));
+        ServiceResult<List<PurchaseNewProjectWideTable>> findPurchaseDealStatisticalDetailProject = purchaseDealStatisticalService.findPurchaseDealStatisticalDetailProject(purchaseNewProjectWideTable);
         List<PurchaseNewProjectWideTable> result = findPurchaseDealStatisticalDetailProject.getResult();
         if (result != null && result.size()>0){
             return result;
