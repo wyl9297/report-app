@@ -22,6 +22,7 @@
 
     <d:reference id="supplierPurchaseStatisticsService" registry="defaultRegistryAddress" interface="cn.bidlink.report.server.service.SupplierPurchaseStatisticsService" check="false"/>
     <d:reference id="purchaseDealStatisticalService" registry="defaultRegistryAddress" interface="cn.bidlink.report.server.service.PurchaseDealStatisticalService" check="false"/>
+    <d:reference id="purchaseStatisticalDealDetailService" registry="defaultRegistryAddress" interface="cn.bidlink.report.server.service.PurchaseStatisticalDealDetailService" check="false"/>
 
 
 </beans>
