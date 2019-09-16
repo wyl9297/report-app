@@ -91,9 +91,12 @@
 <WebPage isPage="true" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
+<ElementCaseMobileAttr>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+</ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
-<HR/>
+<HR F="0" T="0"/>
 <FR/>
 <HC/>
 <FC/>
@@ -366,12 +369,28 @@
 </C>
 </CellElementList>
 <ReportAttrSet>
-<ReportSettings headerHeight="0" footerHeight="0">
+<ReportSettings pageOrder="1" headerHeight="0" footerHeight="720000">
 <PaperSetting>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
 </ReportSettings>
+<Footer reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList>
+<HFElement className="com.fr.base.headerfooter.PageNumberHFElement">
+<FRFont name="SimSun" style="0" size="72"/>
+<![CDATA[1]]></HFElement>
+<HFElement className="com.fr.base.headerfooter.TextHFElement">
+<FRFont name="SimSun" style="0" size="72"/>
+<![CDATA[/]]></HFElement>
+<HFElement className="com.fr.base.headerfooter.NumberOfPageHFElement">
+<FRFont name="SimSun" style="0" size="72"/>
+<![CDATA[100]]></HFElement>
+</CenterList>
+<RightList/>
+</Footer>
 </ReportAttrSet>
 <PrivilegeControl/>
 </Report>
@@ -649,31 +668,36 @@
 </Layout>
 <DesignAttr width="1100" height="55"/>
 </ParameterUI>
+<Parameter>
+<Attributes name="FineWaterMark"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
 </ReportParameterAttr>
 <StyleList>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
+<FRFont name="微软雅黑" style="1" size="72"/>
+<Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2"/>
-<Bottom style="1"/>
-<Left style="2"/>
-<Right style="1"/>
+<Top style="2" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="2" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
+<FRFont name="微软雅黑" style="1" size="72"/>
+<Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
+<Top style="2" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
+<FRFont name="微软雅黑" style="1" size="72"/>
+<Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2"/>
 <Bottom style="1"/>
@@ -714,6 +738,12 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="335cbc6b-ede3-4f88-9328-8ebdcbd1d06f"/>
 </TemplateIdAttMark>
