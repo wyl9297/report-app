@@ -69,7 +69,7 @@ public class TestStatisticsReportService extends TestBase{
      * 采购成交采购品统计钻取项目数据
      * 11113173798L
      */
-    @Test
+    /*@Test
     public void findPurchaseDealStatisticalDetailProject() {
         ServiceResult<List<PurchaseNewProjectWideTable>> result = testPurchaseService.findPurchaseDealStatisticalDetailProject(174923316547551232L);
         List<PurchaseNewProjectWideTable> approvings = result.getResult();
@@ -80,7 +80,7 @@ public class TestStatisticsReportService extends TestBase{
         }else {
             System.out.println(111111);
         }
-    }
+    }*/
 
     /**
      *采购成交明细统计
