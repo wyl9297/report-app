@@ -152,7 +152,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[952500,723900,723900,723900,723900,723900,723900,723900,723900,723900,876300,876300,875520,723900,876300,876300,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1066800,4206240,3848100,4320000,4320000,3291840,2895600,2895600,2895600,3505200,3505200,2895600,3352800,4533900,3230880,3230880,3657600,3695700,3779520,3383280,3390900,3657600,3619500,3619500,3619500,2743200]]></ColumnWidth>
+<![CDATA[1066800,4206240,3848100,4320000,4320000,3291840,2895600,2895600,2895600,3505200,3505200,2895600,3352800,4533900,3230880,3230880,3657600,3695700,3779520,2781300,2592000,2592000,2592000,2592000,3619500,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="2" s="0">
 <PrivilegeControl/>
@@ -603,8 +603,10 @@
 </C>
 <C c="14" r="12" s="11">
 <O>
-<![CDATA[报价单价（元）]]></O>
+<![CDATA[报价单价<br>（元）]]></O>
 <PrivilegeControl/>
+<CellGUIAttr showAsHTML="true"/>
+<CellPageAttr/>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="15" r="12" s="11">
@@ -664,32 +666,42 @@
 </C>
 <C c="19" r="12" s="11">
 <O>
-<![CDATA[成交比例（%）]]></O>
+<![CDATA[成交比例<br>（%）]]></O>
 <PrivilegeControl/>
+<CellGUIAttr showAsHTML="true"/>
+<CellPageAttr/>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="20" r="12" s="11">
 <O>
-<![CDATA[成交单价（元）]]></O>
+<![CDATA[成交单价<br>（元）]]></O>
 <PrivilegeControl/>
+<CellGUIAttr showAsHTML="true"/>
+<CellPageAttr/>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="21" r="12" s="11">
 <O>
-<![CDATA[成交总价（元）]]></O>
+<![CDATA[成交总价<br>（元）]]></O>
 <PrivilegeControl/>
+<CellGUIAttr showAsHTML="true"/>
+<CellPageAttr/>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="22" r="12" s="11">
 <O>
-<![CDATA[节资额（元）]]></O>
+<![CDATA[节资额<br>（元）]]></O>
 <PrivilegeControl/>
+<CellGUIAttr showAsHTML="true"/>
+<CellPageAttr/>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="23" r="12" s="11">
 <O>
-<![CDATA[节资率（%）]]></O>
+<![CDATA[节资率<br>（%）]]></O>
 <PrivilegeControl/>
+<CellGUIAttr showAsHTML="true"/>
+<CellPageAttr/>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="24" r="12" s="12">
@@ -1267,6 +1279,7 @@
 <ReportAttrSet>
 <ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
 <PaperSetting orientation="1">
+<PaperSize width="37440000" height="56160000"/>
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
@@ -1571,12 +1584,6 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
-<Text>
-<![CDATA[=$FineWaterMark]]></Text>
-</WatermarkAttr>
-</WatermarkAttr>
 <PrintSettings class="com.fr.base.print.PrintSettingsAttrMark">
 <PrintSettings printType="0" valid="true">
 <NoClientPrintAttr>
@@ -1596,6 +1603,12 @@
 </NativePrintAttr>
 </PrintSettings>
 </PrintSettings>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="9fde2f35-a11a-4869-9be7-9d7058838bfd"/>
 </TemplateIdAttMark>
