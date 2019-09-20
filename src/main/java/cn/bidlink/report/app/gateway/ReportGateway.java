@@ -258,7 +258,11 @@ public class ReportGateway {
                 break;
             case "auction" :
                 set = new LinkedHashSet<>();
-                set.add("");
+                set.add("报价一览表");
+                set.add("成交结果");
+                set.add("竞价规则及报价记录");
+                set.add("采购品信息");
+                set.add("审批记录");
                 break;
         };
         return set;
