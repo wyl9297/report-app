@@ -1,53 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
-<TableData name="supplier_rank" class="com.fr.data.impl.EmbeddedTableData">
-<Parameters/>
-<DSName>
-<![CDATA[]]></DSName>
-<ColumnNames>
-<![CDATA[supplier_name,,.,,supplier_id,,.,,total_deal_price]]></ColumnNames>
-<ColumnTypes>
-<![CDATA[java.lang.String,java.lang.Integer,java.lang.Double]]></ColumnTypes>
-<RowData ColumnTypes="java.lang.String,java.lang.Integer,java.lang.Double">
-<![CDATA[D3;qX_CuOUch>7Y35gi&]A+h4O+MsjN-t*]Ae[%N_^Lo#d$mE9#[q^jjbSg#e.qI\ksb]AX6gZ+
-5c8*nbU%&!-R4A`=f!"aX:Yr>+0ATpZHu-ud$,j+>-U!;d@]AOnM:JHOTR"lsK=f6QF(T6d9d
-eT/LC]A`L3i<]AfmQT[Rm&DP+p-Q7q'(s&nZ3`%3Q^i8X(T.i_$'rKY@#fKWqF+XfSkPhYUC);
-#.Er,ekU\FI<b@+1b;;_.VSi?aG#^f6gMgVPilF08ZToE%!hJ@+EZ&"klC*-?t0s!Zg1Tnjo
-auKY3\l;!m9r_uXU?.l]AECamk7-="u##mS.M1RO0*oAfLN3#<+.]A&ai4k'`T6tCtQYllJlJY
-]AKdGf:!#U~
-]]></RowData>
-</TableData>
-<TableData name="item_rank" class="com.fr.data.impl.EmbeddedTableData">
-<Parameters/>
-<DSName>
-<![CDATA[]]></DSName>
-<ColumnNames>
-<![CDATA[item_id,,.,,item_name,,.,,deal_price]]></ColumnNames>
-<ColumnTypes>
-<![CDATA[java.lang.Integer,java.lang.String,java.lang.Double]]></ColumnTypes>
-<RowData ColumnTypes="java.lang.Integer,java.lang.String,java.lang.Double">
-<![CDATA[<K>60Jj:$)f>iXY`uNR;Z\$=P)?`nS5m>r$MDVVQl=i@UXaGiB>#a8F^[MgH.u%@l)mc%nZh
-TF,$$&8n/eD6`M@NG&a%M*[[IEmq./6DX5rVeJ.Db&Q`Qg_J>u:uL(kZ]AtCd?-(g$XOd1Nm7
-J/V+fQ;b.Sr*u?<%`!m:]Ahf"^YL/NchB(us2'1]A:r4!PZ/3t!_J$Jo1ScNWcIrV/r9l"rfM<
-XS;%$^1`*WlYRphI_PIE1TK_O0k^O0)~
-]]></RowData>
-</TableData>
-<TableData name="item_rate" class="com.fr.data.impl.EmbeddedTableData">
-<Parameters/>
-<DSName>
-<![CDATA[]]></DSName>
-<ColumnNames>
-<![CDATA[catalog_name,,.,,catalog_id,,.,,deal_price]]></ColumnNames>
-<ColumnTypes>
-<![CDATA[java.lang.String,java.lang.Integer,java.lang.Double]]></ColumnTypes>
-<RowData ColumnTypes="java.lang.String,java.lang.Integer,java.lang.Double">
-<![CDATA[/Pka@Jj9nF^%X@]A<nc:WUdaomBS'DiJU`8>.o;ppWOp]AiBFf]A+R@0Us=g;qXZR_6!$mO%`j/
-c&)I_$7_.b8YqHOAX2*H]AS;S<N>M47Z_"nuAieNOS:>COi*@2)\HILEs_:#+XZO+ekK)"L*?
-Uh0P;cqWn"(%UmGH=<.^CH[ucfLb8`a@*sK2->260crE)<,uuC0I$m_tm.It!/?l)E_=#3GR
-E%!^24!m!U)Krg56~
-]]></RowData>
-</TableData>
 <TableData name="supplier_price_trend" class="com.fr.data.impl.EmbeddedTableData">
 <Parameters/>
 <DSName>
@@ -61,25 +14,24 @@ E%!^24!m!U)Krg56~
 ]]></RowData>
 </TableData>
 <TableData name="supplier_dealprice_trend" class="com.fr.data.impl.ClassTableData">
-<Parameters/>
-<ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.DashboardSupplierDealPriceTrend"/>
+<Parameters>
+<Parameter>
+<Attributes name="supplierId"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
+</Parameters>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithPurchasePriceHistoryDataSource"/>
 </TableData>
 <TableData name="item_dealprice_trend" class="com.fr.data.impl.ClassTableData">
-<Parameters/>
-<ClassTableDataAttr className="cn.bidlink.report.app.datasource.purchase.DashboardItemDealPriceTrend"/>
-</TableData>
-<TableData name="project_count" class="com.fr.data.impl.EmbeddedTableData">
-<Parameters/>
-<DSName>
-<![CDATA[]]></DSName>
-<ColumnNames>
-<![CDATA[month,,.,,count,,.,,company_id]]></ColumnNames>
-<ColumnTypes>
-<![CDATA[java.lang.Integer,java.lang.Integer,java.lang.Integer]]></ColumnTypes>
-<RowData ColumnTypes="java.lang.Integer,java.lang.Integer,java.lang.Integer">
-<![CDATA[/^;*@^eb:<cnh4^^=DNJMmX"aG_$]Ag=YPHZ6+)s@>Pc6KJQZGl6@,l-#NM:BV8U/o-GT0t*`
-2M;~
-]]></RowData>
+<Parameters>
+<Parameter>
+<Attributes name="directoryId"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
+</Parameters>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithDirectoryPriceHistoryDataSource"/>
 </TableData>
 <TableData name="project_sum_price" class="com.fr.data.impl.EmbeddedTableData">
 <Parameters/>
@@ -93,6 +45,26 @@ E%!^24!m!U)Krg56~
 <![CDATA[29\]A'^d&/,co!tGpoAK9Mq*LFMJ%MP4RJdZT8g.B".Uc"iRT4i4HaaF</<3a13#!r$YSLLV!
 Ue94gr^Y>BEPRk5t~
 ]]></RowData>
+</TableData>
+<TableData name="supplier_rank" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithSupplierPurchaseMoneyRankDataSource"/>
+</TableData>
+<TableData name="item_rank" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithPurchaseMoneyRankDataSource"/>
+</TableData>
+<TableData name="item_rate" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithMaterialClassificationDataSource"/>
+</TableData>
+<TableData name="project_count" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithDirectoryAmountPriceDataSource"/>
+</TableData>
+<TableData name="project_price" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithDirectoryAmountPriceDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -545,7 +517,7 @@ Ue94gr^Y>BEPRk5t~
 <HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="300" height="300"/>
 <alertList/>
 <customBackgroundList/>
-<VanChartValueAxisAttr isLog="true" valueStyle="false" baseLog="=1000"/>
+<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=1000"/>
 <ds>
 <RadarYAxisTableDefinition>
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
@@ -611,7 +583,7 @@ Ue94gr^Y>BEPRk5t~
 <VanChartColumnPlotAttr seriesOverlapPercent="-100.0" categoryIntervalPercent="20.0" fixedWidth="true" columnWidth="15" filledWithImage="false" isBar="true"/>
 </Plot>
 <ChartDefinition>
-<OneValueCDDefinition seriesName="supplier_id" valueName="total_deal_price" function="com.fr.data.util.function.NoneFunction">
+<OneValueCDDefinition seriesName="supplier_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
 <Top topCate="10" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
 <TableData class="com.fr.data.impl.NameTableData">
 <Name>
@@ -956,8 +928,8 @@ Ue94gr^Y>BEPRk5t~
 <VanChartRadius radiusType="auto" radius="160"/>
 </Plot>
 <ChartDefinition>
-<OneValueCDDefinition seriesName="catalog_name" valueName="deal_price" function="com.fr.data.util.function.NoneFunction">
-<Top topCate="8" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="true" isDiscardNullSeries="false"/>
+<OneValueCDDefinition seriesName="catalog_name" valueName="price" function="com.fr.data.util.function.NoneFunction">
+<Top topCate="8" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
 <TableData class="com.fr.data.impl.NameTableData">
 <Name>
 <![CDATA[item_rate]]></Name>
@@ -1377,10 +1349,10 @@ Ue94gr^Y>BEPRk5t~
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
 <VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="X轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="false" isRotation="false"/>
-<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="150" height="150"/>
+<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="true" isCustomHeight="false" width="150" height="150"/>
 <alertList/>
 <customBackgroundList/>
-<VanChartValueAxisAttr isLog="true" valueStyle="false" baseLog="=1000"/>
+<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=1000"/>
 <ds>
 <RadarYAxisTableDefinition>
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
@@ -1430,7 +1402,7 @@ Ue94gr^Y>BEPRk5t~
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
-<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
+<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="false" isRotation="false"/>
 <HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="10" height="50"/>
 <alertList/>
 <customBackgroundList/>
@@ -1446,13 +1418,13 @@ Ue94gr^Y>BEPRk5t~
 <VanChartColumnPlotAttr seriesOverlapPercent="-100.0" categoryIntervalPercent="20.0" fixedWidth="true" columnWidth="15" filledWithImage="false" isBar="true"/>
 </Plot>
 <ChartDefinition>
-<OneValueCDDefinition seriesName="item_id" valueName="deal_price" function="com.fr.data.util.function.NoneFunction">
+<OneValueCDDefinition seriesName="directory_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
 <Top topCate="10" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
 <TableData class="com.fr.data.impl.NameTableData">
 <Name>
 <![CDATA[item_rank]]></Name>
 </TableData>
-<CategoryName value="item_name"/>
+<CategoryName value="directory_name"/>
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
@@ -2280,13 +2252,13 @@ Ue94gr^Y>BEPRk5t~
 </stackAndAxisCondition>
 </Plot>
 <ChartDefinition>
-<OneValueCDDefinition seriesName="supplierId" valueName="price" function="com.fr.data.util.function.NoneFunction">
+<OneValueCDDefinition seriesName="supplier_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
 <TableData class="com.fr.data.impl.NameTableData">
 <Name>
 <![CDATA[supplier_dealprice_trend]]></Name>
 </TableData>
-<CategoryName value="month"/>
+<CategoryName value="time"/>
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
@@ -2409,7 +2381,7 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[采购项目量（柱状图）、采购金额（曲线）]]></O>
+<![CDATA[采购项目量、采购金额]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -2466,10 +2438,10 @@ Ue94gr^Y>BEPRk5t~
 <Attr alpha="1.0"/>
 </AttrAlpha>
 </GI>
-<Attr position="-1" visible="false"/>
-<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
+<Attr position="3" visible="true"/>
+<FRFont name="微软雅黑" style="0" size="64" foreground="-10066330"/>
 </Legend>
-<Attr4VanChart floating="true" x="80.0" y="5.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
+<Attr4VanChart floating="false" x="75.0" y="5.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
 </Legend4VanChart>
 <DataSheet>
 <GI>
@@ -2728,57 +2700,6 @@ Ue94gr^Y>BEPRk5t~
 </LineStyleInfo>
 </TrendLine>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.AttrLabel">
-<AttrLabel>
-<labelAttr enable="false"/>
-<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
-<Attr showLine="false" autoAdjust="false" position="0" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-</labelDetail>
-</AttrLabel>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrTooltip">
 <AttrTooltip>
 <Attr enable="true" duration="4" followMouse="false" showMutiSeries="true" isCustom="false"/>
@@ -2831,7 +2752,7 @@ Ue94gr^Y>BEPRk5t~
 <Attr shadow="false"/>
 </AttrBackground>
 <AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
 <newColor borderColor="-16777216"/>
 </AttrBorder>
 <AttrAlpha>
@@ -2839,6 +2760,57 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 </AttrTooltip>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrLabel">
+<AttrLabel>
+<labelAttr enable="false"/>
+<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
+<Attr showLine="false" autoAdjust="false" position="0" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return this.value;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+</labelDetail>
+</AttrLabel>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -3131,57 +3103,6 @@ Ue94gr^Y>BEPRk5t~
 <Background name="NullBackground"/>
 </VanAttrMarker>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.AttrLabel">
-<AttrLabel>
-<labelAttr enable="false"/>
-<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
-<Attr showLine="false" autoAdjust="false" position="1" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-</labelDetail>
-</AttrLabel>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrTooltip">
 <AttrTooltip>
 <Attr enable="true" duration="4" followMouse="false" showMutiSeries="true" isCustom="false"/>
@@ -3242,6 +3163,57 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 </AttrTooltip>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrLabel">
+<AttrLabel>
+<labelAttr enable="false"/>
+<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
+<Attr showLine="false" autoAdjust="false" position="1" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return this.value;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+</labelDetail>
+</AttrLabel>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -3476,25 +3448,27 @@ Ue94gr^Y>BEPRk5t~
 <ChartDefinition>
 <CustomDefinition>
 <DefinitionMapList>
+<DefinitionMap key="line">
+<MoreNameCDDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[project_price]]></Name>
+</TableData>
+<CategoryName value="time"/>
+<ChartSummaryColumn name="price" function="com.fr.data.util.function.NoneFunction" customName="采购金额"/>
+</MoreNameCDDefinition>
+</DefinitionMap>
 <DefinitionMap key="column">
-<OneValueCDDefinition seriesName="month" valueName="count" function="com.fr.data.util.function.NoneFunction">
+<MoreNameCDDefinition>
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
 <TableData class="com.fr.data.impl.NameTableData">
 <Name>
 <![CDATA[project_count]]></Name>
 </TableData>
-<CategoryName value="month"/>
-</OneValueCDDefinition>
-</DefinitionMap>
-<DefinitionMap key="line">
-<OneValueCDDefinition seriesName="company_id" valueName="sum_price" function="com.fr.data.util.function.NoneFunction">
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[project_sum_price]]></Name>
-</TableData>
-<CategoryName value="month"/>
-</OneValueCDDefinition>
+<CategoryName value="time"/>
+<ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
+</MoreNameCDDefinition>
 </DefinitionMap>
 </DefinitionMapList>
 </CustomDefinition>
@@ -3966,13 +3940,13 @@ Ue94gr^Y>BEPRk5t~
 </stackAndAxisCondition>
 </Plot>
 <ChartDefinition>
-<OneValueCDDefinition seriesName="directoryId" valueName="price" function="com.fr.data.util.function.NoneFunction">
+<OneValueCDDefinition seriesName="directory_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
 <TableData class="com.fr.data.impl.NameTableData">
 <Name>
 <![CDATA[item_dealprice_trend]]></Name>
 </TableData>
-<CategoryName value="month"/>
+<CategoryName value="time"/>
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
@@ -4224,26 +4198,6 @@ Ue94gr^Y>BEPRk5t~
 <Expand/>
 </C>
 <C c="8" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="9" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="10" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="11" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="12" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="13" r="39">
 <PrivilegeControl/>
 <Expand/>
 </C>
