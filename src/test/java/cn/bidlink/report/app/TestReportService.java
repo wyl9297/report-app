@@ -28,6 +28,8 @@ import cn.bidlink.procurement.vendue.cloud.service.VendueProjectViewRestService;
 import cn.bidlink.procurement.vendue.cloud.vo.ProjectPrintVO;
 import cn.bidlink.procurement.vendue.dal.dto.ProjectViewRulesDto;
 import cn.bidlink.report.app.model.vo.purchase.TotalItemsSeparatelyVo;
+import cn.bidlink.report.server.entity.SupplierPurchasesDto;
+import cn.bidlink.report.server.service.SupplierPurchaseStatisticsService;
 import org.apache.commons.collections.map.HashedMap;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -101,6 +103,8 @@ public class TestReportService extends TestBase{
     @Autowired
     private DubboAppsetPrivilegeModuleNodeControlService dubboAppsetPrivilegeModuleNodeControlService;
 
+    @Autowired
+    private SupplierPurchaseStatisticsService supplierPurchaseStatisticsService;
 
     /**
      * 统计报价相关项  单元测试
@@ -431,6 +435,23 @@ public class TestReportService extends TestBase{
 
     }
 
-
+    @Test
+    public void test1(){
+        // 采购价格走势图
+//        ServiceResult<List<Map>> listServiceResult1 = supplierPurchaseStatisticsService.companySupplier(11113173803L, 11113173826L , "1970-01-01" , "2099-12-31");
+//        ServiceResult<List<Map>> listServiceResult2 = supplierPurchaseStatisticsService.companyFirstten(11113173803L , "1970-01-01" , "2099-12-31");
+//        ServiceResult<List<Map>> listServiceResult3 = supplierPurchaseStatisticsService.directoryFirstten(11113173803L , "1970-01-01" , "2099-12-31");
+//        // 采购品价格走势图
+//        ServiceResult<List<Map>> listServiceResult = supplierPurchaseStatisticsService.companyDirectory(11113173803L, 186791529287778304L , "1970-01-01" , "2099-12-31");
+        SupplierPurchasesDto dto = new SupplierPurchasesDto();
+        dto.setCompanyId(11113173803L);
+        //  "yyyy-MM-dd"
+        dto.setcTime("1970-01-01");
+        dto.seteTime("2099-12-31");
+        ServiceResult<List<Map>> listServiceResult4 = supplierPurchaseStatisticsService.catalogPath(dto);
+        ServiceResult<List<Map>> listServiceResult5 = supplierPurchaseStatisticsService.directoryAmountPrice(dto);
+        print(listServiceResult4);
+        print(listServiceResult5);
+    }
 
 }
