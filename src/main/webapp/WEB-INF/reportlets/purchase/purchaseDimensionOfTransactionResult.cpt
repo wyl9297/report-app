@@ -658,7 +658,7 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
-<Expand dir="0" leftParentDefault="false" left="C10"/>
+<Expand dir="0" leftParentDefault="false" left="B10"/>
 </C>
 <C c="1" r="9" s="9">
 <O t="DSColumn">
@@ -1143,6 +1143,17 @@
 <O>
 <![CDATA[审批记录]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len(projectDetail.select(nodeTypeName)) == 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="0" r="12" cs="7" s="10">
@@ -1151,12 +1162,34 @@
 <![CDATA[="第"+serialNumber.select("serialNumber")+"次审批"]]></Attributes>
 </O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len(projectDetail.select(nodeTypeName)) == 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="0" r="13" s="10">
 <O>
 <![CDATA[序号]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len(projectDetail.select(nodeTypeName)) == 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="1" r="13" s="10">
@@ -1198,10 +1231,10 @@
 <C c="0" r="14" s="9">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=seq()]]></Attributes>
+<![CDATA[=&B15]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B15" upParentDefault="false" up="B14"/>
+<Expand dir="0" leftParentDefault="false" left="B15" upParentDefault="false" up="A13"/>
 </C>
 <C c="1" r="14" s="9">
 <O t="DSColumn">
@@ -1239,6 +1272,17 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len(projectDetail.select(nodeTypeName)) == 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand dir="0" leftParentDefault="false" left="A13" upParentDefault="false" up="A13"/>
 </C>
 <C c="2" r="14" s="9">
