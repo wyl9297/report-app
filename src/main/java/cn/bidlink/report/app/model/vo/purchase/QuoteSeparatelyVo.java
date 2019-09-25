@@ -41,7 +41,33 @@ public class QuoteSeparatelyVo {
      */
     private Long directoryId;
 
+    /**
+     *(采购品-供应商维度：成交结果增加)
+     */
+    private Integer dealStatus;
+
+    /**
+     *(采购品-供应商维度：成交结果增加)
+     */
+    private String dealStatusStr;
+
     public QuoteSeparatelyVo() {
+    }
+
+    public Integer getDealStatus() {
+        return dealStatus;
+    }
+
+    public void setDealStatus(Integer dealStatus) {
+        this.dealStatus = dealStatus;
+    }
+
+    public String getDealStatusStr() {
+        return dealStatusStr;
+    }
+
+    public void setDealStatusStr(String dealStatusStr) {
+        this.dealStatusStr = dealStatusStr;
     }
 
     public Long getSupplierProjectItemId() {
