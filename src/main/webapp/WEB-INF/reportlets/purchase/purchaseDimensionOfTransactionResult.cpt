@@ -1468,7 +1468,7 @@
 <Hotkeys>
 <![CDATA[enter]]></Hotkeys>
 </InnerWidget>
-<BoundsAttr x="1207" y="20" width="80" height="21"/>
+<BoundsAttr x="974" y="20" width="80" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.CheckBoxGroup">
@@ -1488,7 +1488,7 @@
 </widgetValue>
 <ChooseAll/>
 </InnerWidget>
-<BoundsAttr x="9" y="20" width="1184" height="21"/>
+<BoundsAttr x="9" y="20" width="943" height="21"/>
 </Widget>
 <Sorted sorted="false"/>
 <MobileWidgetList>
@@ -1499,12 +1499,12 @@
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
 <Position position="1"/>
-<Design_Width design_width="1293"/>
+<Design_Width design_width="1068"/>
 <NameTagModified/>
 <WidgetNameTagMap/>
 <ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
-<DesignAttr width="1293" height="54"/>
+<DesignAttr width="1068" height="54"/>
 </ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
