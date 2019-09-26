@@ -258,6 +258,13 @@ public class ReportGateway {
         switch(module){
             case "purchase" :
                 set = purchaseProjectRestService.findReportFormTab(projectId, companyId);
+
+                for (String str : set) {
+                    logger.error(str);
+                }
+
+
+
                 break;
             case "auction" :
                 set = auctionPrintService.getPrintTitle(projectId,companyId);
