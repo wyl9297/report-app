@@ -603,6 +603,17 @@
 <PrivilegeControl/>
 <CellGUIAttr showAsHTML="true"/>
 <CellPageAttr/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("报价单价", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="15" r="12" s="11">
@@ -628,6 +639,17 @@
 <PrivilegeControl/>
 <CellGUIAttr showAsHTML="true"/>
 <CellPageAttr/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("报价总价", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="17" r="12" s="11">
@@ -668,6 +690,17 @@
 <PrivilegeControl/>
 <CellGUIAttr showAsHTML="true"/>
 <CellPageAttr/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("成交比例", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="20" r="12" s="11">
@@ -706,6 +739,17 @@
 <O>
 <![CDATA[成交说明]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("成交说明", split($ckbx, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand leftParentDefault="false" left="A13"/>
 </C>
 <C c="0" r="13" s="13">
@@ -1602,7 +1646,7 @@
 <Hotkeys>
 <![CDATA[enter]]></Hotkeys>
 </InnerWidget>
-<BoundsAttr x="638" y="9" width="80" height="21"/>
+<BoundsAttr x="851" y="9" width="80" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.CheckBoxGroup">
@@ -1612,7 +1656,7 @@
 </WidgetAttr>
 <Dictionary class="com.fr.data.impl.FormulaDictionary">
 <FormulaDict>
-<![CDATA[=split("申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注",",")]]></FormulaDict>
+<![CDATA[=split("成交比例,成交说明,申报人、电话,申报企业,使用单位,用途,报价单价,报价总价,需求日期,采购品备注",",")]]></FormulaDict>
 </Dictionary>
 <widgetValue>
 <O t="XMLable" class="com.fr.base.Formula">
@@ -1620,8 +1664,9 @@
 <![CDATA[=ARRAY($Columns)]]></Attributes>
 </O>
 </widgetValue>
+<ChooseAll/>
 </InnerWidget>
-<BoundsAttr x="0" y="9" width="623" height="21"/>
+<BoundsAttr x="0" y="9" width="843" height="21"/>
 </Widget>
 <Sorted sorted="false"/>
 <MobileWidgetList>
@@ -1632,12 +1677,12 @@
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
 <Position position="1"/>
-<Design_Width design_width="736"/>
+<Design_Width design_width="944"/>
 <NameTagModified/>
 <WidgetNameTagMap/>
 <ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
-<DesignAttr width="736" height="35"/>
+<DesignAttr width="944" height="35"/>
 </ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
