@@ -624,6 +624,23 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                         Long supplierId = Long.valueOf(key.substring(15));
                         quoteSeparatelyVo.setSupplierId(supplierId);
                     }
+
+                    //增加供应商成交状态
+                    String dealStatus = String.valueOf(col.get("dealStatus"));
+                    if(null != dealStatus && !" ".equals(dealStatus)){
+                        quoteSeparatelyVo.setDealStatus((Integer)(col.get("dealStatus")));
+                    }
+
+                    //增加供应商名称状态
+                    if(null != title && !" ".equals(title)){
+                        if((Integer)(col.get("dealStatus")) == 1){
+                            quoteSeparatelyVo.setDealStatusStr(title+"(未成交)");
+                        }else {
+                            quoteSeparatelyVo.setDealStatusStr(title+"(已成交)");
+                        }
+
+                    }
+
                     objects.add(quoteSeparatelyVo);
                 }
             }
