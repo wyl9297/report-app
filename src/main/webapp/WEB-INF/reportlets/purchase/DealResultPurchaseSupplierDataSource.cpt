@@ -232,7 +232,7 @@
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
-<HR F="7" T="7"/>
+<HR/>
 <FR/>
 <HC/>
 <FC/>
@@ -242,7 +242,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[723900,723900,723900,723900,723900,722880,723900,1005840,875520,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2895600,4229100,2743200,2743200,4114800,3444240,3543300,4457700,2743200,2743200]]></ColumnWidth>
+<![CDATA[2895600,4229100,2743200,2743200,4114800,3444240,3543300,4457700,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="8" s="0">
 <O>
