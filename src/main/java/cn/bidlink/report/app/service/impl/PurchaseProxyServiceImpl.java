@@ -302,7 +302,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     @Override
     public List<ProjectSupplierDealVo> findProcessedDealList(Long projectId, Long companyId, Boolean showUnConfirmed) {
         //查询数据并返回
-        ResultTabListVo<ProjectSupplierItemDealDto> processedDealList = dealPriceRestService.findProcessedDealList(projectId, companyId, showUnConfirmed, 0, 100);
+        ResultTabListVo<ProjectSupplierItemDealDto> processedDealList = dealPriceRestService.findProcessedDealList(projectId, companyId, showUnConfirmed , null , null);
         BigDecimal dealTotalPrice = processedDealList.getDealTotalPrice();
         List<ProjectSupplierItemDealDto> tableData = processedDealList.getTableData();
         List<ProjectSupplierDealVo> list = new ArrayList<>();
