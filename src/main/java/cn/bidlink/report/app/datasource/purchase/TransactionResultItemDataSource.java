@@ -21,7 +21,8 @@ public class TransactionResultItemDataSource extends AbstractBaseTableData {
     protected Parameter[] getParameter() {
         return new Parameter[]{
                 new Parameter("projectId"),
-                new Parameter("companyId")
+                new Parameter("companyId"),
+                new Parameter("showFlag")
         };
     }
 
@@ -34,8 +35,9 @@ public class TransactionResultItemDataSource extends AbstractBaseTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
+        Boolean showFlag = Boolean.valueOf(param.get("showFlag"));
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
-        List<Map> transactionResult = purchaseProxyService.findTransactionResult(Long.valueOf(param.get("projectId")), Long.valueOf(param.get("companyId")));
+        List<Map> transactionResult = purchaseProxyService.findTransactionResult(Long.valueOf(param.get("projectId")), Long.valueOf(param.get("companyId")),showFlag);
         return transactionResult;
     }
 

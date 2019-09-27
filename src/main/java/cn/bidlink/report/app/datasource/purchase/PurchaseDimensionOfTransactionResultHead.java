@@ -21,7 +21,8 @@ public class PurchaseDimensionOfTransactionResultHead extends AbstractBaseTableD
     protected Parameter[] getParameter() {
         return new Parameter[]{
                 new Parameter("projectId"),
-                new Parameter("companyId")
+                new Parameter("companyId"),
+                new Parameter("showFlag")
         };
     }
 
@@ -32,11 +33,12 @@ public class PurchaseDimensionOfTransactionResultHead extends AbstractBaseTableD
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
+        Boolean showFlag = Boolean.valueOf(param.get("showFlag"));
         DealPriceRestService dealPriceRestService = dataServiceFactory.getDataService(DealPriceRestService.class);
         //获取报表查询的参数
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
-        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(Long.valueOf(projectId), Long.valueOf(companyId));
+        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(Long.valueOf(projectId), Long.valueOf(companyId),showFlag);
         List list = new ArrayList();
         list.add(purchaseDealItem);
         return list;
