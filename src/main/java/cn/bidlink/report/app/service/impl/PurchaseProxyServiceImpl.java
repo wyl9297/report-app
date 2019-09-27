@@ -226,39 +226,41 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
         List list = new ArrayList();
         finalDealList.forEach(map -> {
             List<Map<String, Object>> supplierList = (List<Map<String, Object>>) map.get("supplierList");
-            supplierList.forEach(supMap -> {
-                PurchasesWithSupplierItemVO item = new PurchasesWithSupplierItemVO();
-                // 采购品信息
-                item.setMarketPrice((String) map.get("marketPrice"));
-                item.setCode((String) map.get("code"));
-                item.setUnitName((String) map.get("unitName"));
-                item.setPurpose((String) map.get("purpose"));
-                item.setPurpose((String) map.get("userDept"));
-                item.setProjectItemId((String) map.get("projectItemId"));
-                item.setSpec((String) map.get("spec"));
-                item.setPurchaseAmount((String) map.get("purchaseAmount"));
-                item.setTechParameters((String) map.get("techParameters"));
-                item.setName((String) map.get("name"));
-                item.setComment((String) map.get("comment"));
-                item.setPlanPrice((String) map.get("planPrice"));
-                item.setProjectId((String) map.get("projectId"));
-                item.setAppliedEnterprise((String) map.get("appliedEnterprise"));
-                item.setAppliedPersonAndPhone((String) map.get("appliedPersonAndPhone"));
-                item.setNeedTime((String) map.get("needTime"));
-                // 供应商数据
-                item.setDealUnitPrice((String) supMap.get("dealUnitPrice"));
-                item.setDealRation((String) supMap.get("dealRation"));
-                item.setQuoteAmount((String) supMap.get("quoteAmount"));
-                item.setDealTotalPrice((String) supMap.get("dealTotalPrice"));
-                item.setSupplierName((String) supMap.get("supplierName"));
-                item.setDealAmount((String) supMap.get("dealAmount"));
-                item.setQuoteUnitPrice((String) supMap.get("quoteUnitPrice"));
-                item.setQuoteTotalPrice((String) supMap.get("quoteTotalPrice"));
-                item.setSupplierId((String) supMap.get("supplierId"));
-                item.setDealDescription((String) supMap.get("dealDescription"));
-                item.setCurrency((String) supMap.get("currency"));
-                list.add(item);
-            });
+            if ( null != supplierList ){
+                supplierList.forEach(supMap -> {
+                    PurchasesWithSupplierItemVO item = new PurchasesWithSupplierItemVO();
+                    // 采购品信息
+                    item.setMarketPrice((String) map.get("marketPrice"));
+                    item.setCode((String) map.get("code"));
+                    item.setUnitName((String) map.get("unitName"));
+                    item.setPurpose((String) map.get("purpose"));
+                    item.setPurpose((String) map.get("userDept"));
+                    item.setProjectItemId((String) map.get("projectItemId"));
+                    item.setSpec((String) map.get("spec"));
+                    item.setPurchaseAmount((String) map.get("purchaseAmount"));
+                    item.setTechParameters((String) map.get("techParameters"));
+                    item.setName((String) map.get("name"));
+                    item.setComment((String) map.get("comment"));
+                    item.setPlanPrice((String) map.get("planPrice"));
+                    item.setProjectId((String) map.get("projectId"));
+                    item.setAppliedEnterprise((String) map.get("appliedEnterprise"));
+                    item.setAppliedPersonAndPhone((String) map.get("appliedPersonAndPhone"));
+                    item.setNeedTime((String) map.get("needTime"));
+                    // 供应商数据
+                    item.setDealUnitPrice((String) supMap.get("dealUnitPrice"));
+                    item.setDealRation((String) supMap.get("dealRation"));
+                    item.setQuoteAmount((String) supMap.get("quoteAmount"));
+                    item.setDealTotalPrice((String) supMap.get("dealTotalPrice"));
+                    item.setSupplierName((String) supMap.get("supplierName"));
+                    item.setDealAmount((String) supMap.get("dealAmount"));
+                    item.setQuoteUnitPrice((String) supMap.get("quoteUnitPrice"));
+                    item.setQuoteTotalPrice((String) supMap.get("quoteTotalPrice"));
+                    item.setSupplierId((String) supMap.get("supplierId"));
+                    item.setDealDescription((String) supMap.get("dealDescription"));
+                    item.setCurrency((String) supMap.get("currency"));
+                    list.add(item);
+                });
+            }
         });
         return list;
     }
