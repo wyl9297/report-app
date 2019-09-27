@@ -29,11 +29,11 @@ public interface PurchaseProxyService {
 
     List<TotalItemsSeparatelyVo> findPrintingSettingItemWithSchemeSumup(Long projectId, Long companyId);
 
-    List<Map> findTransactionResult(Long projectId, Long companyId);
+    List<Map> findTransactionResult(Long projectId, Long companyId,Boolean showUnconfirmed);
 
-    List findPurchaseDealItem(Long projectId, Long companyId);
+    List findPurchaseDealItem(Long projectId, Long companyId,Boolean showUnconfirmed);
 
-    List<Map<String, Object>> findPurchaseDealItemWithPurchase(Long projectId, Long companyId);
+    List<Map<String, Object>> findPurchaseDealItemWithPurchase(Long projectId, Long companyId,Boolean showUnconfirmed);
 
     List<ProjectSupplierDealVo> findProcessedDealList(Long projectId, Long companyId, Boolean showUnConfirmed);
 

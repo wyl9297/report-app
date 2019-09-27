@@ -203,9 +203,9 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<Map> findTransactionResult(Long projectId, Long companyId) {
+    public List<Map> findTransactionResult(Long projectId, Long companyId,Boolean showUnconfirmed) {
         List<Map> itemList = new ArrayList<>();
-        Map<String, Object> transactionResult1 = projectSupplierRestService.findTransactionResult(projectId, companyId);
+        Map<String, Object> transactionResult1 = projectSupplierRestService.findTransactionResult(projectId, companyId,showUnconfirmed);
         List<Map> supplierList = (List<Map>)transactionResult1.get("supplierList");
         supplierList.forEach( map -> {
             String supplierListCode = (String)map.get("supplierListCode");
@@ -219,8 +219,8 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<PurchasesWithSupplierItemVO> findPurchaseDealItem(Long projectId, Long companyId) {
-        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId);
+    public List<PurchasesWithSupplierItemVO> findPurchaseDealItem(Long projectId, Long companyId ,Boolean showUnconfirmed) {
+        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId,showUnconfirmed);
         // 成交结果信息[采购品 + 供应商]
         List<Map<String, Object>> finalDealList = (List<Map<String, Object>>) purchaseDealItem.get("finalDealList");
         List list = new ArrayList();
@@ -270,8 +270,8 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
      * @return
      */
     @Override
-    public List<Map<String, Object>> findPurchaseDealItemWithPurchase(Long projectId, Long companyId) {
-        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId);
+    public List<Map<String, Object>> findPurchaseDealItemWithPurchase(Long projectId, Long companyId,Boolean showUnconfirmed) {
+        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId,showUnconfirmed);
         // 成交结果信息[采购品 + 供应商]
         List<Map<String, Object>> finalDealList = (List<Map<String, Object>>) purchaseDealItem.get("finalDealList");
         List list = new ArrayList();

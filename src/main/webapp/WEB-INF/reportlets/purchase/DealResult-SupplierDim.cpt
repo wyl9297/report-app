@@ -1636,6 +1636,22 @@
 <Background name="ColorBackground" color="-526086"/>
 <LCAttr vgap="0" hgap="0" compInterval="0"/>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.CheckBox">
+<WidgetName name="showFlag"/>
+<LabelName name="显示未成交供应商"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[显示未成交供应商]]></Text>
+<widgetValue>
+<O t="B">
+<![CDATA[true]]></O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="843" y="9" width="145" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.parameter.FormSubmitButton">
 <WidgetName name="formSubmit0"/>
 <WidgetAttr description="">
@@ -1646,7 +1662,7 @@
 <Hotkeys>
 <![CDATA[enter]]></Hotkeys>
 </InnerWidget>
-<BoundsAttr x="851" y="9" width="80" height="21"/>
+<BoundsAttr x="999" y="9" width="80" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.CheckBoxGroup">
@@ -1671,18 +1687,19 @@
 <Sorted sorted="false"/>
 <MobileWidgetList>
 <Widget widgetName="ckbx"/>
+<Widget widgetName="showFlag"/>
 <Widget widgetName="formSubmit0"/>
 </MobileWidgetList>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
 <Position position="1"/>
-<Design_Width design_width="944"/>
+<Design_Width design_width="1138"/>
 <NameTagModified/>
 <WidgetNameTagMap/>
 <ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
-<DesignAttr width="944" height="35"/>
+<DesignAttr width="1138" height="38"/>
 </ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
@@ -1718,8 +1735,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
 <Left style="2"/>
 <Right style="1"/>
 </Border>
@@ -1728,9 +1745,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
 <Right style="2"/>
 </Border>
 </Style>
@@ -1738,7 +1755,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="2" color="-16777216"/>
 <Right style="1" color="-16777216"/>
@@ -1748,7 +1765,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
+<Top style="1"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="1"/>
 <Right style="2"/>
@@ -1798,8 +1815,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
 <Left style="2" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
@@ -1808,19 +1825,19 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
 <Right style="2" color="-16777216"/>
 </Border>
 </Style>
@@ -1887,12 +1904,6 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
-<Text>
-<![CDATA[=$FineWaterMark]]></Text>
-</WatermarkAttr>
-</WatermarkAttr>
 <PrintSettings class="com.fr.base.print.PrintSettingsAttrMark">
 <PrintSettings printType="0" valid="true">
 <NoClientPrintAttr>
@@ -1912,6 +1923,12 @@
 </NativePrintAttr>
 </PrintSettings>
 </PrintSettings>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="9fde2f35-a11a-4869-9be7-9d7058838bfd"/>
 </TemplateIdAttMark>
