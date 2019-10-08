@@ -261,7 +261,7 @@
 <PrivilegeControl/>
 <Present class="com.fr.base.present.FormulaPresent">
 <Content>
-<![CDATA[=if($$$ = 0, "创建中", if($$$ = 1, "新建", if($$$ = 2, "待执行", if($$$ = 3, "待确认", if($$$ = 4, "执行中", if($$$ = 5, "已取消", if($$$ = 6, "已终止", if($$$ = 7, "已完成", "状态待定"))))))))]]></Content>
+<![CDATA[=if($$$ = 0, "创建中", if($$$ = 1, "新建", if($$$ = 2, "待执行", if($$$ = 3, "待确认", if($$$ = 4, "执行中", if($$$ = 5, "已取消", if($$$ = 6, "已终止", if($$$ = 7, "已完成", "已归档"))))))))]]></Content>
 </Present>
 <Expand dir="0"/>
 </C>
