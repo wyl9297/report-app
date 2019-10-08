@@ -635,12 +635,13 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
 
                     //增加供应商名称状态
                     if(null != title && !" ".equals(title)){
-                        if((Integer)(col.get("dealStatus")) == 1){
-                            quoteSeparatelyVo.setDealStatusStr(title+"(未成交)");
-                        }else {
-                            quoteSeparatelyVo.setDealStatusStr(title+"(已成交)");
+                        if (col.get("dealStatus") != null && col.get("dealStatus") != "") {
+                            if((Integer)(col.get("dealStatus")) == 1){
+                                quoteSeparatelyVo.setDealStatusStr(title+"(未成交)");
+                            }else {
+                                quoteSeparatelyVo.setDealStatusStr(title+"(已成交)");
+                            }
                         }
-
                     }
 
                     objects.add(quoteSeparatelyVo);
