@@ -5,6 +5,7 @@ import cn.bidlink.custom.use.cloud.response.ResponseResult;
 import cn.bidlink.custom.use.cloud.service.cloud.QueryConfigurationCloudService;
 import cn.bidlink.framework.boot.web.context.UserContext;
 import cn.bidlink.procurement.appset.dal.service.DubboAppsetPrintCompanySetService;
+import cn.bidlink.procurement.auction.cloud.service.AuctionPrintService;
 import cn.bidlink.procurement.purchase.cloud.service.ProjectRestService;
 import cn.bidlink.report.app.individuation.ReportUrlAppender;
 import com.alibaba.fastjson.JSON;
@@ -45,6 +46,8 @@ public class ReportGateway {
     DubboAppsetPrintCompanySetService dubboAppsetPrintCompanySetService;
     @Autowired
     ProjectRestService purchaseProjectRestService;
+    @Autowired
+    AuctionPrintService auctionPrintService;
 
     private Logger logger = LoggerFactory.getLogger(ReportGateway.class);
 
@@ -264,8 +267,7 @@ public class ReportGateway {
 
                 break;
             case "auction" :
-                set = new LinkedHashSet<>();
-                set.add("");
+                set = auctionPrintService.getPrintTitle(projectId,companyId);
                 break;
         };
         return set;
