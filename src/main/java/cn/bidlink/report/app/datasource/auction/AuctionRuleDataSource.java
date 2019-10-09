@@ -29,7 +29,7 @@ public class AuctionRuleDataSource extends AbstractBaseTableData {
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"auctionTypeValue", "auctionSpaceValue", "quoteRangeValue","delayRuleValue" , "depreciateValueStr", "delayRuleValue" , "quoteSecrecyTypeValue"};
+        return new String[]{"auctionTypeValue", "auctionSpaceValue", "quoteRangeValue","delayRuleValue" , "depreciateValueStr", "delayRuleHallValue" , "quoteSecrecyTypeValue"};
     }
 
     @Override
