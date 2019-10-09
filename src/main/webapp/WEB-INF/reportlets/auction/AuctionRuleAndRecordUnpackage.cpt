@@ -188,7 +188,7 @@
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
-<HR/>
+<HR F="15" T="15"/>
 <FR/>
 <HC/>
 <FC/>
