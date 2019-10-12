@@ -212,7 +212,7 @@
 </Parameter>
 </Parameters>
 <Content>
-<![CDATA[window.location.href=ip + "/reportGateway/reportWindow/statistics/supplierQuotationItem?supplierId="+supplierId + "&companyId=" + companyId;]]></Content>
+<![CDATA[alert(ip + "/reportGateway/reportWindow/statistics/supplierQuotationItem?supplierId = "+supplierId + "& companyId =" + companyId);]]></Content>
 </JavaScript>
 </NameJavaScript>
 </NameJavaScriptGroup>
@@ -227,14 +227,15 @@
 </O>
 <PrivilegeControl/>
 <NameJavaScriptGroup>
-<NameJavaScript name="JavaScript脚本1">
-<JavaScript class="com.fr.js.JavaScriptImpl">
+<NameJavaScript name="网页链接1">
+<JavaScript class="com.fr.js.WebHyperlink">
+<JavaScript class="com.fr.js.WebHyperlink">
 <Parameters>
 <Parameter>
-<Attributes name="ip"/>
+<Attributes name="companyId"/>
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=serverURL]]></Attributes>
+<![CDATA[=$companyId]]></Attributes>
 </O>
 </Parameter>
 <Parameter>
@@ -244,16 +245,13 @@
 <![CDATA[=supplier.select(supplierId)]]></Attributes>
 </O>
 </Parameter>
-<Parameter>
-<Attributes name="companyId"/>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=$companyId]]></Attributes>
-</O>
-</Parameter>
 </Parameters>
-<Content>
-<![CDATA[window.location.href=ip+"/reportGateway/reportWindow/statistics/supplierWinItem?supplierId="+supplierId +"&companyId="+companyId;]]></Content>
+<TargetFrame>
+<![CDATA[_blank]]></TargetFrame>
+<Features width="600" height="400"/>
+<URL>
+<![CDATA[http://127.0.0.1:8767/reportGateway/reportWindow/statistics/supplierWinItem]]></URL>
+</JavaScript>
 </JavaScript>
 </NameJavaScript>
 </NameJavaScriptGroup>
