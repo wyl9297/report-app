@@ -126,61 +126,61 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="0" s="1">
+<C c="1" r="0" s="0">
 <O>
 <![CDATA[采购品名称]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="0" s="1">
+<C c="2" r="0" s="0">
 <O>
 <![CDATA[编码]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="0" s="1">
+<C c="3" r="0" s="0">
 <O>
 <![CDATA[规格型号]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="0" s="1">
+<C c="4" r="0" s="0">
 <O>
 <![CDATA[技术参数/材质]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="0" s="1">
+<C c="5" r="0" s="0">
 <O>
 <![CDATA[单位]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="0" s="1">
+<C c="6" r="0" s="0">
 <O>
 <![CDATA[中标项目数量]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="0" s="1">
+<C c="7" r="0" s="0">
 <O>
 <![CDATA[中标总金额（元）]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="8" r="0" s="1">
+<C c="8" r="0" s="0">
 <O>
 <![CDATA[最近成交时间 ]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="9" r="0" s="2">
+<C c="9" r="0" s="0">
 <O>
 <![CDATA[历史成交价格]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="1" s="3">
+<C c="0" r="1" s="1">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B2]]></Attributes>
@@ -188,7 +188,7 @@
 <PrivilegeControl/>
 <Expand dir="0" leftParentDefault="false" left="B2" upParentDefault="false"/>
 </C>
-<C c="1" r="1" s="4">
+<C c="1" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="directoryName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -203,7 +203,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="1" s="4">
+<C c="2" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="directoryCode"/>
 <Complex/>
@@ -213,7 +213,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="1" s="4">
+<C c="3" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="spec"/>
 <Complex/>
@@ -223,7 +223,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="1" s="4">
+<C c="4" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="techParameters"/>
 <Complex/>
@@ -233,7 +233,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="5" r="1" s="4">
+<C c="5" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="unitName"/>
 <Complex/>
@@ -243,7 +243,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="1" s="4">
+<C c="6" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="projectCount"/>
 <Complex/>
@@ -253,7 +253,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="1" s="4">
+<C c="7" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="totalBidPrice"/>
 <Complex/>
@@ -263,7 +263,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="8" r="1" s="4">
+<C c="8" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="recentDealTime"/>
 <Complex/>
@@ -273,7 +273,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="9" r="1" s="5">
+<C c="9" r="1" s="2">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="recentDealPrice"/>
 <Complex/>
@@ -282,24 +282,26 @@
 </O>
 <PrivilegeControl/>
 <NameJavaScriptGroup>
-<NameJavaScript name="网页链接1">
-<JavaScript class="com.fr.js.WebHyperlink">
-<JavaScript class="com.fr.js.WebHyperlink">
+<NameJavaScript name="JavaScript脚本2">
+<JavaScript class="com.fr.js.JavaScriptImpl">
 <Parameters>
+<Parameter>
+<Attributes name="ip"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=serverURL]]></Attributes>
+</O>
+</Parameter>
 <Parameter>
 <Attributes name="directoryId"/>
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=purchase.select("directoryId")]]></Attributes>
+<![CDATA[=purchase.select(directoryId)]]></Attributes>
 </O>
 </Parameter>
 </Parameters>
-<TargetFrame>
-<![CDATA[_blank]]></TargetFrame>
-<Features width="600" height="400"/>
-<URL>
-<![CDATA[http://127.0.0.1:8767/reportGateway/reportWindow/statistics/purchaseDealStatisticalDetail]]></URL>
-</JavaScript>
+<Content>
+<![CDATA[window.location.href=ip + "/reportGateway/reportWindow/statistics/purchaseDealStatisticalDetail?directoryId="+directoryId;]]></Content>
 </JavaScript>
 </NameJavaScript>
 </NameJavaScriptGroup>
@@ -307,7 +309,7 @@
 </C>
 </CellElementList>
 <ReportAttrSet>
-<ReportSettings pageOrder="1" headerHeight="0" footerHeight="720000">
+<ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
 <PaperSetting orientation="1">
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
@@ -631,39 +633,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="2" color="-16777216"/>
-<Right style="1" color="-16777216"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="微软雅黑" style="1" size="72"/>
-<Background name="ColorBackground" color="-657929"/>
-<Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="微软雅黑" style="1" size="72"/>
-<Background name="ColorBackground" color="-657929"/>
-<Border>
-<Top style="2"/>
+<Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="2"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border>
-<Top style="1"/>
-<Bottom style="2"/>
-<Left style="2"/>
 <Right style="1"/>
 </Border>
 </Style>
@@ -672,7 +644,7 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1"/>
-<Bottom style="2"/>
+<Bottom style="1"/>
 <Left style="1"/>
 <Right style="1"/>
 </Border>
@@ -682,9 +654,9 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1"/>
-<Bottom style="2"/>
+<Bottom style="1"/>
 <Left style="1"/>
-<Right style="2"/>
+<Right style="1"/>
 </Border>
 </Style>
 </StyleList>

@@ -112,7 +112,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1143000,723900,723900,1143000,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
+<![CDATA[1143000,723900,723900,1143000,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[2743200,2743200,2933700,3657600,2971800,2743200,4000500,2590800,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
@@ -122,31 +122,31 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="0" s="1">
+<C c="1" r="0" s="0">
 <O>
 <![CDATA[采购品编码]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="0" s="1">
+<C c="2" r="0" s="0">
 <O>
 <![CDATA[规格]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="0" s="1">
+<C c="3" r="0" s="0">
 <O>
 <![CDATA[单位]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="0" s="2">
+<C c="4" r="0" s="0">
 <O>
 <![CDATA[成交数量合计]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="1" s="3">
+<C c="0" r="1" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="directoryName"/>
 <Complex/>
@@ -156,7 +156,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="1" r="1" s="4">
+<C c="1" r="1" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="directoryCode"/>
 <Complex/>
@@ -166,7 +166,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="1" s="4">
+<C c="2" r="1" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="spec"/>
 <Complex/>
@@ -176,7 +176,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="1" s="4">
+<C c="3" r="1" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="unitName"/>
 <Complex/>
@@ -186,7 +186,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="1" s="5">
+<C c="4" r="1" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="dealAmount"/>
 <Complex/>
@@ -202,61 +202,61 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="3" s="1">
+<C c="1" r="3" s="0">
 <O>
 <![CDATA[项目名称]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="3" s="1">
+<C c="2" r="3" s="0">
 <O>
 <![CDATA[供应商名称]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="3" s="1">
+<C c="3" r="3" s="0">
 <O>
 <![CDATA[成交价格（元）]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="3" s="1">
+<C c="4" r="3" s="0">
 <O>
 <![CDATA[成交数量]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="3" s="1">
+<C c="5" r="3" s="0">
 <O>
 <![CDATA[成交金额]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="3" s="1">
+<C c="6" r="3" s="0">
 <O>
 <![CDATA[采购结果发布时间]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="3" s="1">
+<C c="7" r="3" s="0">
 <O>
 <![CDATA[项目来源]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="8" r="3" s="1">
+<C c="8" r="3" s="0">
 <O>
 <![CDATA[立项人]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="9" r="3" s="2">
+<C c="9" r="3" s="0">
 <O>
 <![CDATA[采购部门]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="4" s="3">
+<C c="0" r="4" s="0">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B5]]></Attributes>
@@ -264,7 +264,7 @@
 <PrivilegeControl/>
 <Expand leftParentDefault="false" left="B5" upParentDefault="false"/>
 </C>
-<C c="1" r="4" s="4">
+<C c="1" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="projectName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -279,10 +279,12 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="4" s="4">
+<C c="2" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="supplierName"/>
 <Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
 <CNAME>
 <![CDATA[projectId]]></CNAME>
 <Compare op="0">
@@ -300,7 +302,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="4" s="4">
+<C c="3" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="dealPrice"/>
 <Complex/>
@@ -310,7 +312,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="4" s="4">
+<C c="4" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="dealAmount"/>
 <Complex/>
@@ -320,7 +322,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="5" r="4" s="4">
+<C c="5" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="dealTotalPrice"/>
 <Complex/>
@@ -330,7 +332,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="4" s="4">
+<C c="6" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="publishBidResultTime"/>
 <Complex/>
@@ -340,7 +342,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="4" s="4">
+<C c="7" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="createSource"/>
 <Complex/>
@@ -350,7 +352,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="8" r="4" s="4">
+<C c="8" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="createUserName"/>
 <Complex/>
@@ -360,7 +362,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="9" r="4" s="5">
+<C c="9" r="4" s="0">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="departmentName"/>
 <Complex/>
@@ -370,18 +372,26 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="10">
-<PrivilegeControl/>
-<Expand/>
-</C>
 </CellElementList>
 <ReportAttrSet>
-<ReportSettings pageOrder="1" headerHeight="0" footerHeight="0">
-<PaperSetting>
+<ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="0">
+<PaperSetting orientation="1">
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
 </ReportSettings>
+<Header reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground"/>
+<LeftList/>
+<CenterList/>
+<RightList/>
+</Footer>
 </ReportAttrSet>
 <PrivilegeControl/>
 </Report>
@@ -479,60 +489,10 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="2"/>
-<Bottom style="1"/>
-<Left style="2"/>
-<Right style="1"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border>
-<Top style="2"/>
+<Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
 <Right style="1"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border>
-<Top style="2"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="2"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border>
-<Top style="1"/>
-<Bottom style="2"/>
-<Left style="2"/>
-<Right style="1"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border>
-<Top style="1"/>
-<Bottom style="2"/>
-<Left style="1"/>
-<Right style="1"/>
-</Border>
-</Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border>
-<Top style="1"/>
-<Bottom style="2"/>
-<Left style="1"/>
-<Right style="2"/>
 </Border>
 </Style>
 </StyleList>
