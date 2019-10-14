@@ -28,7 +28,7 @@ public class PurchaseDealStatisticalOneDataSource extends AbstractBaseTableData 
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"id", "projectId", "companyId", "directoryId", "dealAmount", "unitName", "directoryCode", "spec", "techParameters", "supplierId"};
+        return new String[]{"id", "projectId", "companyId", "directoryId", "directoryName", "dealAmount", "unitName", "directoryCode", "spec", "techParameters", "supplierId"};
     }
 
     @Override
