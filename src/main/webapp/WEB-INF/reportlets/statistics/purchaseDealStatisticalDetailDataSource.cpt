@@ -112,9 +112,9 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1143000,723900,723900,1143000,723900,723900]]></RowHeight>
+<![CDATA[1143000,723900,723900,1143000,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2933700,3657600,2971800,2743200,4000500,2590800,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2743200,2743200,2933700,3657600,3200400,2743200,5067300,2590800,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" s="0">
 <O>
@@ -146,7 +146,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="1" s="0">
+<C c="0" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="directoryName"/>
 <Complex/>
@@ -156,7 +156,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="1" r="1" s="0">
+<C c="1" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="directoryCode"/>
 <Complex/>
@@ -166,7 +166,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="1" s="0">
+<C c="2" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="spec"/>
 <Complex/>
@@ -176,7 +176,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="1" s="0">
+<C c="3" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="unitName"/>
 <Complex/>
@@ -186,7 +186,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="1" s="0">
+<C c="4" r="1" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="dealAmount"/>
 <Complex/>
@@ -256,7 +256,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="4" s="0">
+<C c="0" r="4" s="1">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B5]]></Attributes>
@@ -264,7 +264,7 @@
 <PrivilegeControl/>
 <Expand leftParentDefault="false" left="B5" upParentDefault="false"/>
 </C>
-<C c="1" r="4" s="0">
+<C c="1" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="projectName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -279,7 +279,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="4" s="0">
+<C c="2" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="supplierName"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -302,7 +302,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="4" s="0">
+<C c="3" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="dealPrice"/>
 <Complex/>
@@ -312,7 +312,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="4" s="0">
+<C c="4" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="dealAmount"/>
 <Complex/>
@@ -322,7 +322,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="5" r="4" s="0">
+<C c="5" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseDetail" columnName="dealTotalPrice"/>
 <Complex/>
@@ -332,7 +332,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="4" s="0">
+<C c="6" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="publishBidResultTime"/>
 <Complex/>
@@ -342,7 +342,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="7" r="4" s="0">
+<C c="7" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="createSource"/>
 <Complex/>
@@ -352,7 +352,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="8" r="4" s="0">
+<C c="8" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="createUserName"/>
 <Complex/>
@@ -362,7 +362,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="9" r="4" s="0">
+<C c="9" r="4" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="departmentName"/>
 <Complex/>
@@ -483,8 +483,23 @@
 </Layout>
 <DesignAttr width="960" height="80"/>
 </ParameterUI>
+<Parameter>
+<Attributes name="FineWaterMark"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
 </ReportParameterAttr>
 <StyleList>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="1" size="72"/>
+<Background name="ColorBackground" color="-657929"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
@@ -498,6 +513,12 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="37cd0e72-83ca-4ca6-b5c0-5f68178c6547"/>
 </TemplateIdAttMark>
