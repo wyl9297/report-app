@@ -203,9 +203,9 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<Map> findTransactionResult(Long projectId, Long companyId) {
+    public List<Map> findTransactionResult(Long projectId, Long companyId,Boolean showUnconfirmed) {
         List<Map> itemList = new ArrayList<>();
-        Map<String, Object> transactionResult1 = projectSupplierRestService.findTransactionResult(projectId, companyId);
+        Map<String, Object> transactionResult1 = projectSupplierRestService.findTransactionResult(projectId, companyId,showUnconfirmed);
         List<Map> supplierList = (List<Map>)transactionResult1.get("supplierList");
         supplierList.forEach( map -> {
             String supplierListCode = (String)map.get("supplierListCode");
@@ -219,46 +219,48 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<PurchasesWithSupplierItemVO> findPurchaseDealItem(Long projectId, Long companyId) {
-        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId);
+    public List<PurchasesWithSupplierItemVO> findPurchaseDealItem(Long projectId, Long companyId ,Boolean showUnconfirmed) {
+        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId,showUnconfirmed);
         // 成交结果信息[采购品 + 供应商]
         List<Map<String, Object>> finalDealList = (List<Map<String, Object>>) purchaseDealItem.get("finalDealList");
         List list = new ArrayList();
         finalDealList.forEach(map -> {
             List<Map<String, Object>> supplierList = (List<Map<String, Object>>) map.get("supplierList");
-            supplierList.forEach(supMap -> {
-                PurchasesWithSupplierItemVO item = new PurchasesWithSupplierItemVO();
-                // 采购品信息
-                item.setMarketPrice((String) map.get("marketPrice"));
-                item.setCode((String) map.get("code"));
-                item.setUnitName((String) map.get("unitName"));
-                item.setPurpose((String) map.get("purpose"));
-                item.setPurpose((String) map.get("userDept"));
-                item.setProjectItemId((String) map.get("projectItemId"));
-                item.setSpec((String) map.get("spec"));
-                item.setPurchaseAmount((String) map.get("purchaseAmount"));
-                item.setTechParameters((String) map.get("techParameters"));
-                item.setName((String) map.get("name"));
-                item.setComment((String) map.get("comment"));
-                item.setPlanPrice((String) map.get("planPrice"));
-                item.setProjectId((String) map.get("projectId"));
-                item.setAppliedEnterprise((String) map.get("appliedEnterprise"));
-                item.setAppliedPersonAndPhone((String) map.get("appliedPersonAndPhone"));
-                item.setNeedTime((String) map.get("needTime"));
-                // 供应商数据
-                item.setDealUnitPrice((String) supMap.get("dealUnitPrice"));
-                item.setDealRation((String) supMap.get("dealRation"));
-                item.setQuoteAmount((String) supMap.get("quoteAmount"));
-                item.setDealTotalPrice((String) supMap.get("dealTotalPrice"));
-                item.setSupplierName((String) supMap.get("supplierName"));
-                item.setDealAmount((String) supMap.get("dealAmount"));
-                item.setQuoteUnitPrice((String) supMap.get("quoteUnitPrice"));
-                item.setQuoteTotalPrice((String) supMap.get("quoteTotalPrice"));
-                item.setSupplierId((String) supMap.get("supplierId"));
-                item.setDealDescription((String) supMap.get("dealDescription"));
-                item.setCurrency((String) supMap.get("currency"));
-                list.add(item);
-            });
+            if ( null != supplierList ){
+                supplierList.forEach(supMap -> {
+                    PurchasesWithSupplierItemVO item = new PurchasesWithSupplierItemVO();
+                    // 采购品信息
+                    item.setMarketPrice((String) map.get("marketPrice"));
+                    item.setCode((String) map.get("code"));
+                    item.setUnitName((String) map.get("unitName"));
+                    item.setPurpose((String) map.get("purpose"));
+                    item.setPurpose((String) map.get("userDept"));
+                    item.setProjectItemId((String) map.get("projectItemId"));
+                    item.setSpec((String) map.get("spec"));
+                    item.setPurchaseAmount((String) map.get("purchaseAmount"));
+                    item.setTechParameters((String) map.get("techParameters"));
+                    item.setName((String) map.get("name"));
+                    item.setComment((String) map.get("comment"));
+                    item.setPlanPrice((String) map.get("planPrice"));
+                    item.setProjectId((String) map.get("projectId"));
+                    item.setAppliedEnterprise((String) map.get("appliedEnterprise"));
+                    item.setAppliedPersonAndPhone((String) map.get("appliedPersonAndPhone"));
+                    item.setNeedTime((String) map.get("needTime"));
+                    // 供应商数据
+                    item.setDealUnitPrice((String) supMap.get("dealUnitPrice"));
+                    item.setDealRation((String) supMap.get("dealRation"));
+                    item.setQuoteAmount((String) supMap.get("quoteAmount"));
+                    item.setDealTotalPrice((String) supMap.get("dealTotalPrice"));
+                    item.setSupplierName((String) supMap.get("supplierName"));
+                    item.setDealAmount((String) supMap.get("dealAmount"));
+                    item.setQuoteUnitPrice((String) supMap.get("quoteUnitPrice"));
+                    item.setQuoteTotalPrice((String) supMap.get("quoteTotalPrice"));
+                    item.setSupplierId((String) supMap.get("supplierId"));
+                    item.setDealDescription((String) supMap.get("dealDescription"));
+                    item.setCurrency((String) supMap.get("currency"));
+                    list.add(item);
+                });
+            }
         });
         return list;
     }
@@ -270,8 +272,8 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
      * @return
      */
     @Override
-    public List<Map<String, Object>> findPurchaseDealItemWithPurchase(Long projectId, Long companyId) {
-        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId);
+    public List<Map<String, Object>> findPurchaseDealItemWithPurchase(Long projectId, Long companyId,Boolean showUnconfirmed) {
+        Map<String, Object> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(projectId, companyId,showUnconfirmed);
         // 成交结果信息[采购品 + 供应商]
         List<Map<String, Object>> finalDealList = (List<Map<String, Object>>) purchaseDealItem.get("finalDealList");
         List list = new ArrayList();
@@ -302,7 +304,7 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     @Override
     public List<ProjectSupplierDealVo> findProcessedDealList(Long projectId, Long companyId, Boolean showUnConfirmed) {
         //查询数据并返回
-        ResultTabListVo<ProjectSupplierItemDealDto> processedDealList = dealPriceRestService.findProcessedDealList(projectId, companyId, showUnConfirmed, 0, 100);
+        ResultTabListVo<ProjectSupplierItemDealDto> processedDealList = dealPriceRestService.findProcessedDealList(projectId, companyId, showUnConfirmed , null , null);
         BigDecimal dealTotalPrice = processedDealList.getDealTotalPrice();
         List<ProjectSupplierItemDealDto> tableData = processedDealList.getTableData();
         List<ProjectSupplierDealVo> list = new ArrayList<>();
@@ -624,6 +626,24 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
                         Long supplierId = Long.valueOf(key.substring(15));
                         quoteSeparatelyVo.setSupplierId(supplierId);
                     }
+
+                    //增加供应商成交状态
+                    String dealStatus = String.valueOf(col.get("dealStatus"));
+                    if(null != dealStatus && !" ".equals(dealStatus)){
+                        quoteSeparatelyVo.setDealStatus((Integer)(col.get("dealStatus")));
+                    }
+
+                    //增加供应商名称状态
+                    if(null != title && !" ".equals(title)){
+                        if (col.get("dealStatus") != null && col.get("dealStatus") != "") {
+                            if((Integer)(col.get("dealStatus")) == 1){
+                                quoteSeparatelyVo.setDealStatusStr(title+"(未成交)");
+                            }else {
+                                quoteSeparatelyVo.setDealStatusStr(title+"(已成交)");
+                            }
+                        }
+                    }
+
                     objects.add(quoteSeparatelyVo);
                 }
             }

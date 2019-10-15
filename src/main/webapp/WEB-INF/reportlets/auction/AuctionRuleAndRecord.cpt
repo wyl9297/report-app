@@ -383,7 +383,7 @@
 </C>
 <C c="1" r="11" cs="8" s="2">
 <O t="DSColumn">
-<Attributes dsName="rule" columnName="delayRuleValue"/>
+<Attributes dsName="rule" columnName="delayRuleHallValue"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
@@ -393,7 +393,7 @@
 </C>
 <C c="0" r="12" s="1">
 <O>
-<![CDATA[报价保密规则]]></O>
+<![CDATA[供应商可见信息]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -449,7 +449,9 @@
 <O t="DSColumn">
 <Attributes dsName="record" columnName="quotePrice"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
 <Parameters/>
 </O>
 <PrivilegeControl/>

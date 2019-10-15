@@ -39,7 +39,7 @@ public class TransactionPricingPurchasesDimDataSource extends AbstractBaseTableD
         //获取报表查询的参数
         String projectId = param.get("projectId");
         //查询数据并返回
-        ResultTabListVo<ProjectSupplierItemDealDto> processedDealList = dealPriceRestService.findProcessedDealList(Long.parseLong(projectId), UserContext.getCompanyId(),true, 0, 100);
+        ResultTabListVo<ProjectSupplierItemDealDto> processedDealList = dealPriceRestService.findProcessedDealList(Long.parseLong(projectId), UserContext.getCompanyId(),true, null, null);
         List<ProjectSupplierItemDealDto> tableData = processedDealList.getTableData();
         return tableData;
     }
