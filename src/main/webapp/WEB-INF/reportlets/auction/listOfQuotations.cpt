@@ -803,7 +803,7 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="1" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
 <Parameter>
@@ -827,8 +827,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
 <Left style="2"/>
 <Right style="1"/>
 </Border>
@@ -847,7 +847,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
+<Top style="1" color="-16777216"/>
 <Bottom style="2"/>
 <Left style="2"/>
 <Right style="1"/>

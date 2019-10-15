@@ -39,11 +39,9 @@ public class AuctionSupplierListDataSource extends AbstractBaseTableData {
         Long projectId = Long.valueOf(param.get("projectId"));
         Long companyId = Long.valueOf(param.get("companyId"));
 //        Boolean quoteResult = Boolean.valueOf(param.get("quoteResult"));
-        Integer pageNum = Integer.valueOf(param.get("pageNum"));
-        Integer pageSize = Integer.valueOf(param.get("pageSize"));
 
         // quoteResult 默认设置为true
-        Map<String, Object> quotedSupplierList = auctionQuotedPriceRestService.findQuotedSupplierList(projectId, companyId, true, pageNum, 1000);
+        Map<String, Object> quotedSupplierList = auctionQuotedPriceRestService.findQuotedSupplierList(projectId, companyId, true, 1, 1000);
         List<Map<String, Object>> tableData = (List<Map<String, Object>>) quotedSupplierList.get("tableData");
         return tableData;
     }

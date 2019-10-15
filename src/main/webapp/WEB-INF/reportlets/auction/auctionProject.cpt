@@ -214,6 +214,17 @@
 <O>
 <![CDATA[技术参数]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("技术参数", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="5" r="5" s="5">
@@ -238,48 +249,136 @@
 <O>
 <![CDATA[申报人、电话]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("申报人、电话", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="9" r="5" s="5">
 <O>
 <![CDATA[申报企业]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("申报企业", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="10" r="5" s="5">
 <O>
 <![CDATA[使用单位]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("使用单位", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="11" r="5" s="5">
 <O>
 <![CDATA[用途]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("用途", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="12" r="5" s="5">
 <O>
 <![CDATA[需求日期]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("需求日期", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="13" r="5" s="5">
 <O>
 <![CDATA[采购品备注]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="14" r="5" s="5">
 <O>
 <![CDATA[来源]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("来源", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="15" r="5" s="6">
 <O>
 <![CDATA[添加时间]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("添加时间", split($checkBox, ",")) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
 <C c="0" r="6" s="7">
@@ -359,9 +458,19 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$) > 250]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("技术参数", split($checkBox, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -492,9 +601,19 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$)>250]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($checkBox, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="8640000"/>
@@ -503,9 +622,19 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性2]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
 <![CDATA[len($$$)>500]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("采购品备注", split($checkBox, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="14400000"/>
@@ -574,9 +703,78 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="1" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
+<ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
+<Parameters/>
+<Layout class="com.fr.form.ui.container.WParameterLayout">
+<WidgetName name="para"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Margin top="0" left="0" bottom="0" right="0"/>
+<Border>
+<border style="0" color="-723724" borderRadius="0" type="0" borderStyle="0"/>
+<WidgetTitle>
+<O>
+<![CDATA[新建标题]]></O>
+<FRFont name="SimSun" style="0" size="72"/>
+<Position pos="0"/>
+</WidgetTitle>
+<Alpha alpha="1.0"/>
+</Border>
+<Background name="ColorBackground" color="-526086"/>
+<LCAttr vgap="0" hgap="0" compInterval="0"/>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.CheckBoxGroup">
+<WidgetName name="checkBox"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Dictionary class="com.fr.data.impl.FormulaDictionary">
+<FormulaDict>
+<![CDATA[=split("技术参数,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注,来源,添加时间",",")]]></FormulaDict>
+</Dictionary>
+<widgetValue>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=array($Columns)]]></Attributes>
+</O>
+</widgetValue>
+<ChooseAll/>
+</InnerWidget>
+<BoundsAttr x="14" y="25" width="770" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.parameter.FormSubmitButton">
+<WidgetName name="formSubmit0"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<Text>
+<![CDATA[查询]]></Text>
+<Hotkeys>
+<![CDATA[enter]]></Hotkeys>
+</InnerWidget>
+<BoundsAttr x="807" y="25" width="80" height="21"/>
+</Widget>
+<Sorted sorted="false"/>
+<MobileWidgetList>
+<Widget widgetName="checkBox"/>
+<Widget widgetName="formSubmit0"/>
+</MobileWidgetList>
+<Display display="true"/>
+<DelayDisplayContent delay="false"/>
+<UseParamsTemplate use="true"/>
+<Position position="1"/>
+<Design_Width design_width="960"/>
+<NameTagModified/>
+<WidgetNameTagMap/>
+<ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
+</Layout>
+<DesignAttr width="960" height="80"/>
+</ParameterUI>
 <Parameter>
 <Attributes name="FineWaterMark"/>
 <O>
@@ -606,8 +804,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
 <Left style="2"/>
 <Right style="1"/>
 </Border>
@@ -616,8 +814,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
 <Left style="1"/>
 <Right style="2"/>
 </Border>
@@ -628,8 +826,8 @@
 <Border>
 <Top style="1"/>
 <Bottom style="1"/>
-<Left style="2"/>
-<Right style="1"/>
+<Left style="2" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -639,7 +837,7 @@
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="1"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -679,7 +877,7 @@
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="2"/>
+<Right style="2" color="-16777216"/>
 </Border>
 </Style>
 </StyleList>

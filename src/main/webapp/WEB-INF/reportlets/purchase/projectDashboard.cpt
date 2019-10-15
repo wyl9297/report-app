@@ -263,67 +263,6 @@ Ue94gr^Y>BEPRk5t~
 <newColor borderColor="-1"/>
 </AttrBorder>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="function(){ return this.category+this.seriesName+this.value;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="true"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
 <labelAttr enable="true"/>
@@ -394,6 +333,69 @@ Ue94gr^Y>BEPRk5t~
 </AttrBorder>
 </LineStyleInfo>
 </TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00万元]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return this.category+this.seriesName+this.value;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="true"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -918,8 +920,8 @@ Ue94gr^Y>BEPRk5t~
 <FillStyleName fillStyleName=""/>
 <isCustomFillStyle isCustomFillStyle="true"/>
 <ColorList>
-<OColor colvalue="-6259463"/>
 <OColor colvalue="-11686657"/>
+<OColor colvalue="-6259463"/>
 </ColorList>
 </AttrFillStyle>
 </newPlotFillStyle>
@@ -1094,65 +1096,6 @@ Ue94gr^Y>BEPRk5t~
 <DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
 <ConditionAttr name="">
 <AttrList>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="true"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
 <Attr class="com.fr.chart.base.AttrBorder">
 <AttrBorder>
 <Attr lineStyle="1" isRoundBorder="false" roundRadius="10"/>
@@ -1229,6 +1172,69 @@ Ue94gr^Y>BEPRk5t~
 </AttrBorder>
 </LineStyleInfo>
 </TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00万元]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="true"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -2038,6 +2044,8 @@ Ue94gr^Y>BEPRk5t~
 <value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
 <AttrTooltipValueFormat>
 <Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00万元]]></Format>
 </AttrTooltipValueFormat>
 </value>
 <percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
@@ -2054,7 +2062,7 @@ Ue94gr^Y>BEPRk5t~
 </category>
 <series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
 <AttrTooltipSeriesFormat>
-<Attr enable="true"/>
+<Attr enable="false"/>
 </AttrTooltipSeriesFormat>
 </series>
 <changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
@@ -2700,67 +2708,6 @@ Ue94gr^Y>BEPRk5t~
 </LineStyleInfo>
 </TrendLine>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="true" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="function(){ return &quot;项目采购量:&quot;+this.value;}" useHtml="true" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
 <labelAttr enable="false"/>
@@ -2811,6 +2758,71 @@ Ue94gr^Y>BEPRk5t~
 </AttrToolTipContent>
 </labelDetail>
 </AttrLabel>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="true" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[项目量：#0个]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+<Format class="java.text.SimpleDateFormat">
+<![CDATA[yyyy-MM]]></Format>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return &quot;项目采购量:&quot;+this.value;}" useHtml="true" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -3103,67 +3115,6 @@ Ue94gr^Y>BEPRk5t~
 <Background name="NullBackground"/>
 </VanAttrMarker>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="true" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="function(){ return &quot;采购金额:&quot;+this.value;}" useHtml="true" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="true"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
 <labelAttr enable="false"/>
@@ -3214,6 +3165,69 @@ Ue94gr^Y>BEPRk5t~
 </AttrToolTipContent>
 </labelDetail>
 </AttrLabel>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="true" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[采购金额：#0.00万元]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return &quot;采购金额:&quot;+this.value;}" useHtml="true" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="true"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -3628,65 +3642,6 @@ Ue94gr^Y>BEPRk5t~
 <DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
 <ConditionAttr name="">
 <AttrList>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="true"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
 <labelAttr enable="true"/>
@@ -3773,6 +3728,69 @@ Ue94gr^Y>BEPRk5t~
 <AttrAreaSeriesFillColorBackground>
 <Attr alpha="0.15"/>
 </AttrAreaSeriesFillColorBackground>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00万元]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="true"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
 </Attr>
 </AttrList>
 </ConditionAttr>

@@ -21,7 +21,8 @@ public class PurchaseDimensionOfTransactionResult extends AbstractBaseTableData 
     protected Parameter[] getParameter() {
         return new Parameter[]{
                 new Parameter("projectId"),
-                new Parameter("companyId")
+                new Parameter("companyId"),
+                new Parameter("showFlag")
         };
     }
 
@@ -37,10 +38,11 @@ public class PurchaseDimensionOfTransactionResult extends AbstractBaseTableData 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         PurchaseProxyService dealPriceRestService = dataServiceFactory.getDataService(PurchaseProxyService.class);
+        Boolean showFlag = Boolean.valueOf(param.get("showFlag"));
         //获取报表查询的参数
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
-        List<PurchasesWithSupplierItemVO> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(Long.valueOf(projectId), Long.valueOf(companyId));
+        List<PurchasesWithSupplierItemVO> purchaseDealItem = dealPriceRestService.findPurchaseDealItem(Long.valueOf(projectId), Long.valueOf(companyId),showFlag);
         return purchaseDealItem;
     }
 }
