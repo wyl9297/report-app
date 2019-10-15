@@ -217,12 +217,12 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     }
 
                     String projectId = String.valueOf(item.get("projectId"));
-                    if ( !"".equals(projectId) && projectId != null){
+                    if ( !"".equals(projectId) && projectId != null && !"null".equals(projectId)){
                         biddingResultDynamicChangeVo.setProjectId(Long.valueOf(projectId));
                     }
 
                     String subProjectId = String.valueOf(item.get("subProjectId"));
-                    if ( !"".equals(subProjectId) && subProjectId != null){
+                    if ( !"".equals(subProjectId) && subProjectId != null && !"null".equals(subProjectId) ){
                         biddingResultDynamicChangeVo.setSubProjectId(Long.valueOf(subProjectId));
                     }
 
@@ -456,12 +456,12 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     }
 
                     String projectId = String.valueOf(item.get("projectId"));
-                    if ( !"".equals(projectId) && projectId != null){
+                    if ( !"".equals(projectId) && projectId != null && !"null".equals(projectId)){
                         biddingResultDynamicChangeVo.setProjectId(Long.valueOf(projectId));
                     }
 
                     String subProjectId = String.valueOf(item.get("subProjectId"));
-                    if ( !"".equals(subProjectId) && subProjectId != null){
+                    if ( !"".equals(subProjectId) && subProjectId != null && !"null".equals(subProjectId)){
                         biddingResultDynamicChangeVo.setSubProjectId(Long.valueOf(subProjectId));
                     }
 
@@ -540,11 +540,11 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                 }
                 String projectId = String.valueOf(decideBid.get("projectId"));
 
-                if ( !"".equals(projectId) && projectId != null){
+                if ( !"".equals(projectId) && projectId != null && !"null".equals(projectId)){
                     biddingResultVo.setProjectId(Long.valueOf(projectId));
                 }
                 String subProjectId = String.valueOf(decideBid.get("subProjectId"));
-                if ( !"".equals(subProjectId) && subProjectId != null){
+                if ( !"".equals(subProjectId) && subProjectId != null && !"null".equals(subProjectId)){
                     biddingResultVo.setSubProjectId(Long.valueOf(subProjectId));
                 }
 
