@@ -30,6 +30,7 @@ import cn.bidlink.procurement.vendue.dal.dto.ProjectViewRulesDto;
 import cn.bidlink.report.app.model.vo.purchase.TotalItemsSeparatelyVo;
 import cn.bidlink.report.server.entity.SupplierPurchasesDto;
 import cn.bidlink.report.server.service.SupplierPurchaseStatisticsService;
+import com.fr.third.org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.collections.map.HashedMap;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,9 +38,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * @author <a href="mailto:xinyuli@ebnew.com">wisdom</a>
@@ -452,6 +452,30 @@ public class TestReportService extends TestBase{
         ServiceResult<List<Map>> listServiceResult5 = supplierPurchaseStatisticsService.directoryAmountPrice(dto);
         print(listServiceResult4);
         print(listServiceResult5);
+    }
+
+    @Test
+    public void datetest(){
+        //得到long类型当前时间
+        long l = System.currentTimeMillis();
+        //new日期对
+        Date datetim = new Date(l);
+        //转换提日期输出格式
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(dateFormat.format(datetim));
+        System.out.println(dateFormat);
+        System.out.println(111111);
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH, -1);
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH)+1;
+        int date = calendar.get(Calendar.DATE);
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
+        int second = calendar.get(Calendar.SECOND);
+        System.out.println(year+"-"+(month<10?"0"+month:month)+"-"+(date<10?"0"+date:date)+" "+(hour<10?"0"+hour:hour)+":"+(minute<10?"0"+minute:minute)+":"+(second<10?"0"+second:second));
+
     }
 
 }

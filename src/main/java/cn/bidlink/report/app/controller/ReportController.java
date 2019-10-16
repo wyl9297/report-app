@@ -1,5 +1,6 @@
 package cn.bidlink.report.app.controller;
 
+import cn.bidlink.base.ServiceResult;
 import cn.bidlink.procurement.auction.cloud.service.*;
 import cn.bidlink.procurement.bidding.cloud.service.BidSupplierItemRestService;
 import cn.bidlink.procurement.contract.cloud.service.ContractItemRestService;
@@ -8,6 +9,9 @@ import cn.bidlink.procurement.purchase.cloud.service.DealPriceSupplierDimensionR
 import cn.bidlink.report.app.service.ContractProxyService;
 import cn.bidlink.report.app.service.PurchaseProxyService;
 import cn.bidlink.report.app.service.TenderProxyService;
+import cn.bidlink.report.server.entity.ProjectWideTable;
+import cn.bidlink.report.server.entity.SupplierPurchasesDto;
+import cn.bidlink.report.server.service.SupplierPurchaseStatisticsService;
 import cn.bidlink.usercenter.server.service.DubboTRegCompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -70,6 +74,8 @@ public class ReportController {
     @Autowired
     PurchaseProxyService purchaseProxyService;
 
+    @Autowired
+    SupplierPurchaseStatisticsService supplierPurchaseStatisticsService;
 
     @RequestMapping(value = "success")
     @ResponseBody
@@ -77,6 +83,14 @@ public class ReportController {
         List<Map<String,String>> mapList = purchaseProxyService.totalQuoteTitle(335362391413891452L);
         List<Map> mapList1 = purchaseProxyService.totalQuoteValue(335362391413891452L);
         return "success";
+    }
+
+    @RequestMapping("/test1")
+    public void test1(){
+        SupplierPurchasesDto supplierPurchasesDto = new SupplierPurchasesDto();
+        supplierPurchasesDto.setCompanyId(11113174493L);
+        ServiceResult<List<SupplierPurchasesDto>> allByCondition = supplierPurchaseStatisticsService.findAllByCondition(supplierPurchasesDto);
+        System.out.println(allByCondition);
     }
 
 }
