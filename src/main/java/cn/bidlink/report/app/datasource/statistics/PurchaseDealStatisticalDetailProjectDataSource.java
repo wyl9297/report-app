@@ -36,7 +36,7 @@ public class PurchaseDealStatisticalDetailProjectDataSource extends AbstractBase
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         PurchaseDealStatisticalService purchaseDealStatisticalService = dataServiceFactory.getDataService(PurchaseDealStatisticalService.class);
         PurchaseNewProjectWideTable purchaseNewProjectWideTable = new PurchaseNewProjectWideTable();
-        purchaseNewProjectWideTable.setCompanyId(Long.valueOf(param.get("directoryId")));
+        purchaseNewProjectWideTable.setDirectoryId(Long.valueOf(param.get("directoryId")));
         purchaseNewProjectWideTable.setSupplierName(param.get("supplierName"));
         ServiceResult<List<PurchaseNewProjectWideTable>> findPurchaseDealStatisticalDetailProject = purchaseDealStatisticalService.findPurchaseDealStatisticalDetailProject(purchaseNewProjectWideTable);
         List<PurchaseNewProjectWideTable> result = findPurchaseDealStatisticalDetailProject.getResult();
