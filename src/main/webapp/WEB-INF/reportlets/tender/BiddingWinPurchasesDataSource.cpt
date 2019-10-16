@@ -869,7 +869,7 @@
 </C>
 </CellElementList>
 <ReportAttrSet>
-<ReportSettings pageOrder="1" headerHeight="0" footerHeight="720000">
+<ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
 <PaperSetting>
 <PaperSize width="69120000" height="47520000"/>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
