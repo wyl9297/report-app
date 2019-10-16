@@ -112,41 +112,41 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1143000,723900,723900,1143000,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
+<![CDATA[1028700,723900,723900,1143000,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[2743200,2743200,2933700,3657600,3200400,2743200,5067300,2590800,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" s="0">
+<C c="0" r="0" cs="2" s="0">
 <O>
 <![CDATA[采购品名称]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="0" s="0">
+<C c="2" r="0" cs="2" s="0">
 <O>
 <![CDATA[采购品编码]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="0" s="0">
+<C c="4" r="0" cs="2" s="0">
 <O>
 <![CDATA[规格]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="0" s="0">
+<C c="6" r="0" cs="2" s="0">
 <O>
 <![CDATA[单位]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="0" s="0">
+<C c="8" r="0" cs="2" s="0">
 <O>
 <![CDATA[成交数量合计]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="1" s="1">
+<C c="0" r="1" cs="2" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="directoryName"/>
 <Complex/>
@@ -156,7 +156,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="1" r="1" s="1">
+<C c="2" r="1" cs="2" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="directoryCode"/>
 <Complex/>
@@ -166,7 +166,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="2" r="1" s="1">
+<C c="4" r="1" cs="2" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="spec"/>
 <Complex/>
@@ -176,7 +176,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="1" s="1">
+<C c="6" r="1" cs="2" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="unitName"/>
 <Complex/>
@@ -186,7 +186,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="1" s="1">
+<C c="8" r="1" cs="2" s="1">
 <O t="DSColumn">
 <Attributes dsName="purchaseOne" columnName="dealAmount"/>
 <Complex/>
