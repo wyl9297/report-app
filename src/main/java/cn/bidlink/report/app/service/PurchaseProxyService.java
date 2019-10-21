@@ -43,23 +43,29 @@ public interface PurchaseProxyService {
 
     List<TaskRecodeDtoVO> findWorkflowApproveSerialNumber(ApproveRecodeParamDto approveRecodeParamDto);
 
-    List<QuoteSeparatelyVo> getColSpanColumnsValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag);
+    List<QuoteSeparatelyVo> getColSpanColumnsValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal);
 
-    List<QuoteSeparatelyVo> getColSpanColumnsTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag);
+    List<QuoteSeparatelyVo> getColSpanColumnsTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal);
+
+    DealItemSupplierVo quotationPricing(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal);
 
     DealItemSupplierVo quotationPricing(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag);
 
-    List<QuoteSeparatelyVo> purQuoteTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag);
+    List<QuoteSeparatelyVo> purQuoteTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal);
 
-    List<QuoteSeparatelyVo> purQuoteValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag);
+    List<QuoteSeparatelyVo> purQuoteValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal);
 
-    List<QuoteSeparatelyVo> priceSupplierTitle(Long projectId, Long companyId, Integer handStatus, Boolean viewFlag);
+    List<QuoteSeparatelyVo> priceSupplierTitle(Long projectId, Long companyId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal);
 
     List<Map<String,String>> getBargainItemList(Long projectId, Long companyId);
 
     List<Map<String,String>> getBargainInfoList(Long projectId, Long companyId);
 
+    List<Map<String,String>> totalQuoteTitle(Long projectId, Boolean showNoDeal);
+
     List<Map<String,String>> totalQuoteTitle(Long projectId);
+
+    List<Map> totalQuoteValue(Long projectId, Boolean showNoDeal);
 
     List<Map> totalQuoteValue(Long projectId);
 }

@@ -25,7 +25,8 @@ public class PurchaseClinchDealResultPurProductDataSource extends AbstractBaseTa
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId")
+                new Parameter("projectId"),
+                new Parameter("showNoDeal")
         };
     }
 
@@ -39,7 +40,7 @@ public class PurchaseClinchDealResultPurProductDataSource extends AbstractBaseTa
 
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         DealItemSupplierVo itemSupplierVoList = purchaseProxyService.quotationPricing(Long.valueOf(param.get("projectId")),
-                UserContext.getCompanyId(), UserContext.getUserId(), 3, false);
+                UserContext.getCompanyId(), UserContext.getUserId(), 3, false,Boolean.valueOf(param.get("showNoDeal")));
         List<Map<String, Object>> tableData = itemSupplierVoList.getTableData();
 
         List<ClinchDealVo> tableDatanull = new ArrayList<>();

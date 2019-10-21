@@ -23,7 +23,8 @@ public class PurchaseClinchDealResultSupplierTitleDataSource extends AbstractBas
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId")
+                new Parameter("projectId"),
+                new Parameter("showNoDeal")
         };
     }
 
@@ -37,7 +38,7 @@ public class PurchaseClinchDealResultSupplierTitleDataSource extends AbstractBas
 
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         List<QuoteSeparatelyVo> quoteSeparatelyVos = purchaseProxyService.priceSupplierTitle(Long.valueOf(param.get("projectId")),
-                UserContext.getCompanyId(), 3, false);
+                UserContext.getCompanyId(), 3, false,Boolean.valueOf(param.get("showNoDeal")));
         return quoteSeparatelyVos;
     }
 

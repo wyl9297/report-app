@@ -25,7 +25,8 @@ public class PurchaseQuotationsPurDealTotPriceDataSource extends AbstractBaseTab
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId")
+                new Parameter("projectId"),
+                new Parameter("showNoDeal")
         };
     }
 
@@ -39,7 +40,7 @@ public class PurchaseQuotationsPurDealTotPriceDataSource extends AbstractBaseTab
 
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         DealItemSupplierVo supplierVo = purchaseProxyService.quotationPricing(Long.valueOf(param.get("projectId")),
-                UserContext.getCompanyId(), UserContext.getUserId(), 1, true);
+                UserContext.getCompanyId(), UserContext.getUserId(), 1, true, false);
         List<DealItemSupplierVo> tableData = new ArrayList<>();
         BigDecimal dealTotalPrice = supplierVo.getDealTotalPrice();
         DealItemSupplierVo dealItemSupplierVo = new DealItemSupplierVo();
