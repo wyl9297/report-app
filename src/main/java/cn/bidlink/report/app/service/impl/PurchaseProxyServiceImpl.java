@@ -441,10 +441,10 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<QuoteSeparatelyVo> getColSpanColumnsValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag) {
+    public List<QuoteSeparatelyVo> getColSpanColumnsValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal) {
         // 报价一览表    handStatus  1   viewFlag : true     supplierIds : null
         // 成交定价 handStatus  2       viewFlag : false    supplierIds : null
-        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag);
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag, showNoDeal);
         String colSpanColumns = itemSupplierVoList.getColSpanColumns();
 
         List<QuoteSeparatelyVo> objects = new ArrayList<>();
@@ -488,8 +488,8 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<QuoteSeparatelyVo> getColSpanColumnsTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag) {
-        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag);
+    public List<QuoteSeparatelyVo> getColSpanColumnsTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal) {
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag, showNoDeal);
         String colSpanColumns = itemSupplierVoList.getColSpanColumns();
 
         List<QuoteSeparatelyVo> objects = new ArrayList<>();
@@ -515,14 +515,20 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
 
     // 报价一览表采购品-供应商  成交定价-采购品供应商  共用查询接口
     @Override
+    public DealItemSupplierVo quotationPricing(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal) {
+        DealItemSupplierVo itemSupplierVoList = dealItemSupplierRestService.findItemSupplierVoList(projectId, companyId, userId, handStatus, viewFlag, null, true, showNoDeal);
+        return itemSupplierVoList;
+    }
+
+    @Override
     public DealItemSupplierVo quotationPricing(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag) {
         DealItemSupplierVo itemSupplierVoList = dealItemSupplierRestService.findItemSupplierVoList(projectId, companyId, userId, handStatus, viewFlag, null, true);
         return itemSupplierVoList;
     }
 
     @Override
-    public List<QuoteSeparatelyVo> purQuoteTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag) {
-        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag);
+    public List<QuoteSeparatelyVo> purQuoteTitle(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal) {
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag, showNoDeal);
         List<QuoteSeparatelyVo> bidding = new ArrayList<>();
         List<QuoteSeparatelyVo> biddingNull = new ArrayList<>();
         List<Map<String, Object>> tableData = itemSupplierVoList.getTableData();
@@ -556,8 +562,8 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<QuoteSeparatelyVo> purQuoteValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag) {
-        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag);
+    public List<QuoteSeparatelyVo> purQuoteValue(Long projectId, Long companyId, Long userId, Integer handStatus, Boolean viewFlag, Boolean showNoDeal) {
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, companyId, userId, handStatus, viewFlag, showNoDeal);
         List<QuoteSeparatelyVo> bidding = new ArrayList<>();
         List<QuoteSeparatelyVo> biddingNull = new ArrayList<>();
         List<Map<String, Object>> tableData = itemSupplierVoList.getTableData();
@@ -603,8 +609,8 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<QuoteSeparatelyVo> priceSupplierTitle(Long projectId, Long companyId,Integer handStatus, Boolean viewFlag) {
-        String dealItemSupplierTitlePro = quotedPriceRestService.getDealItemSupplierTitlePro(projectId, companyId, handStatus, viewFlag, null, true);
+    public List<QuoteSeparatelyVo> priceSupplierTitle(Long projectId, Long companyId,Integer handStatus, Boolean viewFlag, Boolean showNoDeal) {
+        String dealItemSupplierTitlePro = quotedPriceRestService.getDealItemSupplierTitlePro(projectId, companyId, handStatus, viewFlag, null, true, showNoDeal);
         List<QuoteSeparatelyVo> objects = new ArrayList<>();
         List<QuoteSeparatelyVo> objectsnull = new ArrayList<>();
         if (!"[]".equals(dealItemSupplierTitlePro)  && StringUtils.isNotBlank(dealItemSupplierTitlePro) ){
@@ -737,7 +743,28 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
     }
 
     @Override
-    public List<Map<String,String>> totalQuoteTitle(Long projectId) {
+    public List<Map<String,String>> totalQuoteTitle(Long projectId, Boolean showNoDeal) {
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, UserContext.getCompanyId(), UserContext.getUserId(), 1, true, showNoDeal);
+        String quoteTotalItems = itemSupplierVoList.getQuoteTotalItems();
+        List<Map> mapList = (List<Map>) JSONObject.parse(quoteTotalItems);
+        if ( mapList.size() > 0 ) {
+            Map map = mapList.get(0);
+            Map tableBody = ((List<Map>) map.get("tableBody")).get(0);
+            List<Map<String,String>> list = (List<Map<String,String>>) tableBody.get("show");
+            list.forEach(m -> {
+                String unit = m.get("unit");
+                if ( StringUtils.isNotEmpty(unit) ) {
+                    String title = m.get("title");
+                    m.put("title" , title + "（" + unit + "）" );
+                }
+            });
+            return list;
+        }
+        return new ArrayList<>();
+    }
+
+    @Override
+    public List<Map<String, String>> totalQuoteTitle(Long projectId) {
         DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, UserContext.getCompanyId(), UserContext.getUserId(), 1, true);
         String quoteTotalItems = itemSupplierVoList.getQuoteTotalItems();
         List<Map> mapList = (List<Map>) JSONObject.parse(quoteTotalItems);
@@ -755,6 +782,33 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
             return list;
         }
         return new ArrayList<>();
+    }
+
+    @Override
+    public List<Map> totalQuoteValue(Long projectId, Boolean showNoDeal) {
+        DealItemSupplierVo itemSupplierVoList = this.quotationPricing(projectId, UserContext.getCompanyId(), UserContext.getUserId(), 1, true, showNoDeal);
+        String quoteTotalItems = itemSupplierVoList.getQuoteTotalItems();
+        List<Map> arrayList = new ArrayList<>();
+        List<Map> mapList = (List<Map>) JSONObject.parse(quoteTotalItems);
+        if ( mapList.size() > 0 ) {
+            Map map1 = mapList.get(0);
+            List<Map> list = (List<Map>) map1.get("tableBody");
+            list.forEach( map -> {
+                if ( !"supplierChildrenColumns".equals(map.get("key")) ) {
+                    Map<String,String> show = (Map) map.get("show");
+                    show.forEach((k,v) -> {
+                        if ( !"supplierId".equals(k)) {
+                            Map<String, String> m = new HashMap<>();
+                            m.put("supplierId",show.get("supplierId"));
+                            m.put("key",k);
+                            m.put("value",v);
+                            arrayList.add(m);
+                        }
+                    });
+                }
+            });
+        }
+        return arrayList;
     }
 
     @Override

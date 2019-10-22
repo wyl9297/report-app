@@ -23,7 +23,8 @@ public class PurchaseClinchDealPricePurColTitleDataSource extends AbstractBaseTa
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId")
+                new Parameter("projectId"),
+                new Parameter("showNoDeal")
         };
     }
 
@@ -36,7 +37,7 @@ public class PurchaseClinchDealPricePurColTitleDataSource extends AbstractBaseTa
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         List<QuoteSeparatelyVo> colSpanColumnsTitle = purchaseProxyService.getColSpanColumnsTitle(Long.valueOf(param.get("projectId")),
-                UserContext.getCompanyId(), UserContext.getUserId(), 2, false);
+                UserContext.getCompanyId(), UserContext.getUserId(), 2, false,Boolean.valueOf(param.get("showNoDeal")));
         return colSpanColumnsTitle;
 
     }
