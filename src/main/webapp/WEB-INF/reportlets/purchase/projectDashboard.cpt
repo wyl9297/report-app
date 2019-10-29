@@ -185,6 +185,26 @@ Ue94gr^Y>BEPRk5t~
 <newColor borderColor="-1"/>
 </AttrBorder>
 </Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
 <labelAttr enable="true"/>
@@ -235,26 +255,6 @@ Ue94gr^Y>BEPRk5t~
 </AttrToolTipContent>
 </labelDetail>
 </AttrLabel>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
 </Attr>
 <Attr class="com.fr.plugin.chart.base.AttrTooltip">
 <AttrTooltip>
@@ -413,18 +413,18 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[]]></O>
+<![CDATA[点击供应商查看历史走势]]></O>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="true" position="4"/>
 </Title>
 <newAxisAttr isShowAxisLabel="false"/>
 <AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
 <newLineColor mainGridColor="-1" lineColor="-1"/>
-<AxisPosition value="3"/>
+<AxisPosition value="1"/>
 <TickLine201106 type="2" secType="0"/>
 <ArrowShow arrowShow="false"/>
 <TextAttr>
@@ -469,8 +469,8 @@ Ue94gr^Y>BEPRk5t~
 <O>
 <![CDATA[]]></O>
 <TextAttr>
-<Attr rotation="9" alignText="0">
-<FRFont name="Verdana" style="0" size="88"/>
+<Attr rotation="90" alignText="0">
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
 </Attr>
 </TextAttr>
 <TitleVisible value="true" position="0"/>
@@ -1252,18 +1252,18 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[]]></O>
+<![CDATA[点击采购品查看历史走势]]></O>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="true" position="4"/>
 </Title>
 <newAxisAttr isShowAxisLabel="false"/>
 <AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
 <newLineColor mainGridColor="-1" lineColor=""/>
-<AxisPosition value="3"/>
+<AxisPosition value="1"/>
 <TickLine201106 type="2" secType="0"/>
 <ArrowShow arrowShow="false"/>
 <TextAttr>
@@ -1308,8 +1308,8 @@ Ue94gr^Y>BEPRk5t~
 <O>
 <![CDATA[]]></O>
 <TextAttr>
-<Attr rotation="-90" alignText="0">
-<FRFont name="Verdana" style="0" size="88"/>
+<Attr rotation="90" alignText="0">
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
 </Attr>
 </TextAttr>
 <TitleVisible value="true" position="0"/>
@@ -1825,7 +1825,7 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[采购价格历史走势]]></O>
+<![CDATA[<a target=\"_blank\" style=\"color:black;text-decoration:none;\" href=\"www.baidu.com\">采购价格历史走势</a>]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -1833,7 +1833,7 @@ Ue94gr^Y>BEPRk5t~
 </TextAttr>
 <TitleVisible value="true" position="0"/>
 </Title>
-<Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
+<Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
 <Plot class="com.fr.plugin.chart.area.VanChartAreaPlot">
 <VanChartPlotVersion version="20170715"/>
