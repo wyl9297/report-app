@@ -289,7 +289,7 @@
 </C>
 <C c="8" r="1" s="1">
 <O t="DSColumn">
-<Attributes dsName="purchase" columnName="directoryName"/>
+<Attributes dsName="purchase" columnName="directoryCode"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
@@ -299,7 +299,7 @@
 </C>
 <C c="9" r="1" s="1">
 <O t="DSColumn">
-<Attributes dsName="purchase" columnName="directoryCode"/>
+<Attributes dsName="purchase" columnName="directoryName"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
