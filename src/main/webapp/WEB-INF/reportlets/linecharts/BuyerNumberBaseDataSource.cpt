@@ -496,12 +496,7 @@
 <Style imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="ColorBackground" color="-1"/>
-<Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
-</Border>
+<Border/>
 </Style>
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>

@@ -40,9 +40,9 @@ D62pNraJIr6>~
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <FloatElementList>
 <com.fr.report.cell.FloatElement>
 <FloatElementName name="Float0"/>
@@ -521,12 +521,7 @@ D62pNraJIr6>~
 <Style imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="ColorBackground" color="-1"/>
-<Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
-</Border>
+<Border/>
 </Style>
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
