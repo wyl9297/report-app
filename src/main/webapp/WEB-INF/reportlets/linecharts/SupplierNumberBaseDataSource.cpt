@@ -42,12 +42,12 @@ D62pNraJIr6>~
 <RowHeight defaultValue="723900">
 <![CDATA[723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <FloatElementList>
 <com.fr.report.cell.FloatElement>
 <FloatElementName name="Float0"/>
 <PrivilegeControl/>
-<Location leftDistance="59961" topDistance="0" width="87362675" height="37475409"/>
+<Location leftDistance="0" topDistance="0" width="87362675" height="37475409"/>
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">

@@ -10,9 +10,10 @@
 <ServerPrinter/>
 <WebPageContent>
 <ToolBars/>
-<WebPage isPage="true" showAsImage="false" autoScale="false" tdHeavy="false"/>
+<WebPage isPage="true" showAsImage="false" autoScale="true" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
+<ReportFitAttr fitStateInPC="2" fitFont="false"/>
 <ElementCaseMobileAttr>
 <ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
 </ElementCaseMobileAttr>
@@ -33,7 +34,7 @@
 <com.fr.report.cell.FloatElement>
 <FloatElementName name="Float2"/>
 <PrivilegeControl/>
-<Location leftDistance="0" topDistance="0" width="24574500" height="15087600"/>
+<Location leftDistance="249382" topDistance="0" width="71406327" height="37414200"/>
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -477,7 +478,10 @@
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
-<PaperSetting/>
+<PaperSetting>
+<PaperSize width="92160000" height="40320000"/>
+<Margin top="986400" left="727200" bottom="986400" right="727200"/>
+</PaperSetting>
 <Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 </ReportAttrSet>
