@@ -10,13 +10,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author <a href="mailto:xinyuli@ebnew.com">wisdom</a>
+ * @author <a href="mailto:liuqi@ebnew.com">wisdom</a>
  * @version Ver 1.0
- * @description:订单项目->订单信息和收货人信息(基础数据集)
- * @Date 2019/6/28
+ * @Date 2019/11/05
  *
  */
-public class WinBidItems extends AbstractBaseTableData {
+public class ArchivedAuctionSupplierUnProjectDataSource extends AbstractBaseTableData {
 
     @Override
     protected Parameter[] getParameter() {
