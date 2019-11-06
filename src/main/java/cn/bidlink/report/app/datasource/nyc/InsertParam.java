@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class InsertParam {
-    public List insert(String[] strings) {
+    public static List insert(String[] strings) {
         List<Map<String, Object>> resultList = new ArrayList<>();
         Map<String, Object> resultMap = new HashMap<>();
         for (int i = 0; i < strings.length; i++) {
