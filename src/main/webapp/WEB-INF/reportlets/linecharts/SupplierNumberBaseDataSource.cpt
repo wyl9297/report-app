@@ -47,7 +47,7 @@ D62pNraJIr6>~
 <com.fr.report.cell.FloatElement>
 <FloatElementName name="Float0"/>
 <PrivilegeControl/>
-<Location leftDistance="249381" topDistance="1080654" width="87362675" height="37475409"/>
+<Location leftDistance="0" topDistance="0" width="87362675" height="37475409"/>
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
