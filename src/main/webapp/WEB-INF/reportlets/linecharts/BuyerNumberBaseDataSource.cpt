@@ -74,7 +74,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[采购商数量（家）]]></O>
+<![CDATA[]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="128" foreground="-13421773"/>
@@ -340,7 +340,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[采购商数量（家）]]></O>
+<![CDATA[]]></O>
 <TextAttr>
 <Attr rotation="-90" alignText="0">
 <FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
@@ -393,7 +393,7 @@
 <![CDATA[buyerNumber]]></Name>
 </TableData>
 <CategoryName value="timeMonth"/>
-<ChartSummaryColumn name="count" function="com.fr.data.util.function.NoneFunction" customName="数量"/>
+<ChartSummaryColumn name="count" function="com.fr.data.util.function.NoneFunction" customName=""/>
 </MoreNameCDDefinition>
 </ChartDefinition>
 </Chart>
