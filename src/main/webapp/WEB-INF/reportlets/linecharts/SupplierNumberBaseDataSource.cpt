@@ -93,7 +93,7 @@ D62pNraJIr6>~
 <FRFont name="微软雅黑" style="0" size="128" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
 <Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
@@ -410,7 +410,7 @@ D62pNraJIr6>~
 </MoreNameCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="true" sort="true" export="true" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
