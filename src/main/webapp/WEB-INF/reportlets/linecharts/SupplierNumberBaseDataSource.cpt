@@ -47,7 +47,7 @@ D62pNraJIr6>~
 <com.fr.report.cell.FloatElement>
 <FloatElementName name="Float0"/>
 <PrivilegeControl/>
-<Location leftDistance="0" topDistance="0" width="87362675" height="37475409"/>
+<Location leftDistance="249381" topDistance="1080654" width="87362675" height="37475409"/>
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -87,7 +87,7 @@ D62pNraJIr6>~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[记录供应商总量]]></O>
+<![CDATA[]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="128" foreground="-13421773"/>
@@ -353,7 +353,7 @@ D62pNraJIr6>~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[供应商数量（家）]]></O>
+<![CDATA[]]></O>
 <TextAttr>
 <Attr rotation="-90" alignText="0">
 <FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
@@ -406,7 +406,7 @@ D62pNraJIr6>~
 <![CDATA[supplierNumber]]></Name>
 </TableData>
 <CategoryName value="timeMonthDay"/>
-<ChartSummaryColumn name="count" function="com.fr.data.util.function.NoneFunction" customName="数量"/>
+<ChartSummaryColumn name="count" function="com.fr.data.util.function.NoneFunction" customName=""/>
 </MoreNameCDDefinition>
 </ChartDefinition>
 </Chart>

@@ -158,7 +158,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[平台新增项目数量（个）]]></O>
+<![CDATA[]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -402,7 +402,7 @@
 <![CDATA[]]></O>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <TitleVisible value="true" position="0"/>
@@ -415,7 +415,7 @@
 <ArrowShow arrowShow="false"/>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
@@ -449,7 +449,7 @@
 <![CDATA[]]></O>
 <TextAttr>
 <Attr rotation="-90" alignText="0">
-<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <TitleVisible value="true" position="0"/>
@@ -462,7 +462,7 @@
 <ArrowShow arrowShow="false"/>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
@@ -499,7 +499,7 @@
 <![CDATA[projectNumber]]></Name>
 </TableData>
 <CategoryName value="timeMonth"/>
-<ChartSummaryColumn name="count" function="com.fr.data.util.function.NoneFunction" customName="数量"/>
+<ChartSummaryColumn name="count" function="com.fr.data.util.function.NoneFunction" customName=" "/>
 </MoreNameCDDefinition>
 </ChartDefinition>
 </Chart>
