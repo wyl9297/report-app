@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WorkBook xmlVersion="20170720" releaseVersion="9.0.0">
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="ds1" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.purchaseProcess.BidOpenSupplierResultA"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.SupplierBidResultDataSet.BidOpenSupplierResultADataSource"/>
 </TableData>
 <TableData name="ds2" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.purchaseProcess.BidOpenSupplierResultB"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.SupplierBidResultDataSet.BidOpenSupplierResultBDataSource"/>
 </TableData>
 <TableData name="pro" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.purchaseProcess.ProcessProject"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.SupplierBidResultDataSet.ProcessProjectDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -86,7 +86,7 @@
 </ToolBar>
 </ToolBarManager>
 </ToolBars>
-<WebPage isPage="false" isShowAsImage="false" isAutoScale="false" isTDHeavy="false"/>
+<WebPage isPage="false" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
 <ReportExportAttr>
@@ -94,6 +94,7 @@
 <PDFExportAttr/>
 <HTMLExportAttr/>
 <WordExportAttr/>
+<ImageExportAttr imageResolution="96" imageType="false"/>
 </ReportExportAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -116,7 +117,7 @@
 <Expand/>
 </C>
 <C c="0" r="1" cs="15" s="1">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="项目名称：" + pro.select(项目名称)]]></Attributes>
 </O>
@@ -124,7 +125,7 @@
 <Expand/>
 </C>
 <C c="0" r="2" cs="8" s="1">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="项目编号：" + pro.select(项目编号)]]></Attributes>
 </O>
@@ -132,7 +133,7 @@
 <Expand/>
 </C>
 <C c="8" r="2" cs="7" s="1">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="打印时间：" +FORMAT(NOW(), "yyyy-MM-dd HH:mm")]]></Attributes>
 </O>
@@ -140,7 +141,7 @@
 <Expand/>
 </C>
 <C c="0" r="3" cs="8" s="1">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="供应商名称："+ds2.select(supplier_user_name)]]></Attributes>
 </O>
@@ -148,7 +149,7 @@
 <Expand/>
 </C>
 <C c="8" r="3" cs="7" s="1">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="采购商名称："+pro.select(purchase_name)]]></Attributes>
 </O>
@@ -172,7 +173,7 @@
 <Expand/>
 </C>
 <C c="7" r="4" cs="2" s="3">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=sum(I7)]]></Attributes>
 </O>
@@ -186,7 +187,7 @@
 <Expand/>
 </C>
 <C c="11" r="4" cs="2" s="3">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=sum(K7)]]></Attributes>
 </O>
@@ -284,7 +285,7 @@
 <Expand/>
 </C>
 <C c="0" r="6" s="5">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B7]]></Attributes>
 </O>
@@ -356,7 +357,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -394,7 +395,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -404,7 +405,7 @@
 <Expand dir="0"/>
 </C>
 <C c="8" r="6" s="6">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=ds1.select(bid_price) * ds1.select(plan_amount)]]></Attributes>
 </O>
@@ -419,7 +420,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -446,7 +447,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -456,7 +457,7 @@
 <Expand dir="0"/>
 </C>
 <C c="10" r="6" s="6">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=ds1.select(deal_price) * ds1.select(deal_amount)]]></Attributes>
 </O>
@@ -471,7 +472,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -498,7 +499,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -536,7 +537,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE($$$)]]></Attributes>
 </O>
@@ -676,8 +677,8 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
-<Background name="ImageBackground" specifiedImageWidth="-1.0" specifiedImageHeight="-1.0" layout="2">
-<FRImage fm="png">
+<Background name="ImageBackground" layout="2">
+<FineImage fm="png">
 <IM>
 <![CDATA[m(I[H;ouK;h;,"d:/PtFL!VSh'LWfB"";M!1&up.1'f'[d@^UV#Xb@0N<:#R_1WsU-=AcrN!
 9T]A3&!jW-A#Z(83hnPJRFl9m<HpemlC,c%"5kQI@fnSmdZ@JpSRYag/YP\<n7'6[1hnD@2me
@@ -1247,7 +1248,7 @@ mZp<JA!Ob1.,i,r)e3bFYsVp9HE4Lc(`3AE7nX,b#(^ib9L3;@TUL^UsUG*7q2!\(>r,f;34
 FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 )Ot:J#A[W;)?WfHY\+2akJjs&-`6+!f'mNbpR%<I*OU$D&;!A?)9(lYuCo!<~
 ]]></IM>
-</FRImage>
+</FineImage>
 </Background>
 </ReportSettings>
 <Header reportPageType="0">
@@ -1341,10 +1342,9 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <Border/>
 </Style>
 </StyleList>
-<DesignerVersion DesignerVersion="JAA"/>
+<DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<TemplateID/>
-<TemplateIdAttMark class="com.fr.base.iofileattr.TemplateIdAttrMark">
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="4af5d190-aea8-443c-a77d-cc5e05405676"/>
 </TemplateIdAttMark>
 </WorkBook>
