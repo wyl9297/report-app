@@ -131,6 +131,12 @@
         </dependency>
 
         <dependency>
+            <groupId>cn.bidlink.usage.supplier</groupId>
+            <artifactId>supplier_usage_statistics_cloud_service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>cn.bidlink.framework</groupId>
             <artifactId>bidlink-framework-common</artifactId>
         </dependency>
