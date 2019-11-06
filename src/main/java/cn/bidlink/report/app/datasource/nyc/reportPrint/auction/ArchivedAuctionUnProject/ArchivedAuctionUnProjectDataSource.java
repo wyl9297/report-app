@@ -1,4 +1,4 @@
-package cn.bidlink.report.app.datasource.nyc.reportPrint.auction;
+package cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuctionUnProject;
 
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
@@ -19,15 +19,15 @@ public class ArchivedAuctionUnProjectDataSource extends AbstractBaseTableData {
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         List<Map<String, Object>> resultList = new ArrayList<>();
         Map<String, Object> resultMap = new HashMap<>();
-        resultMap.put("directoryName", "炉石传说");
-        resultMap.put("directoryCode", "c325545111211");
-        resultMap.put("planAmount", 488);
-        resultMap.put("supplierName", "暴雪");
-        resultMap.put("linkMan", "酒馆老板");
-        resultMap.put("currency", "人民币");
-        resultMap.put("realPrice", 328);
-        resultMap.put("divideRate", 10);
-        resultMap.put("amount", 20);
+        resultMap.put("采购品名称", "炉石传说");
+        resultMap.put("采购品编码", "c325545111211");
+        resultMap.put("采购量", 488);
+        resultMap.put("中标供应商名称", "暴雪");
+        resultMap.put("联系人", "酒馆老板");
+        resultMap.put("币种", "人民币");
+        resultMap.put("最终价", 328);
+        resultMap.put("分标比例", 10);
+        resultMap.put("单项总价", 20);
         resultList.add(resultMap);
         return resultList;
     }
@@ -42,7 +42,6 @@ public class ArchivedAuctionUnProjectDataSource extends AbstractBaseTableData {
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"directoryName", "directoryCode", "planAmount", "supplierName", "linkMan", "currency",
-        "realPrice", "divideRate", "amount"};
+        return new String[]{"采购品名称","采购品编码","采购量","中标供应商名称","联系人","币种","最终价","分标比例","单项总价"};
     }
 }
