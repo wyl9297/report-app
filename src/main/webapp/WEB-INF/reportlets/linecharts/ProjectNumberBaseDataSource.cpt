@@ -399,10 +399,10 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[月份]]></O>
+<![CDATA[]]></O>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <TitleVisible value="true" position="0"/>
@@ -415,7 +415,7 @@
 <ArrowShow arrowShow="false"/>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
@@ -446,23 +446,23 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[数量（个）]]></O>
+<![CDATA[]]></O>
 <TextAttr>
 <Attr rotation="-90" alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <TitleVisible value="true" position="0"/>
 </Title>
 <newAxisAttr isShowAxisLabel="true"/>
 <AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
-<newLineColor lineColor="-5197648"/>
+<newLineColor mainGridColor="-3881788" lineColor="-5197648"/>
 <AxisPosition value="2"/>
 <TickLine201106 type="2" secType="0"/>
 <ArrowShow arrowShow="false"/>
 <TextAttr>
 <Attr alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-10066330"/>
+<FRFont name="verdana" style="0" size="88" foreground="-10066330"/>
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
