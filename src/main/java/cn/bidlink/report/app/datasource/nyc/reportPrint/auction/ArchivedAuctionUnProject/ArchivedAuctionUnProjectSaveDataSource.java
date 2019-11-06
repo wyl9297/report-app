@@ -1,4 +1,4 @@
-package cn.bidlink.report.app.datasource.nyc.reportPrint.auction;
+package cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuctionUnProject;
 
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
@@ -18,8 +18,9 @@ public class ArchivedAuctionUnProjectSaveDataSource extends AbstractBaseTableDat
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         List<Map<String, Object>> resultList = new ArrayList<>();
         Map<String, Object> resultMap = new HashMap<>();
-        resultMap.put("bidPrice", 488);
-        resultMap.put("avgPrice", 328);
+        resultMap.put("中标金额", 488);
+        resultMap.put("平均投标金额", 328);
+        resultMap.put("节资率", "10%");
         resultList.add(resultMap);
         return resultList;
     }
@@ -34,6 +35,6 @@ public class ArchivedAuctionUnProjectSaveDataSource extends AbstractBaseTableDat
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"bidPrice", "avgPrice"};
+        return new String[]{"中标金额" ,"平均投标金额","节资率"};
     }
 }

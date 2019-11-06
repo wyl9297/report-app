@@ -1,4 +1,4 @@
-package cn.bidlink.report.app.datasource.nyc.reportPrint.auction;
+package cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuctionSupplierUnProject;
 
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
@@ -21,14 +21,14 @@ public class ArchivedAuctionSupplierUnProjectDataSource extends AbstractBaseTabl
     protected Parameter[] getParameter() {
         return new Parameter[]{
                 new Parameter("projectId"),
-                new Parameter("companyId"),
+                new Parameter("purchaserId"),
                 new Parameter("supplierId")
         };
     }
 
     @Override
     protected String[] getColumn() {
-        return new String[]{ "directoryName" , "directoryCode" , "planAmount" , "currency" , "divideRate" , "preTotalPrice"};
+        return new String[]{"采购品名称","采购品编号","采购量","币种","分标比例","单项总价"};
     }
 
     @Override
@@ -44,12 +44,12 @@ public class ArchivedAuctionSupplierUnProjectDataSource extends AbstractBaseTabl
 //        orderDetailDto.setAddressPhone("34234");
         List<Map<String, Object>> resultList = new ArrayList<>();
         Map<String, Object> resultMap = new HashMap<>();
-        resultMap.put("directoryName","炉石传说");
-        resultMap.put("directoryCode","c325545111211");
-        resultMap.put("planAmount",488);
-        resultMap.put("currency","人民币");
-        resultMap.put("divideRate","%12");
-        resultMap.put("preTotalPrice",328);
+        resultMap.put("采购品名称","炉石传说");
+        resultMap.put("采购品编号","c325545111211");
+        resultMap.put("采购量","488");
+        resultMap.put("币种","人民币");
+        resultMap.put("分标比例","%12");
+        resultMap.put("单项总价","328");
         resultList.add(resultMap);
 
         return resultList;
