@@ -2,24 +2,8 @@
 <WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="directory" class="com.fr.data.impl.ClassTableData">
-<Parameters>
-<Parameter>
-<Attributes name="projectId"/>
-<O>
-<![CDATA[]]></O>
-</Parameter>
-<Parameter>
-<Attributes name="purchaserId"/>
-<O>
-<![CDATA[]]></O>
-</Parameter>
-<Parameter>
-<Attributes name="supplierId"/>
-<O>
-<![CDATA[]]></O>
-</Parameter>
-</Parameters>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.auction.ArchivedAuctionSupplierUnProject"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuctionSupplierUnProject.ArchivedAuctionSupplierUnProjectDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -303,11 +287,8 @@
 <C c="5" r="2" s="2">
 <O t="DSColumn">
 <Attributes dsName="directory" columnName="分标比例"/>
-<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Result>
-<![CDATA[FORMAT($$$,"##0")+"%"]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -316,11 +297,8 @@
 <C c="6" r="2" s="2">
 <O t="DSColumn">
 <Attributes dsName="directory" columnName="单项总价"/>
-<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Result>
-<![CDATA[FORMAT($$$,"##0.0000")]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -329,7 +307,7 @@
 <C c="0" r="3" cs="7" s="3">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[="合计金额：" + FORMAT(SUM(G3),'##0.0000') + "元" ]]></Attributes>
+<![CDATA[="合计金额：" + FORMAT(SUM(G3),'##0.0000') + "元"]]></Attributes>
 </O>
 <PrivilegeControl/>
 <Expand/>
