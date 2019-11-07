@@ -8,7 +8,7 @@ public class InsertParam {
         Random random = new Random();
         Map<String, Object> resultMap = new HashMap<>();
         for (int i = 0; i < strings.length; i++) {
-            resultMap.put(strings[i],  random.nextInt());
+            resultMap.put(strings[i],  1456789);
         }
         resultList.add(resultMap);
         return resultList;

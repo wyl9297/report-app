@@ -1,26 +1,29 @@
-package cn.bidlink.report.app.datasource.nyc.auction.modifyFinalPriceList;
+package cn.bidlink.report.app.datasource.nyc.reportPrint.procurement.printProcurementReport;
 
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.datasource.nyc.InsertParam;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import com.fr.base.Parameter;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
-public class SupplierInfoDataSource extends AbstractBaseTableData {
+public class SuplierReportDataSource extends AbstractBaseTableData {
 
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),
-                new Parameter("supplierId"),
+                new Parameter("directoryId"),
+                new Parameter("catalogId"),
+                new Parameter("updateTimeBegin"),
+                new Parameter("updateTimeEnd"),
                 new Parameter("companyId")
         };
     }
 
     @Override
     protected String[] getColumn() {
-        String[] column = {"supplier_name", "link_man", "link_phone", "real_price", "final_price","RMB"};
+        String[] column = { "supplierId" ,"suppelierName","supplierLevel","tradeEvaluation","amount","totalprice"};
         return column;
     }
 
@@ -29,6 +32,4 @@ public class SupplierInfoDataSource extends AbstractBaseTableData {
         List insert = InsertParam.insert(this.getColumn());
         return insert;
     }
-
-
 }
