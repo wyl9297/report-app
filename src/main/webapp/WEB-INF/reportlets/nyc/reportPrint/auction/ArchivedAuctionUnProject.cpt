@@ -2,34 +2,12 @@
 <WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="directory" class="com.fr.data.impl.ClassTableData">
-<Parameters>
-<Parameter>
-<Attributes name="projectId"/>
-<O>
-<![CDATA[]]></O>
-</Parameter>
-<Parameter>
-<Attributes name="companyId"/>
-<O>
-<![CDATA[]]></O>
-</Parameter>
-</Parameters>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.auction.ArchivedAuctionUnProject"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuctionUnProject.ArchivedAuctionUnProjectDataSource"/>
 </TableData>
 <TableData name="money" class="com.fr.data.impl.ClassTableData">
-<Parameters>
-<Parameter>
-<Attributes name="projectId"/>
-<O>
-<![CDATA[]]></O>
-</Parameter>
-<Parameter>
-<Attributes name="companyId"/>
-<O>
-<![CDATA[]]></O>
-</Parameter>
-</Parameters>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.auction.ArchivedAuctionUnProjectSave"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuctionUnProject.ArchivedAuctionUnProjectSaveDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -268,11 +246,8 @@
 <C c="8" r="2" s="2">
 <O t="DSColumn">
 <Attributes dsName="directory" columnName="分标比例"/>
-<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Result>
-<![CDATA[FORMAT($$$,"##0")+"%"]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -281,11 +256,8 @@
 <C c="9" r="2" s="2">
 <O t="DSColumn">
 <Attributes dsName="directory" columnName="单项总价"/>
-<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Result>
-<![CDATA[FORMAT($$$,"##0.0000")]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -294,7 +266,7 @@
 <C c="0" r="3" cs="10" s="3">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[="中标金额："+FORMAT(money.select(中标金额),"##0.0000")+"元 平均投标金额："+FORMAT(money.select(平均投标金额),"##0.0000")+"元 节资率："+FORMAT(money.select(节资率),'##0.0000')+"%" ]]></Attributes>
+<![CDATA[="中标金额："+FORMAT(money.select(中标金额),"##0.0000")+"元 平均投标金额："+FORMAT(money.select(平均投标金额),"##0.0000")+"元 节资率："+FORMAT(money.select(节资率),'##0.0000')+"%"]]></Attributes>
 </O>
 <PrivilegeControl/>
 <Expand/>

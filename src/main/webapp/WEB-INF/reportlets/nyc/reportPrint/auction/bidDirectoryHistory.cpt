@@ -3,7 +3,7 @@
 <TableDataMap>
 <TableData name="ds1" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.auction.BidDirectoryHistory"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.auction.bidDirectoryHistory.BidDirectoryHistoryDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -104,7 +104,7 @@
 <C c="0" r="2" cs="3" s="1">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[="采购品名称：" + if(ds1.select(directory_name)!=null && ds1.select(directory_name) !='',INDEXOFARRAY(ds1.select(directory_name), 1),'') ]]></Attributes>
+<![CDATA[="采购品名称：" + if(ds1.select(directory_name)!=null && ds1.select(directory_name) !='',INDEXOFARRAY(ds1.select(directory_name), 1),'')]]></Attributes>
 </O>
 <PrivilegeControl/>
 <Expand/>
