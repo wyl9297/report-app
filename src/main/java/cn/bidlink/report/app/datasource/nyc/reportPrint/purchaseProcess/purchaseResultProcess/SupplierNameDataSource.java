@@ -41,8 +41,6 @@ public class SupplierNameDataSource extends AbstractBaseTableData {
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         String[] column = this.getColumn();
-        InsertParam insertParam = new InsertParam();
-        insertParam.insert(column);
-        return  insertParam.insert(column);
+        return InsertParam.insert(column);
     }
 }
