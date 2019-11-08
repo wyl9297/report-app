@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WorkBook xmlVersion="20170720" releaseVersion="9.0.0">
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="ds1" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderGoodsDetalisA"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderGoodsDetails.OrderGoodsDetalisADataSource"/>
 </TableData>
 <TableData name="ds2" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderGoodsDetalisB"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderGoodsDetails.OrderGoodsDetalisBDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -82,7 +82,7 @@
 </ToolBar>
 </ToolBarManager>
 </ToolBars>
-<WebPage isPage="false" isShowAsImage="false" isAutoScale="false" isTDHeavy="false"/>
+<WebPage isPage="false" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
 <ReportExportAttr>
@@ -90,6 +90,7 @@
 <PDFExportAttr/>
 <HTMLExportAttr/>
 <WordExportAttr/>
+<ImageExportAttr imageResolution="96" imageType="false"/>
 </ReportExportAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -664,7 +665,7 @@
 <Expand/>
 </C>
 <C c="0" r="10" rs="24" s="3">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B11]]></Attributes>
 </O>
@@ -834,8 +835,8 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
-<Background name="ImageBackground" specifiedImageWidth="-1.0" specifiedImageHeight="-1.0" layout="2">
-<FRImage fm="png">
+<Background name="ImageBackground" layout="2">
+<FineImage fm="png">
 <IM>
 <![CDATA[m(I[H;ouK;h;,"d:/PtFL!VSh'LWfB"";M!1&up.1'f'[d@^UV#Xb@0N<:#R_1WsU-=AcrN!
 9T]A3&!jW-A#Z(83hnPJRFl9m<HpemlC,c%"5kQI@fnSmdZ@JpSRYag/YP\<n7'6[1hnD@2me
@@ -1405,7 +1406,7 @@ mZp<JA!Ob1.,i,r)e3bFYsVp9HE4Lc(`3AE7nX,b#(^ib9L3;@TUL^UsUG*7q2!\(>r,f;34
 FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 )Ot:J#A[W;)?WfHY\+2akJjs&-`6+!f'mNbpR%<I*OU$D&;!A?)9(lYuCo!<~
 ]]></IM>
-</FRImage>
+</FineImage>
 </Background>
 </ReportSettings>
 <Header reportPageType="0">
@@ -1480,10 +1481,9 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 </Border>
 </Style>
 </StyleList>
-<DesignerVersion DesignerVersion="JAA"/>
+<DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<TemplateID TemplateID="e6fd08e5-2176-484b-b9e7-2f33367c4962"/>
-<TemplateIdAttMark class="com.fr.base.iofileattr.TemplateIdAttrMark">
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="41ef0491-f0a9-41dd-9e9c-ba40a19388c4"/>
 </TemplateIdAttMark>
 </WorkBook>
