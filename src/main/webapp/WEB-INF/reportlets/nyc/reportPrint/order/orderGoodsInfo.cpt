@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WorkBook xmlVersion="20170720" releaseVersion="9.0.0">
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="itemInfo" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderGoodsInfoA"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderGoodsInfo.OrderGoodsInfoADataSource"/>
 </TableData>
 <TableData name="goodsInfo" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderGoodsInfoB"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderGoodsInfo.OrderGoodsInfoBDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -82,7 +82,7 @@
 </ToolBar>
 </ToolBarManager>
 </ToolBars>
-<WebPage isPage="false" isShowAsImage="false" isAutoScale="false" isTDHeavy="false"/>
+<WebPage isPage="false" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
 <ReportExportAttr>
@@ -90,6 +90,7 @@
 <PDFExportAttr/>
 <HTMLExportAttr/>
 <WordExportAttr/>
+<ImageExportAttr imageResolution="96" imageType="false"/>
 </ReportExportAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -646,7 +647,7 @@
 <Expand/>
 </C>
 <C c="0" r="16" rs="10" s="3">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B17]]></Attributes>
 </O>
@@ -849,6 +850,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -897,7 +899,7 @@
 </WidgetTitle>
 <Alpha alpha="1.0"/>
 </Border>
-<Background name="ColorBackground" color="-1118482"/>
+<Background name="ColorBackground" color="-526086"/>
 <LCAttr vgap="0" hgap="0" compInterval="0"/>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.parameter.FormSubmitButton">
@@ -940,6 +942,7 @@
 <Design_Width design_width="960"/>
 <NameTagModified/>
 <WidgetNameTagMap/>
+<ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
 <DesignAttr width="960" height="80"/>
 </ParameterUI>
@@ -976,10 +979,9 @@
 </Border>
 </Style>
 </StyleList>
-<DesignerVersion DesignerVersion="JAA"/>
+<DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<TemplateID TemplateID="ca567b89-57dc-47f1-bd08-a21a26940490"/>
-<TemplateIdAttMark class="com.fr.base.iofileattr.TemplateIdAttrMark">
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="ca567b89-57dc-47f1-bd08-a21a26940490"/>
 </TemplateIdAttMark>
 </WorkBook>

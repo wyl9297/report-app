@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WorkBook xmlVersion="20151125" releaseVersion="8.0.0">
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="ds1" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderDetailA"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderDetail.OrderDetailADataSource"/>
 </TableData>
 <TableData name="ds2" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderDetailB"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderDetail.OrderDetailBDataSource"/>
 </TableData>
 <TableData name="ds3" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderDetailC"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderDetail.OrderDetailCDataSource"/>
 </TableData>
 <TableData name="ds4" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.order.OrderDetailD"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderDetail.OrderDetailDDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -24,7 +28,7 @@
 </Location>
 <ToolBar>
 <Widget class="com.fr.report.web.button.page.First">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -33,7 +37,7 @@
 <![CDATA[first]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Previous">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -42,12 +46,12 @@
 <![CDATA[previous]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.page.PageNavi">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Next">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -56,7 +60,7 @@
 <![CDATA[next]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Last">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -65,7 +69,7 @@
 <![CDATA[last]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.PDFPrint">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -74,7 +78,7 @@
 <![CDATA[pdfprint]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.Export">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -86,7 +90,7 @@
 </ToolBar>
 </ToolBarManager>
 </ToolBars>
-<WebPage isPage="false" isShowAsImage="false" isAutoScale="false" isTDHeavy="false"/>
+<WebPage isPage="false" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
 <ReportExportAttr>
@@ -94,6 +98,7 @@
 <PDFExportAttr/>
 <HTMLExportAttr/>
 <WordExportAttr/>
+<ImageExportAttr imageResolution="96" imageType="false"/>
 </ReportExportAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -148,7 +153,7 @@
 <Expand dir="0"/>
 </C>
 <C c="0" r="2" cs="2" s="1">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="来源于" + ds1.select(order_source_text) + "："]]></Attributes>
 </O>
@@ -363,7 +368,7 @@
 <Expand/>
 </C>
 <C c="0" r="7" cs="2" s="5">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="分批" + &B9]]></Attributes>
 </O>
@@ -1028,7 +1033,7 @@
 <![CDATA[1 = 1]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE($$$)]]></Attributes>
 </O>
@@ -1068,7 +1073,7 @@
 <![CDATA[1 = 1]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -1088,7 +1093,7 @@
 <Expand dir="0"/>
 </C>
 <C c="11" r="17" rs="11" s="11">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=(I18) * (J18)]]></Attributes>
 </O>
@@ -1104,7 +1109,7 @@
 <![CDATA[1 = 1]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=format($$$, "#,##0.0000")]]></Attributes>
 </O>
@@ -1196,6 +1201,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -1223,7 +1229,7 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0"/>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="false"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
 </ReportParameterAttr>
@@ -1264,7 +1270,7 @@
 </Border>
 </Style>
 <Style horizontal_alignment="2" imageLayout="1">
-<Format class="java.text.SimpleDateFormat">
+<Format class="com.fr.base.SimpleDateFormatThreadSafe">
 <![CDATA[yyyy-MM-dd]]></Format>
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
@@ -1363,6 +1369,9 @@
 <Border/>
 </Style>
 </StyleList>
-<DesignerVersion DesignerVersion="IAA"/>
+<DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
+<TemplateIdAttMark TemplateId="ebbc64ef-bbac-40c5-887e-eababe8a5b4d"/>
+</TemplateIdAttMark>
 </WorkBook>

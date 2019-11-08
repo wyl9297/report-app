@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WorkBook xmlVersion="20151125" releaseVersion="8.0.0">
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="ds1" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.require.PurchasePlanInfoA"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.require.purchasePlanInfo.PurchasePlanInfoADataSource"/>
 </TableData>
 <TableData name="ds2" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
-<ClassTableDataAttr className="cn.bidlink.nyc.report.dataSource.require.PurchasePlanInfoB"/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportPrint.require.purchasePlanInfo.PurchasePlanInfoBDataSource"/>
 </TableData>
 </TableDataMap>
 <ReportWebAttr>
@@ -82,7 +82,7 @@
 </ToolBar>
 </ToolBarManager>
 </ToolBars>
-<WebPage isPage="false" isShowAsImage="false" isAutoScale="false" isTDHeavy="false"/>
+<WebPage isPage="false" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
 <ReportExportAttr>
@@ -90,6 +90,7 @@
 <PDFExportAttr/>
 <HTMLExportAttr/>
 <WordExportAttr/>
+<ImageExportAttr imageResolution="96" imageType="false"/>
 </ReportExportAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -312,7 +313,7 @@
 <Expand dir="0"/>
 </C>
 <C c="2" r="3" s="3">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=ds1.select(plan_cycle_value) + "年"]]></Attributes>
 </O>
@@ -390,7 +391,7 @@
 <Expand/>
 </C>
 <C c="9" r="3" cs="4" s="0">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="V" + ds1.select(plan_version)]]></Attributes>
 </O>
@@ -592,7 +593,7 @@
 <Expand/>
 </C>
 <C c="9" r="4" cs="4" s="5">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=sum(D19)]]></Attributes>
 </O>
@@ -606,7 +607,7 @@
 <Expand/>
 </C>
 <C c="14" r="4" cs="4" s="1">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=IF(ds1.select(plan_source) = 2, "ERP", "平台")]]></Attributes>
 </O>
@@ -813,7 +814,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -849,7 +850,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -885,7 +886,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -921,7 +922,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(round($$$, 4))]]></Attributes>
 </O>
@@ -957,7 +958,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE(format($$$, "##.00##"))]]></Attributes>
 </O>
@@ -979,7 +980,7 @@
 <Expand dir="0"/>
 </C>
 <C c="9" r="8" rs="10" s="5">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=ds2.select(plan_number) * ds2.select(plan_price)]]></Attributes>
 </O>
@@ -994,7 +995,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE($$$)]]></Attributes>
 </O>
@@ -1033,7 +1034,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE($$$)]]></Attributes>
 </O>
@@ -1060,7 +1061,7 @@
 <![CDATA[len($$$) > 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=CONCATENATE($$$)]]></Attributes>
 </O>
@@ -1251,7 +1252,7 @@
 <Expand dir="0"/>
 </C>
 <C c="3" r="18">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=B19 * C19]]></Attributes>
 </O>
@@ -1279,6 +1280,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -1306,7 +1308,7 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0"/>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="false"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
 </ReportParameterAttr>
@@ -1332,7 +1334,7 @@
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<Format class="java.text.SimpleDateFormat">
+<Format class="com.fr.base.SimpleDateFormatThreadSafe">
 <![CDATA[yyyy-MM-dd ]]></Format>
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
@@ -1376,7 +1378,9 @@
 </Border>
 </Style>
 </StyleList>
-<DesignerVersion DesignerVersion="IAA"/>
+<DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<TemplateID TemplateID="87e8984a-aab8-450a-bfad-75fa0b3e9d86"/>
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
+<TemplateIdAttMark TemplateId="455be04a-b595-4d4b-a17b-d8e059aa0367"/>
+</TemplateIdAttMark>
 </WorkBook>
