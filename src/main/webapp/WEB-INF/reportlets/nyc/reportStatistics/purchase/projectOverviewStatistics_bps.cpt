@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
+<TableData name="dept" class="com.fr.data.impl.ClassTableData">
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectOverviewStatisticsBps.DeptDataSource"/>
+</TableData>
 <TableData name="ds1" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectOverviewStatisticsBps.ProjectOverviewStatisticsBpsADataSource"/>
@@ -17,10 +21,6 @@
 <Parameters/>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectOverviewStatisticsBps.ProjectOverviewStatisticsBpsDDataSource"/>
 </TableData>
-<TableData name="dept" class="com.fr.data.impl.ClassTableData">
-<Parameters/>
-<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectOverviewStatisticsBps.DeptDataSource"/>
-</TableData>
 <TableData name="Tree1" class="com.fr.data.impl.RecursionTableData">
 <markFields>
 <![CDATA[0]]></markFields>
@@ -34,107 +34,10 @@
 <![CDATA[dept]]></originalTableDataName>
 </TableData>
 </TableDataMap>
-<ReportWebAttr>
-<ServerPrinter/>
-<WebPageContent>
-<ToolBars>
-<ToolBarManager>
-<Location>
-<Embed position="1"/>
-</Location>
-<ToolBar>
-<Widget class="com.fr.report.web.button.page.First">
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('ReportServerP-First')}]]></Text>
-<IconName>
-<![CDATA[first]]></IconName>
-</Widget>
-<Widget class="com.fr.report.web.button.page.Previous">
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('ReportServerP-Previous')}]]></Text>
-<IconName>
-<![CDATA[previous]]></IconName>
-</Widget>
-<Widget class="com.fr.report.web.button.page.PageNavi">
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-</Widget>
-<Widget class="com.fr.report.web.button.page.Next">
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('ReportServerP-Next')}]]></Text>
-<IconName>
-<![CDATA[next]]></IconName>
-</Widget>
-<Widget class="com.fr.report.web.button.page.Last">
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('ReportServerP-Last')}]]></Text>
-<IconName>
-<![CDATA[last]]></IconName>
-</Widget>
-<Widget class="com.fr.report.web.button.FlashPrint">
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('Print')}]]></Text>
-<IconName>
-<![CDATA[flashprint]]></IconName>
-</Widget>
-<Widget class="com.fr.report.web.button.Export">
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('FR-Designer-Plugin_Excel_Web_2003_Sheet')}]]></Text>
-<IconName>
-<![CDATA[excel]]></IconName>
-<Buttons pdf="true" excelP="false" excelO="false" excelS="false" word="true" image="true" html="true"/>
-</Widget>
-</ToolBar>
-</ToolBarManager>
-</ToolBars>
-<WebPage isPage="false" showAsImage="false" autoScale="false" tdHeavy="false"/>
-</WebPageContent>
-</ReportWebAttr>
-<Report class="com.fr.report.poly.PolyWorkSheet" name="sheet1">
-<ReportAttrSet>
-<ReportSettings headerHeight="0" footerHeight="720000">
-<PaperSetting orientation="1">
-<Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
-</PaperSetting>
-<Background name="ColorBackground" color="-1"/>
-</ReportSettings>
-<Footer reportPageType="0">
-<Background name="NullBackground"/>
-<LeftList/>
-<CenterList>
-<HFElement className="com.fr.base.headerfooter.TextHFElement">
-<FRFont name="SimSun" style="0" size="72"/>
-<![CDATA[第]]></HFElement>
-<HFElement className="com.fr.base.headerfooter.PageNumberHFElement">
-<FRFont name="SimSun" style="0" size="80"/>
-<![CDATA[1]]></HFElement>
-<HFElement className="com.fr.base.headerfooter.TextHFElement">
-<FRFont name="SimSun" style="0" size="72"/>
-<![CDATA[页]]></HFElement>
-</CenterList>
-<RightList/>
-</Footer>
-</ReportAttrSet>
-<Block class="com.fr.report.poly.PolyECBlock">
+<ElementCaseMobileAttr>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+</ElementCaseMobileAttr>
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
 <HR/>
 <FR/>
@@ -144,17 +47,13 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,914400,1143000,1143000,990600,1028700,723900,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,723900,914400,1143000,1143000,990600,1028700,1066800,1104900,1295400,1104900,1295400,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[3314700,2743200,2743200,4724400,4610100,3924300,3695700,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[3467100,4191000,4038600,4610100,4610100,4267200,4267200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="5" rs="2" s="0">
 <O>
 <![CDATA[招标流程项目概况统计报表]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="5" r="1">
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -238,12 +137,6 @@
 <O>
 <![CDATA[项目慨况：]]></O>
 <PrivilegeControl/>
-<Expand/>
-</C>
-<C c="2" r="3">
-<PrivilegeControl/>
-<CellGUIAttr showAsHTML="true"/>
-<CellPageAttr/>
 <Expand/>
 </C>
 <C c="0" r="4" cs="3" s="5">
@@ -503,168 +396,103 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-</CellElementList>
-<PECBAttr blockName="block1" x="0" y="0" width="25755600" height="6667500"/>
-</Block>
-<Block class="com.fr.report.poly.PolyECBlock">
-<ReportPageAttr>
-<HR/>
-<FR/>
-<HC/>
-<FC/>
-</ReportPageAttr>
-<ColumnPrivilegeControl/>
-<RowPrivilegeControl/>
-<RowHeight defaultValue="723900">
-<![CDATA[1066800,1104900,1295400,723900,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
-<ColumnWidth defaultValue="2743200">
-<![CDATA[3467100,4191000,5067300,5067300,4038600,4610100,4267200,2743200,2743200,2743200,2743200]]></ColumnWidth>
-<CellElementList>
-<C c="0" r="0" cs="3" s="4">
+<C c="0" r="7" cs="3" s="4">
 <O>
 <![CDATA[报价供应商列表：]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="1" s="5">
+<C c="0" r="8" s="5">
 <O>
 <![CDATA[序号]]></O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="1">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastBegin) = 0]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastEnd) = 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
 <Expand/>
 </C>
-<C c="1" r="1" s="5">
+<C c="1" r="8" s="5">
 <O>
 <![CDATA[供应商名称]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="1" s="5">
+<C c="2" r="8" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=$contrastBegin + "—" + $contrastEnd + "中标总金额(元)"]]></Attributes>
 </O>
 <PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="1">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastBegin) = 0]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="1">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastEnd) = 0]]></Formula>
-</Condition>
-</JoinCondition>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
-</Highlight>
-</HighlightList>
 <Expand/>
 </C>
-<C c="3" r="1" s="5">
+<C c="3" r="8" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=$begin + "—" + $end + "中标总金额(元)"]]></Attributes>
 </O>
 <PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastBegin) = 0]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="1">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastEnd) = 0]]></Formula>
-</Condition>
-</JoinCondition>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
-</Highlight>
-</HighlightList>
 <Expand/>
 </C>
-<C c="4" r="1" s="5">
-<O>
-<![CDATA[中标总金额(元)]]></O>
-<PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastBegin) != 0]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastEnd) != 0]]></Formula>
-</Condition>
-</JoinCondition>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
-</Highlight>
-</HighlightList>
-<Expand/>
-</C>
-<C c="5" r="1" s="5">
+<C c="4" r="8" s="5">
 <O>
 <![CDATA[中标总金额增长率]]></O>
 <PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="1">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastBegin) = 0]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="1">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($contrastEnd) = 0]]></Formula>
-</Condition>
-</JoinCondition>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
-</Highlight>
-</HighlightList>
 <Expand/>
 </C>
-<C c="6" r="1" s="5">
+<C c="5" r="8" s="5">
 <O>
 <![CDATA[我的合作供应商]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="2" s="6">
+<C c="0" r="9" s="6">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=&B3]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand leftParentDefault="false" left="B3"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastBegin) = 0]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastEnd) = 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand leftParentDefault="false" left="B10"/>
 </C>
-<C c="1" r="2" s="6">
+<C c="1" r="9" s="6">
 <O t="DSColumn">
 <Attributes dsName="ds3" columnName="name"/>
 <Complex/>
@@ -685,7 +513,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="2" r="2" s="7">
+<C c="2" r="9" s="7">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="bidsum"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -704,7 +532,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="2" s="7">
+<C c="3" r="9" s="7">
 <O t="DSColumn">
 <Attributes dsName="ds3" columnName="bidsum"/>
 <Complex/>
@@ -714,7 +542,120 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="2" s="7">
+<C c="4" r="9" s="8">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=(&D3 - &C3) / &C3]]></Attributes>
+</O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="5" r="9" s="6">
+<O t="DSColumn">
+<Attributes dsName="ds3" columnName="supplierType"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="0" r="10" s="5">
+<O>
+<![CDATA[序号]]></O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastBegin) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastEnd) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand/>
+</C>
+<C c="1" r="10" s="5">
+<O>
+<![CDATA[供应商名称]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="2" r="10" s="5">
+<O>
+<![CDATA[中标总金额(元)]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="3" r="10" s="5">
+<O>
+<![CDATA[我的合作供应商]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="11" s="6">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=&B3]]></Attributes>
+</O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastBegin) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($contrastEnd) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand leftParentDefault="false" left="B12"/>
+</C>
+<C c="1" r="11" s="6">
+<O t="DSColumn">
+<Attributes dsName="ds3" columnName="name"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) = 0]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
+</C>
+<C c="2" r="11" s="7">
 <O t="DSColumn">
 <Attributes dsName="ds3" columnName="bidsum"/>
 <Complex/>
@@ -731,15 +672,7 @@
 </CellInsertPolicy>
 <Expand dir="0"/>
 </C>
-<C c="5" r="2" s="8">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=(&D3 - &C3) / &C3]]></Attributes>
-</O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="6" r="2" s="6">
+<C c="3" r="11" s="6">
 <O t="DSColumn">
 <Attributes dsName="ds3" columnName="supplierType"/>
 <Complex/>
@@ -750,12 +683,18 @@
 <Expand dir="0"/>
 </C>
 </CellElementList>
-<PECBAttr blockName="block2" x="0" y="6667500" width="30708600" height="3467100"/>
-</Block>
+<ReportAttrSet>
+<ReportSettings headerHeight="0" footerHeight="0">
+<PaperSetting orientation="1">
+<Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
+</PaperSetting>
+<Background name="ColorBackground" color="-1"/>
+</ReportSettings>
+</ReportAttrSet>
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="0" useParamsTemplate="false"/>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
 <ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
@@ -765,7 +704,7 @@
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
-<Margin top="1" left="1" bottom="1" right="1"/>
+<Margin top="0" left="0" bottom="0" right="0"/>
 <Border>
 <border style="0" color="-723724" borderRadius="0" type="0" borderStyle="0"/>
 <WidgetTitle>
@@ -781,22 +720,22 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="contrastEnd"/>
+<LabelName name="~"/>
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <DateAttr enddatefm="=now()"/>
 <widgetValue>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=]]></Attributes>
-</O>
+<O t="Date">
+<![CDATA[1573200552103]]></O>
 </widgetValue>
 </InnerWidget>
-<BoundsAttr x="241" y="56" width="95" height="21"/>
+<BoundsAttr x="241" y="50" width="95" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label2_c"/>
+<LabelName name="对比统计周期："/>
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
@@ -808,7 +747,7 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <border style="0" color="-723724"/>
 </InnerWidget>
-<BoundsAttr x="213" y="56" width="36" height="21"/>
+<BoundsAttr x="213" y="50" width="36" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.DateEditor">
@@ -818,13 +757,11 @@
 </WidgetAttr>
 <DateAttr/>
 <widgetValue>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=]]></Attributes>
-</O>
+<O t="Date">
+<![CDATA[1573200544912]]></O>
 </widgetValue>
 </InnerWidget>
-<BoundsAttr x="127" y="55" width="95" height="21"/>
+<BoundsAttr x="127" y="49" width="95" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
@@ -840,7 +777,7 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <border style="0" color="-723724"/>
 </InnerWidget>
-<BoundsAttr x="20" y="56" width="93" height="21"/>
+<BoundsAttr x="20" y="50" width="93" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
@@ -856,7 +793,7 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <border style="0" color="-723724"/>
 </InnerWidget>
-<BoundsAttr x="213" y="20" width="36" height="21"/>
+<BoundsAttr x="213" y="14" width="36" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.parameter.FormSubmitButton">
@@ -869,11 +806,12 @@
 <Hotkeys>
 <![CDATA[enter]]></Hotkeys>
 </InnerWidget>
-<BoundsAttr x="573" y="56" width="80" height="21"/>
+<BoundsAttr x="573" y="50" width="80" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="begin"/>
+<LabelName name="统计周期："/>
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
@@ -889,11 +827,12 @@
 </O>
 </widgetValue>
 </InnerWidget>
-<BoundsAttr x="127" y="20" width="95" height="21"/>
+<BoundsAttr x="127" y="14" width="95" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="end"/>
+<LabelName name="~"/>
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
@@ -909,7 +848,7 @@
 </O>
 </widgetValue>
 </InnerWidget>
-<BoundsAttr x="242" y="20" width="94" height="21"/>
+<BoundsAttr x="242" y="14" width="94" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
@@ -925,11 +864,12 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <border style="0" color="-723724"/>
 </InnerWidget>
-<BoundsAttr x="33" y="20" width="80" height="21"/>
+<BoundsAttr x="33" y="14" width="80" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.TreeComboBoxEditor">
 <WidgetName name="selectDepName"/>
+<LabelName name="部门："/>
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
@@ -946,13 +886,17 @@
 </TableData>
 </TableDataDictAttr>
 </Dictionary>
-<widgetValue/>
+<widgetValue>
+<O>
+<![CDATA[]]></O>
+</widgetValue>
 </InnerWidget>
-<BoundsAttr x="410" y="56" width="150" height="21"/>
+<BoundsAttr x="410" y="50" width="150" height="21"/>
 </Widget>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label1_c"/>
+<LabelName name="~"/>
 <WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
@@ -964,7 +908,7 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <border style="0" color="-723724"/>
 </InnerWidget>
-<BoundsAttr x="364" y="56" width="46" height="21"/>
+<BoundsAttr x="364" y="50" width="46" height="21"/>
 </Widget>
 <Sorted sorted="false"/>
 <MobileWidgetList>
@@ -976,20 +920,25 @@
 <Widget widgetName="Search"/>
 </MobileWidgetList>
 <Display display="true"/>
-<DelayDisplayContent delay="false"/>
-<UseParamsTemplate use="false"/>
+<DelayDisplayContent delay="true"/>
+<UseParamsTemplate use="true"/>
 <Position position="0"/>
 <Design_Width design_width="960"/>
-<NameTagModified/>
+<NameTagModified>
+<TagModified tag="begin_c" modified="true"/>
+<TagModified tag="contrastEnd_c" modified="true"/>
+<TagModified tag="selectDepName_c" modified="true"/>
+<TagModified tag="end_c" modified="true"/>
+</NameTagModified>
 <WidgetNameTagMap>
-<NameTag name="selectDepName" tag="部门："/>
-<NameTag name="contrastEnd" tag="~"/>
-<NameTag name="end" tag="~"/>
-<NameTag name="begin" tag="统计周期："/>
+<NameTag name="begin_c" tag="统计周期："/>
+<NameTag name="contrastEnd_c" tag="~"/>
+<NameTag name="selectDepName_c" tag="部门："/>
+<NameTag name="end_c" tag="~"/>
 </WidgetNameTagMap>
 <ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
-<DesignAttr width="960" height="90"/>
+<DesignAttr width="960" height="80"/>
 </ParameterUI>
 </ReportParameterAttr>
 <StyleList>
@@ -1066,6 +1015,6 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
-<TemplateIdAttMark TemplateId="251c811c-050d-4cb1-9f55-607c78fb974f"/>
+<TemplateIdAttMark TemplateId="12fd47e3-51c7-44f3-8711-c2aa68d6abb4"/>
 </TemplateIdAttMark>
 </WorkBook>
