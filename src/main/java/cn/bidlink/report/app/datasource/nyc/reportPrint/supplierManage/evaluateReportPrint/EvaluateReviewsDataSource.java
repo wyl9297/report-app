@@ -14,9 +14,9 @@ public class EvaluateReviewsDataSource extends AbstractBaseTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("reportId"),
                 new Parameter("beginTime"),
                 new Parameter("endTime"),
+                new Parameter("reportId"),
                 new Parameter("chooseType"),
                 new Parameter("catalogId"),
                 new Parameter("companyId")
