@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WorkBook xmlVersion="20151125" releaseVersion="8.0.0">
+<WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
 <TableData name="year" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.statistics.report.totalAmountTrendsStatistics.ProjectTotalAmountTrendByYear"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectTotalAmountTrendNew.ProjectTotalAmountTrendByYearDataSouce"/>
 </TableData>
 <TableData name="quater" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.statistics.report.totalAmountTrendsStatistics.ProjectTotalAmountTrendByQuater"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectTotalAmountTrendNew.ProjectTotalAmountTrendByQuaterDataSource"/>
 </TableData>
 <TableData name="month" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.statistics.report.totalAmountTrendsStatistics.ProjectTotalAmountTrendByMonth"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectTotalAmountTrendNew.ProjectTotalAmountTrendByMonthDataSource"/>
 </TableData>
 <TableData name="dept" class="com.fr.data.impl.ClassTableData">
-<ClassTableDataAttr className="cn.bidlink.nyc.report.statistics.report.overviewStatistics.Dept"/>
+<Parameters/>
+<ClassTableDataAttr className="cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectTotalAmountTrendNew.DeptDataSource"/>
 </TableData>
 <TableData name="Tree1" class="com.fr.data.impl.RecursionTableData">
 <markFields>
 <![CDATA[0]]></markFields>
 <parentmarkFields>
-<![CDATA[3]]></parentmarkFields>
+<![CDATA[0]]></parentmarkFields>
 <markFieldsName>
 <![CDATA[id]]></markFieldsName>
 <parentmarkFieldsName>
-<![CDATA[parentId]]></parentmarkFieldsName>
+<![CDATA[id]]></parentmarkFieldsName>
 <originalTableDataName>
 <![CDATA[dept]]></originalTableDataName>
 </TableData>
@@ -36,7 +40,7 @@
 </Location>
 <ToolBar>
 <Widget class="com.fr.report.web.button.page.First">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -45,7 +49,7 @@
 <![CDATA[first]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Previous">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -54,12 +58,12 @@
 <![CDATA[previous]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.page.PageNavi">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Next">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -68,7 +72,7 @@
 <![CDATA[next]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Last">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -77,7 +81,7 @@
 <![CDATA[last]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.FlashPrint">
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -86,49 +90,19 @@
 <![CDATA[flashprint]]></IconName>
 </Widget>
 <Widget class="com.fr.report.web.button.Export">
-<WidgetAttr>
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('Export')}]]></Text>
-<IconName>
-<![CDATA[export]]></IconName>
-<ExtraButton>
-<Buttons ExcelO2003="true"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
 <![CDATA[${i18n('FR-Designer-Plugin_Excel_Web_2003_Sheet')}]]></Text>
 <IconName>
 <![CDATA[excel]]></IconName>
-</ExtraButton>
-<ExtraButton>
-<Buttons ExcelP2003="true"/>
-<WidgetAttr>
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('FR-Designer-Plugin_Excel_Web_2003_Page')}]]></Text>
-<IconName>
-<![CDATA[excel]]></IconName>
-</ExtraButton>
-<ExtraButton>
-<Buttons ExcelS2003="true"/>
-<WidgetAttr>
-<PrivilegeControl/>
-</WidgetAttr>
-<Text>
-<![CDATA[${i18n('FR-Designer-Plugin_Excel_Web_2003_Sheet')}]]></Text>
-<IconName>
-<![CDATA[excel]]></IconName>
-</ExtraButton>
 <Buttons pdf="true" excelP="false" excelO="false" excelS="false" word="true" image="true" html="true"/>
 </Widget>
 </ToolBar>
 </ToolBarManager>
 </ToolBars>
-<WebPage isPage="false" isShowAsImage="false" isAutoScale="false" isTDHeavy="false"/>
+<WebPage isPage="false" showAsImage="false" autoScale="false" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
@@ -152,6 +126,11 @@
 <C c="0" r="1" cs="4">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
+<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+</ChangeAttr>
 <Chart name="默认" chartClass="com.fr.chart.chartattr.Chart">
 <Chart class="com.fr.chart.chartattr.Chart">
 <GI>
@@ -283,6 +262,7 @@
 </GI>
 <Attr isVisible="false"/>
 </DataSheet>
+<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
 <newPlotFillStyle>
 <AttrFillStyle>
 <AFStyle colorStyle="0"/>
@@ -380,7 +360,6 @@
 <Show Curve="false"/>
 </CategoryPlot>
 </Plot>
-<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
 <ChartDefinition>
 <NormalReportDataDefinition>
 <Series>
@@ -390,7 +369,7 @@
 <![CDATA[]]></O>
 </SeriesName>
 <SeriesValue>
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=SWITCH($groupType, 1, B8, 2, B9, 3, B7)]]></Attributes>
 </O>
@@ -398,7 +377,7 @@
 </SeriesDefinition>
 </Series>
 <Category>
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=SWITCH($groupType, 1, A8, 2, A9, 3, A7)]]></Attributes>
 </O>
@@ -415,6 +394,11 @@
 <C c="0" r="3" cs="4">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
+<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+</ChangeAttr>
 <Chart name="默认" chartClass="com.fr.chart.chartattr.Chart">
 <Chart class="com.fr.chart.chartattr.Chart">
 <GI>
@@ -546,6 +530,7 @@
 </GI>
 <Attr isVisible="false"/>
 </DataSheet>
+<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
 <newPlotFillStyle>
 <AttrFillStyle>
 <AFStyle colorStyle="0"/>
@@ -643,14 +628,13 @@
 <Show Curve="false"/>
 </CategoryPlot>
 </Plot>
-<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
 <ChartDefinition>
 <NormalReportDataDefinition>
 <Series>
 <SeriesDefinition>
 <SeriesName/>
 <SeriesValue>
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=SWITCH($groupType, 1, C8, 2, C9, 3, C7)]]></Attributes>
 </O>
@@ -658,7 +642,7 @@
 </SeriesDefinition>
 </Series>
 <Category>
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=SWITCH($groupType, 1, A8, 2, A9, 3, A7)]]></Attributes>
 </O>
@@ -673,7 +657,7 @@
 <Expand/>
 </C>
 <C c="0" r="4" cs="3" s="0">
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=" 统计周期：" + $begin + " - " + $end + "   走势图类型：" + if($groupType = 3, "月度", if($groupType = 1, "年度", "季度"))]]></Attributes>
 </O>
@@ -919,6 +903,7 @@
 <PaperSetting>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -946,18 +931,19 @@
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="0"/>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="0" useParamsTemplate="false"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
 <ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
+<Parameters/>
 <Layout class="com.fr.form.ui.container.WParameterLayout">
 <WidgetName name="para"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Margin top="1" left="1" bottom="1" right="1"/>
 <Border>
-<border style="0" color="-723724" type="0" borderStyle="0"/>
+<border style="0" color="-723724" borderRadius="0" type="0" borderStyle="0"/>
 <WidgetTitle>
 <O>
 <![CDATA[新建标题]]></O>
@@ -966,12 +952,12 @@
 </WidgetTitle>
 <Alpha alpha="1.0"/>
 </Border>
-<Background name="ColorBackground" color="-1118482"/>
+<Background name="ColorBackground" color="-526086"/>
 <LCAttr vgap="0" hgap="0" compInterval="0"/>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="Labelendtime"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -987,7 +973,7 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="end"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <EMSG>
@@ -996,7 +982,7 @@
 <![CDATA[false]]></allowBlank>
 <DateAttr enddatefm="=now()"/>
 <widgetValue>
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=now()-1]]></Attributes>
 </O>
@@ -1007,7 +993,7 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="begin"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <EMSG>
@@ -1016,7 +1002,7 @@
 <![CDATA[false]]></allowBlank>
 <DateAttr enddatefm="=now()"/>
 <widgetValue>
-<O t="Formula" class="Formula">
+<O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=FORMAT(now(),"yyyy")+"-01-01"]]></Attributes>
 </O>
@@ -1027,7 +1013,7 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.parameter.FormSubmitButton">
 <WidgetName name="Search"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -1040,7 +1026,7 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label0"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -1056,7 +1042,7 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="走势图类型："/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -1072,10 +1058,11 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.TreeComboBoxEditor">
 <WidgetName name="groupType"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <TreeAttr selectLeafOnly="true"/>
+<isLayerBuild isLayerBuild="false"/>
 <TreeNodeAttr>
 <Dictionary class="com.fr.data.impl.CustomDictionary">
 <CustomDictAttr>
@@ -1097,12 +1084,13 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.TreeComboBoxEditor">
 <WidgetName name="deptCode"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <DirectEdit>
 <![CDATA[false]]></DirectEdit>
 <TreeAttr selectLeafOnly="false"/>
+<isLayerBuild isLayerBuild="false"/>
 <isAutoBuild autoBuild="false"/>
 <isPerformanceFirst performanceFirst="false"/>
 <Dictionary class="com.fr.data.impl.TableDataDictionary">
@@ -1124,7 +1112,7 @@
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label1"/>
-<WidgetAttr>
+<WidgetAttr description="">
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -1138,21 +1126,25 @@
 <BoundsAttr x="474" y="15" width="36" height="21"/>
 </Widget>
 <Sorted sorted="false"/>
-<Display display="true"/>
-<DelayDisplayContent delay="false"/>
-<Position position="0"/>
-<Design_Width design_width="743"/>
 <MobileWidgetList>
 <Widget widgetName="groupType"/>
 <Widget widgetName="begin"/>
 <Widget widgetName="end"/>
 <Widget widgetName="deptCode"/>
+<Widget widgetName="Search"/>
 </MobileWidgetList>
+<Display display="true"/>
+<DelayDisplayContent delay="false"/>
+<UseParamsTemplate use="false"/>
+<Position position="0"/>
+<Design_Width design_width="743"/>
+<NameTagModified/>
 <WidgetNameTagMap>
 <NameTag name="groupType" tag="走势图类型："/>
 <NameTag name="end" tag="~"/>
 <NameTag name="begin" tag="统计周期："/>
 </WidgetNameTagMap>
+<ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
 <DesignAttr width="743" height="52"/>
 </ParameterUI>
@@ -1208,6 +1200,9 @@
 </Border>
 </Style>
 </StyleList>
-<DesignerVersion DesignerVersion="IAA"/>
+<DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
+<TemplateIdAttMark TemplateId="edd47e99-49d5-46e0-88d7-2942cb0e2e88"/>
+</TemplateIdAttMark>
 </WorkBook>
