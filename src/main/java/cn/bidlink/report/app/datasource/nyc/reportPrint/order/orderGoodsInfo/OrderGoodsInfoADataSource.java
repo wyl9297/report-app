@@ -36,11 +36,11 @@ public class OrderGoodsInfoADataSource extends AbstractBaseTableData {
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
 
         DubboOrderGoodsInfoService orderGoodsInfoService = dataServiceFactory.getDataService(DubboOrderGoodsInfoService.class);
-        String orderId = param.get("goodsId");
+        String goodsId = param.get("goodsId");
         String companyId = param.get("companyId");
 
-        if(StringUtils.isNotEmpty(orderId) && StringUtils.isNotEmpty(companyId)){
-            ServiceResult<List<Map<String, Object>>> listServiceResult = orderGoodsInfoService.orderGoodsInfoA(orderId, companyId);
+        if(StringUtils.isNotEmpty(goodsId) && StringUtils.isNotEmpty(companyId)){
+            ServiceResult<List<Map<String, Object>>> listServiceResult = orderGoodsInfoService.orderGoodsInfoA(goodsId, companyId);
             return listServiceResult.getResult();
         }
         return null;

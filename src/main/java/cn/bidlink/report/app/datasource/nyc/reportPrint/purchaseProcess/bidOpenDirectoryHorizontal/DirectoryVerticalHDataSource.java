@@ -1,12 +1,11 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpenDirectoryHorizontal;
 
+import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
-import cn.bidlink.report.app.datasource.nyc.InsertParam;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenDirectoryHorizontalService;
 import com.fr.base.Parameter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,8 +31,15 @@ public class DirectoryVerticalHDataSource extends AbstractBaseTableData {
     }
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] column = this.getColumn();
-        return InsertParam.insert(column);
+
+        DubboBidOpenDirectoryHorizontalService bidOpenDirectoryHorizontalService = dataServiceFactory.getDataService(DubboBidOpenDirectoryHorizontalService.class);
+        String projectId = param.get("projectId");
+        String companyId = param.get("companyId");
+        ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenDirectoryHorizontalService.directoryVerticalH(projectId, companyId);
+        return listServiceResult.getResult();
+
+//        String[] column = this.getColumn();
+//        return InsertParam.insert(column);
     }
 }
 
