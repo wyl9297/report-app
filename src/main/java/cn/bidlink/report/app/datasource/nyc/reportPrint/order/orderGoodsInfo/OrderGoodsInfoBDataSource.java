@@ -1,11 +1,12 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderGoodsInfo;
 
+import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.order.DubboOrderGoodsInfoService;
 import com.fr.base.Parameter;
+import org.apache.commons.lang.StringUtils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,22 +37,24 @@ public class OrderGoodsInfoBDataSource extends AbstractBaseTableData {
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
 
-//        OrderListResultService orderListResultService = dataServiceFactory.getDataService(OrderListResultService.class);
-//        String projectId = param.get("projectId");
-//        String companyId = param.get("companyId");
-//        String supplierId = param.get("supplierId");
-//        OrderDetailDto orderDetail = orderListResultService.getOrderDetail(projectId, companyId, supplierId);
-//        OrderDetailDto orderDetailDto = new OrderDetailDto();
-//        orderDetailDto.setAddressName("12");
-//        orderDetailDto.setAddressPhone("34234");
-        List<Map<String, Object>> resultList = new ArrayList<>();
-        Map<String, Object> resultMap = new HashMap<>();
+        DubboOrderGoodsInfoService orderGoodsInfoService = dataServiceFactory.getDataService(DubboOrderGoodsInfoService.class);
+        String orderId = param.get("goodsId");
+        String companyId = param.get("companyId");
 
-        for (String s : getColumn()) {
-            resultMap.put(s,"77777");
+        if(StringUtils.isNotEmpty(orderId) && StringUtils.isNotEmpty(companyId)){
+            ServiceResult<List<Map<String, Object>>> listServiceResult = orderGoodsInfoService.orderGoodsInfoB(orderId, companyId);
+            return listServiceResult.getResult();
         }
-        resultList.add(resultMap);
+        return null;
 
-        return resultList;
+//        List<Map<String, Object>> resultList = new ArrayList<>();
+//        Map<String, Object> resultMap = new HashMap<>();
+//
+//        for (String s : getColumn()) {
+//            resultMap.put(s,"77777");
+//        }
+//        resultList.add(resultMap);
+//
+//        return resultList;
     }
 }
