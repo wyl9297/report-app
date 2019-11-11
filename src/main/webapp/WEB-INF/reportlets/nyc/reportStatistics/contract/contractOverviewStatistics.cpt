@@ -107,7 +107,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[723900,723900,800100,952500,1257300,1447800,1447800,1181100,1028700,1447800,1028700,1028700,1447800,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[5600700,3733800,4533900,4914900,4914900,4914900,5600700,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[5600700,3733800,4533900,4914900,4914900,4914900,5600700,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="5" rs="2" s="0">
 <O>
@@ -2030,7 +2030,7 @@ D8Ao(C3<SXe[/p'd2*n5$smbmUr^/-#[k5Q"c\24V0O&&LM(iHGMnrkHl5fPfl>3g%Np_O&b
 <PrivilegeControl/>
 </Report>
 <ReportParameterAttr>
-<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" align="0" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
 <ParameterUI class="com.fr.form.main.parameter.FormParameterUI">
@@ -2211,7 +2211,7 @@ D8Ao(C3<SXe[/p'd2*n5$smbmUr^/-#[k5Q"c\24V0O&&LM(iHGMnrkHl5fPfl>3g%Np_O&b
 <Widget widgetName="Search"/>
 </MobileWidgetList>
 <Display display="true"/>
-<DelayDisplayContent delay="true"/>
+<DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
 <Position position="0"/>
 <Design_Width design_width="960"/>
