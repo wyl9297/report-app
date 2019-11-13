@@ -5,13 +5,12 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.purchas
  * @description :cn.bidlink.nyc.report.dataSource.purchaseProcess.SupplierNameCombox
  */
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
-import cn.bidlink.report.app.datasource.nyc.InsertParam;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessService;
 import com.fr.base.Parameter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +21,7 @@ import java.util.Map;
  * @Date 2019/11/6 13:21
  * @Version 1.0
  **/
-public class SupplierNameComboxDataSource extends AbstractBaseTableData {
+public class SupplierNameComboxDataSource extends AbstractColumnPositionTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -37,7 +36,19 @@ public class SupplierNameComboxDataSource extends AbstractBaseTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] column = this.getColumn();
-        return InsertParam.insert(column);
+        DubboPurchaseResultProcessService dataService = dataServiceFactory.getDataService(DubboPurchaseResultProcessService.class);
+        //获取报表查询的参数
+        String projectId = String.valueOf(param.get("projectId"));
+        String companyId = String.valueOf(param.get("companyId"));
+        String bs = String.valueOf(param.get("bs"));
+
+        ServiceResult<List<Map<String, Object>>> listServiceResult = new ServiceResult<>();
+        if (bs != null && "2".equals(bs)){
+            listServiceResult = dataService.getPurchaseResultProcessSupplierNameBidAll(projectId, companyId);
+        }else {
+            listServiceResult = dataService.getPurchaseResultProcessSupplierNameAll(projectId, companyId);
+        }
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 }

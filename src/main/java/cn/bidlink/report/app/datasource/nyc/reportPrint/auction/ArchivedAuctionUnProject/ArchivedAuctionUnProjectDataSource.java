@@ -1,11 +1,11 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuctionUnProject;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.auction.DubboArchivedAuctionUnProjectService;
 import com.fr.base.Parameter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,23 +13,18 @@ import java.util.Map;
  * @author liuqi
  * @date 2019-11-05 15:49
  */
-public class ArchivedAuctionUnProjectDataSource extends AbstractBaseTableData {
+public class ArchivedAuctionUnProjectDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        List<Map<String, Object>> resultList = new ArrayList<>();
-        Map<String, Object> resultMap = new HashMap<>();
-        resultMap.put("采购品名称", "炉石传说");
-        resultMap.put("采购品编码", "c325545111211");
-        resultMap.put("采购量", 488);
-        resultMap.put("中标供应商名称", "暴雪");
-        resultMap.put("联系人", "酒馆老板");
-        resultMap.put("币种", "人民币");
-        resultMap.put("最终价", 328);
-        resultMap.put("分标比例", 10);
-        resultMap.put("单项总价", 20);
-        resultList.add(resultMap);
-        return resultList;
+        DubboArchivedAuctionUnProjectService dataService = dataServiceFactory.getDataService(DubboArchivedAuctionUnProjectService.class);
+        //获取报表查询的参数
+        String projectId = String.valueOf(param.get("projectId"));
+        String companyId = String.valueOf(param.get("companyId"));
+
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.archivedAuctionUnProject(projectId, companyId);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 
     @Override

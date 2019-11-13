@@ -1,12 +1,11 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.auction.archivedAuctionProject;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
-import cn.bidlink.report.app.datasource.nyc.InsertParam;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.auction.DubboArchivedAuctionProjectService;
 import com.fr.base.Parameter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +15,7 @@ import java.util.Map;
  * @date :  2019/11/6  9:28
  * @description :
  */
-public class ArchivedAuctionProjectDataSource extends AbstractBaseTableData {
+public class ArchivedAuctionProjectDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {
@@ -32,7 +31,13 @@ public class ArchivedAuctionProjectDataSource extends AbstractBaseTableData {
     }
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] column = this.getColumn();
-        return InsertParam.insert(column);
+        DubboArchivedAuctionProjectService dubboArchivedAuctionProjectService = dataServiceFactory.getDataService(DubboArchivedAuctionProjectService.class);
+        //获取报表查询的参数
+        String projectId = String.valueOf(param.get("projectId"));
+        String companyId = String.valueOf(param.get("companyId"));
+
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dubboArchivedAuctionProjectService.archivedAuctionProject(projectId, companyId);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 }

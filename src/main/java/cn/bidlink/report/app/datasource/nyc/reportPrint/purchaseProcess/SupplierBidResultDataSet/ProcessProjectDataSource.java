@@ -1,18 +1,25 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.SupplierBidResultDataSet;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
-import cn.bidlink.report.app.datasource.nyc.InsertParam;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboSupplierBidResultDataSetService;
 import com.fr.base.Parameter;
 
 import java.util.List;
 import java.util.Map;
 
-public class ProcessProjectDataSource extends AbstractBaseTableData {
+public class ProcessProjectDataSource extends AbstractColumnPositionTableData {
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] strings = this.getColumn();
-        return InsertParam.insert(strings);
+        DubboSupplierBidResultDataSetService dataService = dataServiceFactory.getDataService(DubboSupplierBidResultDataSetService.class);
+        //获取报表查询的参数
+        String projectId = String.valueOf(param.get("projectId"));
+        String companyId = String.valueOf(param.get("companyId"));
+
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.processProject(projectId, companyId);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 
     @Override

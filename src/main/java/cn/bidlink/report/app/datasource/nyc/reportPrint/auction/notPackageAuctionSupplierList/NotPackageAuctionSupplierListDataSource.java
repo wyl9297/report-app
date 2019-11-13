@@ -1,18 +1,19 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.auction.notPackageAuctionSupplierList;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
-import cn.bidlink.report.app.datasource.nyc.InsertParam;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.auction.DubboNotPackageAuctionSupplierListService;
 import com.fr.base.Parameter;
 
 import java.util.*;
 
-public class NotPackageAuctionSupplierListDataSource extends AbstractBaseTableData {
+public class NotPackageAuctionSupplierListDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {
         Parameter[] parameter = {
-                new Parameter("compId"),
+                new Parameter("companyId"),
                 new Parameter("projectId"),
                 new Parameter("directoryName")};
         return parameter;
@@ -28,8 +29,15 @@ public class NotPackageAuctionSupplierListDataSource extends AbstractBaseTableDa
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        List insert = InsertParam.insert(this.getColumn());
-        return insert;
+        DubboNotPackageAuctionSupplierListService dataService = dataServiceFactory.getDataService(DubboNotPackageAuctionSupplierListService.class);
+        //获取报表查询的参数
+        String projectId = String.valueOf(param.get("projectId"));
+        String companyId = String.valueOf(param.get("companyId"));
+        String directoryName = String.valueOf(param.get("directoryName"));
+
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.notPackageAuctionSupplierList(projectId, companyId, directoryName);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 
 
