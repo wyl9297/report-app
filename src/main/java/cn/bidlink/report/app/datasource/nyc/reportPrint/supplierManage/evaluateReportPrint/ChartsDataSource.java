@@ -1,7 +1,7 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.supplierManage.evaluateReportPrint;
 
 import cn.bidlink.base.ServiceResult;
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.suppliermanage.DubboEvaluateReportPrintService;
 import com.fr.base.Parameter;
@@ -9,7 +9,7 @@ import com.fr.base.Parameter;
 import java.util.List;
 import java.util.Map;
 
-public class ChartsDataSource extends AbstractBaseTableData {
+public class ChartsDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {

@@ -1,7 +1,7 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpen;
 
 import cn.bidlink.base.ServiceResult;
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenService;
 import com.fr.base.Parameter;
@@ -15,7 +15,7 @@ import java.util.Map;
  * @date :  2019/11/6  11:18
  * @description :原E采供  cn.bidlink.nyc.report.dataSource.purchaseProcess.DirectoryVerticalF
  */
-public class DirectoryVerticalFDataSource extends AbstractBaseTableData {
+public class DirectoryVerticalFDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {

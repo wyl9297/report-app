@@ -6,7 +6,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpen
  */
 
 import cn.bidlink.base.ServiceResult;
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenDirectoryVerticalService;
 import com.fr.base.Parameter;
@@ -21,7 +21,7 @@ import java.util.Map;
  * @Date 2019/11/6 11:46
  * @Version 1.0
  **/
-public class ProcessProjectDataSource extends AbstractBaseTableData {
+public class ProcessProjectDataSource extends AbstractColumnPositionTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
