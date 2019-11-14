@@ -71,10 +71,10 @@ Ue94gr^Y>BEPRk5t~
 <ServerPrinter/>
 <WebPageContent>
 <ToolBars/>
-<WebPage isPage="true" showAsImage="false" autoScale="false" tdHeavy="false"/>
+<WebPage isPage="true" showAsImage="false" autoScale="true" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
-<ReportFitAttr fitStateInPC="2" fitFont="false"/>
+<ReportFitAttr fitStateInPC="1" fitFont="false"/>
 <ElementCaseMobileAttr>
 <ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
 </ElementCaseMobileAttr>
@@ -88,9 +88,9 @@ Ue94gr^Y>BEPRk5t~
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,3390900,288000,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[228600,2743200,1943100,2743200,2743200,2743200,2743200,1714500,288000,2743200,2247900,2171700,1600200,380160,1790700,2743200,2743200,1447800,288000,2743200,2743200,1219200,2743200]]></ColumnWidth>
+<![CDATA[228600,2743200,2743200,1219200,2743200,2247900,2171700,5600700,2743200,8648700,288000,2743200,2743200,1219200,2743200,2247900,2171700,5600700,2743200,8648700,1790700,2743200,2743200,1447800,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0">
 <PrivilegeControl/>
@@ -98,2180 +98,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="0" cs="7" rs="22" s="0">
-<O t="CC">
-<LayoutAttr selectedIndex="0"/>
-<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-</ChangeAttr>
-<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
-<Chart class="com.fr.plugin.chart.vanchart.VanChart">
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-1118482"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
-<Title4VanChart>
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-6908266"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[供应商采购金额-排名]]></O>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
-</Title4VanChart>
-<Plot class="com.fr.plugin.chart.column.VanChartColumnPlot">
-<VanChartPlotVersion version="20170715"/>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
-<newHotTooltipStyle>
-<AttrContents>
-<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
-<PercentFormat>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.##%]]></Format>
-</PercentFormat>
-</AttrContents>
-</newHotTooltipStyle>
-<ConditionCollection>
-<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
-<ConditionAttr name="">
-<AttrList>
-<Attr class="com.fr.chart.base.AttrBorder">
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="10"/>
-<newColor borderColor="-1"/>
-</AttrBorder>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrLabel">
-<AttrLabel>
-<labelAttr enable="true"/>
-<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
-<Attr showLine="false" autoAdjust="false" position="6" isCustom="true"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="72" foreground="-14145496"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="function(){ return this.value;}" useHtml="false" isCustomWidth="true" isCustomHeight="true" width="50" height="50"/>
-</AttrToolTipContent>
-</labelDetail>
-</AttrLabel>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.00万元]]></Format>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="function(){ return this.category+this.seriesName+this.value;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="true"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
-</AttrList>
-</ConditionAttr>
-</DefaultAttr>
-</ConditionCollection>
-<Legend4VanChart>
-<Legend>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-3355444"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr position="4" visible="false"/>
-<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
-</Legend>
-<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
-</Legend4VanChart>
-<DataSheet>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isVisible="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
-</DataSheet>
-<NameJavaScriptGroup>
-<NameJavaScript name="图表超链-联动单元格1">
-<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
-<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
-<Parameters>
-<Parameter>
-<Attributes name="supplierId"/>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=SERIES]]></Attributes>
-</O>
-</Parameter>
-</Parameters>
-<TargetFrame>
-<![CDATA[_blank]]></TargetFrame>
-<Features width="500" height="270"/>
-<realateName realateValue="B24" animateType="none"/>
-</JavaScript>
-</JavaScript>
-</NameJavaScript>
-</NameJavaScriptGroup>
-<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
-<newPlotFillStyle>
-<AttrFillStyle>
-<AFStyle colorStyle="2"/>
-<FillStyleName fillStyleName=""/>
-<isCustomFillStyle isCustomFillStyle="true"/>
-<ColorList>
-<OColor colvalue="-3736577"/>
-<OColor colvalue="-12870401"/>
-</ColorList>
-</AttrFillStyle>
-</newPlotFillStyle>
-<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
-<VanChartRectanglePlotAttr vanChartPlotType="normal" isDefaultIntervalBackground="true"/>
-<XAxisList>
-<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartValueAxis">
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[点击供应商查看历史走势]]></O>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="4"/>
-</Title>
-<newAxisAttr isShowAxisLabel="false"/>
-<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
-<newLineColor mainGridColor="-1" lineColor="-1"/>
-<AxisPosition value="1"/>
-<TickLine201106 type="2" secType="0"/>
-<ArrowShow arrowShow="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-6710887"/>
-</Attr>
-</TextAttr>
-<AxisLabelCount value="=1"/>
-<AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
-<ZoomAxisAttr isZoom="false"/>
-<axisReversed axisReversed="false"/>
-<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="X轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="50.0" commonValueFormat="true" isRotation="false"/>
-<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="300" height="300"/>
-<alertList/>
-<customBackgroundList/>
-<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=1000"/>
-<ds>
-<RadarYAxisTableDefinition>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<attr/>
-</RadarYAxisTableDefinition>
-</ds>
-</VanChartAxis>
-</XAxisList>
-<YAxisList>
-<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartAxis">
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[]]></O>
-<TextAttr>
-<Attr rotation="90" alignText="0">
-<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<newAxisAttr isShowAxisLabel="true"/>
-<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
-<newLineColor lineColor="-1"/>
-<AxisPosition value="2"/>
-<TickLine201106 type="2" secType="0"/>
-<ArrowShow arrowShow="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="1" size="72" foreground="-14145496"/>
-</Attr>
-</TextAttr>
-<AxisLabelCount value="=1"/>
-<AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
-<ZoomAxisAttr isZoom="false"/>
-<axisReversed axisReversed="false"/>
-<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
-<HtmlLabel customText="function(){ return this; }" useHtml="true" isCustomWidth="false" isCustomHeight="false" width="10" height="10"/>
-<alertList/>
-<customBackgroundList/>
-</VanChartAxis>
-</YAxisList>
-<stackAndAxisCondition>
-<ConditionCollection>
-<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
-<ConditionAttr name=""/>
-</DefaultAttr>
-</ConditionCollection>
-</stackAndAxisCondition>
-<VanChartColumnPlotAttr seriesOverlapPercent="-100.0" categoryIntervalPercent="20.0" fixedWidth="true" columnWidth="15" filledWithImage="false" isBar="true"/>
-</Plot>
-<ChartDefinition>
-<OneValueCDDefinition seriesName="supplier_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
-<Top topCate="10" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[supplier_rank]]></Name>
-</TableData>
-<CategoryName value="supplier_name"/>
-</OneValueCDDefinition>
-</ChartDefinition>
-</Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
-<VanChartZoom>
-<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
-<from>
-<![CDATA[]]></from>
-<to>
-<![CDATA[]]></to>
-</VanChartZoom>
-<refreshMoreLabel>
-<attr moreLabel="false" autoTooltip="true"/>
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="true"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-1"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
-<newColor borderColor="-15395563"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.8"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</refreshMoreLabel>
-</Chart>
-</O>
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="0">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="9" r="0" cs="9" rs="22" s="0">
-<O t="CC">
-<LayoutAttr selectedIndex="0"/>
-<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-</ChangeAttr>
-<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
-<Chart class="com.fr.plugin.chart.vanchart.VanChart">
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-1118482"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
-<Title4VanChart>
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-6908266"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[物料分类金额占比]]></O>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<Attr4VanChart useHtml="false" floating="false" x="74.0" y="0.0" limitSize="false" maxHeight="10.0"/>
-</Title4VanChart>
-<Plot class="com.fr.plugin.chart.PiePlot4VanChart">
-<VanChartPlotVersion version="20170715"/>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-1118482"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
-<newHotTooltipStyle>
-<AttrContents>
-<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
-<PercentFormat>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.##%]]></Format>
-</PercentFormat>
-</AttrContents>
-</newHotTooltipStyle>
-<ConditionCollection>
-<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
-<ConditionAttr name="">
-<AttrList>
-<Attr class="com.fr.chart.base.AttrBorder">
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-1"/>
-</AttrBorder>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="function(){ return this.seriesName+this.value+this.percentage;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="true"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrLabel">
-<AttrLabel>
-<labelAttr enable="true"/>
-<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
-<Attr showLine="true" autoAdjust="false" position="6" isCustom="true"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="72" foreground="-10066330"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="false"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="true"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-</labelDetail>
-</AttrLabel>
-</Attr>
-</AttrList>
-</ConditionAttr>
-</DefaultAttr>
-</ConditionCollection>
-<Legend4VanChart>
-<Legend>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-3355444"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr position="2" visible="false"/>
-<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
-</Legend>
-<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
-</Legend4VanChart>
-<DataSheet>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isVisible="false"/>
-</DataSheet>
-<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
-<newPlotFillStyle>
-<AttrFillStyle>
-<AFStyle colorStyle="2"/>
-<FillStyleName fillStyleName=""/>
-<isCustomFillStyle isCustomFillStyle="true"/>
-<ColorList>
-<OColor colvalue="-11686657"/>
-<OColor colvalue="-6259463"/>
-</ColorList>
-</AttrFillStyle>
-</newPlotFillStyle>
-<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
-<PieAttr4VanChart roseType="normal" startAngle="0.0" endAngle="360.0" innerRadius="80.0" supportRotation="false"/>
-<VanChartRadius radiusType="auto" radius="160"/>
-</Plot>
-<ChartDefinition>
-<OneValueCDDefinition seriesName="catalog_name" valueName="price" function="com.fr.data.util.function.NoneFunction">
-<Top topCate="8" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[item_rate]]></Name>
-</TableData>
-<CategoryName value="无"/>
-</OneValueCDDefinition>
-</ChartDefinition>
-</Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
-<VanChartZoom>
-<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
-<from>
-<![CDATA[]]></from>
-<to>
-<![CDATA[]]></to>
-</VanChartZoom>
-<refreshMoreLabel>
-<attr moreLabel="false" autoTooltip="true"/>
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="true"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-1"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
-<newColor borderColor="-15395563"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.8"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</refreshMoreLabel>
-</Chart>
-</O>
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="19" r="0" cs="7" rs="22" s="0">
-<O t="CC">
-<LayoutAttr selectedIndex="0"/>
-<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-</ChangeAttr>
-<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
-<Chart class="com.fr.plugin.chart.vanchart.VanChart">
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-1118482"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
-<Title4VanChart>
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-6908266"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[采购品采购金额-排名]]></O>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<Attr4VanChart useHtml="false" floating="false" x="50.0" y="0.0" limitSize="false" maxHeight="15.0"/>
-</Title4VanChart>
-<Plot class="com.fr.plugin.chart.column.VanChartColumnPlot">
-<VanChartPlotVersion version="20170715"/>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
-<newHotTooltipStyle>
-<AttrContents>
-<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
-<PercentFormat>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.##%]]></Format>
-</PercentFormat>
-</AttrContents>
-</newHotTooltipStyle>
-<ConditionCollection>
-<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
-<ConditionAttr name="">
-<AttrList>
-<Attr class="com.fr.chart.base.AttrBorder">
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="10"/>
-<newColor borderColor="-1"/>
-</AttrBorder>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrLabel">
-<AttrLabel>
-<labelAttr enable="true"/>
-<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
-<Attr showLine="false" autoAdjust="false" position="6" isCustom="true"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="72" foreground="-14145496"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-</labelDetail>
-</AttrLabel>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.00万元]]></Format>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="true"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
-</AttrList>
-</ConditionAttr>
-</DefaultAttr>
-</ConditionCollection>
-<Legend4VanChart>
-<Legend>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-3355444"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr position="4" visible="false"/>
-<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
-</Legend>
-<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
-</Legend4VanChart>
-<DataSheet>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isVisible="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
-</DataSheet>
-<NameJavaScriptGroup>
-<NameJavaScript name="图表超链-联动单元格1">
-<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
-<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
-<Parameters>
-<Parameter>
-<Attributes name="directoryId"/>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=SERIES]]></Attributes>
-</O>
-</Parameter>
-</Parameters>
-<TargetFrame>
-<![CDATA[_blank]]></TargetFrame>
-<Features width="500" height="270"/>
-<realateName realateValue="T24" animateType="none"/>
-</JavaScript>
-</JavaScript>
-</NameJavaScript>
-</NameJavaScriptGroup>
-<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
-<newPlotFillStyle>
-<AttrFillStyle>
-<AFStyle colorStyle="2"/>
-<FillStyleName fillStyleName=""/>
-<isCustomFillStyle isCustomFillStyle="true"/>
-<ColorList>
-<OColor colvalue="-3736577"/>
-<OColor colvalue="-12870401"/>
-</ColorList>
-</AttrFillStyle>
-</newPlotFillStyle>
-<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
-<VanChartRectanglePlotAttr vanChartPlotType="normal" isDefaultIntervalBackground="true"/>
-<XAxisList>
-<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartValueAxis">
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[点击采购品查看历史走势]]></O>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="4"/>
-</Title>
-<newAxisAttr isShowAxisLabel="false"/>
-<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
-<newLineColor mainGridColor="-1" lineColor=""/>
-<AxisPosition value="1"/>
-<TickLine201106 type="2" secType="0"/>
-<ArrowShow arrowShow="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="Verdana" style="0" size="88" foreground="-6710887"/>
-</Attr>
-</TextAttr>
-<AxisLabelCount value="=1"/>
-<AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
-<ZoomAxisAttr isZoom="false"/>
-<axisReversed axisReversed="false"/>
-<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="X轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="false" isRotation="false"/>
-<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="true" isCustomHeight="false" width="150" height="150"/>
-<alertList/>
-<customBackgroundList/>
-<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=1000"/>
-<ds>
-<RadarYAxisTableDefinition>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<attr/>
-</RadarYAxisTableDefinition>
-</ds>
-</VanChartAxis>
-</XAxisList>
-<YAxisList>
-<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartAxis">
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[]]></O>
-<TextAttr>
-<Attr rotation="90" alignText="0">
-<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<newAxisAttr isShowAxisLabel="true"/>
-<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
-<newLineColor mainGridColor="-1" lineColor=""/>
-<AxisPosition value="2"/>
-<TickLine201106 type="2" secType="0"/>
-<ArrowShow arrowShow="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="1" size="72" foreground="-14145496"/>
-</Attr>
-</TextAttr>
-<AxisLabelCount value="=1"/>
-<AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
-<ZoomAxisAttr isZoom="false"/>
-<axisReversed axisReversed="false"/>
-<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="false" isRotation="false"/>
-<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="10" height="50"/>
-<alertList/>
-<customBackgroundList/>
-</VanChartAxis>
-</YAxisList>
-<stackAndAxisCondition>
-<ConditionCollection>
-<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
-<ConditionAttr name=""/>
-</DefaultAttr>
-</ConditionCollection>
-</stackAndAxisCondition>
-<VanChartColumnPlotAttr seriesOverlapPercent="-100.0" categoryIntervalPercent="20.0" fixedWidth="true" columnWidth="15" filledWithImage="false" isBar="true"/>
-</Plot>
-<ChartDefinition>
-<OneValueCDDefinition seriesName="directory_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
-<Top topCate="10" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[item_rank]]></Name>
-</TableData>
-<CategoryName value="directory_name"/>
-</OneValueCDDefinition>
-</ChartDefinition>
-</Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
-<VanChartZoom>
-<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
-<from>
-<![CDATA[]]></from>
-<to>
-<![CDATA[]]></to>
-</VanChartZoom>
-<refreshMoreLabel>
-<attr moreLabel="false" autoTooltip="true"/>
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="true"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-1"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
-<newColor borderColor="-15395563"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.8"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</refreshMoreLabel>
-</Chart>
-</O>
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="0" r="1">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="1">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="2">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="2">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="3">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="3">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="4">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="4">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="5">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="5">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="6">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="6">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="7">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="7">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="8">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="8">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="9">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="9">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="10">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="10">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="11">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="11">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="12">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="12">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="13">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="13">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="14">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="14">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="15">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="15">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="16">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="16">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="17">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="17">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="18">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="18">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="19">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="19">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="20">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="20">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="21">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="21">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="1" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="2" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="3" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="4" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="5" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="6" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="7" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="9" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="10" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="11" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="12" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="13" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="14" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="15" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="16" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="17" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="18" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="19" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="20" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="21" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="22" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="23" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="24" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="25" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="0" r="23">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="1" r="23" cs="7" rs="16" s="1">
-<O t="CC">
-<LayoutAttr selectedIndex="0"/>
-<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-</ChangeAttr>
-<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
-<Chart class="com.fr.plugin.chart.vanchart.VanChart">
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-3355444"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
-<Title4VanChart>
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-6908266"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[<a target=\"_blank\" style=\"color:black;text-decoration:none;\" href=\"www.baidu.com\">采购价格历史走势</a>]]></O>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
-</Title4VanChart>
-<Plot class="com.fr.plugin.chart.area.VanChartAreaPlot">
-<VanChartPlotVersion version="20170715"/>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-3355444"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
-<newHotTooltipStyle>
-<AttrContents>
-<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
-<PercentFormat>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.##%]]></Format>
-</PercentFormat>
-</AttrContents>
-</newHotTooltipStyle>
-<ConditionCollection>
-<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
-<ConditionAttr name="">
-<AttrList>
-<Attr class="com.fr.plugin.chart.base.AttrLabel">
-<AttrLabel>
-<labelAttr enable="true"/>
-<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
-<Attr showLine="false" autoAdjust="true" position="1" isCustom="true"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="微软雅黑" style="0" size="64" foreground="-14145496"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="false"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-</labelDetail>
-</AttrLabel>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
-<VanAttrLine>
-<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
-</VanAttrLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
-<VanAttrMarker>
-<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
-<Background name="NullBackground"/>
-</VanAttrMarker>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
-<AttrAreaSeriesFillColorBackground>
-<Attr alpha="0.15"/>
-</AttrAreaSeriesFillColorBackground>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrTooltip">
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="宋体" style="0" size="72"/>
-</Attr>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.00万元]]></Format>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="false"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="false"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-16777216"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.5"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</Attr>
-</AttrList>
-</ConditionAttr>
-</DefaultAttr>
-</ConditionCollection>
-<Legend4VanChart>
-<Legend>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-3355444"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr position="4" visible="false"/>
-<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
-</Legend>
-<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
-</Legend4VanChart>
-<DataSheet>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<Attr isVisible="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
-</DataSheet>
-<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
-<newPlotFillStyle>
-<AttrFillStyle>
-<AFStyle colorStyle="2"/>
-<FillStyleName fillStyleName=""/>
-<isCustomFillStyle isCustomFillStyle="true"/>
-<ColorList>
-<OColor colvalue="-7181324"/>
-<OColor colvalue="-1"/>
-</ColorList>
-</AttrFillStyle>
-</newPlotFillStyle>
-<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
-<VanChartRectanglePlotAttr vanChartPlotType="normal" isDefaultIntervalBackground="true"/>
-<XAxisList>
-<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartAxis">
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[月份]]></O>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="Verdana" style="0" size="64" foreground="-10066330"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<newAxisAttr isShowAxisLabel="true"/>
-<AxisLineStyle AxisStyle="1" MainGridStyle="1"/>
-<newLineColor mainGridColor="-1" lineColor="-5197648"/>
-<AxisPosition value="3"/>
-<TickLine201106 type="2" secType="0"/>
-<ArrowShow arrowShow="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="Verdana" style="0" size="64" foreground="-5197648"/>
-</Attr>
-</TextAttr>
-<AxisLabelCount value="=1"/>
-<AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
-<ZoomAxisAttr isZoom="false"/>
-<axisReversed axisReversed="false"/>
-<VanChartAxisAttr mainTickLine="2" secTickLine="0" axisName="X轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
-<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-<alertList/>
-<customBackgroundList/>
-</VanChartAxis>
-</XAxisList>
-<YAxisList>
-<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartValueAxis">
-<Title>
-<GI>
-<AttrBackground>
-<Background name="NullBackground"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-</GI>
-<O>
-<![CDATA[价格（万元）]]></O>
-<TextAttr>
-<Attr rotation="-90" alignText="0">
-<FRFont name="Verdana" style="0" size="64" foreground="-10066330"/>
-</Attr>
-</TextAttr>
-<TitleVisible value="true" position="0"/>
-</Title>
-<newAxisAttr isShowAxisLabel="true"/>
-<AxisLineStyle AxisStyle="1" MainGridStyle="1"/>
-<newLineColor mainGridColor="-1" lineColor="-5197648"/>
-<AxisPosition value="2"/>
-<TickLine201106 type="2" secType="0"/>
-<ArrowShow arrowShow="false"/>
-<TextAttr>
-<Attr alignText="0">
-<FRFont name="Verdana" style="0" size="64" foreground="-5197648"/>
-</Attr>
-</TextAttr>
-<AxisLabelCount value="=1"/>
-<AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
-<ZoomAxisAttr isZoom="false"/>
-<axisReversed axisReversed="false"/>
-<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
-<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-<alertList/>
-<customBackgroundList/>
-<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=10"/>
-<ds>
-<RadarYAxisTableDefinition>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<attr/>
-</RadarYAxisTableDefinition>
-</ds>
-</VanChartAxis>
-</YAxisList>
-<stackAndAxisCondition>
-<ConditionCollection>
-<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
-<ConditionAttr name=""/>
-</DefaultAttr>
-</ConditionCollection>
-</stackAndAxisCondition>
-</Plot>
-<ChartDefinition>
-<OneValueCDDefinition seriesName="supplier_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[supplier_dealprice_trend]]></Name>
-</TableData>
-<CategoryName value="time"/>
-</OneValueCDDefinition>
-</ChartDefinition>
-</Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
-<VanChartZoom>
-<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
-<from>
-<![CDATA[]]></from>
-<to>
-<![CDATA[]]></to>
-</VanChartZoom>
-<refreshMoreLabel>
-<attr moreLabel="false" autoTooltip="true"/>
-<AttrTooltip>
-<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
-<TextAttr>
-<Attr alignText="0"/>
-</TextAttr>
-<AttrToolTipContent>
-<Attr isCommon="true"/>
-<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
-<AttrTooltipValueFormat>
-<Attr enable="true"/>
-</AttrTooltipValueFormat>
-</value>
-<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
-<AttrTooltipPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipPercentFormat>
-</percent>
-<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
-<AttrToolTipCategoryFormat>
-<Attr enable="true"/>
-</AttrToolTipCategoryFormat>
-</category>
-<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
-<AttrTooltipSeriesFormat>
-<Attr enable="true"/>
-</AttrTooltipSeriesFormat>
-</series>
-<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
-<AttrTooltipChangedPercentFormat>
-<Attr enable="false"/>
-<Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##%]]></Format>
-</AttrTooltipChangedPercentFormat>
-</changedPercent>
-<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
-<AttrTooltipChangedValueFormat>
-<Attr enable="true"/>
-</AttrTooltipChangedValueFormat>
-</changedValue>
-<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
-</AttrToolTipContent>
-<GI>
-<AttrBackground>
-<Background name="ColorBackground" color="-1"/>
-<Attr shadow="false"/>
-</AttrBackground>
-<AttrBorder>
-<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
-<newColor borderColor="-15395563"/>
-</AttrBorder>
-<AttrAlpha>
-<Attr alpha="0.8"/>
-</AttrAlpha>
-</GI>
-</AttrTooltip>
-</refreshMoreLabel>
-</Chart>
-</O>
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="23">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="9" r="23" cs="9" rs="16" s="0">
+<C c="1" r="0" cs="9" rs="22" s="0">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3483,7 +1310,1056 @@ Ue94gr^Y>BEPRk5t~
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="19" r="23" cs="7" rs="16" s="1">
+<C c="11" r="0" cs="9" rs="22" s="0">
+<O t="CC">
+<LayoutAttr selectedIndex="0"/>
+<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+</ChangeAttr>
+<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
+<Chart class="com.fr.plugin.chart.vanchart.VanChart">
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-1118482"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
+<Title4VanChart>
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-6908266"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[物料分类金额占比]]></O>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<Attr4VanChart useHtml="false" floating="false" x="74.0" y="0.0" limitSize="false" maxHeight="10.0"/>
+</Title4VanChart>
+<Plot class="com.fr.plugin.chart.PiePlot4VanChart">
+<VanChartPlotVersion version="20170715"/>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-1118482"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
+<newHotTooltipStyle>
+<AttrContents>
+<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##]]></Format>
+<PercentFormat>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.##%]]></Format>
+</PercentFormat>
+</AttrContents>
+</newHotTooltipStyle>
+<ConditionCollection>
+<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
+<ConditionAttr name="">
+<AttrList>
+<Attr class="com.fr.chart.base.AttrBorder">
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-1"/>
+</AttrBorder>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="true"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return this.seriesName+this.value+this.percentage;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="true"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrLabel">
+<AttrLabel>
+<labelAttr enable="true"/>
+<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
+<Attr showLine="true" autoAdjust="false" position="6" isCustom="true"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="72" foreground="-10066330"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="false"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="true"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+</labelDetail>
+</AttrLabel>
+</Attr>
+</AttrList>
+</ConditionAttr>
+</DefaultAttr>
+</ConditionCollection>
+<Legend4VanChart>
+<Legend>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-3355444"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr position="2" visible="false"/>
+<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
+</Legend>
+<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
+</Legend4VanChart>
+<DataSheet>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isVisible="false"/>
+</DataSheet>
+<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
+<newPlotFillStyle>
+<AttrFillStyle>
+<AFStyle colorStyle="2"/>
+<FillStyleName fillStyleName=""/>
+<isCustomFillStyle isCustomFillStyle="true"/>
+<ColorList>
+<OColor colvalue="-11686657"/>
+<OColor colvalue="-6259463"/>
+</ColorList>
+</AttrFillStyle>
+</newPlotFillStyle>
+<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
+<PieAttr4VanChart roseType="normal" startAngle="0.0" endAngle="360.0" innerRadius="80.0" supportRotation="false"/>
+<VanChartRadius radiusType="auto" radius="160"/>
+</Plot>
+<ChartDefinition>
+<OneValueCDDefinition seriesName="catalog_name" valueName="price" function="com.fr.data.util.function.NoneFunction">
+<Top topCate="8" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[item_rate]]></Name>
+</TableData>
+<CategoryName value="无"/>
+</OneValueCDDefinition>
+</ChartDefinition>
+</Chart>
+<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<VanChartZoom>
+<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
+<from>
+<![CDATA[]]></from>
+<to>
+<![CDATA[]]></to>
+</VanChartZoom>
+<refreshMoreLabel>
+<attr moreLabel="false" autoTooltip="true"/>
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="true"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="true"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-1"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
+<newColor borderColor="-15395563"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.8"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</refreshMoreLabel>
+</Chart>
+</O>
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="1">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="2">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="3">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="4">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="5">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="6">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="7">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="8">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="9">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="10">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="11">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="12">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="13">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="14">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="15">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="16">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="17">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="18">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="19">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="20">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="21">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="1" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="2" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="3" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="4" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="5" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="6" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="7" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="12" r="22">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="13" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="14" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="15" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="16" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="17" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="23">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="1" r="23" cs="9" rs="23" s="0">
+<O t="CC">
+<LayoutAttr selectedIndex="0"/>
+<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+</ChangeAttr>
+<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
+<Chart class="com.fr.plugin.chart.vanchart.VanChart">
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-1118482"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
+<Title4VanChart>
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-6908266"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[采购品采购金额-排名]]></O>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<Attr4VanChart useHtml="false" floating="false" x="50.0" y="0.0" limitSize="false" maxHeight="15.0"/>
+</Title4VanChart>
+<Plot class="com.fr.plugin.chart.column.VanChartColumnPlot">
+<VanChartPlotVersion version="20170715"/>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
+<newHotTooltipStyle>
+<AttrContents>
+<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##]]></Format>
+<PercentFormat>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.##%]]></Format>
+</PercentFormat>
+</AttrContents>
+</newHotTooltipStyle>
+<ConditionCollection>
+<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
+<ConditionAttr name="">
+<AttrList>
+<Attr class="com.fr.chart.base.AttrBorder">
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="10"/>
+<newColor borderColor="-1"/>
+</AttrBorder>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrLabel">
+<AttrLabel>
+<labelAttr enable="true"/>
+<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
+<Attr showLine="false" autoAdjust="false" position="6" isCustom="true"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="72" foreground="-14145496"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+</labelDetail>
+</AttrLabel>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00万元]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="true"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</Attr>
+</AttrList>
+</ConditionAttr>
+</DefaultAttr>
+</ConditionCollection>
+<Legend4VanChart>
+<Legend>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-3355444"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr position="4" visible="false"/>
+<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
+</Legend>
+<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
+</Legend4VanChart>
+<DataSheet>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isVisible="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##]]></Format>
+</DataSheet>
+<NameJavaScriptGroup>
+<NameJavaScript name="图表超链-联动单元格1">
+<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
+<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
+<Parameters>
+<Parameter>
+<Attributes name="directoryId"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=SERIES]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
+<TargetFrame>
+<![CDATA[_blank]]></TargetFrame>
+<Features width="500" height="270"/>
+<realateName realateValue="L24" animateType="none"/>
+</JavaScript>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
+<newPlotFillStyle>
+<AttrFillStyle>
+<AFStyle colorStyle="2"/>
+<FillStyleName fillStyleName=""/>
+<isCustomFillStyle isCustomFillStyle="true"/>
+<ColorList>
+<OColor colvalue="-3736577"/>
+<OColor colvalue="-12870401"/>
+</ColorList>
+</AttrFillStyle>
+</newPlotFillStyle>
+<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
+<VanChartRectanglePlotAttr vanChartPlotType="normal" isDefaultIntervalBackground="true"/>
+<XAxisList>
+<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartValueAxis">
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[点击采购品查看历史走势]]></O>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="4"/>
+</Title>
+<newAxisAttr isShowAxisLabel="false"/>
+<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
+<newLineColor mainGridColor="-1" lineColor=""/>
+<AxisPosition value="1"/>
+<TickLine201106 type="2" secType="0"/>
+<ArrowShow arrowShow="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="Verdana" style="0" size="88" foreground="-6710887"/>
+</Attr>
+</TextAttr>
+<AxisLabelCount value="=1"/>
+<AxisRange/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
+<ZoomAxisAttr isZoom="false"/>
+<axisReversed axisReversed="false"/>
+<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="X轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="false" isRotation="false"/>
+<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="true" isCustomHeight="false" width="150" height="150"/>
+<alertList/>
+<customBackgroundList/>
+<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=1000"/>
+<ds>
+<RadarYAxisTableDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<attr/>
+</RadarYAxisTableDefinition>
+</ds>
+</VanChartAxis>
+</XAxisList>
+<YAxisList>
+<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartAxis">
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[]]></O>
+<TextAttr>
+<Attr rotation="90" alignText="0">
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<newAxisAttr isShowAxisLabel="true"/>
+<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
+<newLineColor mainGridColor="-1" lineColor=""/>
+<AxisPosition value="2"/>
+<TickLine201106 type="2" secType="0"/>
+<ArrowShow arrowShow="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="1" size="72" foreground="-14145496"/>
+</Attr>
+</TextAttr>
+<AxisLabelCount value="=1"/>
+<AxisRange/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
+<ZoomAxisAttr isZoom="false"/>
+<axisReversed axisReversed="false"/>
+<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="false" isRotation="false"/>
+<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="10" height="50"/>
+<alertList/>
+<customBackgroundList/>
+</VanChartAxis>
+</YAxisList>
+<stackAndAxisCondition>
+<ConditionCollection>
+<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
+<ConditionAttr name=""/>
+</DefaultAttr>
+</ConditionCollection>
+</stackAndAxisCondition>
+<VanChartColumnPlotAttr seriesOverlapPercent="-100.0" categoryIntervalPercent="20.0" fixedWidth="true" columnWidth="15" filledWithImage="false" isBar="true"/>
+</Plot>
+<ChartDefinition>
+<OneValueCDDefinition seriesName="directory_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
+<Top topCate="10" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[item_rank]]></Name>
+</TableData>
+<CategoryName value="directory_name"/>
+</OneValueCDDefinition>
+</ChartDefinition>
+</Chart>
+<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<VanChartZoom>
+<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
+<from>
+<![CDATA[]]></from>
+<to>
+<![CDATA[]]></to>
+</VanChartZoom>
+<refreshMoreLabel>
+<attr moreLabel="false" autoTooltip="true"/>
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="true"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="true"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-1"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
+<newColor borderColor="-15395563"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.8"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</refreshMoreLabel>
+</Chart>
+</O>
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="11" r="23" cs="9" rs="23" s="1">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3971,18 +2847,10 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="24">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="25">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="25">
-<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="0" r="26">
@@ -3991,18 +2859,10 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="26">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="27">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="27">
-<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="0" r="28">
@@ -4011,18 +2871,10 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="28">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="29">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="29">
-<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="0" r="30">
@@ -4031,26 +2883,10 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="30">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="8" r="31">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="8" r="32">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="33">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="33">
-<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="0" r="34">
@@ -4059,18 +2895,10 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="34">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="35">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="35">
-<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="0" r="36">
@@ -4079,18 +2907,10 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="36">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="37">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="37">
-<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="0" r="38">
@@ -4099,53 +2919,993 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="38">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="39">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="39">
+<C c="1" r="47" cs="9" rs="23" s="0">
+<O t="CC">
+<LayoutAttr selectedIndex="0"/>
+<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+</ChangeAttr>
+<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
+<Chart class="com.fr.plugin.chart.vanchart.VanChart">
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-1118482"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
+<Title4VanChart>
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-6908266"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[供应商采购金额-排名]]></O>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
+</Title4VanChart>
+<Plot class="com.fr.plugin.chart.column.VanChartColumnPlot">
+<VanChartPlotVersion version="20170715"/>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
+<newHotTooltipStyle>
+<AttrContents>
+<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##]]></Format>
+<PercentFormat>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.##%]]></Format>
+</PercentFormat>
+</AttrContents>
+</newHotTooltipStyle>
+<ConditionCollection>
+<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
+<ConditionAttr name="">
+<AttrList>
+<Attr class="com.fr.chart.base.AttrBorder">
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="10"/>
+<newColor borderColor="-1"/>
+</AttrBorder>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrLabel">
+<AttrLabel>
+<labelAttr enable="true"/>
+<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
+<Attr showLine="false" autoAdjust="false" position="6" isCustom="true"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="72" foreground="-14145496"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return this.value;}" useHtml="false" isCustomWidth="true" isCustomHeight="true" width="50" height="50"/>
+</AttrToolTipContent>
+</labelDetail>
+</AttrLabel>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00万元]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="function(){ return this.category+this.seriesName+this.value;}" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="true"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</Attr>
+</AttrList>
+</ConditionAttr>
+</DefaultAttr>
+</ConditionCollection>
+<Legend4VanChart>
+<Legend>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-3355444"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr position="4" visible="false"/>
+<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
+</Legend>
+<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
+</Legend4VanChart>
+<DataSheet>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isVisible="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##]]></Format>
+</DataSheet>
+<NameJavaScriptGroup>
+<NameJavaScript name="图表超链-联动单元格1">
+<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
+<JavaScript class="com.fr.chart.web.ChartHyperRelateCellLink">
+<Parameters>
+<Parameter>
+<Attributes name="supplierId"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=SERIES]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
+<TargetFrame>
+<![CDATA[_blank]]></TargetFrame>
+<Features width="500" height="270"/>
+<realateName realateValue="L48" animateType="none"/>
+</JavaScript>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
+<newPlotFillStyle>
+<AttrFillStyle>
+<AFStyle colorStyle="2"/>
+<FillStyleName fillStyleName=""/>
+<isCustomFillStyle isCustomFillStyle="true"/>
+<ColorList>
+<OColor colvalue="-3736577"/>
+<OColor colvalue="-12870401"/>
+</ColorList>
+</AttrFillStyle>
+</newPlotFillStyle>
+<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
+<VanChartRectanglePlotAttr vanChartPlotType="normal" isDefaultIntervalBackground="true"/>
+<XAxisList>
+<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartValueAxis">
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[点击供应商查看历史走势]]></O>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="4"/>
+</Title>
+<newAxisAttr isShowAxisLabel="false"/>
+<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
+<newLineColor mainGridColor="-1" lineColor="-1"/>
+<AxisPosition value="1"/>
+<TickLine201106 type="2" secType="0"/>
+<ArrowShow arrowShow="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="Verdana" style="0" size="88" foreground="-6710887"/>
+</Attr>
+</TextAttr>
+<AxisLabelCount value="=1"/>
+<AxisRange/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
+<ZoomAxisAttr isZoom="false"/>
+<axisReversed axisReversed="false"/>
+<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="X轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="50.0" commonValueFormat="true" isRotation="false"/>
+<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="300" height="300"/>
+<alertList/>
+<customBackgroundList/>
+<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=1000"/>
+<ds>
+<RadarYAxisTableDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<attr/>
+</RadarYAxisTableDefinition>
+</ds>
+</VanChartAxis>
+</XAxisList>
+<YAxisList>
+<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartAxis">
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[]]></O>
+<TextAttr>
+<Attr rotation="90" alignText="0">
+<FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<newAxisAttr isShowAxisLabel="true"/>
+<AxisLineStyle AxisStyle="0" MainGridStyle="1"/>
+<newLineColor lineColor="-1"/>
+<AxisPosition value="2"/>
+<TickLine201106 type="2" secType="0"/>
+<ArrowShow arrowShow="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="1" size="72" foreground="-14145496"/>
+</Attr>
+</TextAttr>
+<AxisLabelCount value="=1"/>
+<AxisRange/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
+<ZoomAxisAttr isZoom="false"/>
+<axisReversed axisReversed="false"/>
+<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
+<HtmlLabel customText="function(){ return this; }" useHtml="true" isCustomWidth="false" isCustomHeight="false" width="10" height="10"/>
+<alertList/>
+<customBackgroundList/>
+</VanChartAxis>
+</YAxisList>
+<stackAndAxisCondition>
+<ConditionCollection>
+<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
+<ConditionAttr name=""/>
+</DefaultAttr>
+</ConditionCollection>
+</stackAndAxisCondition>
+<VanChartColumnPlotAttr seriesOverlapPercent="-100.0" categoryIntervalPercent="20.0" fixedWidth="true" columnWidth="15" filledWithImage="false" isBar="true"/>
+</Plot>
+<ChartDefinition>
+<OneValueCDDefinition seriesName="supplier_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
+<Top topCate="10" topValue="10" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[supplier_rank]]></Name>
+</TableData>
+<CategoryName value="supplier_name"/>
+</OneValueCDDefinition>
+</ChartDefinition>
+</Chart>
+<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<VanChartZoom>
+<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
+<from>
+<![CDATA[]]></from>
+<to>
+<![CDATA[]]></to>
+</VanChartZoom>
+<refreshMoreLabel>
+<attr moreLabel="false" autoTooltip="true"/>
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="true"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="true"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-1"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
+<newColor borderColor="-15395563"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.8"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</refreshMoreLabel>
+</Chart>
+</O>
 <PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
 <Expand/>
 </C>
-<C c="2" r="39">
+<C c="11" r="47" cs="9" rs="23" s="1">
+<O t="CC">
+<LayoutAttr selectedIndex="0"/>
+<ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+</ChangeAttr>
+<Chart name="默认" chartClass="com.fr.plugin.chart.vanchart.VanChart">
+<Chart class="com.fr.plugin.chart.vanchart.VanChart">
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-3355444"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<ChartAttr isJSDraw="true" isStyleGlobal="false"/>
+<Title4VanChart>
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-6908266"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[<a target=\"_blank\" style=\"color:black;text-decoration:none;\" href=\"www.baidu.com\">采购价格历史走势</a>]]></O>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
+</Title4VanChart>
+<Plot class="com.fr.plugin.chart.area.VanChartAreaPlot">
+<VanChartPlotVersion version="20170715"/>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-3355444"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isNullValueBreak="true" autoRefreshPerSecond="6" seriesDragEnable="false" plotStyle="4" combinedSize="50.0"/>
+<newHotTooltipStyle>
+<AttrContents>
+<Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##]]></Format>
+<PercentFormat>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.##%]]></Format>
+</PercentFormat>
+</AttrContents>
+</newHotTooltipStyle>
+<ConditionCollection>
+<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
+<ConditionAttr name="">
+<AttrList>
+<Attr class="com.fr.plugin.chart.base.AttrLabel">
+<AttrLabel>
+<labelAttr enable="true"/>
+<labelDetail class="com.fr.plugin.chart.base.AttrLabelDetail">
+<Attr showLine="false" autoAdjust="true" position="1" isCustom="true"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="微软雅黑" style="0" size="64" foreground="-14145496"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="false"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+</labelDetail>
+</AttrLabel>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
+<VanAttrLine>
+<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
+</VanAttrLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
+<VanAttrMarker>
+<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
+<Background name="NullBackground"/>
+</VanAttrMarker>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
+<AttrAreaSeriesFillColorBackground>
+<Attr alpha="0.15"/>
+</AttrAreaSeriesFillColorBackground>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrTooltip">
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="宋体" style="0" size="72"/>
+</Attr>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00万元]]></Format>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="false"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="false"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-16777216"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="2"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.5"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</Attr>
+</AttrList>
+</ConditionAttr>
+</DefaultAttr>
+</ConditionCollection>
+<Legend4VanChart>
+<Legend>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-3355444"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr position="4" visible="false"/>
+<FRFont name="微软雅黑" style="0" size="88" foreground="-10066330"/>
+</Legend>
+<Attr4VanChart floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0" isHighlight="true"/>
+</Legend4VanChart>
+<DataSheet>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<Attr isVisible="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##]]></Format>
+</DataSheet>
+<DataProcessor class="com.fr.base.chart.chartdata.model.NormalDataModel"/>
+<newPlotFillStyle>
+<AttrFillStyle>
+<AFStyle colorStyle="2"/>
+<FillStyleName fillStyleName=""/>
+<isCustomFillStyle isCustomFillStyle="true"/>
+<ColorList>
+<OColor colvalue="-7181324"/>
+<OColor colvalue="-1"/>
+</ColorList>
+</AttrFillStyle>
+</newPlotFillStyle>
+<VanChartPlotAttr isAxisRotation="false" categoryNum="1"/>
+<VanChartRectanglePlotAttr vanChartPlotType="normal" isDefaultIntervalBackground="true"/>
+<XAxisList>
+<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartAxis">
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[月份]]></O>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="Verdana" style="0" size="64" foreground="-10066330"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<newAxisAttr isShowAxisLabel="true"/>
+<AxisLineStyle AxisStyle="1" MainGridStyle="1"/>
+<newLineColor mainGridColor="-1" lineColor="-5197648"/>
+<AxisPosition value="3"/>
+<TickLine201106 type="2" secType="0"/>
+<ArrowShow arrowShow="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="Verdana" style="0" size="64" foreground="-5197648"/>
+</Attr>
+</TextAttr>
+<AxisLabelCount value="=1"/>
+<AxisRange/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
+<ZoomAxisAttr isZoom="false"/>
+<axisReversed axisReversed="false"/>
+<VanChartAxisAttr mainTickLine="2" secTickLine="0" axisName="X轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
+<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+<alertList/>
+<customBackgroundList/>
+</VanChartAxis>
+</XAxisList>
+<YAxisList>
+<VanChartAxis class="com.fr.plugin.chart.attr.axis.VanChartValueAxis">
+<Title>
+<GI>
+<AttrBackground>
+<Background name="NullBackground"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+</GI>
+<O>
+<![CDATA[价格（万元）]]></O>
+<TextAttr>
+<Attr rotation="-90" alignText="0">
+<FRFont name="Verdana" style="0" size="64" foreground="-10066330"/>
+</Attr>
+</TextAttr>
+<TitleVisible value="true" position="0"/>
+</Title>
+<newAxisAttr isShowAxisLabel="true"/>
+<AxisLineStyle AxisStyle="1" MainGridStyle="1"/>
+<newLineColor mainGridColor="-1" lineColor="-5197648"/>
+<AxisPosition value="2"/>
+<TickLine201106 type="2" secType="0"/>
+<ArrowShow arrowShow="false"/>
+<TextAttr>
+<Attr alignText="0">
+<FRFont name="Verdana" style="0" size="64" foreground="-5197648"/>
+</Attr>
+</TextAttr>
+<AxisLabelCount value="=1"/>
+<AxisRange/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
+<ZoomAxisAttr isZoom="false"/>
+<axisReversed axisReversed="false"/>
+<VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
+<HtmlLabel customText="function(){ return this; }" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+<alertList/>
+<customBackgroundList/>
+<VanChartValueAxisAttr isLog="false" valueStyle="false" baseLog="=10"/>
+<ds>
+<RadarYAxisTableDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<attr/>
+</RadarYAxisTableDefinition>
+</ds>
+</VanChartAxis>
+</YAxisList>
+<stackAndAxisCondition>
+<ConditionCollection>
+<DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
+<ConditionAttr name=""/>
+</DefaultAttr>
+</ConditionCollection>
+</stackAndAxisCondition>
+</Plot>
+<ChartDefinition>
+<OneValueCDDefinition seriesName="supplier_id" valueName="price" function="com.fr.data.util.function.NoneFunction">
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[supplier_dealprice_trend]]></Name>
+</TableData>
+<CategoryName value="time"/>
+</OneValueCDDefinition>
+</ChartDefinition>
+</Chart>
+<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<VanChartZoom>
+<zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
+<from>
+<![CDATA[]]></from>
+<to>
+<![CDATA[]]></to>
+</VanChartZoom>
+<refreshMoreLabel>
+<attr moreLabel="false" autoTooltip="true"/>
+<AttrTooltip>
+<Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
+<TextAttr>
+<Attr alignText="0"/>
+</TextAttr>
+<AttrToolTipContent>
+<Attr isCommon="true"/>
+<value class="com.fr.plugin.chart.base.format.AttrTooltipValueFormat">
+<AttrTooltipValueFormat>
+<Attr enable="true"/>
+</AttrTooltipValueFormat>
+</value>
+<percent class="com.fr.plugin.chart.base.format.AttrTooltipPercentFormat">
+<AttrTooltipPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipPercentFormat>
+</percent>
+<category class="com.fr.plugin.chart.base.format.AttrTooltipCategoryFormat">
+<AttrToolTipCategoryFormat>
+<Attr enable="true"/>
+</AttrToolTipCategoryFormat>
+</category>
+<series class="com.fr.plugin.chart.base.format.AttrTooltipSeriesFormat">
+<AttrTooltipSeriesFormat>
+<Attr enable="true"/>
+</AttrTooltipSeriesFormat>
+</series>
+<changedPercent class="com.fr.plugin.chart.base.format.AttrTooltipChangedPercentFormat">
+<AttrTooltipChangedPercentFormat>
+<Attr enable="false"/>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#.##%]]></Format>
+</AttrTooltipChangedPercentFormat>
+</changedPercent>
+<changedValue class="com.fr.plugin.chart.base.format.AttrTooltipChangedValueFormat">
+<AttrTooltipChangedValueFormat>
+<Attr enable="true"/>
+</AttrTooltipChangedValueFormat>
+</changedValue>
+<HtmlLabel customText="" useHtml="false" isCustomWidth="false" isCustomHeight="false" width="50" height="50"/>
+</AttrToolTipContent>
+<GI>
+<AttrBackground>
+<Background name="ColorBackground" color="-1"/>
+<Attr shadow="false"/>
+</AttrBackground>
+<AttrBorder>
+<Attr lineStyle="1" isRoundBorder="false" roundRadius="4"/>
+<newColor borderColor="-15395563"/>
+</AttrBorder>
+<AttrAlpha>
+<Attr alpha="0.8"/>
+</AttrAlpha>
+</GI>
+</AttrTooltip>
+</refreshMoreLabel>
+</Chart>
+</O>
 <PrivilegeControl/>
-<Expand/>
-</C>
-<C c="3" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="4" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="5" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="6" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="7" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="8" r="39">
-<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
 <Expand/>
 </C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
 <PaperSetting orientation="1">
-<PaperSize width="72000000" height="101808000"/>
+<PaperSize width="54720000" height="72000000"/>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
