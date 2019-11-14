@@ -2,15 +2,17 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.purchas
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
-
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessSanyouService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
 
 public class SupplierNameComboxDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(SupplierNameComboxDataSource.class);
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         DubboPurchaseResultProcessSanyouService dataService = dataServiceFactory.getDataService(DubboPurchaseResultProcessSanyouService.class);
@@ -22,8 +24,18 @@ public class SupplierNameComboxDataSource extends AbstractColumnPositionTableDat
         ServiceResult<List<Map<String, Object>>> listServiceResult = new ServiceResult<>();
         if (bs != null && "2".equals(bs)){
             listServiceResult = dataService.getPurchaseResultProcessSupplierNameBidAll(projectId, companyId);
+            if (!listServiceResult.getSuccess()){
+                log.error("{}调用{}时发生未知异常,error Message:{}", "DubboPurchaseResultProcessSanyouService.getPurchaseResultProcessSupplierNameBidAll",
+                        "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
         }else {
             listServiceResult = dataService.getPurchaseResultProcessSupplierNameAll(projectId, companyId);
+            if (!listServiceResult.getSuccess()){
+                log.error("{}调用{}时发生未知异常,error Message:{}", "DubboPurchaseResultProcessSanyouService.getPurchaseResultProcessSupplierNameBidAll",
+                        "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
         }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;

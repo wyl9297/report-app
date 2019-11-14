@@ -5,11 +5,14 @@ import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableDat
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessSanyouService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
 
 public class TotalSheetDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(TotalSheetDataSource.class);
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         DubboPurchaseResultProcessSanyouService dataService = dataServiceFactory.getDataService(DubboPurchaseResultProcessSanyouService.class);
@@ -18,6 +21,11 @@ public class TotalSheetDataSource extends AbstractColumnPositionTableData {
         String companyId = String.valueOf(param.get("companyId"));
 
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.totalSheet(projectId, companyId);
+        if (!listServiceResult.getSuccess()){
+            log.error("{}调用{}时发生未知异常,error Message:{}", "DubboPurchaseResultProcessSanyouService.totalSheet",
+                    "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

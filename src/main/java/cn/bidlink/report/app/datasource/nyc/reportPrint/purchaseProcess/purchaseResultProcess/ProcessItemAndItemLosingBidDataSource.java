@@ -10,6 +10,8 @@ import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableDat
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -22,6 +24,7 @@ import java.util.Map;
  * @Version 1.0
  **/
 public class ProcessItemAndItemLosingBidDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(ProcessItemAndItemLosingBidDataSource.class);
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -43,6 +46,11 @@ public class ProcessItemAndItemLosingBidDataSource extends AbstractColumnPositio
         String companyId = String.valueOf(param.get("companyId"));
 
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.processItemAndItemLosingBid(projectId, companyId);
+        if (!listServiceResult.getSuccess()){
+            log.error("{}调用{}时发生未知异常,error Message:{}", "DubboPurchaseResultProcessService.processItemAndItemLosingBid",
+                    "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

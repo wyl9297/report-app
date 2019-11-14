@@ -10,6 +10,8 @@ import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableDat
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -22,6 +24,7 @@ import java.util.Map;
  * @Version 1.0
  **/
 public class SupplierNameDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(SupplierNameDataSource.class);
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -48,8 +51,18 @@ public class SupplierNameDataSource extends AbstractColumnPositionTableData {
         ServiceResult<List<Map<String, Object>>> listServiceResult = new ServiceResult<>();
         if (bs != null && "2".equals(bs)){
             listServiceResult = dataService.getPurchaseResultProcessSupplierNameBidAll(projectId, companyId);
+            if (!listServiceResult.getSuccess()){
+                log.error("{}调用{}时发生未知异常,error Message:{}", "DubboPurchaseResultProcessService.getPurchaseResultProcessSupplierNameBidAll",
+                        "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
         }else {
             listServiceResult = dataService.getPurchaseResultProcessSupplierNameAll(projectId, companyId);
+            if (!listServiceResult.getSuccess()){
+                log.error("{}调用{}时发生未知异常,error Message:{}", "DubboPurchaseResultProcessService.getPurchaseResultProcessSupplierNameAll",
+                        "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
         }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
