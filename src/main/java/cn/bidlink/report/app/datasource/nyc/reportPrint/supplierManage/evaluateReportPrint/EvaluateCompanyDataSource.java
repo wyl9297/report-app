@@ -40,6 +40,14 @@ public class EvaluateCompanyDataSource extends AbstractColumnPositionTableData {
         String catalogId = param.get("catalogId");
         String companyId = param.get("companyId");
         ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.evaluateCompany(catalogId, reportId, companyId, beginTime, endTime, chooseType);
+
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        if ( result == null || result.size() == 0){
+            return null;
+        }
         return listServiceResult.getResult();
 
 //        List<Map<String, Object>> resultList = new ArrayList<>();

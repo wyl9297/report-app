@@ -37,9 +37,14 @@ public class TotalAccountDataSource extends AbstractColumnPositionTableData {
         String updateTimeEnd = param.get("updateTimeEnd");
         String companyId = param.get("companyId");
         ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.totalAccount(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        if ( result == null || result.size() == 0){
+            return null;
+        }
         return listServiceResult.getResult();
 
-//        List insert = InsertParam.insert(this.getColumn());
-//        return insert;
     }
 }
