@@ -21,9 +21,9 @@ public class SupplierNameComboxDataSource extends AbstractColumnPositionTableDat
 
         ServiceResult<List<Map<String, Object>>> listServiceResult = new ServiceResult<>();
         if (bs != null && "2".equals(bs)){
-            dataService.getPurchaseResultProcessSupplierNameBidAll(projectId, companyId);
+            listServiceResult = dataService.getPurchaseResultProcessSupplierNameBidAll(projectId, companyId);
         }else {
-            dataService.getPurchaseResultProcessSupplierNameAll(projectId, companyId);
+            listServiceResult = dataService.getPurchaseResultProcessSupplierNameAll(projectId, companyId);
         }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;

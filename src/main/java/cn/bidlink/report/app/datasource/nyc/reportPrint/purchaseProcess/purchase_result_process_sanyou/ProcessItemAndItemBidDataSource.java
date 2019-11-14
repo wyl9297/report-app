@@ -26,7 +26,6 @@ public class ProcessItemAndItemBidDataSource extends AbstractColumnPositionTable
         }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
-
     }
 
     @Override
