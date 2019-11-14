@@ -8,6 +8,7 @@ import org.springframework.util.ReflectionUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * 根据列名定义的位置进行数据结果包装,
@@ -159,6 +160,10 @@ public abstract class AbstractColumnPositionTableData extends AbstractTableData 
             int j = 0;
             for (String key : strings) {
                 objArray[j] = map.get(key);
+                //判断map中的字段数有没有大于数组的长度
+                if (j==(objArray.length-1)){
+                    break;
+                }
                 j++;
             }
             arrayList.add(objArray);
