@@ -74,7 +74,7 @@ Ue94gr^Y>BEPRk5t~
 <WebPage isPage="true" showAsImage="false" autoScale="true" tdHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
-<ReportFitAttr fitStateInPC="1" fitFont="false"/>
+<ReportFitAttr fitStateInPC="2" fitFont="false"/>
 <ElementCaseMobileAttr>
 <ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
 </ElementCaseMobileAttr>
