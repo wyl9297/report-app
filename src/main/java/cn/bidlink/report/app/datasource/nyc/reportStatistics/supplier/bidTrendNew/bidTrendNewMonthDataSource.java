@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * @ClassName bidTrendNewMonthDataSource
  * @Author Administrator
- * @Description //TODO
+ * @Description
  * @Date 2019/11/7 14:46
  * @Version 1.0
  **/
@@ -45,7 +45,7 @@ public class bidTrendNewMonthDataSource extends AbstractColumnPositionTableData 
         String supplierId = String.valueOf(param.get("supplierId"));
         String startTime = String.valueOf(param.get("begin"));
         String endTime = String.valueOf(param.get("end"));
-        String companyId = String.valueOf(param.get("comp_id"));
+        String companyId = String.valueOf(param.get("companyId"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidTrendNewMonth(supplierId, startTime, endTime,companyId);
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;

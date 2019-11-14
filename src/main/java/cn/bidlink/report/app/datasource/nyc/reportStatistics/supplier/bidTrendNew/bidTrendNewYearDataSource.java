@@ -30,7 +30,7 @@ public class bidTrendNewYearDataSource extends AbstractColumnPositionTableData {
                 new Parameter("supplierId"),
                 new Parameter("begin"),
                 new Parameter("end"),
-                new Parameter("comp_id")
+                new Parameter("companyId")
         };
     }
 
@@ -45,7 +45,7 @@ public class bidTrendNewYearDataSource extends AbstractColumnPositionTableData {
         String supplierId = String.valueOf(param.get("supplierId"));
         String startTime = String.valueOf(param.get("begin"));
         String endTime = String.valueOf(param.get("end"));
-        String companyId = String.valueOf(param.get("comp_id"));
+        String companyId = String.valueOf(param.get("companyId"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidTrendNewYear(supplierId, startTime, endTime,companyId);
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;

@@ -45,7 +45,7 @@ public class bidTrendNewQuarterDataSource extends AbstractColumnPositionTableDat
         String supplierId = String.valueOf(param.get("supplierId"));
         String startTime = String.valueOf(param.get("begin"));
         String endTime = String.valueOf(param.get("end"));
-        String companyId = String.valueOf(param.get("comp_id"));
+        String companyId = String.valueOf(param.get("companyId"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidTrendNewQuarter(supplierId, startTime, endTime,companyId);
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
