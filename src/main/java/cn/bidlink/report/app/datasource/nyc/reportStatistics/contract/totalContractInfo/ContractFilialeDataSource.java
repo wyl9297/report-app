@@ -1,7 +1,9 @@
 package cn.bidlink.report.app.datasource.nyc.reportStatistics.contract.totalContractInfo;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_statistics.DubboTotalContractInfoService;
 import com.fr.base.Parameter;
 
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ContractFilialeDataSource extends AbstractBaseTableData {
+public class ContractFilialeDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {
@@ -25,23 +27,11 @@ public class ContractFilialeDataSource extends AbstractBaseTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
+        DubboTotalContractInfoService dataService = dataServiceFactory.getDataService(DubboTotalContractInfoService.class);
+        String companyId = String.valueOf(param.get("compId"));
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractFiliale(companyId);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
 
-//        OrderListResultService orderListResultService = dataServiceFactory.getDataService(OrderListResultService.class);
-//        String projectId = param.get("projectId");
-//        String companyId = param.get("companyId");
-//        String supplierId = param.get("supplierId");
-//        OrderDetailDto orderDetail = orderListResultService.getOrderDetail(projectId, companyId, supplierId);
-//        OrderDetailDto orderDetailDto = new OrderDetailDto();
-//        orderDetailDto.setAddressName("12");
-//        orderDetailDto.setAddressPhone("34234");
-        List<Map<String, Object>> resultList = new ArrayList<>();
-        Map<String, Object> resultMap = new HashMap<>();
-
-        for (String s : getColumn()) {
-            resultMap.put(s,"77777");
-        }
-        resultList.add(resultMap);
-
-        return resultList;
     }
 }

@@ -6,9 +6,11 @@ package cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectTo
  * @description :cn.bidlink.nyc.report.statistics.report.overviewStatistics.Dept
  */
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.datasource.nyc.InsertParam;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectTotalAmountTrendNewService;
 import com.fr.base.Parameter;
 
 import java.util.List;
@@ -21,7 +23,7 @@ import java.util.Map;
  * @Date 2019/11/7 14:36
  * @Version 1.0
  **/
-public class DeptDataSource extends AbstractBaseTableData {
+public class DeptDataSource extends AbstractColumnPositionTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -36,7 +38,12 @@ public class DeptDataSource extends AbstractBaseTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] column = this.getColumn();
-        return InsertParam.insert(column);
+        DubboProjectTotalAmountTrendNewService dataService = dataServiceFactory.getDataService(DubboProjectTotalAmountTrendNewService.class);
+        String companyId = String.valueOf(param.get("compId"));
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.overviewStatisticsDept(companyId);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return  result;
+
+
     }
 }

@@ -1,6 +1,6 @@
 package cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectProgressStatisticsBps;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import com.fr.base.Parameter;
 
@@ -9,17 +9,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProjectProgressStatisticsBpsADataSource extends AbstractBaseTableData {
+public class ProjectProgressStatisticsBpsADataSource extends AbstractColumnPositionTableData {
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         List<Map<String, Object>> listResult = new ArrayList<>();
-        Parameter[] parameter = this.getParameter();
-        for (int i=0; i<parameter.length; i++){
-            Map<String, Object> mapResult = new HashMap<>();
-            mapResult.put("id", String.valueOf(i+1));
-            mapResult.put("name", parameter[i]);
-            listResult.add(mapResult);
-        }
+            Map map = new HashMap();
+                map.put("1", "项目建档");
+                map.put("2","资格预审");
+                map.put("3", "招标公告" );
+                map.put("4", "项目开标");
+                map.put("5", "项目评标");
+                map.put("6","项目定标");
+                map.put("7","项目归档");
+                map.put("8","已归档");
+                map.put("9","已撤项");
+        listResult.add(map);
         return listResult;
     }
 

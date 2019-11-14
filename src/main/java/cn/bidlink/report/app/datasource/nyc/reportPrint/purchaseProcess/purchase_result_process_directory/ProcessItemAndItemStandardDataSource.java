@@ -1,18 +1,24 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.purchase_result_process_directory;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.datasource.nyc.InsertParam;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessDirectoryService;
 import com.fr.base.Parameter;
 
 import java.util.List;
 import java.util.Map;
 
-public class ProcessItemAndItemStandardDataSource extends AbstractBaseTableData {
+public class ProcessItemAndItemStandardDataSource extends AbstractColumnPositionTableData {
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] strings = this.getColumn();
-        return InsertParam.insert(strings);
+        DubboPurchaseResultProcessDirectoryService dataService = dataServiceFactory.getDataService(DubboPurchaseResultProcessDirectoryService.class);
+        String projectId = String.valueOf(param.get("projectId"));
+        String companyId = String.valueOf(param.get("companyId"));
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.processItemAndItemStandard(projectId,companyId);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 
     @Override

@@ -6,9 +6,11 @@ package cn.bidlink.report.app.datasource.nyc.reportStatistics.supplier.bidTrendN
  * @description :cn.bidlink.nyc.report.statistics.report.supplier.bidTrendNewYear
  */
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.datasource.nyc.InsertParam;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_statistics.DubboBidTrendNewService;
 import com.fr.base.Parameter;
 
 import java.util.List;
@@ -21,7 +23,7 @@ import java.util.Map;
  * @Date 2019/11/7 14:47
  * @Version 1.0
  **/
-public class bidTrendNewYearDataSource extends AbstractBaseTableData {
+public class bidTrendNewYearDataSource extends AbstractColumnPositionTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -39,7 +41,13 @@ public class bidTrendNewYearDataSource extends AbstractBaseTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] column = this.getColumn();
-        return InsertParam.insert(column);
+        DubboBidTrendNewService dataService = dataServiceFactory.getDataService(DubboBidTrendNewService.class);
+        String supplierId = String.valueOf(param.get("supplierId"));
+        String startTime = String.valueOf(param.get("begin"));
+        String endTime = String.valueOf(param.get("end"));
+        String companyId = String.valueOf(param.get("comp_id"));
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidTrendNewYear(supplierId, startTime, endTime,companyId);
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 }
