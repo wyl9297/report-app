@@ -17,8 +17,10 @@ public class ProjectProgressStatisticsBpsDataSource extends AbstractColumnPositi
         String companyId = String.valueOf(param.get("compId"));
         String startTime = String.valueOf(param.get("begin"));
         String endTime = String.valueOf(param.get("end"));
-
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.projectProgressStatisticsBps(companyId, startTime, endTime);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return  result;
     }

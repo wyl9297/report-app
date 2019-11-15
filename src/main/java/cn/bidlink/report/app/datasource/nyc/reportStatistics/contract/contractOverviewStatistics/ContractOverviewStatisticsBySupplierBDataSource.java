@@ -40,6 +40,9 @@ public class ContractOverviewStatisticsBySupplierBDataSource extends AbstractCol
             endTime = endTime.concat(" 23:59:59");
         }
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractOverviewStatisticsBySupplierB(companyId, startTime, endTime);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

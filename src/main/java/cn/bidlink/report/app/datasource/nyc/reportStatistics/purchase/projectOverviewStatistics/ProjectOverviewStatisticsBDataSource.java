@@ -19,6 +19,9 @@ public class ProjectOverviewStatisticsBDataSource extends AbstractColumnPosition
         String endTime = String.valueOf(param.get("contrastEnd"));
         String code = String.valueOf(param.get("selectDepName"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.projectOverviewStatisticsB(companyId, code, startTime, endTime);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

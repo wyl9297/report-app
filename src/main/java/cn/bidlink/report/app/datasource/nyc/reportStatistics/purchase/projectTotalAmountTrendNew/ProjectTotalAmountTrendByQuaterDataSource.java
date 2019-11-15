@@ -40,6 +40,9 @@ public class ProjectTotalAmountTrendByQuaterDataSource extends AbstractColumnPos
         String endTime = String.valueOf(param.get("end"));
         String code = String.valueOf(param.get("deptCode"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.projectTotalAmountTrendByQuater(companyId, code, startTime, endTime);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

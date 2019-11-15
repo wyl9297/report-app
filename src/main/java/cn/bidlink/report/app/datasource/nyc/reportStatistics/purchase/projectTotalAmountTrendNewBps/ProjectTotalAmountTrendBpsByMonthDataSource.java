@@ -45,6 +45,9 @@ public class ProjectTotalAmountTrendBpsByMonthDataSource extends AbstractColumnP
         String startTime = String.valueOf(param.get("begin"));
         String endTime = String.valueOf(param.get("end"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.projectTotalAmountTrendBpsByMonth(companyId, startTime, endTime);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

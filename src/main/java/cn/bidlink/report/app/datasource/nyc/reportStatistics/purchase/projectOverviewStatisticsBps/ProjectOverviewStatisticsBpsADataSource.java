@@ -19,6 +19,9 @@ public class ProjectOverviewStatisticsBpsADataSource extends AbstractColumnPosit
         String endTime = String.valueOf(param.get("end"));
         String code = String.valueOf(param.get("selectDepName"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.projectOverviewStatisticsBpsA(companyId, code, startTime, endTime);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return  result;
 

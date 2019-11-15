@@ -50,6 +50,9 @@ public class ContractTotalInfoDataSource extends AbstractColumnPositionTableData
         //agreement 只有为 ( 1:协议 2:非协议 ) 时 参与过滤
         agreement = agreement.length() > 1 ? null: agreement;
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractTotalInfo(companyId, createTimeStart, createTimeEnd, signTimeStart, signTimeEnd, keyWords, keyValue, filiale, agreement);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

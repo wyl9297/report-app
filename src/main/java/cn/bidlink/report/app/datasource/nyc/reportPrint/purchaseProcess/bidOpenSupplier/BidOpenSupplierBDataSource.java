@@ -47,6 +47,9 @@ public class BidOpenSupplierBDataSource extends AbstractColumnPositionTableData 
         String companyId = String.valueOf(param.get("companyId"));
         String supplierId = String.valueOf(param.get("supplierId"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidOpenSupplierB(projectId,companyId,supplierId);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }

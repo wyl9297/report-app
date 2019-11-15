@@ -43,7 +43,11 @@ public class DirectoryVerticalHDataSource extends AbstractColumnPositionTableDat
         String projectId = String.valueOf(param.get("projectId"));
         String companyId = String.valueOf(param.get("comp_id"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.directoryVerticalH(projectId,companyId);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
+
     }
 }

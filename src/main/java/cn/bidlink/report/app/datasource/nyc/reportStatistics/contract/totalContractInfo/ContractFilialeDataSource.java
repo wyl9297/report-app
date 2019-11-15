@@ -30,6 +30,9 @@ public class ContractFilialeDataSource extends AbstractColumnPositionTableData {
         DubboTotalContractInfoService dataService = dataServiceFactory.getDataService(DubboTotalContractInfoService.class);
         String companyId = String.valueOf(param.get("compId"));
         ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractFiliale(companyId);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
         List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
 
