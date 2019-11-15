@@ -61,6 +61,7 @@
     <d:reference id="projectTotalAmountTrendNewBpsService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectTotalAmountTrendNewBpsService"/>
     <d:reference id="projectTotalAmountTrendNewService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectTotalAmountTrendNewService"/>
     <d:reference id="totalContractInfoService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboTotalContractInfoService"/>
+    <d:reference id="bidTrendNewService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboBidTrendNewService"/>
 
 
 </beans>

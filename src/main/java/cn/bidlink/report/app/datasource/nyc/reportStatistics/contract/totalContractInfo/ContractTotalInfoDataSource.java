@@ -1,7 +1,9 @@
 package cn.bidlink.report.app.datasource.nyc.reportStatistics.contract.totalContractInfo;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_statistics.DubboTotalContractInfoService;
 import com.fr.base.Parameter;
 
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ContractTotalInfoDataSource extends AbstractBaseTableData {
+public class ContractTotalInfoDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {
@@ -35,23 +37,23 @@ public class ContractTotalInfoDataSource extends AbstractBaseTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-
-//        OrderListResultService orderListResultService = dataServiceFactory.getDataService(OrderListResultService.class);
-//        String projectId = param.get("projectId");
-//        String companyId = param.get("companyId");
-//        String supplierId = param.get("supplierId");
-//        OrderDetailDto orderDetail = orderListResultService.getOrderDetail(projectId, companyId, supplierId);
-//        OrderDetailDto orderDetailDto = new OrderDetailDto();
-//        orderDetailDto.setAddressName("12");
-//        orderDetailDto.setAddressPhone("34234");
-        List<Map<String, Object>> resultList = new ArrayList<>();
-        Map<String, Object> resultMap = new HashMap<>();
-
-        for (String s : getColumn()) {
-            resultMap.put(s,"77777");
+        DubboTotalContractInfoService dataService = dataServiceFactory.getDataService(DubboTotalContractInfoService.class);
+        String companyId = (String.valueOf(param.get("compId")).equals(""))?null:String.valueOf(param.get("compId"));
+        String createTimeStart =  (String.valueOf(param.get("create_time_start")).equals(""))?null:String.valueOf(param.get("create_time_start"));
+        String createTimeEnd =  (String.valueOf(param.get("create_time_end")).equals(""))?null:String.valueOf(param.get("create_time_end"));
+        String signTimeStart =  (String.valueOf(param.get("sign_time_start")).equals(""))?null:String.valueOf(param.get("sign_time_start"));
+        String signTimeEnd =  (String.valueOf(param.get("sign_time_end")).equals(""))?null:String.valueOf(param.get("sign_time_end"));
+        String keyWords =  (String.valueOf(param.get("keyWords")).equals(""))?null:String.valueOf(param.get("keyWords"));
+        String keyValue = (String.valueOf(param.get("keyValue")).equals(""))?null:String.valueOf(param.get("keyValue"));
+        String filiale = (String.valueOf(param.get("filiale")).equals(""))?null:String.valueOf(param.get("filiale"));
+        String agreement = (String.valueOf(param.get("agreement")).equals(""))?null:String.valueOf(param.get("agreement"));
+        //agreement 只有为 ( 1:协议 2:非协议 ) 时 参与过滤
+        agreement = agreement.length() > 1 ? null: agreement;
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractTotalInfo(companyId, createTimeStart, createTimeEnd, signTimeStart, signTimeEnd, keyWords, keyValue, filiale, agreement);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
         }
-        resultList.add(resultMap);
-
-        return resultList;
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 }

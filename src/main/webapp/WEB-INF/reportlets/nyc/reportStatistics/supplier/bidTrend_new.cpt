@@ -437,12 +437,12 @@
 <Attr alpha="1.0"/>
 </AttrAlpha>
 </GI>
-<Attr isNullValueBreak="true" autoRefreshPerSecond="-1" seriesDragEnable="false" plotStyle="0" combinedSize="50.0"/>
+<Attr isNullValueBreak="true" autoRefreshPerSecond="0" seriesDragEnable="false" plotStyle="0" combinedSize="50.0"/>
 <newHotTooltipStyle>
 <AttrContents>
 <Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${SERIES}${BR}${CATEGORY}${BR}${VALUE}"/>
 <Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#.##]]></Format>
+<![CDATA[#0%]]></Format>
 <PercentFormat>
 <Format class="com.fr.base.CoreDecimalFormat">
 <![CDATA[#0.##%]]></Format>
@@ -463,6 +463,9 @@
 <newAttr lineStyle="5"/>
 </AttrLineStyle>
 </Attr>
+<Attr class="com.fr.chart.base.AttrTrendLine">
+<AttrTrendLine/>
+</Attr>
 <Attr class="com.fr.chart.base.AttrContents">
 <AttrContents>
 <Attr showLine="false" position="1" isWhiteBackground="true" isShowMutiSeries="false" seriesLabel="${VALUE}"/>
@@ -471,6 +474,8 @@
 <FRFont name="宋体" style="0" size="72"/>
 </Attr>
 </TextAttr>
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0%]]></Format>
 <PercentFormat>
 <Format class="com.fr.base.CoreDecimalFormat">
 <![CDATA[#.##%]]></Format>
@@ -585,6 +590,7 @@
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
+<ShowUnitKey value="DataFunction-None"/>
 </ValueAxis>
 </yAxis>
 <secondAxis>
@@ -614,6 +620,17 @@
 </Plot>
 <ChartDefinition>
 <NormalReportDataDefinition>
+<Series>
+<SeriesDefinition>
+<SeriesName/>
+<SeriesValue>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=SWITCH($groupType, 1, D8, 2, D9, 3, D7)]]></Attributes>
+</O>
+</SeriesValue>
+</SeriesDefinition>
+</Series>
 <Category>
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>

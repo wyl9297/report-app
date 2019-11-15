@@ -418,7 +418,7 @@
 
                 <pom.dubbo.default.registry.address>zookeeper://testzookeeper:2181</pom.dubbo.default.registry.address>
                 <!-- 悦采数据源 -->
-                <pom.dubbo.registry.address.saas>zookeeper://10.4.0.144:2181</pom.dubbo.registry.address.saas>
+                <pom.dubbo.registry.address.saas>zookeeper://127.0.0.1:2181</pom.dubbo.registry.address.saas>
                 <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
                 <pom.dubbo.proxy>jdk</pom.dubbo.proxy>
                 <pom.cas.server>https://testpassport.longdaoyun.com</pom.cas.server>

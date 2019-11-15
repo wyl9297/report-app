@@ -5,9 +5,11 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpen
  * @description :cn.bidlink.nyc.report.dataSource.purchaseProcess.BidOpenSupplierB
  */
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.datasource.nyc.InsertParam;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenSupplierService;
 import com.fr.base.Parameter;
 
 import java.util.ArrayList;
@@ -22,7 +24,7 @@ import java.util.Map;
  * @Date 2019/11/6 11:57
  * @Version 1.0
  **/
-public class BidOpenSupplierBDataSource extends AbstractBaseTableData {
+public class BidOpenSupplierBDataSource extends AbstractColumnPositionTableData {
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -40,7 +42,15 @@ public class BidOpenSupplierBDataSource extends AbstractBaseTableData {
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        String[] column = this.getColumn();
-        return InsertParam.insert(column);
+        DubboBidOpenSupplierService dataService = dataServiceFactory.getDataService(DubboBidOpenSupplierService.class);
+        String projectId = String.valueOf(param.get("projectId"));
+        String companyId = String.valueOf(param.get("companyId"));
+        String supplierId = String.valueOf(param.get("supplierId"));
+        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidOpenSupplierB(projectId,companyId,supplierId);
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        return result;
     }
 }
