@@ -9,7 +9,6 @@ import org.springframework.util.ReflectionUtils;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-
 /**
  * 根据列名定义的位置进行数据结果包装,
  * 从而返回一个报表cpt 显示的数据实体 EmbDataModel
@@ -160,13 +159,10 @@ public abstract class AbstractColumnPositionTableData extends AbstractTableData 
             int j = 0;
             for (String key : strings) {
                 objArray[j] = map.get(key);
-<<<<<<< HEAD
                 //判断map中的字段数有没有大于数组的长度
                 if (j==(objArray.length-1)){
                     break;
                 }
-=======
->>>>>>> 807a5cdae63018af8272c459347fa472f202b5ef
                 j++;
             }
             arrayList.add(objArray);

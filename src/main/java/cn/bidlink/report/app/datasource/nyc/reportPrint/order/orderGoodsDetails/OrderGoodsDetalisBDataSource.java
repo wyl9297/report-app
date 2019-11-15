@@ -44,18 +44,15 @@ public class OrderGoodsDetalisBDataSource extends AbstractColumnPositionTableDat
 
         if(StringUtils.isNotEmpty(goodsId) && StringUtils.isNotEmpty(companyId)){
             ServiceResult<List<Map<String, Object>>> listServiceResult = orderGoodsDetalisService.orderGoodsDetalisB(goodsId, companyId);
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            if ( result == null || result.size() == 0){
+                return null;
+            }
             return listServiceResult.getResult();
         }
         return null;
-
-//        List<Map<String, Object>> resultList = new ArrayList<>();
-//        Map<String, Object> resultMap = new HashMap<>();
-//
-//        for (String s : getColumn()) {
-//            resultMap.put(s,"77777");
-//        }
-//        resultList.add(resultMap);
-//
-//        return resultList;
     }
 }

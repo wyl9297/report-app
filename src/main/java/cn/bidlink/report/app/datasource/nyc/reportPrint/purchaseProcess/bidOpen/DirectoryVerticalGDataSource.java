@@ -37,7 +37,16 @@ public class DirectoryVerticalGDataSource extends AbstractColumnPositionTableDat
         DubboBidOpenService bidOpenService = dataServiceFactory.getDataService(DubboBidOpenService.class);
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
+
         ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenService.directoryVerticalG(projectId, companyId);
+
+        if (!listServiceResult.getSuccess()) {
+            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        }
+        List<Map<String, Object>> result = listServiceResult.getResult();
+        if ( result == null || result.size() == 0){
+            return null;
+        }
         return listServiceResult.getResult();
 
 //        String[] column = this.getColumn();
