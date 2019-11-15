@@ -160,10 +160,13 @@ public abstract class AbstractColumnPositionTableData extends AbstractTableData 
             int j = 0;
             for (String key : strings) {
                 objArray[j] = map.get(key);
+<<<<<<< HEAD
                 //判断map中的字段数有没有大于数组的长度
                 if (j==(objArray.length-1)){
                     break;
                 }
+=======
+>>>>>>> 807a5cdae63018af8272c459347fa472f202b5ef
                 j++;
             }
             arrayList.add(objArray);

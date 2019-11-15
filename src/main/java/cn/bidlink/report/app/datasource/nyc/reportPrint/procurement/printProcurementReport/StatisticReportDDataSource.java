@@ -1,20 +1,15 @@
 package cn.bidlink.report.app.datasource.nyc.reportPrint.procurement.printProcurementReport;
 
-import cn.bidlink.report.app.datasource.abstracts.AbstractBaseTableData;
-import cn.bidlink.report.app.datasource.nyc.InsertParam;
+import cn.bidlink.base.ServiceResult;
+import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
 import cn.bidlink.report.app.utils.DataServiceFactory;
+import cn.bidlink.statistics.report.service.service.report_print.purchases.DubboPrintProcurementReportService;
 import com.fr.base.Parameter;
 
 import java.util.List;
 import java.util.Map;
 
-public class StatisticReportDDataSource extends AbstractBaseTableData {
-
-    @Override
-    protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        List insert = InsertParam.insert(this.getColumn());
-        return insert;
-    }
+public class StatisticReportDDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {
@@ -28,5 +23,19 @@ public class StatisticReportDDataSource extends AbstractBaseTableData {
     protected String[] getColumn() {
         String[] column = { "supplierLevel" ,"leveCount"};
         return column;
+    }
+
+    @Override
+    protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
+
+        DubboPrintProcurementReportService printProcurementReportService = dataServiceFactory.getDataService(DubboPrintProcurementReportService.class);
+        String directoryId = param.get("directoryId");
+        String catalogId = param.get("catalogId");
+        String companyId = param.get("companyId");
+        ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.statisticReportD(directoryId, catalogId, companyId);
+        return listServiceResult.getResult();
+
+//        List insert = InsertParam.insert(this.getColumn());
+//        return insert;
     }
 }
