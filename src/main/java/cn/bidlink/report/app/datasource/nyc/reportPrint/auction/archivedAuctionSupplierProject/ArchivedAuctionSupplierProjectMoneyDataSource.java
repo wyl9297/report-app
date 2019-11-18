@@ -52,7 +52,9 @@ public class ArchivedAuctionSupplierProjectMoneyDataSource extends AbstractColum
             }
             List<Map<String, Object>> result = listServiceResult.getResult();
             return result;
+        } else{
+            log.error("{}数据源所需必要参数不全", log.getName());
+            return null;
         }
-        return null;
     }
 }

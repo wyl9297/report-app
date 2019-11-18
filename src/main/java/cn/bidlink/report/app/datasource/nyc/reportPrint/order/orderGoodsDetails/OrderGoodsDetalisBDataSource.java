@@ -6,6 +6,8 @@ import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.order.DubboOrderGoodsDetalisService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -18,6 +20,7 @@ import java.util.Map;
  *
  */
 public class OrderGoodsDetalisBDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(OrderGoodsDetalisBDataSource.class);
 
     @Override
     protected Parameter[] getParameter() {
@@ -51,7 +54,9 @@ public class OrderGoodsDetalisBDataSource extends AbstractColumnPositionTableDat
             }
             List<Map<String, Object>> result = listServiceResult.getResult();
             return result;
+        } else{
+            log.error("{}数据源所需必要参数不全", log.getName());
+            return null;
         }
-        return null;
     }
 }

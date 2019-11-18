@@ -52,9 +52,10 @@ public class ArchivedAuctionDirectoryDataSource extends AbstractColumnPositionTa
             }
             List<Map<String, Object>> result = listServiceResult.getResult();
             return result;
+        } else{
+            logger.error("{}数据源所需必要参数不全", logger.getName());
+            return null;
         }
-        return null;
-
 
     }
 

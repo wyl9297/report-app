@@ -11,6 +11,8 @@ import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenDirectoryVerticalService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,8 @@ import java.util.Map;
  * @Version 1.0
  **/
 public class TotalSheetNameDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(TotalSheetNameDataSource.class);
+
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -51,7 +55,9 @@ public class TotalSheetNameDataSource extends AbstractColumnPositionTableData {
             }
             List<Map<String, Object>> result = listServiceResult.getResult();
             return result;
+        } else{
+            log.error("{}数据源所需必要参数不全", log.getName());
+            return null;
         }
-        return null;
     }
 }
