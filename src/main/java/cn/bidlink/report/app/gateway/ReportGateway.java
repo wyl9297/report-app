@@ -193,7 +193,9 @@ public class ReportGateway {
                                 }
                             }
                         }
-                        String result = appendShowColumns(templateId,primaryId,extendParam);
+                        // todo 暂时注释 因为没有部署
+                       // String result = appendShowColumns(templateId,primaryId,extendParam);
+                        String result = null;
                         if( StringUtils.isNotEmpty(result) ){
                             sb.append("&").append("Columns").append("=").append(result);
                         }
@@ -207,6 +209,7 @@ public class ReportGateway {
                 }
             }
         }
+        // todo 暂时注释 因为没有部署
         //调用接口查询该公司的水印值
         ServiceResult<String> fineWaterMark = dubboAppsetPrintCompanySetService.getFineWaterMark(UserContext.getCompanyId());
         if ( !fineWaterMark.getSuccess() ) {
