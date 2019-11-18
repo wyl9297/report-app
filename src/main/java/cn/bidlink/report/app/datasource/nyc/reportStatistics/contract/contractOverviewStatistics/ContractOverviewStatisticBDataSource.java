@@ -2,16 +2,19 @@ package cn.bidlink.report.app.datasource.nyc.reportStatistics.contract.contractO
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_statistics.DubboContractOverviewStatisticsService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class ContractOverviewStatisticBDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(ContractOverviewStatisticBDataSource.class);
 
     @Override
     protected Parameter[] getParameter() {
@@ -39,11 +42,17 @@ public class ContractOverviewStatisticBDataSource extends AbstractColumnPosition
         if (endTime != null && !"".equals(endTime)) {
             endTime = endTime.concat(" 23:59:59");
         }
-        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractOverviewStatisticB(companyId, startTime, endTime);
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        List<Map<String, Object>> result = new ArrayList<>();
+        boolean sel = ParamUtils.sel(param, companyId, startTime, endTime);
+        if (sel == Boolean.FALSE){
+            log.error("{}数据源所需必要参数不全", log.getName());
+        }else {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractOverviewStatisticB(companyId, startTime, endTime);
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            result = listServiceResult.getResult();
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }
 }

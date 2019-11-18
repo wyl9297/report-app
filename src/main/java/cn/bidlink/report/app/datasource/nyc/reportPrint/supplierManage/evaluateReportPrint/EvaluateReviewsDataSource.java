@@ -2,14 +2,19 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.supplierManage.evaluate
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.suppliermanage.DubboEvaluateReportPrintService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class EvaluateReviewsDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(EvaluateReviewsDataSource.class);
 
     @Override
     protected Parameter[] getParameter() {
@@ -39,27 +44,22 @@ public class EvaluateReviewsDataSource extends AbstractColumnPositionTableData {
         String chooseType = param.get("chooseType");
         String catalogId = param.get("catalogId");
         String companyId = param.get("companyId");
-        ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.evaluateReviews(catalogId, reportId, companyId, beginTime, endTime, chooseType);
+        List<Map<String, Object>> result = new ArrayList<>();
+        boolean sel = ParamUtils.sel(param, reportId, catalogId, companyId);
+        if (sel){
+            log.error("{}数据源所需必要参数不全", log.getName());
+        }else {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.evaluateReviews(catalogId, reportId, companyId, beginTime, endTime, chooseType);
 
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            result = listServiceResult.getResult();
+            if ( result == null || result.size() == 0){
+                return null;
+            }
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null || result.size() == 0){
-            return null;
-        }
-
-        return listServiceResult.getResult();
-
-//        List<Map<String, Object>> resultList = new ArrayList<>();
-//        Map<String, Object> resultMap = new HashMap<>();
-//
-//        for (String s : getColumn()) {
-//            resultMap.put(s,"77777");
-//        }
-//        resultList.add(resultMap);
-//
-//        return resultList;
+        return result;
     }
 
 }

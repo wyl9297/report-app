@@ -2,16 +2,19 @@ package cn.bidlink.report.app.datasource.nyc.reportStatistics.contract.totalCont
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_statistics.DubboTotalContractInfoService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class ContractTotalInfoDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(ContractTotalInfoDataSource.class);
 
     @Override
     protected Parameter[] getParameter() {
@@ -49,11 +52,18 @@ public class ContractTotalInfoDataSource extends AbstractColumnPositionTableData
         String agreement = (String.valueOf(param.get("agreement")).equals(""))?null:String.valueOf(param.get("agreement"));
         //agreement 只有为 ( 1:协议 2:非协议 ) 时 参与过滤
         agreement = agreement.length() > 1 ? null: agreement;
-        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractTotalInfo(companyId, createTimeStart, createTimeEnd, signTimeStart, signTimeEnd, keyWords, keyValue, filiale, agreement);
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+
+        List<Map<String, Object>> result = new ArrayList<>();
+        boolean sel = ParamUtils.sel(param, companyId);
+        if (sel == Boolean.FALSE){
+            log.error("{}数据源所需必要参数不全", log.getName());
+        }else {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.contractTotalInfo(companyId, createTimeStart, createTimeEnd, signTimeStart, signTimeEnd, keyWords, keyValue, filiale, agreement);
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            result = listServiceResult.getResult();
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }
 }

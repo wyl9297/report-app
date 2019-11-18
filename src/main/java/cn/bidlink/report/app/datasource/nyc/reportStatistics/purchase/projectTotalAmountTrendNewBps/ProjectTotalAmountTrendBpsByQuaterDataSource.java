@@ -8,11 +8,14 @@ package cn.bidlink.report.app.datasource.nyc.reportStatistics.purchase.projectTo
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
-import cn.bidlink.report.app.datasource.nyc.InsertParam;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectTotalAmountTrendNewBpsService;
 import com.fr.base.Parameter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -24,6 +27,8 @@ import java.util.Map;
  * @Version 1.0
  **/
 public class ProjectTotalAmountTrendBpsByQuaterDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(ProjectTotalAmountTrendBpsByQuaterDataSource.class);
+
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -44,11 +49,17 @@ public class ProjectTotalAmountTrendBpsByQuaterDataSource extends AbstractColumn
         String companyId = String.valueOf(param.get("compId"));
         String startTime = String.valueOf(param.get("begin"));
         String endTime = String.valueOf(param.get("end"));
-        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.projectTotalAmountTrendBpsByQuater(companyId, startTime, endTime);
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        List<Map<String, Object>> result = new ArrayList<>();
+        boolean sel = ParamUtils.sel(param, companyId, startTime, endTime);
+        if (sel == Boolean.FALSE){
+            log.error("{}数据源所需必要参数不全", log.getName());
+        }else {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.projectTotalAmountTrendBpsByQuater(companyId, startTime, endTime);
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            result = listServiceResult.getResult();
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
         return result;
     }
 }
