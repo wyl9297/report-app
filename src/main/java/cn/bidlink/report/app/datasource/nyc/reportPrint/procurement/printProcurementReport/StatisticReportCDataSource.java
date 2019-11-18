@@ -2,6 +2,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.procurement.printProcur
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchases.DubboPrintProcurementReportService;
 import com.fr.base.Parameter;
@@ -37,15 +38,17 @@ public class StatisticReportCDataSource extends AbstractColumnPositionTableData 
         String updateTimeEnd = param.get("updateTimeEnd");
         String companyId = param.get("companyId");
 
-        ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.statisticReportC(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);
+        boolean panduan = ParamUtils.panduan(param, companyId);
 
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        if (panduan) {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.statisticReportC(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);
+
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null || result.size() == 0){
-            return null;
-        }
-        return listServiceResult.getResult();
+        return null;
     }
 }
