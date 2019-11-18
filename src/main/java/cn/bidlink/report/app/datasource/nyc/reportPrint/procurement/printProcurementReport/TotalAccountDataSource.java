@@ -2,6 +2,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.procurement.printProcur
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchases.DubboPrintProcurementReportService;
 import com.fr.base.Parameter;
@@ -13,7 +14,7 @@ public class TotalAccountDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected Parameter[] getParameter() {
-        return new Parameter[] {
+        return new Parameter[]{
                 new Parameter("directoryId"),
                 new Parameter("catalogId"),
                 new Parameter("updateTimeBegin"),
@@ -23,7 +24,7 @@ public class TotalAccountDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected String[] getColumn() {
-        String[] column = { "totalprice" ,"totalnum","dealprice","dealnum","totalCount"};
+        String[] column = {"totalprice", "totalnum", "dealprice", "dealnum", "totalCount"};
         return column;
     }
 
@@ -36,15 +37,18 @@ public class TotalAccountDataSource extends AbstractColumnPositionTableData {
         String updateTimeBegin = param.get("updateTimeBegin");
         String updateTimeEnd = param.get("updateTimeEnd");
         String companyId = param.get("companyId");
-        ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.totalAccount(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+
+        boolean panduan = ParamUtils.panduan(param, companyId);
+
+        if (panduan) {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.totalAccount(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null || result.size() == 0){
-            return null;
-        }
-        return listServiceResult.getResult();
+        return null;
 
     }
 }

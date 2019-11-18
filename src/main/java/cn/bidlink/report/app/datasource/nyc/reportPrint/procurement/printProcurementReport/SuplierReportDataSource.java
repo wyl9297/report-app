@@ -2,6 +2,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.procurement.printProcur
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchases.DubboPrintProcurementReportService;
 import com.fr.base.Parameter;
@@ -38,17 +39,17 @@ public class SuplierReportDataSource extends AbstractColumnPositionTableData {
         String updateTimeEnd = param.get("updateTimeEnd");
         String companyId = param.get("companyId");
 
-        ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.suplierReport(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
-        }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null){
-            return null;
-        }
-        return listServiceResult.getResult();
+        boolean panduan = ParamUtils.panduan(param, companyId);
 
-//        List insert = InsertParam.insert(this.getColumn());
-//        return insert;
+        if (panduan) {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.suplierReport(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
+        }
+        return null;
+
     }
 }

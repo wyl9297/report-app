@@ -7,6 +7,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpen
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenDirectoryVerticalService;
 import com.fr.base.Parameter;
@@ -25,13 +26,13 @@ public class DirectoryVerticalCDataSource extends AbstractColumnPositionTableDat
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
-                new Parameter("projectId"),new Parameter("companyId")
+                new Parameter("projectId"), new Parameter("companyId")
         };
     }
 
     @Override
     protected String[] getColumn() {
-        return new String[]{ "supplier_id" ,"project_id","supplier_name","supplier_type","bid_price","deal_total_price","bid_mark","project_item_id","code","data1","data2","data3","data4","data5","data6","data7","data8","bid_status" };
+        return new String[]{"supplier_id", "project_id", "supplier_name", "supplier_type", "bid_price", "deal_total_price", "bid_mark", "project_item_id", "code", "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "bid_status"};
     }
 
     @Override
@@ -40,18 +41,19 @@ public class DirectoryVerticalCDataSource extends AbstractColumnPositionTableDat
         DubboBidOpenDirectoryVerticalService bidOpenDirectoryVerticalService = dataServiceFactory.getDataService(DubboBidOpenDirectoryVerticalService.class);
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
-        ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenDirectoryVerticalService.directoryVerticalC(projectId, companyId);
 
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
-        }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null || result.size() == 0){
-            return null;
-        }
-        return listServiceResult.getResult();
+        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
 
-//        String[] column = this.getColumn();
-//        return InsertParam.insert(column);
+        if (panduan) {
+
+            ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenDirectoryVerticalService.directoryVerticalC(projectId, companyId);
+
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
+        }
+        return null;
     }
 }

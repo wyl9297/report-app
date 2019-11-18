@@ -2,6 +2,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpen
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenDirectoryHorizontalService;
 import com.fr.base.Parameter;
@@ -27,26 +28,29 @@ public class ProcessProjectDataSource extends AbstractColumnPositionTableData {
 
     @Override
     protected String[] getColumn() {
-        return new String[]{ "项目编号" ,"项目名称","用户名称","创建时间","project_status","approve_status","type","divide_bid_mark","报价精度","purchase_name"};
+        return new String[]{"项目编号", "项目名称", "用户名称", "创建时间", "project_status", "approve_status", "type", "divide_bid_mark", "报价精度", "purchase_name"};
     }
+
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
 
         DubboBidOpenDirectoryHorizontalService bidOpenDirectoryHorizontalService = dataServiceFactory.getDataService(DubboBidOpenDirectoryHorizontalService.class);
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
-        ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenDirectoryHorizontalService.processProject(projectId, companyId);
 
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
+
+        if (panduan) {
+
+            ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenDirectoryHorizontalService.processProject(projectId, companyId);
+
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null || result.size() == 0){
-            return null;
-        }
-        return listServiceResult.getResult();
-//        String[] column = this.getColumn();
-//        return InsertParam.insert(column);
+        return null;
     }
 }
 

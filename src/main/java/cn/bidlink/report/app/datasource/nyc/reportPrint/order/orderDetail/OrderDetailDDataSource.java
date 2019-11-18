@@ -2,10 +2,12 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderDetail;
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.order.DubboOrderDetailService;
 import com.fr.base.Parameter;
-import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -18,6 +20,7 @@ import java.util.Map;
  *
  */
 public class OrderDetailDDataSource extends AbstractColumnPositionTableData {
+    private static Logger log = LoggerFactory.getLogger(OrderDetailDDataSource.class);
 
     @Override
     protected Parameter[] getParameter() {
@@ -39,20 +42,19 @@ public class OrderDetailDDataSource extends AbstractColumnPositionTableData {
         String orderId = param.get("orderId");
         String companyId = param.get("companyId");
 
-        if(StringUtils.isNotEmpty(orderId) && StringUtils.isNotEmpty(companyId)){
+        boolean panduan = ParamUtils.panduan(param, orderId, companyId);
+
+        if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = orderDetailService.orderDetailD(orderId, companyId);
-            return listServiceResult.getResult();
+            if (!listServiceResult.getSuccess()) {
+                log.error("{}调用{}时发生未知异常,error Message:{}", "DubboOrderDetailService.OrderDetailD",
+                        "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
         }
         return null;
 
-//        List<Map<String, Object>> resultList = new ArrayList<>();
-//        Map<String, Object> resultMap = new HashMap<>();
-//
-//        for (String s : getColumn()) {
-//            resultMap.put(s,"77777");
-//        }
-//        resultList.add(resultMap);
-//
-//        return resultList;
     }
 }

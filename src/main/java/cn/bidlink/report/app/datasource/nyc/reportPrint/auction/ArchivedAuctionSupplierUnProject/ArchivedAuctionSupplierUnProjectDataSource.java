@@ -2,6 +2,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.auction.ArchivedAuction
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.auction.DubboArchivedAuctionSupplierUnProjectService;
 import com.fr.base.Parameter;
@@ -19,6 +20,7 @@ import java.util.Map;
  */
 public class ArchivedAuctionSupplierUnProjectDataSource extends AbstractColumnPositionTableData {
     private static Logger log = LoggerFactory.getLogger(ArchivedAuctionSupplierUnProjectDataSource.class);
+
     @Override
     protected Parameter[] getParameter() {
         return new Parameter[]{
@@ -41,13 +43,18 @@ public class ArchivedAuctionSupplierUnProjectDataSource extends AbstractColumnPo
         String purchaserId = String.valueOf(param.get("purchaserId"));
         String supplierId = String.valueOf(param.get("supplierId"));
 
-        ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.archivedAuctionSupplierUnProject(projectId, purchaserId, supplierId);
-        if (!listServiceResult.getSuccess()){
-            log.error("{}调用{}时发生未知异常,error Message:{}", "DubboArchivedAuctionSupplierUnProjectService.archivedAuctionSupplierUnProject",
-                    "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        boolean panduan = ParamUtils.panduan(param, projectId, purchaserId, supplierId);
+
+        if (panduan) {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.archivedAuctionSupplierUnProject(projectId, purchaserId, supplierId);
+            if (!listServiceResult.getSuccess()) {
+                log.error("{}调用{}时发生未知异常,error Message:{}", "DubboArchivedAuctionSupplierUnProjectService.archivedAuctionSupplierUnProject",
+                        "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        return result;
+        return null;
     }
 }

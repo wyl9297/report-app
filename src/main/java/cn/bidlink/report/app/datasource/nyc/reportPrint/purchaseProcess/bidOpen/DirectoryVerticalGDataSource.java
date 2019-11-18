@@ -2,6 +2,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpen
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenService;
 import com.fr.base.Parameter;
@@ -26,9 +27,9 @@ public class DirectoryVerticalGDataSource extends AbstractColumnPositionTableDat
     }
 
     @Override
-    protected  String[] getColumn() {
-        return new String[] { "code" ,"name","unit_name","spec","plan_amount","description","bid_price","usedepart","need_time","bid_mark","supplier_project_bid_id","tech_parameters","purpose","applied_enterprise","applied_person_and_phone",
-                "data1","data2","data3","data4","data5","data6","data7","data8","data9","data10","data11","data12","data13","data14","data15"};
+    protected String[] getColumn() {
+        return new String[]{"code", "name", "unit_name", "spec", "plan_amount", "description", "bid_price", "usedepart", "need_time", "bid_mark", "supplier_project_bid_id", "tech_parameters", "purpose", "applied_enterprise", "applied_person_and_phone",
+                "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10", "data11", "data12", "data13", "data14", "data15"};
     }
 
     @Override
@@ -38,19 +39,18 @@ public class DirectoryVerticalGDataSource extends AbstractColumnPositionTableDat
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
 
-        ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenService.directoryVerticalG(projectId, companyId);
+        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
 
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
-        }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null || result.size() == 0){
-            return null;
-        }
-        return listServiceResult.getResult();
+        if (panduan) {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenService.directoryVerticalG(projectId, companyId);
 
-//        String[] column = this.getColumn();
-//        return InsertParam.insert(column);
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
+        }
+        return null;
     }
 }
 

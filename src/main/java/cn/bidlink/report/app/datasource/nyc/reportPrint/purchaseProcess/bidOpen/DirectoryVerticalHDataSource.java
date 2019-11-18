@@ -2,6 +2,7 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.bidOpen
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenService;
 import com.fr.base.Parameter;
@@ -27,24 +28,28 @@ public class DirectoryVerticalHDataSource extends AbstractColumnPositionTableDat
 
     @Override
     protected String[] getColumn() {
-        return new String[]{ "order_number" ,"item_name","required"};
+        return new String[]{"order_number", "item_name", "required"};
     }
+
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
 
         DubboBidOpenService bidOpenService = dataServiceFactory.getDataService(DubboBidOpenService.class);
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
-        ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenService.directoryVerticalH(projectId, companyId);
 
-        if (!listServiceResult.getSuccess()) {
-            throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
+
+        if (panduan) {
+            ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenService.directoryVerticalH(projectId, companyId);
+
+            if (!listServiceResult.getSuccess()) {
+                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
+            }
+            List<Map<String, Object>> result = listServiceResult.getResult();
+            return result;
         }
-        List<Map<String, Object>> result = listServiceResult.getResult();
-        if ( result == null || result.size() == 0){
-            return null;
-        }
-        return listServiceResult.getResult();
+        return null;
     }
 }
 

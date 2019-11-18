@@ -2,10 +2,10 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.order.orderGoodsInfo;
 
 import cn.bidlink.base.ServiceResult;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.order.DubboOrderGoodsInfoService;
 import com.fr.base.Parameter;
-import org.apache.commons.lang.StringUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -39,28 +39,18 @@ public class OrderGoodsInfoADataSource extends AbstractColumnPositionTableData {
         String goodsId = param.get("goodsId");
         String companyId = param.get("companyId");
 
-        if(StringUtils.isNotEmpty(goodsId) && StringUtils.isNotEmpty(companyId)){
+        boolean panduan = ParamUtils.panduan(param, goodsId, companyId);
+
+        if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = orderGoodsInfoService.orderGoodsInfoA(goodsId, companyId);
 
             if (!listServiceResult.getSuccess()) {
                 throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
             }
             List<Map<String, Object>> result = listServiceResult.getResult();
-            if ( result == null || result.size() == 0){
-                return null;
-            }
-            return listServiceResult.getResult();
+            return result;
         }
         return null;
 
-//        List<Map<String, Object>> resultList = new ArrayList<>();
-//        Map<String, Object> resultMap = new HashMap<>();
-//
-//        for (String s : getColumn()) {
-//            resultMap.put(s,"77777");
-//        }
-//        resultList.add(resultMap);
-//
-//        return resultList;
     }
 }
