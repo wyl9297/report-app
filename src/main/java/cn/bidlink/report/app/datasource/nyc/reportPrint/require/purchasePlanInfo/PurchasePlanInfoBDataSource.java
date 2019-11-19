@@ -40,7 +40,7 @@ public class PurchasePlanInfoBDataSource extends AbstractColumnPositionTableData
         String planId = param.get("planId");
         String companyId = param.get("companyId");
         List<Map<String, Object>> result = new ArrayList<>();
-        boolean sel = ParamUtils.sel(param, planId, companyId);
+        boolean sel = ParamUtils.sel(param, "planId", "companyId");
         if (sel = Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {

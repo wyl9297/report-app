@@ -24,7 +24,7 @@ public class ProjectOverviewStatisticsBpsCDataSource extends AbstractColumnPosit
         String endTime = String.valueOf(param.get("end"));
         String code = String.valueOf(param.get("selectDepName"));
         List<Map<String, Object>> result = new ArrayList<>();
-        boolean sel = ParamUtils.sel(param, companyId, startTime, endTime);
+        boolean sel = ParamUtils.sel(param, "companyId", "startTime", "endTime");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {

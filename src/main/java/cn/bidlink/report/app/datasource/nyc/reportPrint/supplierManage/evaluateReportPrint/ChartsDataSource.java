@@ -45,7 +45,7 @@ public class ChartsDataSource extends AbstractColumnPositionTableData {
         String catalogId = param.get("catalogId");
         String companyId = param.get("companyId");
         List<Map<String, Object>> result = new ArrayList<>();
-        boolean sel = ParamUtils.sel(param, reportId, catalogId, companyId);
+        boolean sel = ParamUtils.sel(param, "reportId", "catalogId", "companyId");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {

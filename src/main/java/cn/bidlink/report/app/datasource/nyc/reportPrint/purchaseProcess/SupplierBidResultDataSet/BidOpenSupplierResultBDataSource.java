@@ -25,7 +25,7 @@ public class BidOpenSupplierResultBDataSource extends AbstractColumnPositionTabl
 
         List<Map<String, Object>> result = new ArrayList<>();
         //校验是否缺失必填参数
-        boolean sel = ParamUtils.sel(param, projectId, companyId, supplierId);
+        boolean sel = ParamUtils.sel(param, "projectId", "companyId", "supplierId");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {

@@ -52,7 +52,7 @@ public class bidTrendNewMonthDataSource extends AbstractColumnPositionTableData 
         String endTime = String.valueOf(param.get("end"));
         String companyId = String.valueOf(param.get("companyId"));
         List<Map<String, Object>> result = new ArrayList<>();
-        boolean sel = ParamUtils.sel(param, companyId, startTime, endTime, supplierId);
+        boolean sel = ParamUtils.sel(param, "companyId", "startTime", "endTime", "supplierId");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {

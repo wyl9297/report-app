@@ -38,7 +38,7 @@ public class PurchasePlanInfoADataSource extends AbstractColumnPositionTableData
         String companyId = param.get("companyId");
         List<Map<String, Object>> result = new ArrayList<>();
         //校验是否缺失必填参数
-        boolean sel = ParamUtils.sel(param, planId, companyId);
+        boolean sel = ParamUtils.sel(param, "planId", "companyId");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {

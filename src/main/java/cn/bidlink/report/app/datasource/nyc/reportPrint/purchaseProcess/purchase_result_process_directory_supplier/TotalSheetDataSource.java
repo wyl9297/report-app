@@ -22,7 +22,7 @@ public class TotalSheetDataSource extends AbstractColumnPositionTableData {
         String companyId = String.valueOf(param.get("companyId"));
         List<Map<String, Object>> result = new ArrayList<>();
         //校验是否缺失必填参数
-        boolean sel = ParamUtils.sel(param, projectId, companyId);
+        boolean sel = ParamUtils.sel(param, "projectId", "companyId");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {
