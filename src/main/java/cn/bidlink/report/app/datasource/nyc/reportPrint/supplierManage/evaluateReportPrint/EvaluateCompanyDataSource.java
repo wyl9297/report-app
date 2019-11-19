@@ -46,7 +46,7 @@ public class EvaluateCompanyDataSource extends AbstractColumnPositionTableData {
         String companyId = param.get("companyId");
         List<Map<String, Object>> result = new ArrayList<>();
         boolean sel = ParamUtils.sel(param, "reportId", "catalogId", "companyId");
-        if (sel){
+        if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {
             ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.evaluateCompany(catalogId, reportId, companyId, beginTime, endTime, chooseType);

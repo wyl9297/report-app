@@ -46,10 +46,10 @@ public class EvaluateReviewsDataSource extends AbstractColumnPositionTableData {
         String companyId = param.get("companyId");
         List<Map<String, Object>> result = new ArrayList<>();
         boolean sel = ParamUtils.sel(param, "reportId", "catalogId", "companyId");
-        if (sel){
+        if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {
-            ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.evaluateReviews(catalogId, reportId, companyId, beginTime, endTime, chooseType);
+            ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.evaluateReviews(reportId, beginTime, endTime, chooseType, catalogId, companyId);
 
             if (!listServiceResult.getSuccess()) {
                 throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());

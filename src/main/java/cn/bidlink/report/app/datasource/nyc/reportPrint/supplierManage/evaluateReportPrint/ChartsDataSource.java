@@ -49,7 +49,7 @@ public class ChartsDataSource extends AbstractColumnPositionTableData {
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {
-            ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.charts(beginTime, endTime, reportId, chooseType, catalogId, companyId);
+            ServiceResult<List<Map<String, Object>>> listServiceResult = evaluateReportPrintService.charts(catalogId, reportId, companyId, beginTime, endTime, chooseType);
 
             if (!listServiceResult.getSuccess()) {
                 throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
