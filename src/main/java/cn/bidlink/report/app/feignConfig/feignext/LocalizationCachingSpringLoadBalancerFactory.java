@@ -39,7 +39,7 @@ public class LocalizationCachingSpringLoadBalancerFactory extends CachingSpringL
 
     static {
         //本地化的注册中心地址
-        eurekaHostMap.put(11113174597L , "192.168.1.44:8035");
+        eurekaHostMap.put(11113174597L , "20.8.0.222:8035");
     }
 
 
