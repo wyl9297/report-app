@@ -54,7 +54,7 @@ public class ContractTotalInfoDataSource extends AbstractColumnPositionTableData
         agreement = agreement.length() > 1 ? null: agreement;
 
         List<Map<String, Object>> result = new ArrayList<>();
-        boolean sel = ParamUtils.sel(param, "companyId");
+        boolean sel = ParamUtils.sel(param, "compId");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {

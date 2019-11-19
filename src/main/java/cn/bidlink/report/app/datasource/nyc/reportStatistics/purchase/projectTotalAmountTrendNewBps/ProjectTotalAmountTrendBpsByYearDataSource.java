@@ -50,7 +50,7 @@ public class ProjectTotalAmountTrendBpsByYearDataSource extends AbstractColumnPo
         String startTime = String.valueOf(param.get("begin"));
         String endTime = String.valueOf(param.get("end"));
         List<Map<String, Object>> result = new ArrayList<>();
-        boolean sel = ParamUtils.sel(param, "companyId", "startTime", "endTime");
+        boolean sel = ParamUtils.sel(param, "compId", "begin", "end");
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {
