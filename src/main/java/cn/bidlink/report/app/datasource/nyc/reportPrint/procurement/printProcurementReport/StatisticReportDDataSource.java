@@ -37,7 +37,7 @@ public class StatisticReportDDataSource extends AbstractColumnPositionTableData 
         String catalogId = param.get("catalogId");
         String companyId = param.get("companyId");
 
-        boolean panduan = ParamUtils.panduan(param, companyId);
+        boolean panduan = ParamUtils.panduan(param, "companyId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.statisticReportD(directoryId, catalogId, companyId);

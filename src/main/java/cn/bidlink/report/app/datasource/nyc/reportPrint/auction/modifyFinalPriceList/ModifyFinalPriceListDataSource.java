@@ -36,7 +36,7 @@ public class ModifyFinalPriceListDataSource extends AbstractColumnPositionTableD
         String projectId = String.valueOf(param.get("projectId"));
         String companyId = String.valueOf(param.get("companyId"));
 
-        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "companyId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.modifyFinalPriceList(projectId, companyId);

@@ -49,7 +49,7 @@ public class BidOpenSupplierBDataSource extends AbstractColumnPositionTableData 
         String companyId = String.valueOf(param.get("companyId"));
         String supplierId = String.valueOf(param.get("supplierId"));
 
-        boolean panduan = ParamUtils.panduan(param, projectId, supplierId, companyId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "supplierId", "companyId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidOpenSupplierB(projectId, companyId, supplierId);

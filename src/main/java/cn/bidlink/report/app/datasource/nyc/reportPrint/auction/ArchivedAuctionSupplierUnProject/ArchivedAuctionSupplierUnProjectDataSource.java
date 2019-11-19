@@ -43,7 +43,7 @@ public class ArchivedAuctionSupplierUnProjectDataSource extends AbstractColumnPo
         String purchaserId = String.valueOf(param.get("purchaserId"));
         String supplierId = String.valueOf(param.get("supplierId"));
 
-        boolean panduan = ParamUtils.panduan(param, projectId, purchaserId, supplierId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "projectId", "projectId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.archivedAuctionSupplierUnProject(projectId, purchaserId, supplierId);

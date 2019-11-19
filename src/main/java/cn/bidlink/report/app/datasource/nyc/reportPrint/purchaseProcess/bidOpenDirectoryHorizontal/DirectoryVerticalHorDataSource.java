@@ -43,7 +43,7 @@ public class DirectoryVerticalHorDataSource extends AbstractColumnPositionTableD
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
 
-        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "companyId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenDirectoryHorizontalService.directoryVerticalHor(projectId, companyId);

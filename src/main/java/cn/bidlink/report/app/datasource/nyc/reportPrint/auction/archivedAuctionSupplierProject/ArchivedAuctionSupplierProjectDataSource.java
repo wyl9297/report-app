@@ -41,7 +41,7 @@ public class ArchivedAuctionSupplierProjectDataSource extends AbstractColumnPosi
         String purchaserId = String.valueOf(param.get("purchaserId"));
         String supplierId = String.valueOf(param.get("supplierId"));
 
-        boolean panduan = ParamUtils.panduan(param, projectId, purchaserId, supplierId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "purchaserId", "supplierId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.archivedAuctionSupplierProject(projectId, purchaserId, supplierId);

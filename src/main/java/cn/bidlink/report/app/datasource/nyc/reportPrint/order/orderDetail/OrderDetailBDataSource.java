@@ -43,7 +43,7 @@ public class OrderDetailBDataSource extends AbstractColumnPositionTableData {
         String orderId = param.get("orderId");
         String companyId = param.get("companyId");
 
-        boolean panduan = ParamUtils.panduan(param, orderId, companyId);
+        boolean panduan = ParamUtils.panduan(param, "orderId", "companyId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = orderDetailService.orderDetailB(orderId, companyId);

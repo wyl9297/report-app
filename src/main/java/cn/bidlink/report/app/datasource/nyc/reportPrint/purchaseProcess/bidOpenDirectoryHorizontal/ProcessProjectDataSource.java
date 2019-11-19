@@ -41,7 +41,7 @@ public class ProcessProjectDataSource extends AbstractColumnPositionTableData {
         String projectId = param.get("projectId");
         String companyId = param.get("companyId");
 
-        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "companyId");
 
         if (panduan) {
 

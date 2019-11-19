@@ -38,7 +38,7 @@ public class SupplierInfoDataSource extends AbstractColumnPositionTableData {
         String companyId = String.valueOf(param.get("companyId"));
         String supplierId = String.valueOf(param.get("supplierId"));
 
-        boolean panduan = ParamUtils.panduan(param, projectId, companyId, supplierId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "companyId", "supplierId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.supplierInfo(projectId, companyId, supplierId);

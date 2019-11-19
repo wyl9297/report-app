@@ -46,7 +46,7 @@ public class BidDirectoryHistoryDataSource extends AbstractColumnPositionTableDa
         String endTime = String.valueOf(param.get("endTime"));
         String compId = String.valueOf(param.get("compId"));
 
-        boolean panduan = ParamUtils.panduan(param, compId);
+        boolean panduan = ParamUtils.panduan(param, "compId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.bidDirectoryHistory(directoryId, compId, projectOrSupplierName, startTime, endTime);

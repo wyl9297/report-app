@@ -40,7 +40,7 @@ public class NotPackageAuctionSupplierListDataSource extends AbstractColumnPosit
         String companyId = String.valueOf(param.get("companyId"));
         String directoryName = String.valueOf(param.get("directoryName"));
 
-        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "companyId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.notPackageAuctionSupplierList(projectId, companyId, directoryName);

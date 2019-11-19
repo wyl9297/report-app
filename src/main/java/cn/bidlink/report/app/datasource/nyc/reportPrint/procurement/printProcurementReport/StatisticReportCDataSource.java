@@ -41,7 +41,7 @@ public class StatisticReportCDataSource extends AbstractColumnPositionTableData 
         String updateTimeEnd = param.get("updateTimeEnd");
         String companyId = param.get("companyId");
 
-        boolean panduan = ParamUtils.panduan(param, companyId);
+        boolean panduan = ParamUtils.panduan(param, "companyId");
 
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = printProcurementReportService.statisticReportC(directoryId, catalogId, updateTimeBegin, updateTimeEnd, companyId);

@@ -30,7 +30,7 @@ public class ProcessItemAndItemLosingBidDataSource extends AbstractColumnPositio
         DubboPurchaseResultProcessDirectoryService dataService = dataServiceFactory.getDataService(DubboPurchaseResultProcessDirectoryService.class);
         String projectId = String.valueOf(param.get("projectId"));
         String companyId = String.valueOf(param.get("companyId"));
-        boolean panduan = ParamUtils.panduan(param, projectId, companyId);
+        boolean panduan = ParamUtils.panduan(param, "projectId", "companyId");
 
         if (panduan) {
 
