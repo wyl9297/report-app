@@ -46,7 +46,7 @@ public class DirectoryVerticalHDataSource extends AbstractColumnPositionTableDat
         if (panduan) {
             ServiceResult<List<Map<String, Object>>> listServiceResult = bidOpenDirectoryHorizontalService.directoryVerticalH(projectId, companyId);
 
-            if (listServiceResult.getSuccess()) {
+            if (!listServiceResult.getSuccess()) {
                 throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
             }
             List<Map<String, Object>> result = listServiceResult.getResult();
