@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WorkBook xmlVersion="20170720" releaseVersion="10.0.0">
 <TableDataMap>
-<TableData name="supplier_price_trend" class="com.fr.data.impl.EmbeddedTableData">
-<Parameters/>
-<DSName>
-<![CDATA[]]></DSName>
-<ColumnNames>
-<![CDATA[supplier_id,,.,,price,,.,,month]]></ColumnNames>
-<ColumnTypes>
-<![CDATA[java.lang.Integer,java.lang.Double,java.lang.Integer]]></ColumnTypes>
-<RowData ColumnTypes="java.lang.Integer,java.lang.Double,java.lang.Integer">
-<![CDATA[--*h6!$DQc^iq>aiD`YNDbM$Ufa'TQU-&<b39/nD;:m$!Bq$Xn$Wb*s(B~
-]]></RowData>
-</TableData>
 <TableData name="supplier_dealprice_trend" class="com.fr.data.impl.ClassTableData">
 <Parameters>
 <Parameter>
@@ -32,19 +20,6 @@
 </Parameter>
 </Parameters>
 <ClassTableDataAttr className="cn.bidlink.report.app.datasource.dashboard.DashBoardWithDirectoryPriceHistoryDataSource"/>
-</TableData>
-<TableData name="project_sum_price" class="com.fr.data.impl.EmbeddedTableData">
-<Parameters/>
-<DSName>
-<![CDATA[]]></DSName>
-<ColumnNames>
-<![CDATA[month,,.,,sum_price,,.,,company_id]]></ColumnNames>
-<ColumnTypes>
-<![CDATA[java.lang.Integer,java.lang.Integer,java.lang.Integer]]></ColumnTypes>
-<RowData ColumnTypes="java.lang.Integer,java.lang.Integer,java.lang.Integer">
-<![CDATA[29\]A'^d&/,co!tGpoAK9Mq*LFMJ%MP4RJdZT8g.B".Uc"iRT4i4HaaF</<3a13#!r$YSLLV!
-Ue94gr^Y>BEPRk5t~
-]]></RowData>
 </TableData>
 <TableData name="supplier_rank" class="com.fr.data.impl.ClassTableData">
 <Parameters/>
@@ -1825,7 +1800,7 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[<a target=\"_blank\" style=\"color:black;text-decoration:none;\" href=\"www.baidu.com\">采购价格历史走势</a>]]></O>
+<![CDATA[<span id=\"supplier_trend\">供应商采购金额历史走势</span>]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -3384,17 +3359,6 @@ Ue94gr^Y>BEPRk5t~
 <ChartDefinition>
 <CustomDefinition>
 <DefinitionMapList>
-<DefinitionMap key="column">
-<MoreNameCDDefinition>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[project_count]]></Name>
-</TableData>
-<CategoryName value="time"/>
-<ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
-</MoreNameCDDefinition>
-</DefinitionMap>
 <DefinitionMap key="line">
 <MoreNameCDDefinition>
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
@@ -3404,6 +3368,17 @@ Ue94gr^Y>BEPRk5t~
 </TableData>
 <CategoryName value="time"/>
 <ChartSummaryColumn name="price" function="com.fr.data.util.function.NoneFunction" customName="采购金额"/>
+</MoreNameCDDefinition>
+</DefinitionMap>
+<DefinitionMap key="column">
+<MoreNameCDDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[project_count]]></Name>
+</TableData>
+<CategoryName value="time"/>
+<ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
 </MoreNameCDDefinition>
 </DefinitionMap>
 </DefinitionMapList>
@@ -3523,7 +3498,7 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[采购品价格历史走势]]></O>
+<![CDATA[<span id=\"item_trend\">采购品采购金额历史走势</span>]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -3531,7 +3506,7 @@ Ue94gr^Y>BEPRk5t~
 </TextAttr>
 <TitleVisible value="true" position="0"/>
 </Title>
-<Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
+<Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
 <Plot class="com.fr.plugin.chart.area.VanChartAreaPlot">
 <VanChartPlotVersion version="20170715"/>
@@ -4103,44 +4078,6 @@ Ue94gr^Y>BEPRk5t~
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="39">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="1" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="2" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="3" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="4" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="5" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="6" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="7" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="8" r="39">
-<PrivilegeControl/>
-<Expand/>
-</C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
@@ -4169,6 +4106,16 @@ Ue94gr^Y>BEPRk5t~
 <Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0" useParamsTemplate="true"/>
 <PWTitle>
 <![CDATA[参数]]></PWTitle>
+<Parameter>
+<Attributes name="item_name"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
+<Parameter>
+<Attributes name="supplier_name"/>
+<O>
+<![CDATA[]]></O>
+</Parameter>
 </ReportParameterAttr>
 <StyleList>
 <Style imageLayout="1">
