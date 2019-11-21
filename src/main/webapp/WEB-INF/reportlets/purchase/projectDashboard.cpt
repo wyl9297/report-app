@@ -63,7 +63,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,1219200,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[228600,2743200,1943100,2743200,2743200,2743200,2743200,1714500,288000,2743200,2247900,2171700,1600200,380160,1790700,2743200,2743200,1447800,288000,2743200,2743200,1219200,2743200]]></ColumnWidth>
 <CellElementList>
@@ -352,8 +352,23 @@
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="500" height="270"/>
-<realateName realateValue="B24" animateType="none"/>
+<realateName realateValue="B25" animateType="none"/>
 </JavaScript>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="JavaScript2">
+<JavaScript class="com.fr.js.JavaScriptImpl">
+<Parameters>
+<Parameter>
+<Attributes name="supplier_name"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=CATEGORY]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
+<Content>
+<![CDATA[document.getElementById("supplier_trend").innerHTML='采购金额历史走势【'+ supplier_name + "】"]]></Content>
 </JavaScript>
 </NameJavaScript>
 </NameJavaScriptGroup>
@@ -492,7 +507,7 @@
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -837,7 +852,7 @@
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -1191,8 +1206,23 @@
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="500" height="270"/>
-<realateName realateValue="T24" animateType="none"/>
+<realateName realateValue="T25" animateType="none"/>
 </JavaScript>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="JavaScript2">
+<JavaScript class="com.fr.js.JavaScriptImpl">
+<Parameters>
+<Parameter>
+<Attributes name="item_name"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=CATEGORY]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
+<Content>
+<![CDATA[document.getElementById("item_trend").innerHTML='采购品金额历史走势【'+ item_name + "】"]]></Content>
 </JavaScript>
 </NameJavaScript>
 </NameJavaScriptGroup>
@@ -1331,7 +1361,7 @@
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -1616,151 +1646,54 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="1" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="2" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="3" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="4" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="5" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="6" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="7" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="9" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="10" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="11" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="12" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="13" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="14" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="15" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="16" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="17" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="18" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="19" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="20" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="21" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="22" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="23" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="24" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="25" r="22">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
 <C c="0" r="23">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="23" cs="7" rs="16" s="1">
+<C c="1" r="23" cs="7" s="1">
+<O>
+<![CDATA[<span id=\"supplier_trend\">采购金额历史走势</span>]]></O>
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1" showAsHTML="true"/>
+<CellPageAttr/>
+<CellInsertPolicy/>
+<Expand/>
+</C>
+<C c="8" r="23">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="9" r="23" cs="9" s="1">
+<O>
+<![CDATA[采购项目量、采购金额]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="23">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="19" r="23" cs="7" s="1">
+<O>
+<![CDATA[<span id=\"item_trend\">采购品金额历史走势</span>]]></O>
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1" showAsHTML="true"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="24">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="1" r="24" cs="7" rs="16" s="2">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -1806,7 +1739,7 @@
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
 <Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
@@ -2167,7 +2100,7 @@
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -2242,11 +2175,11 @@
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="23">
+<C c="8" r="24">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="9" r="23" cs="9" rs="16" s="0">
+<C c="9" r="24" cs="9" rs="16" s="3">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -2292,7 +2225,7 @@
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
 <Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
@@ -3385,7 +3318,7 @@
 </CustomDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="false" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -3458,7 +3391,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="19" r="23" cs="7" rs="16" s="1">
+<C c="19" r="24" cs="7" rs="16" s="2">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3504,7 +3437,7 @@
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
 <Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
@@ -3865,7 +3798,7 @@
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -3940,16 +3873,6 @@
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="0" r="24">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="24">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="25">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
@@ -4010,18 +3933,18 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
+<C c="0" r="31">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
 <C c="8" r="31">
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="8" r="32">
 <PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="33">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
 <Expand/>
 </C>
 <C c="8" r="33">
@@ -4078,6 +4001,16 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
+<C c="0" r="39">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="8" r="39">
+<PrivilegeControl/>
+<Expand/>
+</C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
@@ -4128,14 +4061,31 @@
 <Right style="17" color="-3355444"/>
 </Border>
 </Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="0" size="96"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1" color="-1513239"/>
+<Left style="1" color="-1513239"/>
+<Right style="1" color="-1513239"/>
+</Border>
+</Style>
 <Style imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="17" color="-4144960"/>
 <Bottom style="17" color="-4144960"/>
 <Left style="17" color="-4144960"/>
 <Right style="17" color="-4144960"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Bottom style="17" color="-3355444"/>
+<Left style="17" color="-3355444"/>
+<Right style="17" color="-3355444"/>
 </Border>
 </Style>
 </StyleList>
