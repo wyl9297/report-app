@@ -88,7 +88,7 @@ Ue94gr^Y>BEPRk5t~
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,3390900,288000,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,3390900,288000,576000,864000,1219200,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,576000,864000,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[228600,2743200,2743200,1219200,2743200,2247900,2171700,5600700,2743200,8648700,288000,2743200,2743200,1219200,2743200,2247900,2171700,5600700,2743200,8648700,1790700,2743200,2743200,1447800,2743200]]></ColumnWidth>
 <CellElementList>
@@ -1859,13 +1859,41 @@ Ue94gr^Y>BEPRk5t~
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="23">
+<C c="1" r="23" cs="9" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="23" cs="9" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="0" r="24">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="23" cs="9" rs="23" s="0">
+<C c="1" r="24" cs="9" s="2">
+<O>
+<![CDATA[采购品采购金额-排名]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="24" cs="9" s="2">
+<O>
+<![CDATA[<span id=\"item_trend\">采购品金额历史走势</span>]]></O>
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1" showAsHTML="true"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="0" r="25">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="1" r="25" cs="9" rs="22" s="3">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -1911,7 +1939,7 @@ Ue94gr^Y>BEPRk5t~
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
 <Attr4VanChart useHtml="false" floating="false" x="50.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
@@ -2144,8 +2172,23 @@ Ue94gr^Y>BEPRk5t~
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="500" height="270"/>
-<realateName realateValue="L24" animateType="none"/>
+<realateName realateValue="L26" animateType="none"/>
 </JavaScript>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="JavaScript2">
+<JavaScript class="com.fr.js.JavaScriptImpl">
+<Parameters>
+<Parameter>
+<Attributes name="item_name"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=CATEGORY]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
+<Content>
+<![CDATA[document.getElementById("item_trend").innerHTML='采购金额历史走势【'+ item_name + "】"]]></Content>
 </JavaScript>
 </NameJavaScript>
 </NameJavaScriptGroup>
@@ -2359,7 +2402,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="11" r="23" cs="9" rs="23" s="1">
+<C c="11" r="25" cs="9" rs="22" s="4">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -2399,15 +2442,15 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[采购品价格历史走势]]></O>
+<![CDATA[<span id=\"item_trend\">采购品采购金额历史走势</span>]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
-<Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
+<Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
 <Plot class="com.fr.plugin.chart.area.VanChartAreaPlot">
 <VanChartPlotVersion version="20170715"/>
@@ -2766,7 +2809,7 @@ Ue94gr^Y>BEPRk5t~
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -2841,18 +2884,6 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="0" r="24">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="0" r="25">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
 <C c="0" r="26">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
@@ -2883,7 +2914,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="0" r="33">
+<C c="0" r="31">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
@@ -2925,7 +2956,35 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="47" cs="9" rs="23" s="0">
+<C c="0" r="40">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="1" r="48" cs="9" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="48" cs="9" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="49" cs="9" s="2">
+<O>
+<![CDATA[供应商采购金额-排名]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="11" r="49" cs="9" s="2">
+<O>
+<![CDATA[<span id=\"supplier_trend\">采购品金额历史走势</span>]]></O>
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1" showAsHTML="true"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="1" r="50" cs="9" rs="23" s="3">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -2971,7 +3030,7 @@ Ue94gr^Y>BEPRk5t~
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
 <Attr4VanChart useHtml="false" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
@@ -3204,8 +3263,23 @@ Ue94gr^Y>BEPRk5t~
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="500" height="270"/>
-<realateName realateValue="L48" animateType="none"/>
+<realateName realateValue="L51" animateType="none"/>
 </JavaScript>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="JavaScript2">
+<JavaScript class="com.fr.js.JavaScriptImpl">
+<Parameters>
+<Parameter>
+<Attributes name="supplier_name"/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=CATEGORY]]></Attributes>
+</O>
+</Parameter>
+</Parameters>
+<Content>
+<![CDATA[document.getElementById("supplier_trend").innerHTML='采购品金额历史走势【'+ supplier_name + "】"]]></Content>
 </JavaScript>
 </NameJavaScript>
 </NameJavaScriptGroup>
@@ -3419,7 +3493,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="11" r="47" cs="9" rs="23" s="1">
+<C c="11" r="50" cs="9" rs="23" s="4">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3465,7 +3539,7 @@ Ue94gr^Y>BEPRk5t~
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
 </Attr>
 </TextAttr>
-<TitleVisible value="true" position="0"/>
+<TitleVisible value="false" position="0"/>
 </Title>
 <Attr4VanChart useHtml="true" floating="false" x="0.0" y="0.0" limitSize="false" maxHeight="15.0"/>
 </Title4VanChart>
@@ -3905,7 +3979,7 @@ Ue94gr^Y>BEPRk5t~
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
 <PaperSetting orientation="1">
-<PaperSize width="54720000" height="72000000"/>
+<PaperSize width="58320000" height="72000000"/>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
@@ -3945,7 +4019,35 @@ Ue94gr^Y>BEPRk5t~
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="17" color="-4144960"/>
+<Top style="1" color="-1513239"/>
+<Left style="1" color="-1513239"/>
+<Right style="1" color="-1513239"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="微软雅黑" style="0" size="96"/>
+<Background name="NullBackground"/>
+<Border>
+<Top color="-16777216"/>
+<Bottom color="-16777216"/>
+<Left style="1" color="-1513239"/>
+<Right style="1" color="-1513239"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Bottom style="17" color="-3355444"/>
+<Left style="17" color="-3355444"/>
+<Right style="17" color="-3355444"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top color="-16777216"/>
 <Bottom style="17" color="-4144960"/>
 <Left style="17" color="-4144960"/>
 <Right style="17" color="-4144960"/>

@@ -63,7 +63,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,1219200,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,144000,1219200,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[228600,2743200,1943100,2743200,2743200,2743200,2743200,1714500,288000,2743200,2247900,2171700,1600200,380160,1790700,2743200,2743200,1447800,288000,2743200,2743200,1219200,2743200]]></ColumnWidth>
 <CellElementList>
@@ -352,7 +352,7 @@
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="500" height="270"/>
-<realateName realateValue="B25" animateType="none"/>
+<realateName realateValue="B26" animateType="none"/>
 </JavaScript>
 </JavaScript>
 </NameJavaScript>
@@ -1206,7 +1206,7 @@
 <TargetFrame>
 <![CDATA[_blank]]></TargetFrame>
 <Features width="500" height="270"/>
-<realateName realateValue="T25" animateType="none"/>
+<realateName realateValue="T26" animateType="none"/>
 </JavaScript>
 </JavaScript>
 </NameJavaScript>
@@ -1653,12 +1653,7 @@
 <Expand/>
 </C>
 <C c="1" r="23" cs="7" s="1">
-<O>
-<![CDATA[<span id=\"supplier_trend\">采购金额历史走势</span>]]></O>
 <PrivilegeControl/>
-<CellGUIAttr adjustmode="1" showAsHTML="true"/>
-<CellPageAttr/>
-<CellInsertPolicy/>
 <Expand/>
 </C>
 <C c="8" r="23">
@@ -1668,8 +1663,6 @@
 <Expand/>
 </C>
 <C c="9" r="23" cs="9" s="1">
-<O>
-<![CDATA[采购项目量、采购金额]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -1680,6 +1673,25 @@
 <Expand/>
 </C>
 <C c="19" r="23" cs="7" s="1">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="24" cs="7" s="2">
+<O>
+<![CDATA[<span id=\"supplier_trend\">采购金额历史走势</span>]]></O>
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1" showAsHTML="true"/>
+<CellPageAttr/>
+<CellInsertPolicy/>
+<Expand/>
+</C>
+<C c="9" r="24" cs="9" s="2">
+<O>
+<![CDATA[采购项目量、采购金额]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="24" cs="7" s="2">
 <O>
 <![CDATA[<span id=\"item_trend\">采购品金额历史走势</span>]]></O>
 <PrivilegeControl/>
@@ -1687,13 +1699,13 @@
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="0" r="24">
+<C c="0" r="25">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="24" cs="7" rs="16" s="2">
+<C c="1" r="25" cs="7" rs="16" s="3">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -2175,11 +2187,11 @@
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="8" r="24">
+<C c="8" r="25">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="9" r="24" cs="9" rs="16" s="3">
+<C c="9" r="25" cs="9" rs="16" s="4">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3292,17 +3304,6 @@
 <ChartDefinition>
 <CustomDefinition>
 <DefinitionMapList>
-<DefinitionMap key="line">
-<MoreNameCDDefinition>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[project_price]]></Name>
-</TableData>
-<CategoryName value="time"/>
-<ChartSummaryColumn name="price" function="com.fr.data.util.function.NoneFunction" customName="采购金额"/>
-</MoreNameCDDefinition>
-</DefinitionMap>
 <DefinitionMap key="column">
 <MoreNameCDDefinition>
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
@@ -3312,6 +3313,17 @@
 </TableData>
 <CategoryName value="time"/>
 <ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
+</MoreNameCDDefinition>
+</DefinitionMap>
+<DefinitionMap key="line">
+<MoreNameCDDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[project_price]]></Name>
+</TableData>
+<CategoryName value="time"/>
+<ChartSummaryColumn name="price" function="com.fr.data.util.function.NoneFunction" customName="采购金额"/>
 </MoreNameCDDefinition>
 </DefinitionMap>
 </DefinitionMapList>
@@ -3391,7 +3403,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="19" r="24" cs="7" rs="16" s="2">
+<C c="19" r="25" cs="7" rs="16" s="3">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3873,16 +3885,6 @@
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="0" r="25">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
-<Expand/>
-</C>
-<C c="8" r="25">
-<PrivilegeControl/>
-<Expand/>
-</C>
 <C c="0" r="26">
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
@@ -3943,18 +3945,18 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
+<C c="0" r="32">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
 <C c="8" r="32">
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="8" r="33">
 <PrivilegeControl/>
-<Expand/>
-</C>
-<C c="0" r="34">
-<PrivilegeControl/>
-<CellGUIAttr adjustmode="1"/>
-<CellPageAttr/>
 <Expand/>
 </C>
 <C c="8" r="34">
@@ -4011,6 +4013,16 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
+<C c="0" r="40">
+<PrivilegeControl/>
+<CellGUIAttr adjustmode="1"/>
+<CellPageAttr/>
+<Expand/>
+</C>
+<C c="8" r="40">
+<PrivilegeControl/>
+<Expand/>
+</C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
@@ -4061,11 +4073,19 @@
 <Right style="17" color="-3355444"/>
 </Border>
 </Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1" color="-1513239"/>
+<Left style="1" color="-1513239"/>
+</Border>
+</Style>
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="微软雅黑" style="0" size="96"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-1513239"/>
+<Bottom color="-16777216"/>
 <Left style="1" color="-1513239"/>
 <Right style="1" color="-1513239"/>
 </Border>
