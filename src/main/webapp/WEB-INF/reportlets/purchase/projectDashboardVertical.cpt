@@ -88,7 +88,7 @@ Ue94gr^Y>BEPRk5t~
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,3390900,288000,576000,864000,1219200,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,576000,864000,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,3390900,288000,576000,864000,1219200,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900,288000,576000,864000,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[228600,2743200,2743200,1219200,2743200,2247900,2171700,5600700,2743200,8648700,288000,2743200,2743200,1219200,2743200,2247900,2171700,5600700,2743200,8648700,1790700,2743200,2743200,1447800,2743200]]></ColumnWidth>
 <CellElementList>
@@ -1893,7 +1893,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="25" cs="9" rs="22" s="3">
+<C c="1" r="25" cs="9" rs="21" s="3">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -2402,7 +2402,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="11" r="25" cs="9" rs="22" s="4">
+<C c="11" r="25" cs="9" rs="21" s="4">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -2962,21 +2962,21 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="48" cs="9" s="1">
+<C c="1" r="47" cs="9" s="1">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="11" r="48" cs="9" s="1">
+<C c="11" r="47" cs="9" s="1">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="49" cs="9" s="2">
+<C c="1" r="48" cs="9" s="2">
 <O>
 <![CDATA[供应商采购金额-排名]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="11" r="49" cs="9" s="2">
+<C c="11" r="48" cs="9" s="2">
 <O>
 <![CDATA[<span id=\"supplier_trend\">采购品金额历史走势</span>]]></O>
 <PrivilegeControl/>
@@ -2984,7 +2984,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="1" r="50" cs="9" rs="23" s="3">
+<C c="1" r="49" cs="9" rs="22" s="3">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3493,7 +3493,7 @@ Ue94gr^Y>BEPRk5t~
 <CellPageAttr/>
 <Expand/>
 </C>
-<C c="11" r="50" cs="9" rs="23" s="4">
+<C c="11" r="49" cs="9" rs="22" s="4">
 <O t="CC">
 <LayoutAttr selectedIndex="0"/>
 <ChangeAttr enable="false" changeType="button" timeInterval="5" buttonColor="-8421505" carouselColor="-8421505" showArrow="true">
@@ -3979,7 +3979,7 @@ Ue94gr^Y>BEPRk5t~
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
 <PaperSetting orientation="1">
-<PaperSize width="57600000" height="72000000"/>
+<PaperSize width="56160000" height="72000000"/>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
 <Background name="ColorBackground" color="-1"/>
