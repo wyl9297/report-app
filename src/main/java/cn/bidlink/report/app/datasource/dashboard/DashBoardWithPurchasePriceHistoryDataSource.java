@@ -32,7 +32,7 @@ public class DashBoardWithPurchasePriceHistoryDataSource extends AbstractBaseTab
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"company_id", "price", "time" , "supplier_id"};
+        return new String[]{"company_id", "price", "time" , "supplier_id" , "supplier_name"};
     }
 
     @Override

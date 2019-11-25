@@ -403,7 +403,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[点击供应商查看历史走势]]></O>
+<![CDATA[提示：点击供应商查看历史走势]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
@@ -626,7 +626,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[物料分类金额占比]]></O>
+<![CDATA[采购品分类成交金额占比]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -967,7 +967,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[采购品采购金额-排名]]></O>
+<![CDATA[采购品成交金额-排名]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -1257,7 +1257,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[点击采购品查看历史走势]]></O>
+<![CDATA[提示：点击采购品查看历史走势]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="64" foreground="-4144960"/>
@@ -1677,13 +1677,20 @@
 <Expand/>
 </C>
 <C c="1" r="24" cs="7" s="2">
-<O>
-<![CDATA[<span id=\"supplier_trend\">采购金额历史走势</span>]]></O>
+<O t="DSColumn">
+<Attributes dsName="supplier_dealprice_trend" columnName="supplier_name"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[CONCATENATE('<span id="supplier_trend">采购金额历史走势【',$$$,'】</span>')]]></Result>
+<Parameters/>
+</O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1" showAsHTML="true"/>
 <CellPageAttr/>
 <CellInsertPolicy/>
-<Expand/>
+<Expand dir="0"/>
 </C>
 <C c="9" r="24" cs="9" s="2">
 <O>
@@ -1692,12 +1699,19 @@
 <Expand/>
 </C>
 <C c="19" r="24" cs="7" s="2">
-<O>
-<![CDATA[<span id=\"item_trend\">采购品金额历史走势</span>]]></O>
+<O t="DSColumn">
+<Attributes dsName="item_dealprice_trend" columnName="directory_name"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[CONCATENATE('<span id="item_trend">采购品成交金额历史走势【',$$$ , '】</span>')]]></Result>
+<Parameters/>
+</O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1" showAsHTML="true"/>
 <CellPageAttr/>
-<Expand/>
+<Expand dir="0"/>
 </C>
 <C c="0" r="25">
 <PrivilegeControl/>
@@ -1837,42 +1851,6 @@
 </labelDetail>
 </AttrLabel>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
-<VanAttrLine>
-<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
-</VanAttrLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
-<VanAttrMarker>
-<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
-<Background name="NullBackground"/>
-</VanAttrMarker>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
-<AttrAreaSeriesFillColorBackground>
-<Attr alpha="0.15"/>
-</AttrAreaSeriesFillColorBackground>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrTooltip">
 <AttrTooltip>
 <Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
@@ -1935,6 +1913,42 @@
 </AttrAlpha>
 </GI>
 </AttrTooltip>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
+<VanAttrLine>
+<Attr lineWidth="2" lineStyle="0" nullValueBreak="true"/>
+</VanAttrLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
+<VanAttrMarker>
+<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
+<Background name="NullBackground"/>
+</VanAttrMarker>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
+<AttrAreaSeriesFillColorBackground>
+<Attr alpha="0.15"/>
+</AttrAreaSeriesFillColorBackground>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -2076,8 +2090,8 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
+<AxisRange minValue="=0"/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
 <VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
@@ -2410,7 +2424,7 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -2462,7 +2476,7 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -2529,26 +2543,6 @@
 <AttrAlpha>
 <Attr alpha="1.0"/>
 </AttrAlpha>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
 </Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
@@ -2666,6 +2660,26 @@
 </GI>
 </AttrTooltip>
 </Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
 </AttrList>
 </ConditionAttr>
 </DefaultAttr>
@@ -2803,7 +2817,7 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -2855,7 +2869,7 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -2926,37 +2940,6 @@
 <DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
 <ConditionAttr name="">
 <AttrList>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
-<VanAttrLine>
-<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
-</VanAttrLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
-<VanAttrMarker>
-<Attr isCommon="true" markerType="RoundMarker" radius="1.0" width="30.0" height="30.0"/>
-<Background name="NullBackground"/>
-</VanAttrMarker>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
 <labelAttr enable="false"/>
@@ -3071,6 +3054,37 @@
 </GI>
 </AttrTooltip>
 </Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
+<VanAttrLine>
+<Attr lineWidth="2" lineStyle="0" nullValueBreak="true"/>
+</VanAttrLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
+<VanAttrMarker>
+<Attr isCommon="true" markerType="RoundMarker" radius="1.0" width="30.0" height="30.0"/>
+<Background name="NullBackground"/>
+</VanAttrMarker>
+</Attr>
 </AttrList>
 </ConditionAttr>
 </DefaultAttr>
@@ -3208,7 +3222,7 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -3260,7 +3274,7 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -3304,17 +3318,6 @@
 <ChartDefinition>
 <CustomDefinition>
 <DefinitionMapList>
-<DefinitionMap key="column">
-<MoreNameCDDefinition>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[project_count]]></Name>
-</TableData>
-<CategoryName value="time"/>
-<ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
-</MoreNameCDDefinition>
-</DefinitionMap>
 <DefinitionMap key="line">
 <MoreNameCDDefinition>
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
@@ -3324,6 +3327,17 @@
 </TableData>
 <CategoryName value="time"/>
 <ChartSummaryColumn name="price" function="com.fr.data.util.function.NoneFunction" customName="采购金额"/>
+</MoreNameCDDefinition>
+</DefinitionMap>
+<DefinitionMap key="column">
+<MoreNameCDDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[project_count]]></Name>
+</TableData>
+<CategoryName value="time"/>
+<ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
 </MoreNameCDDefinition>
 </DefinitionMap>
 </DefinitionMapList>
@@ -3535,42 +3549,6 @@
 </labelDetail>
 </AttrLabel>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
-<VanAttrLine>
-<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
-</VanAttrLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
-<VanAttrMarker>
-<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
-<Background name="NullBackground"/>
-</VanAttrMarker>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
-<AttrAreaSeriesFillColorBackground>
-<Attr alpha="0.15"/>
-</AttrAreaSeriesFillColorBackground>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrTooltip">
 <AttrTooltip>
 <Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
@@ -3633,6 +3611,42 @@
 </AttrAlpha>
 </GI>
 </AttrTooltip>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
+<VanAttrLine>
+<Attr lineWidth="2" lineStyle="0" nullValueBreak="true"/>
+</VanAttrLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
+<VanAttrMarker>
+<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
+<Background name="NullBackground"/>
+</VanAttrMarker>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
+<AttrAreaSeriesFillColorBackground>
+<Attr alpha="0.15"/>
+</AttrAreaSeriesFillColorBackground>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -3774,7 +3788,7 @@
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -4085,7 +4099,6 @@
 <FRFont name="微软雅黑" style="0" size="96"/>
 <Background name="NullBackground"/>
 <Border>
-<Bottom color="-16777216"/>
 <Left style="1" color="-1513239"/>
 <Right style="1" color="-1513239"/>
 </Border>
