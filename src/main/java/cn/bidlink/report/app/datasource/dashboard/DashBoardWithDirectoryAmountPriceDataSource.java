@@ -8,6 +8,7 @@ import cn.bidlink.report.server.service.SupplierPurchaseStatisticsService;
 import com.fr.base.Parameter;
 import org.apache.commons.lang.StringUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -50,6 +51,6 @@ public class DashBoardWithDirectoryAmountPriceDataSource extends AbstractBaseTab
             List<Map> result = listServiceResult.getResult();
             return result;
         }
-        return null;
+        return new ArrayList();
     }
 }
