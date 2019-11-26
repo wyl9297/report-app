@@ -113,7 +113,7 @@
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[供应商采购金额-排名]]></O>
+<![CDATA[供应商成交金额-排名]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -1683,7 +1683,7 @@
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Result>
-<![CDATA[CONCATENATE('<span id="supplier_trend">采购金额历史走势【',$$$,'】</span>')]]></Result>
+<![CDATA[CONCATENATE('<span id="supplier_trend">供应商成交金额历史走势【',$$$,'】</span>')]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -2091,7 +2091,7 @@
 </TextAttr>
 <AxisLabelCount value="=1"/>
 <AxisRange minValue="=0"/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" secUnit="=0"/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
 <VanChartAxisAttr mainTickLine="0" secTickLine="0" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>

@@ -1211,17 +1211,6 @@ Ue94gr^Y>BEPRk5t~
 <ChartDefinition>
 <CustomDefinition>
 <DefinitionMapList>
-<DefinitionMap key="column">
-<MoreNameCDDefinition>
-<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[project_count]]></Name>
-</TableData>
-<CategoryName value="time"/>
-<ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
-</MoreNameCDDefinition>
-</DefinitionMap>
 <DefinitionMap key="line">
 <MoreNameCDDefinition>
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
@@ -1231,6 +1220,17 @@ Ue94gr^Y>BEPRk5t~
 </TableData>
 <CategoryName value="time"/>
 <ChartSummaryColumn name="price" function="com.fr.data.util.function.NoneFunction" customName="采购金额"/>
+</MoreNameCDDefinition>
+</DefinitionMap>
+<DefinitionMap key="column">
+<MoreNameCDDefinition>
+<Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[project_count]]></Name>
+</TableData>
+<CategoryName value="time"/>
+<ChartSummaryColumn name="how_many_directory" function="com.fr.data.util.function.NoneFunction" customName="项目量"/>
 </MoreNameCDDefinition>
 </DefinitionMap>
 </DefinitionMapList>
@@ -1350,7 +1350,7 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 <O>
-<![CDATA[物料分类金额占比]]></O>
+<![CDATA[采购品分类成交金额占比]]></O>
 <TextAttr>
 <Attr alignText="0">
 <FRFont name="微软雅黑" style="0" size="96" foreground="-13421773"/>
@@ -1875,17 +1875,24 @@ Ue94gr^Y>BEPRk5t~
 </C>
 <C c="1" r="24" cs="9" s="2">
 <O>
-<![CDATA[采购品采购金额-排名]]></O>
+<![CDATA[采购品成交金额-排名]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="11" r="24" cs="9" s="2">
-<O>
-<![CDATA[<span id=\"item_trend\">采购品金额历史走势</span>]]></O>
+<O t="DSColumn">
+<Attributes dsName="item_dealprice_trend" columnName="directory_name"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[CONCATENATE('<span id="item_trend">采购品成交金额历史走势【',$$$ , '】</span>')]]></Result>
+<Parameters/>
+</O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1" showAsHTML="true"/>
 <CellPageAttr/>
-<Expand/>
+<Expand dir="0"/>
 </C>
 <C c="0" r="25">
 <PrivilegeControl/>
@@ -2972,17 +2979,24 @@ Ue94gr^Y>BEPRk5t~
 </C>
 <C c="1" r="48" cs="9" s="2">
 <O>
-<![CDATA[供应商采购金额-排名]]></O>
+<![CDATA[供应商成交金额-排名]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="11" r="48" cs="9" s="2">
-<O>
-<![CDATA[<span id=\"supplier_trend\">采购品金额历史走势</span>]]></O>
+<O t="DSColumn">
+<Attributes dsName="supplier_dealprice_trend" columnName="supplier_name"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[CONCATENATE('<span id="supplier_trend">供应商成交金额历史走势【',$$$,'】</span>')]]></Result>
+<Parameters/>
+</O>
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1" showAsHTML="true"/>
 <CellPageAttr/>
-<Expand/>
+<Expand dir="0"/>
 </C>
 <C c="1" r="49" cs="9" rs="22" s="3">
 <O t="CC">
@@ -4028,8 +4042,6 @@ Ue94gr^Y>BEPRk5t~
 <FRFont name="微软雅黑" style="0" size="96"/>
 <Background name="NullBackground"/>
 <Border>
-<Top color="-16777216"/>
-<Bottom color="-16777216"/>
 <Left style="1" color="-1513239"/>
 <Right style="1" color="-1513239"/>
 </Border>
@@ -4047,7 +4059,6 @@ Ue94gr^Y>BEPRk5t~
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top color="-16777216"/>
 <Bottom style="17" color="-4144960"/>
 <Left style="17" color="-4144960"/>
 <Right style="17" color="-4144960"/>
