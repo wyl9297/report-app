@@ -317,7 +317,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -369,7 +369,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -436,26 +436,6 @@ Ue94gr^Y>BEPRk5t~
 <AttrAlpha>
 <Attr alpha="1.0"/>
 </AttrAlpha>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
 </Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
@@ -573,6 +553,26 @@ Ue94gr^Y>BEPRk5t~
 </GI>
 </AttrTooltip>
 </Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
 </AttrList>
 </ConditionAttr>
 </DefaultAttr>
@@ -710,7 +710,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -762,7 +762,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -833,37 +833,6 @@ Ue94gr^Y>BEPRk5t~
 <DefaultAttr class="com.fr.chart.chartglyph.ConditionAttr">
 <ConditionAttr name="">
 <AttrList>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
-<VanAttrLine>
-<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
-</VanAttrLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
-<VanAttrMarker>
-<Attr isCommon="true" markerType="RoundMarker" radius="1.0" width="30.0" height="30.0"/>
-<Background name="NullBackground"/>
-</VanAttrMarker>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrLabel">
 <AttrLabel>
 <labelAttr enable="false"/>
@@ -978,6 +947,37 @@ Ue94gr^Y>BEPRk5t~
 </GI>
 </AttrTooltip>
 </Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
+<VanAttrLine>
+<Attr lineWidth="2" lineStyle="0" nullValueBreak="true"/>
+</VanAttrLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
+<VanAttrMarker>
+<Attr isCommon="true" markerType="RoundMarker" radius="1.0" width="30.0" height="30.0"/>
+<Background name="NullBackground"/>
+</VanAttrMarker>
+</Attr>
 </AttrList>
 </ConditionAttr>
 </DefaultAttr>
@@ -1115,7 +1115,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -1167,7 +1167,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -1237,7 +1237,7 @@ Ue94gr^Y>BEPRk5t~
 </CustomDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="false" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -1576,7 +1576,7 @@ Ue94gr^Y>BEPRk5t~
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -2334,7 +2334,7 @@ Ue94gr^Y>BEPRk5t~
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -2541,42 +2541,6 @@ Ue94gr^Y>BEPRk5t~
 </labelDetail>
 </AttrLabel>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
-<VanAttrLine>
-<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
-</VanAttrLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
-<VanAttrMarker>
-<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
-<Background name="NullBackground"/>
-</VanAttrMarker>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
-<AttrAreaSeriesFillColorBackground>
-<Attr alpha="0.15"/>
-</AttrAreaSeriesFillColorBackground>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrTooltip">
 <AttrTooltip>
 <Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
@@ -2639,6 +2603,42 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 </AttrTooltip>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
+<VanAttrLine>
+<Attr lineWidth="2" lineStyle="0" nullValueBreak="true"/>
+</VanAttrLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
+<VanAttrMarker>
+<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
+<Background name="NullBackground"/>
+</VanAttrMarker>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
+<AttrAreaSeriesFillColorBackground>
+<Attr alpha="0.15"/>
+</AttrAreaSeriesFillColorBackground>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -2780,7 +2780,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -3432,7 +3432,7 @@ Ue94gr^Y>BEPRk5t~
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
@@ -3639,42 +3639,6 @@ Ue94gr^Y>BEPRk5t~
 </labelDetail>
 </AttrLabel>
 </Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
-<TrendLine>
-<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
-<LineStyleInfo>
-<AttrAlpha>
-<Attr alpha="1.0"/>
-</AttrAlpha>
-<AttrColor>
-<Attr/>
-</AttrColor>
-<AttrLineStyle>
-<newAttr lineStyle="0"/>
-</AttrLineStyle>
-<AttrBorder>
-<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
-<newColor borderColor="-16777216"/>
-</AttrBorder>
-</LineStyleInfo>
-</TrendLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
-<VanAttrLine>
-<Attr lineWidth="2" lineStyle="2" nullValueBreak="true"/>
-</VanAttrLine>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
-<VanAttrMarker>
-<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
-<Background name="NullBackground"/>
-</VanAttrMarker>
-</Attr>
-<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
-<AttrAreaSeriesFillColorBackground>
-<Attr alpha="0.15"/>
-</AttrAreaSeriesFillColorBackground>
-</Attr>
 <Attr class="com.fr.plugin.chart.base.AttrTooltip">
 <AttrTooltip>
 <Attr enable="true" duration="4" followMouse="false" showMutiSeries="false" isCustom="false"/>
@@ -3737,6 +3701,42 @@ Ue94gr^Y>BEPRk5t~
 </AttrAlpha>
 </GI>
 </AttrTooltip>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrTrendLine">
+<TrendLine>
+<Attr trendLineName="" trendLineType="exponential" prePeriod="0" afterPeriod="0"/>
+<LineStyleInfo>
+<AttrAlpha>
+<Attr alpha="1.0"/>
+</AttrAlpha>
+<AttrColor>
+<Attr/>
+</AttrColor>
+<AttrLineStyle>
+<newAttr lineStyle="0"/>
+</AttrLineStyle>
+<AttrBorder>
+<Attr lineStyle="0" isRoundBorder="false" roundRadius="0"/>
+<newColor borderColor="-16777216"/>
+</AttrBorder>
+</LineStyleInfo>
+</TrendLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrLine">
+<VanAttrLine>
+<Attr lineWidth="2" lineStyle="0" nullValueBreak="true"/>
+</VanAttrLine>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.VanChartAttrMarker">
+<VanAttrMarker>
+<Attr isCommon="true" markerType="RoundMarker" radius="3.0" width="30.0" height="30.0"/>
+<Background name="NullBackground"/>
+</VanAttrMarker>
+</Attr>
+<Attr class="com.fr.plugin.chart.base.AttrAreaSeriesFillColorBackground">
+<AttrAreaSeriesFillColorBackground>
+<Attr alpha="0.15"/>
+</AttrAreaSeriesFillColorBackground>
 </Attr>
 </AttrList>
 </ConditionAttr>
@@ -3878,7 +3878,7 @@ Ue94gr^Y>BEPRk5t~
 </Attr>
 </TextAttr>
 <AxisLabelCount value="=1"/>
-<AxisRange/>
+<AxisRange minValue="=0"/>
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
@@ -3914,7 +3914,7 @@ Ue94gr^Y>BEPRk5t~
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
