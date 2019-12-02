@@ -12,6 +12,9 @@
 
     <d:registry id="defaultRegistryAddress" address="${pom.dubbo.default.registry.address}" default="true" protocol="zookeeper" timeout="100000"/>
 
+    <!-- 悦采注册中心 -->
+    <d:registry id="saas_dubbo_registry" address="${pom.dubbo.registry.address.saas}" protocol="zookeeper" timeout="100000"/>
+
     <!-- 组织权限、用户中心  Start-->
     <d:reference id="aclService"  registry="defaultRegistryAddress"  interface="cn.bidlink.resacl.dal.service.DubboAclService" />
     <d:reference id="userService" registry="defaultRegistryAddress" interface="cn.bidlink.usercenter.server.service.DubboTRegUserService"/>
@@ -23,6 +26,42 @@
     <d:reference id="supplierPurchaseStatisticsService" registry="defaultRegistryAddress" interface="cn.bidlink.report.server.service.SupplierPurchaseStatisticsService" check="false"/>
     <d:reference id="purchaseDealStatisticalService" registry="defaultRegistryAddress" interface="cn.bidlink.report.server.service.PurchaseDealStatisticalService" check="false"/>
     <d:reference id="purchaseStatisticalDealDetailService" registry="defaultRegistryAddress" interface="cn.bidlink.report.server.service.PurchaseStatisticalDealDetailService" check="false"/>
+
+
+    <!-- //////////////////////////////////////////////////悦采 report_print  reference /////////////////////////////////////////////////// -->
+    <d:reference id="archivedAuctionProjectService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.auction.DubboArchivedAuctionProjectService"/>
+    <d:reference id="archivedAuctionSupplierProjectService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.auction.DubboArchivedAuctionSupplierProjectService"/>
+    <d:reference id="archivedAuctionSupplierUnProjectService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.auction.DubboArchivedAuctionSupplierUnProjectService"/>
+    <d:reference id="archivedAuctionUnProjectService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.auction.DubboArchivedAuctionUnProjectService"/>
+    <d:reference id="bidDirectoryHistoryService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.auction.DubboBidDirectoryHistoryService"/>
+    <d:reference id="modifyFinalPriceListService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.auction.DubboModifyFinalPriceListService"/>
+    <d:reference id="notPackageAuctionSupplierListService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.auction.DubboNotPackageAuctionSupplierListService"/>
+    <d:reference id="orderDetailService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.order.DubboOrderDetailService"/>
+    <d:reference id="orderGoodsDetalisService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.order.DubboOrderGoodsDetalisService"/>
+    <d:reference id="orderGoodsInfoService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.order.DubboOrderGoodsInfoService"/>
+    <d:reference id="purchasePlanInfoService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.plan.DubboPurchasePlanInfoService"/>
+    <d:reference id="bidOpenDirectoryHorizontalService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenDirectoryHorizontalService"/>
+    <d:reference id="bidOpenDirectoryVerticalService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenDirectoryVerticalService"/>
+    <d:reference id="bidOpenService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenService"/>
+    <d:reference id="bidOpenSupplierService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboBidOpenSupplierService"/>
+    <d:reference id="purchaseResultProcessDirectoryService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessDirectoryService"/>
+    <d:reference id="purchaseResultProcessDirectorySupplierService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessDirectorySupplierService"/>
+    <d:reference id="purchaseResultProcessSanyouService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessSanyouService"/>
+    <d:reference id="purchaseResultProcessService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessService"/>
+    <d:reference id="supplierBidResultDataSetService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchase.DubboSupplierBidResultDataSetService"/>
+    <d:reference id="printProcurementReportService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.purchases.DubboPrintProcurementReportService"/>
+    <d:reference id="evaluateReportPrintService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_print.suppliermanage.DubboEvaluateReportPrintService"/>
+
+    <!-- //////////////////////////////////////////////////悦采 report_statistics  reference /////////////////////////////////////////////////// -->
+    <d:reference id="contractOverviewStatisticsService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboContractOverviewStatisticsService"/>
+    <d:reference id="projectOverviewStatisticsBpsService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectOverviewStatisticsBpsService"/>
+    <d:reference id="projectOverviewStatisticsService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectOverviewStatisticsService"/>
+    <d:reference id="projectProgressStatisticsBpsService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectProgressStatisticsBpsService"/>
+    <d:reference id="projectProgressStatisticsService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectProgressStatisticsService"/>
+    <d:reference id="projectTotalAmountTrendNewBpsService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectTotalAmountTrendNewBpsService"/>
+    <d:reference id="projectTotalAmountTrendNewService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboProjectTotalAmountTrendNewService"/>
+    <d:reference id="totalContractInfoService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboTotalContractInfoService"/>
+    <d:reference id="bidTrendNewService" registry="saas_dubbo_registry" interface="cn.bidlink.statistics.report.service.service.report_statistics.DubboBidTrendNewService"/>
 
 
 </beans>

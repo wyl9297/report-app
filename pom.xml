@@ -142,6 +142,12 @@
         </dependency>
 
         <dependency>
+            <groupId>cn.bidlink.statistics.report</groupId>
+            <artifactId>reportStatistics-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -417,6 +423,8 @@
                 </pom.spring.redis.sentinel.nodes>
 
                 <pom.dubbo.default.registry.address>zookeeper://testzookeeper:2181</pom.dubbo.default.registry.address>
+                <!-- 悦采数据源 -->
+                <pom.dubbo.registry.address.saas>zookeeper://testyuecai-middle-02:2182</pom.dubbo.registry.address.saas>
                 <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
                 <pom.dubbo.proxy>jdk</pom.dubbo.proxy>
                 <pom.cas.server>https://testpassport.longdaoyun.com</pom.cas.server>
@@ -452,6 +460,8 @@
                 <pom.spring.redis.sentinel.nodes>testredis:26380,testredis:26381,testredis:26382
                 </pom.spring.redis.sentinel.nodes>
                 <pom.dubbo.default.registry.address>zookeeper://testzookeeper:2181</pom.dubbo.default.registry.address>
+                <!-- 悦采数据源 -->
+                <pom.dubbo.registry.address.saas>zookeeper://testyuecai-middle-02:2182</pom.dubbo.registry.address.saas>
                 <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
                 <pom.dubbo.proxy>javassist</pom.dubbo.proxy>
                 <pom.cas.server>https://testpassport.longdaoyun.com</pom.cas.server>
@@ -483,6 +493,8 @@
                 <pom.spring.redis.sentinel.nodes>10.0.3.91:26380,10.0.3.91:26381,10.0.3.91:26382</pom.spring.redis.sentinel.nodes>
 
                 <pom.dubbo.default.registry.address>zookeeper://10.0.3.92:2181</pom.dubbo.default.registry.address>
+                <!-- 悦采数据源 -->
+                <pom.dubbo.registry.address.saas>zookeeper://localhost:2181</pom.dubbo.registry.address.saas>
                 <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
                 <pom.dubbo.proxy>javassist</pom.dubbo.proxy>
                 <pom.cas.server>https://demopassport.longdaoyun.com</pom.cas.server>
@@ -518,6 +530,10 @@
                 <pom.dubbo.default.registry.address>
                     zookeeper://zookeeper-01.internal.cg-xt.com:2181?backup=zookeeper-02.internal.cg-xt.com:2181,zookeeper-03.internal.cg-xt.com:2181
                 </pom.dubbo.default.registry.address>
+                <!-- 悦采数据源 -->
+                <pom.dubbo.registry.address.saas>
+                    zookeeper://yuecai-zk-01.longdaoyun.com:2181?backup=yuecai-zk-02.longdaoyun.com:2181,yuecai-zk-03.longdaoyun.com:2181
+                </pom.dubbo.registry.address.saas>
                 <pom.dubbo.consumer.timeout>60000</pom.dubbo.consumer.timeout>
                 <pom.dubbo.proxy>javassist</pom.dubbo.proxy>
 
