@@ -185,7 +185,13 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     Map<String , Object>  formItem = (Map<String, Object>)it.get("formItemClass");*/
                     String k = String.valueOf(it.get("key"));
                     String t = String.valueOf(it.get("title"));
-                    if (t.equals("交货地点")){
+                    String typeValue = String.valueOf(it.get("typeValue"));
+                    if ( "2".equals(typeValue) ){
+                        String foItValue = String.valueOf(formItem.get(k + "areaString"));
+                        biddingResultDynamicChangeVo.setValue(foItValue);
+                    } else if ( "5".equals(typeValue) ){
+                        biddingResultDynamicChangeVo.setValue(String.valueOf(formItem.get("value")));
+                    } else if (t.equals("交货地点")){
                         String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
                         biddingResultDynamicChangeVo.setValue(foItValue);
 
