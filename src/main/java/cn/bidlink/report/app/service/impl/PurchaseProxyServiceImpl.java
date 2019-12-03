@@ -534,27 +534,26 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
         List<Map<String, Object>> tableData = itemSupplierVoList.getTableData();
         if ( null != tableData && !"null".equals(tableData) && tableData.size()>0){
             //得到每一个采购品
-            tableData.forEach(table->{
-                List<LinkedHashMap<String, Object>> supplier = (List<LinkedHashMap<String, Object>>) table.get("supplierChildrenColumns");
+            for (Map map : tableData) {
+                List<LinkedHashMap<String, Object>> supplier = (List<LinkedHashMap<String, Object>>) map.get("supplierChildrenColumns");
+
                 for (int i = 0; i < supplier.size(); i++) {
                     LinkedHashMap<String, Object> supplierList = supplier.get(i);
                     if (null != supplierList && supplierList.size()>0){
                         //得到每一个采购品中所有供应商所有分项报价表头
-                        for (String s : supplierList.keySet()){
-                            QuoteSeparatelyVo quoteSeparatelyVo = new QuoteSeparatelyVo();
+                        QuoteSeparatelyVo quoteSeparatelyVo = new QuoteSeparatelyVo();
 
-                            quoteSeparatelyVo.setKey(String.valueOf(supplierList.get("key")));
-                            String title = String.valueOf(String.valueOf(supplierList.get("title")));
-                            if(null != supplierList.get("unit")){
-                                title = title + "(" + supplierList.get("unit").toString() + ")";
-                            }
-                            quoteSeparatelyVo.setTitle(title);
-                            quoteSeparatelyVo.setProjectItemId(Long.valueOf(String.valueOf(table.get("projectItemId"))));
-                            bidding.add(quoteSeparatelyVo);
+                        quoteSeparatelyVo.setKey(String.valueOf(supplierList.get("key")));
+                        String title = String.valueOf(String.valueOf(supplierList.get("title")));
+                        if(null != supplierList.get("unit")){
+                            title = title + "(" + supplierList.get("unit").toString() + ")";
                         }
+                        quoteSeparatelyVo.setTitle(title);
+                        quoteSeparatelyVo.setProjectItemId(Long.valueOf(String.valueOf(map.get("projectItemId"))));
+                        bidding.add(quoteSeparatelyVo);
                     }
                 }
-            });
+            }
             return bidding;
         }else {
             return biddingNull;
