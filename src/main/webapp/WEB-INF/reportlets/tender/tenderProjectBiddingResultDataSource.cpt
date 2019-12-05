@@ -116,7 +116,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,722880,723900,723900,723900,1143000,990600,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,722880,723900,723900,723900,1143000,990600,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[2819400,2880000,2736000,2171700,3314700,3581400,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
@@ -300,6 +300,19 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[LEN($$$)>100]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="28800000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
 <Expand dir="1"/>
 </C>
 <C c="3" r="6" s="2">
