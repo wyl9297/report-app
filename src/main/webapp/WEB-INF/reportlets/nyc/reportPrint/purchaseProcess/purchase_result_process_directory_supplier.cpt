@@ -469,51 +469,6 @@
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) > 250]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) < 500]]></Formula>
-</Condition>
-</JoinCondition>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
-<FRFont name="SimSun" style="0" size="72"/>
-</HighlightAction>
-</Highlight>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性2]]></Name>
-<Condition class="com.fr.data.condition.ListCondition">
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) >= 500]]></Formula>
-</Condition>
-</JoinCondition>
-<JoinCondition join="0">
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) < 768]]></Formula>
-</Condition>
-</JoinCondition>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
-<ColumnWidth i="8640000"/>
-</HighlightAction>
-</Highlight>
-</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="5" r="6" s="2">
@@ -529,22 +484,6 @@
 <PrivilegeControl/>
 <CellGUIAttr adjustmode="1"/>
 <CellPageAttr/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) > 250]]></Formula>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
-<ColumnWidth i="7920000"/>
-</HighlightAction>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
-<FRFont name="SimSun" style="0" size="64"/>
-</HighlightAction>
-</Highlight>
-</HighlightList>
 <CellInsertPolicy/>
 <Expand dir="0"/>
 </C>
