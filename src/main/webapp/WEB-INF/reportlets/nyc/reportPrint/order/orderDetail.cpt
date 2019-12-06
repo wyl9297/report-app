@@ -82,10 +82,10 @@
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
-<![CDATA[${i18n('FR-Designer-Plugin_Excel_Web_2003_Sheet')}]]></Text>
+<![CDATA[${i18n('导出')}]]></Text>
 <IconName>
-<![CDATA[excel]]></IconName>
-<Buttons pdf="true" excelP="false" excelO="false" excelS="false" word="true" image="true" html="true"/>
+<![CDATA[export]]></IconName>
+<Buttons pdf="true" excelP="true" excelO="true" excelS="true" word="true" image="true" html="true"/>
 </Widget>
 </ToolBar>
 </ToolBarManager>
