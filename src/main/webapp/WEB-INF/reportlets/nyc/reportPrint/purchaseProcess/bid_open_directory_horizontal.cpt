@@ -86,10 +86,10 @@
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
-<![CDATA[${i18n('FR-Designer-Plugin_Excel_Web_2003_Sheet')}]]></Text>
+<![CDATA[${i18n('导出')}]]></Text>
 <IconName>
-<![CDATA[excel]]></IconName>
-<Buttons pdf="true" excelP="false" excelO="false" excelS="false" word="true" image="true" html="true"/>
+<![CDATA[export]]></IconName>
+<Buttons pdf="true" excelP="true" excelO="true" excelS="true" word="true" image="true" html="true"/>
 </Widget>
 </ToolBar>
 </ToolBarManager>
@@ -2911,10 +2911,10 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 </StyleList>
