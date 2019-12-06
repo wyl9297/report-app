@@ -225,28 +225,32 @@ public class ReportGateway {
     }
 
     private String appendShowColumns(String templateId, Long projectId , String extendParam) {
-        ResponseResult responseResult = queryConfigurationCloudService.queryCustomConf(UserContext.getUserId(), UserContext.getCompanyId(), templateId, extendParam );
-        Boolean success = responseResult.getSuccess();
-        if (!success) {
-            logger.info("查询动态列配置失败 {} , {}" , templateId,projectId);
-            throw new RuntimeException("查询动态列配置失败");
-        }
-        Object resultData = responseResult.getData();
-        StringBuilder sb = new StringBuilder();
-        JSONObject jsonObject = JSON.parseObject(resultData.toString());
-        JSONObject typeData = (JSONObject) jsonObject.get("typeData");
-        Set<Map.Entry<String, Object>> entrySet = typeData.entrySet();
-        for (Map.Entry<String, Object> entry : entrySet) {
-            JSONObject value = (JSONObject) entry.getValue();
-            JSONObject customClass = value.getJSONObject("customClass");
-            Boolean isChecked = customClass.getBoolean("isChecked");
-            Boolean isShow = customClass.getBoolean("isShow");
-            if(BooleanUtils.isTrue(isChecked) && BooleanUtils.isTrue(isShow)){
-               sb.append(value.getString("title")).append(",");
+        try {
+            ResponseResult responseResult = queryConfigurationCloudService.queryCustomConf(UserContext.getUserId(), UserContext.getCompanyId(), templateId, extendParam );
+            Boolean success = responseResult.getSuccess();
+            if (!success) {
+                logger.info("查询动态列配置失败 {} , {}" , templateId,projectId);
+                throw new RuntimeException("查询动态列配置失败");
             }
-        }
-        if( sb.length() > 0 ){
-            return sb.substring(0, sb.length() - 1);
+            Object resultData = responseResult.getData();
+            StringBuilder sb = new StringBuilder();
+            JSONObject jsonObject = JSON.parseObject(resultData.toString());
+            JSONObject typeData = (JSONObject) jsonObject.get("typeData");
+            Set<Map.Entry<String, Object>> entrySet = typeData.entrySet();
+            for (Map.Entry<String, Object> entry : entrySet) {
+                JSONObject value = (JSONObject) entry.getValue();
+                JSONObject customClass = value.getJSONObject("customClass");
+                Boolean isChecked = customClass.getBoolean("isChecked");
+                Boolean isShow = customClass.getBoolean("isShow");
+                if(BooleanUtils.isTrue(isChecked) && BooleanUtils.isTrue(isShow)){
+                   sb.append(value.getString("title")).append(",");
+                }
+            }
+            if( sb.length() > 0 ){
+                return sb.substring(0, sb.length() - 1);
+            }
+        } catch (Exception e){
+            logger.error("查询动态列时出现错误...");
         }
         return null;
     }
