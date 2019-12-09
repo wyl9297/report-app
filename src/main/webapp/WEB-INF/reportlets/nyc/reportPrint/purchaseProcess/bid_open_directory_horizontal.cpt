@@ -1221,7 +1221,7 @@
 <![CDATA[=&B7]]></Attributes>
 </O>
 <PrivilegeControl/>
-<CellPageAttr/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B7"/>
 </C>
 <C c="1" r="6" s="5">
@@ -1234,7 +1234,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="2" r="6" s="5">
@@ -1245,7 +1245,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="3" r="6" s="5">
@@ -1256,7 +1256,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="4" r="6" s="5">
@@ -1267,7 +1267,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1340,6 +1340,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1376,7 +1377,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1417,6 +1418,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="8" r="6" s="5">
@@ -1427,6 +1429,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="9" r="6" s="5">
@@ -1437,6 +1440,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="10" r="6" s="5">
@@ -1447,6 +1451,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="11" r="6" s="5">
@@ -1457,7 +1462,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1484,6 +1489,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1533,7 +1539,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="14" r="6" s="5">
@@ -1555,7 +1561,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1593,7 +1599,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1618,6 +1624,7 @@
 <![CDATA[=if(G7>0 && P7>0,G7 * P7,'')]]></Attributes>
 </O>
 <PrivilegeControl/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand extendable="1" leftParentDefault="false" left="P7"/>
 </C>
 <C c="17" r="6" s="5">
@@ -1654,7 +1661,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="18" r="6" s="5">
@@ -1691,7 +1698,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="19" r="6" s="5">
@@ -1728,7 +1735,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="20" r="6" s="5">
@@ -1765,7 +1772,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="21" r="6" s="5">
@@ -1802,7 +1809,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="22" r="6" s="5">
@@ -1839,7 +1846,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="23" r="6" s="5">
@@ -1876,7 +1883,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="24" r="6" s="5">
@@ -1913,7 +1920,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="25" r="6" s="5">
@@ -1950,7 +1957,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="26" r="6" s="5">
@@ -1987,7 +1994,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="27" r="6" s="5">
@@ -2024,7 +2031,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="28" r="6" s="5">
@@ -2061,7 +2068,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="29" r="6" s="5">
@@ -2098,7 +2105,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="30" r="6" s="5">
@@ -2135,7 +2142,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="31" r="6" s="5">
@@ -2172,7 +2179,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 </CellElementList>

@@ -145,7 +145,7 @@
 <O>
 <![CDATA[采购结果处理]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr/>
 <Expand/>
 </C>
 <C c="0" r="1" cs="8" s="1">
@@ -1933,7 +1933,7 @@
 <![CDATA[=&B8]]></Attributes>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -1950,7 +1950,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -1965,7 +1965,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -1980,7 +1980,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -1995,7 +1995,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2072,7 +2072,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2116,7 +2116,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2147,7 +2147,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="8" r="7" s="5">
@@ -2158,7 +2158,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="9" r="7" s="5">
@@ -2169,7 +2169,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="10" r="7" s="5">
@@ -2180,7 +2180,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="11" r="7" s="7">
@@ -2191,7 +2191,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2242,7 +2242,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2294,7 +2294,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -2307,7 +2307,7 @@
 <![CDATA[=if(project_bid_item.select(supplier_type) = 1, "盘内", "盘外")]]></Attributes>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2343,7 +2343,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -2356,7 +2356,7 @@
 <![CDATA[=P8 * G8]]></Attributes>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -2382,7 +2382,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -2408,7 +2408,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2437,7 +2437,7 @@
 <![CDATA[=R8 * S8]]></Attributes>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -2452,7 +2452,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="21" r="7" s="8">
@@ -2461,7 +2461,7 @@
 <![CDATA[=(U8 - R8) * S8]]></Attributes>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -2474,7 +2474,7 @@
 <![CDATA[=if(project_bid_item.select(bid_status) = 3, "已中标", "") + "" + if(and(project_bid_item.select(can_win_bid_status) = 1, project_bid_item.select(bid_status) = 1), "预中标", "") + "" + if(and(project_bid_item.select(bid_status) != 3, project_bid_item.select(can_win_bid_status) != 1), "未中标", "")]]></Attributes>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
 <C c="23" r="7" s="5">
@@ -2496,7 +2496,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <CellInsertPolicy>
 <InsertPolicy>
 <![CDATA[copy]]></InsertPolicy>
@@ -2520,7 +2520,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2582,7 +2582,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="26" r="7" s="5">
@@ -2622,7 +2622,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="27" r="7" s="5">
@@ -2673,7 +2673,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="28" r="7" s="5">
@@ -2724,7 +2724,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="29" r="7" s="5">
@@ -2775,7 +2775,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="30" r="7" s="5">
@@ -2826,7 +2826,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="31" r="7" s="5">
@@ -2877,7 +2877,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="32" r="7" s="5">
@@ -2928,7 +2928,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="33" r="7" s="5">
@@ -2979,7 +2979,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="34" r="7" s="5">
@@ -3030,7 +3030,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="35" r="7" s="5">
@@ -3081,7 +3081,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="36" r="7" s="5">
@@ -3132,7 +3132,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="37" r="7" s="5">
@@ -3183,7 +3183,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="38" r="7" s="5">
@@ -3234,7 +3234,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="39" r="7" s="5">
@@ -3285,7 +3285,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="0" r="8">
@@ -4481,7 +4481,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
-<Background name="ImageBackground" layout="2">
+<Background name="ImageBackground" layout="4">
 <FineImage fm="png">
 <IM>
 <![CDATA[m(I[H;ouK;h;,"d:/PtFL!VSh'LWfB"";M!1&up.1'f'[d@^UV#Xb@0N<:#R_1WsU-=AcrN!
