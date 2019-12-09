@@ -132,13 +132,13 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1152000,864000,864000,864000,864000,722880,1219200,722880,722880,722880,723900,722880,722880,723900,722880,722880,1143000,722880,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[838200,1714500,2667000,1066800,3505200,4800600,3695700,2628900,2209800,2781300,7200000,9504000,2514600,2400300,2705100,4152900,2324100,7200000,9504000,2514600,2400300,2705100,4152900,7200000,1790700,2743200]]></ColumnWidth>
+<![CDATA[609600,1866900,4896000,1295400,4896000,8039100,2476500,9504000,2705100,2514600,2743200,2095500,7200000,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="36" s="0">
 <O>
 <![CDATA[采购结果处理]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr/>
 <Expand/>
 </C>
 <C c="0" r="1" cs="10" s="1">
@@ -702,13 +702,13 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[LEN(B6)==0]]></Formula>
+<![CDATA[LEN(B6) = 0]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[LEN(B6)==0|| B6=='()']]></Formula>
+<![CDATA[LEN(B6) = 0 || B6 = '()']]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -720,7 +720,7 @@
 <C c="1" r="5" cs="6" s="4">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=if(LEN(ds3.select(中标商))>0 ,ds3.select(中标商)+"("+ds3.select(mobile)+")",'')]]></Attributes>
+<![CDATA[=if(LEN(ds3.select(中标商)) > 0, ds3.select(中标商) + "(" + ds3.select(mobile) + ")", '')]]></Attributes>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
@@ -729,7 +729,7 @@
 <C c="7" r="5" cs="10" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[="  报价合计："+sum(J8)+"  成交合计："+sum(L8)+"  节约总额："+sum(P8)+"  节约率："+if(sum(J8) = 0, 0, FORMAT(sum(P8) / ((sum(P8) + sum(L8))),"0.00%"))]]></Attributes>
+<![CDATA[="  报价合计：" + sum(J8) + "  成交合计：" + sum(L8) + "  节约总额：" + sum(P8) + "  节约率：" + if(sum(J8) = 0, 0, FORMAT(sum(P8) / ((sum(P8) + sum(L8))), "0.00%"))]]></Attributes>
 </O>
 <PrivilegeControl/>
 <Expand/>
@@ -972,7 +972,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len(B6)==0]]></Formula>
+<![CDATA[len(B6) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
 </Highlight>
@@ -1713,7 +1713,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len(B6)==0]]></Formula>
+<![CDATA[len(B6) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
 </Highlight>
@@ -2019,7 +2019,7 @@
 <C c="16" r="7" s="6">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=if(ds2.select(bid_status) = 3, "已中标", "")+""+if(and(ds2.select(中标状态)==1,ds2.select(bid_status)==1),"预中标","")+""+if(and(ds2.select(bid_status)!=3,ds2.select(中标状态)!=1),"未中标","")]]></Attributes>
+<![CDATA[=if(ds2.select(bid_status) = 3, "已中标", "") + "" + if(and(ds2.select(中标状态) = 1, ds2.select(bid_status) = 1), "预中标", "") + "" + if(and(ds2.select(bid_status) != 3, ds2.select(中标状态) != 1), "未中标", "")]]></Attributes>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
@@ -3554,7 +3554,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
-<Background name="ImageBackground" layout="2">
+<Background name="ImageBackground" layout="4">
 <FineImage fm="png">
 <IM>
 <![CDATA[m(I[H;ouK;h;,"d:/PtFL!VSh'LWfB"";M!1&up.1'f'[d@^UV#Xb@0N<:#R_1WsU-=AcrN!
@@ -4289,7 +4289,12 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="SimSun" style="1" size="144"/>
 <Background name="NullBackground"/>
-<Border/>
+<Border>
+<Top color="-16777216"/>
+<Bottom color="-16777216"/>
+<Left color="-16777216"/>
+<Right color="-16777216"/>
+</Border>
 </Style>
 <Style imageLayout="1">
 <FRFont name="SimSun" style="1" size="72"/>
