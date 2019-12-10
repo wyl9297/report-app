@@ -132,7 +132,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1152000,864000,864000,864000,864000,722880,1219200,722880,722880,722880,723900,722880,722880,723900,722880,722880,1143000,722880,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[609600,1866900,4896000,1295400,4896000,8039100,2476500,9504000,2705100,2514600,2743200,2095500,7200000,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
+<![CDATA[609600,1866900,4896000,1295400,4896000,8039100,2476500,5067300,2705100,2514600,2743200,2095500,3467100,4896000,1905000,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="36" s="0">
 <O>
@@ -1799,11 +1799,11 @@
 </Condition>
 </JoinCondition>
 </Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
-<ColumnWidth i="6480000"/>
-</HighlightAction>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
 <FRFont name="SimSun" style="0" size="64"/>
+</HighlightAction>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="6480000"/>
 </HighlightAction>
 </Highlight>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1829,11 +1829,11 @@
 </Condition>
 </JoinCondition>
 </Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
-<ColumnWidth i="8640000"/>
-</HighlightAction>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
 <FRFont name="SimSun" style="0" size="64"/>
+</HighlightAction>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="8640000"/>
 </HighlightAction>
 </Highlight>
 </HighlightList>
@@ -2034,6 +2034,29 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 100]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("分标说明", split($sup, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="5760000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
 <Expand dir="0" leftParentDefault="false" left="M8"/>
 </C>
 <C c="18" r="7" s="6">
@@ -2045,6 +2068,86 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$)> 50]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$)<= 200]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("用途", split($sup, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="4320000"/>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性2]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 200]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) < 500]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("用途", split($sup, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
+<FRFont name="SimSun" style="0" size="64"/>
+</HighlightAction>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="8640000"/>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性3]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) < 500]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("用途", split($sup, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="11520000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="19" r="7" s="6">
@@ -2056,6 +2159,56 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 50]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) < 100]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("使用单位", split($sup, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="4320000"/>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性2]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 100]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("使用单位", split($sup, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="7200000"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="20" r="7" s="6">
@@ -4289,12 +4442,7 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="SimSun" style="1" size="144"/>
 <Background name="NullBackground"/>
-<Border>
-<Top color="-16777216"/>
-<Bottom color="-16777216"/>
-<Left color="-16777216"/>
-<Right color="-16777216"/>
-</Border>
+<Border/>
 </Style>
 <Style imageLayout="1">
 <FRFont name="SimSun" style="1" size="72"/>
