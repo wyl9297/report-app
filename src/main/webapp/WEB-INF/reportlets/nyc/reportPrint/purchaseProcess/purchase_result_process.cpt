@@ -132,7 +132,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1152000,864000,864000,864000,864000,722880,1219200,722880,722880,722880,723900,722880,722880,723900,722880,722880,1143000,722880,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[609600,1866900,4896000,1295400,4896000,8039100,2476500,5067300,2705100,2514600,2743200,2095500,3467100,4896000,1905000,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
+<![CDATA[609600,1866900,4896000,3695700,4896000,8039100,2476500,5067300,2705100,2514600,4876800,2095500,3467100,4896000,2857500,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="36" s="0">
 <O>
@@ -965,7 +965,7 @@
 <O>
 <![CDATA[序号]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -983,7 +983,7 @@
 <O>
 <![CDATA[采购品编码]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1001,21 +1001,21 @@
 <O>
 <![CDATA[采购品名称]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B6"/>
 </C>
 <C c="3" r="6" s="6">
 <O>
 <![CDATA[单位]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B6"/>
 </C>
 <C c="4" r="6" s="6">
 <O>
 <![CDATA[规格]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1033,7 +1033,7 @@
 <O>
 <![CDATA[技术参数/材质]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1051,7 +1051,7 @@
 <O>
 <![CDATA[来源协议]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1069,21 +1069,21 @@
 <O>
 <![CDATA[数量]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B6"/>
 </C>
 <C c="8" r="6" s="6">
 <O>
 <![CDATA[报价（元）]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B6"/>
 </C>
 <C c="9" r="6" s="6">
 <O>
 <![CDATA[报价总计（元）]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1101,14 +1101,14 @@
 <O>
 <![CDATA[成交价(元)]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B6"/>
 </C>
 <C c="11" r="6" s="6">
 <O>
 <![CDATA[成交总价（元）]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1126,14 +1126,14 @@
 <O>
 <![CDATA[分标数量]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="B6"/>
 </C>
 <C c="13" r="6" s="6">
 <O>
 <![CDATA[单项总价(元)]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1151,14 +1151,14 @@
 <O>
 <![CDATA[平均节约额]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
 <C c="15" r="6" s="6">
 <O>
 <![CDATA[节约额(元)]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1176,7 +1176,7 @@
 <O>
 <![CDATA[中标状态]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1194,7 +1194,7 @@
 <O>
 <![CDATA[分标说明]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1212,7 +1212,7 @@
 <O>
 <![CDATA[用途]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1230,7 +1230,7 @@
 <O>
 <![CDATA[使用单位]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1248,7 +1248,7 @@
 <O>
 <![CDATA[申报单位]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1266,7 +1266,7 @@
 <O>
 <![CDATA[申报人/电话]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1284,7 +1284,7 @@
 <O>
 <![CDATA[需求日期]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1302,7 +1302,7 @@
 <O>
 <![CDATA[备注]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1334,7 +1334,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1366,7 +1366,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1398,7 +1398,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1430,7 +1430,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1462,7 +1462,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1494,7 +1494,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1526,7 +1526,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1558,7 +1558,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1590,7 +1590,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1622,7 +1622,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1654,7 +1654,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -1686,7 +1686,7 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
@@ -2659,7 +2659,13 @@
 <![CDATA[未中标供应商报价信息]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<CellInsertPolicy>
+<InsertPolicy>
+<![CDATA[default]]></InsertPolicy>
+<O>
+<![CDATA[]]></O>
+</CellInsertPolicy>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="11" r="10">
 <PrivilegeControl/>
@@ -3007,396 +3013,412 @@
 <C c="0" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="1" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="2" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="3" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="4" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="5" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="6" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="7" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="8" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="9" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="10" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="11" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="12" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="13" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="14" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="15" r="13" s="9">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="16" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="17" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="18" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="19" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="20" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="21" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="22" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="23" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="24" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="25" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="26" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="27" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="28" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="29" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="30" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="31" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="32" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="33" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="34" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="35" r="13">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="14" cs="3" s="7">
 <O>
 <![CDATA[整体分标说明]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="3" r="14" cs="14" s="10">
 <O t="DSColumn">
 <Attributes dsName="ds5" columnName="divide_bid_mark"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand dir="0"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 500]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
+<FRFont name="宋体" style="0" size="64"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0" leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="17" r="14">
 <PrivilegeControl/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="18" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="19" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="20" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="21" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="22" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="23" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="24" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="25" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="26" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="27" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="28" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="29" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="30" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="31" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="32" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="33" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="34" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="35" r="14">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="0" r="15" cs="17" s="6">
 <O>
 <![CDATA[采购结果处理审批记录 ]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="17" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="18" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="19" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="20" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="21" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="22" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="23" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="24" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="25" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="26" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="27" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="28" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="29" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="30" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="31" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="32" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="33" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="34" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="35" r="15">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand/>
+<Expand leftParentDefault="false" upParentDefault="false"/>
 </C>
 <C c="0" r="16" cs="2" s="6">
 <O>

@@ -132,7 +132,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1152000,864000,864000,864000,864000,722880,1219200,722880,722880,722880,723900,722880,722880,723900,722880,722880,1143000,722880,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[609600,1866900,4896000,1295400,4896000,8039100,2476500,5067300,2705100,2514600,2743200,2095500,3467100,4896000,1143000,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
+<![CDATA[609600,1866900,4896000,3695700,4896000,8039100,2476500,5067300,2705100,2514600,4876800,2095500,3467100,4896000,2857500,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="36" s="0">
 <O>
@@ -3120,13 +3120,29 @@
 <C c="3" r="14" cs="14" s="10">
 <O t="DSColumn">
 <Attributes dsName="ds5" columnName="divide_bid_mark"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand dir="0"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) > 500]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
+<FRFont name="宋体" style="0" size="64"/>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0" leftParentDefault="false" left="A14" upParentDefault="false"/>
 </C>
 <C c="17" r="14">
 <PrivilegeControl/>
@@ -4368,12 +4384,7 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="SimSun" style="1" size="144"/>
 <Background name="NullBackground"/>
-<Border>
-<Top color="-16777216"/>
-<Bottom color="-16777216"/>
-<Left color="-16777216"/>
-<Right color="-16777216"/>
-</Border>
+<Border/>
 </Style>
 <Style imageLayout="1">
 <FRFont name="SimSun" style="1" size="72"/>
@@ -4443,10 +4454,10 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 </StyleList>
