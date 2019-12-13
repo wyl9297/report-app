@@ -132,7 +132,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1152000,864000,864000,864000,864000,722880,1219200,722880,722880,722880,723900,722880,722880,723900,722880,722880,1143000,722880,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[609600,1866900,4896000,3695700,4896000,8039100,2476500,5067300,2705100,2514600,4876800,2095500,3467100,4896000,2857500,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
+<![CDATA[609600,1866900,4896000,3695700,4896000,8039100,2476500,5067300,2705100,2514600,4876800,2095500,3467100,4838700,0,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="36" s="0">
 <O>
@@ -2751,13 +2751,6 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="17" r="11" cs="6" s="6">
-<O>
-<![CDATA[所报总价]]></O>
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
 <C c="23" r="11">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
@@ -2844,17 +2837,6 @@
 <Expand dir="0"/>
 </C>
 <C c="10" r="12" s="6">
-<O t="DSColumn">
-<Attributes dsName="ds4" columnName="deal_total_price"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
-</O>
-<PrivilegeControl/>
-<CellPageAttr repeat="false" breakOnPaginate="false"/>
-<Expand dir="0"/>
-</C>
-<C c="17" r="12" cs="6" s="6">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="deal_total_price"/>
 <Complex/>
@@ -4437,10 +4419,10 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style imageLayout="1">
@@ -4454,10 +4436,10 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 </StyleList>
