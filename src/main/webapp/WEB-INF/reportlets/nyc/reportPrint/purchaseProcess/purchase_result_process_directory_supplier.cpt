@@ -738,7 +738,7 @@
 <Attr divideMode="1"/>
 </RG>
 <Result>
-<![CDATA[$$$]]></Result>
+<![CDATA[if(len($$$)>0,$$$,0.00)]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -1655,10 +1655,10 @@ FEDV@A1NiCZEh8tD%6^+LCXlmI-g1.r!K5Tqh[de"C(DQ7Q@mJ'6_a3kn@E#\b?c4E95:k(h
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="1" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
