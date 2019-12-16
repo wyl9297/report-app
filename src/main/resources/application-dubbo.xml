@@ -14,6 +14,7 @@
 
     <!-- 悦采注册中心 -->
     <d:registry id="saas_dubbo_registry" address="${pom.dubbo.registry.address.saas}" protocol="zookeeper" timeout="100000"/>
+    <d:reference id="workflowApproveDubboService" interface="cn.bidlink.nyc.workflow.service.workflow.WorkflowApproveDubboService"  registry="saas_dubbo_registry" check="false"/>
 
     <!-- 组织权限、用户中心  Start-->
     <d:reference id="aclService"  registry="defaultRegistryAddress"  interface="cn.bidlink.resacl.dal.service.DubboAclService" />
