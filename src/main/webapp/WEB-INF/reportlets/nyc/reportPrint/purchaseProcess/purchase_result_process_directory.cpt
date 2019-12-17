@@ -137,7 +137,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,722880,722880,723900,723900,723900,723900,723900,1143000,723900,723900,1143000,723900]]></RowHeight>
+<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,541866,722880,723900,723900,587022,723900,632177,857955,857955,723900,1143000,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[1866900,1866900,4896000,1295400,4896000,8039100,2476500,9504000,2705100,2514600,2743200,2095500,7200000,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
@@ -3488,11 +3488,15 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="0" r="9" cs="24" s="5">
+<C c="0" r="9" cs="23" s="5">
 <O>
 <![CDATA[未中标供应商报价信息]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<Expand/>
+</C>
+<C c="23" r="9">
+<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="24" r="9">
@@ -3589,11 +3593,15 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="9" r="10" cs="15" s="5">
+<C c="9" r="10" cs="14" s="5">
 <O>
 <![CDATA[所报总价]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<Expand/>
+</C>
+<C c="23" r="10">
+<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="24" r="10">
@@ -3701,7 +3709,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="9" r="11" cs="15" s="8">
+<C c="9" r="11" cs="14" s="8">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="deal_total_price"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -3716,6 +3724,10 @@
 <PrivilegeControl/>
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
+</C>
+<C c="23" r="11">
+<PrivilegeControl/>
+<Expand/>
 </C>
 <C c="24" r="11">
 <PrivilegeControl/>
@@ -4095,11 +4107,15 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="0" r="14" cs="24" s="5">
+<C c="0" r="14" cs="23" s="5">
 <O>
 <![CDATA[采购结果处理审批记录 ]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<Expand/>
+</C>
+<C c="23" r="14">
+<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="24" r="14">
@@ -4500,6 +4516,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
