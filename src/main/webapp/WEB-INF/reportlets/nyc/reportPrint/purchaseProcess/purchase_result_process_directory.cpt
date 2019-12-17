@@ -137,9 +137,9 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,767644,722880,723900,723900,587022,723900,632177,857955,857955,723900]]></RowHeight>
+<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,767644,632177,723900,723900,587022,723900,632177,857955,857955,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1866900,1866900,4896000,1295400,4896000,8039100,2476500,7631288,2705100,2514600,2743200,2095500,6592711,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,5870222,0,2743200]]></ColumnWidth>
+<![CDATA[1866900,1866900,4896000,1295400,4896000,8039100,2476500,7631288,2705100,2514600,2743200,2095500,6592711,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7588155,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="40" s="0">
 <O>
@@ -3288,17 +3288,81 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
-<C c="0" r="8" cs="40">
+<C c="0" r="8" cs="24">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
+<C c="24" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="25" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="26" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="27" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="28" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="29" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="30" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="31" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="32" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="33" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="34" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="35" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="36" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="37" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="38" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="39" r="8">
+<PrivilegeControl/>
+<Expand/>
+</C>
 <C c="0" r="9" cs="24" s="5">
 <O>
-<![CDATA[未中标供应商报价信息]]></O>
+<![CDATA[未中标供应商报价信息 ]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand leftParentDefault="false" upParentDefault="false"/>
+<Expand/>
 </C>
 <C c="24" r="9">
 <PrivilegeControl/>
