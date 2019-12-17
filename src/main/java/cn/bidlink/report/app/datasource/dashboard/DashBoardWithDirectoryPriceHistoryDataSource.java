@@ -7,7 +7,9 @@ import cn.bidlink.report.server.entity.SupplierPurchasesDto;
 import cn.bidlink.report.server.service.SupplierPurchaseStatisticsService;
 import com.fr.base.Parameter;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.util.CollectionUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -53,18 +55,19 @@ public class DashBoardWithDirectoryPriceHistoryDataSource extends AbstractBaseTa
 
             ServiceResult<List<Map>> directoryFirstten = supplierPurchaseStatisticsService.directoryFirstten(dto);
             List<Map> directoryResult = directoryFirstten.getResult();
-            Map map = directoryResult.get(directoryResult.size()-1);
+            if(!CollectionUtils.isEmpty(directoryResult)){
+                Map map = directoryResult.get(directoryResult.size()-1);
+                if (!map.isEmpty()) {
 
-            if (!map.isEmpty()) {
+                    Object directory_id = map.get("directory_id");
+                    dto.setDirectId(Long.valueOf(String.valueOf(directory_id)));
 
-                Object directory_id = map.get("directory_id");
-                dto.setDirectId(Long.valueOf(String.valueOf(directory_id)));
-
-                if (StringUtils.isNotEmpty(companyId) && StringUtils.isNotEmpty(String.valueOf(directory_id)) && StringUtils.isNotEmpty(startDate)
-                        && StringUtils.isNotEmpty(endDate)) {
-                    ServiceResult<List<Map>> listServiceResult = supplierPurchaseStatisticsService.companyDirectory(dto);
-                    List<Map> result = listServiceResult.getResult();
-                    return result;
+                    if (StringUtils.isNotEmpty(companyId) && StringUtils.isNotEmpty(String.valueOf(directory_id)) && StringUtils.isNotEmpty(startDate)
+                            && StringUtils.isNotEmpty(endDate)) {
+                        ServiceResult<List<Map>> listServiceResult = supplierPurchaseStatisticsService.companyDirectory(dto);
+                        List<Map> result = listServiceResult.getResult();
+                        return result;
+                    }
                 }
             }
         }else{
@@ -77,8 +80,7 @@ public class DashBoardWithDirectoryPriceHistoryDataSource extends AbstractBaseTa
             }
         }
 
-        return null;
-
+        return new ArrayList();
     }
 
 }

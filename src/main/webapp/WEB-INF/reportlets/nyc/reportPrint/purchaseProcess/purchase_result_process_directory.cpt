@@ -139,7 +139,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,722880,722880,723900,723900,723900,723900,723900,1143000,723900,723900,1143000,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[609600,1866900,4896000,1295400,4896000,8039100,2476500,9504000,2705100,2514600,2743200,2095500,7200000,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
+<![CDATA[1866900,1866900,4896000,1295400,4896000,8039100,2476500,9504000,2705100,2514600,2743200,2095500,7200000,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="40" s="0">
 <O>
@@ -4205,7 +4205,7 @@
 </C>
 <C c="4" r="15" cs="5" s="5">
 <O>
-<![CDATA[审批意见`]]></O>
+<![CDATA[审批意见]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
@@ -4310,8 +4310,11 @@
 <C c="0" r="16" s="5">
 <O t="DSColumn">
 <Attributes dsName="ds6" columnName="approveCount"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -4327,7 +4330,7 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<Expand dir="0"/>
+<Expand dir="0" leftParentDefault="false" left="A17" upParentDefault="false" up="A16"/>
 </C>
 <C c="2" r="16" cs="2" s="5">
 <O t="DSColumn">
@@ -4472,6 +4475,22 @@
 <Expand/>
 </C>
 <C c="4" r="18">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="22">
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="2" r="22">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="23">
+<PrivilegeControl/>
+<Expand dir="0"/>
+</C>
+<C c="2" r="23">
 <PrivilegeControl/>
 <Expand/>
 </C>

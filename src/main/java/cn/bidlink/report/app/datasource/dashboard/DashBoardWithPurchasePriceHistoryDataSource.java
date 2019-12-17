@@ -7,7 +7,9 @@ import cn.bidlink.report.server.entity.SupplierPurchasesDto;
 import cn.bidlink.report.server.service.SupplierPurchaseStatisticsService;
 import com.fr.base.Parameter;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.util.CollectionUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -32,7 +34,7 @@ public class DashBoardWithPurchasePriceHistoryDataSource extends AbstractBaseTab
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"company_id", "price", "time" , "supplier_id"};
+        return new String[]{"company_id", "price", "time" , "supplier_id" , "supplier_name"};
     }
 
     @Override
@@ -52,17 +54,19 @@ public class DashBoardWithPurchasePriceHistoryDataSource extends AbstractBaseTab
         if(StringUtils.isEmpty(supplierId)){
             ServiceResult<List<Map>> companyFirstten = supplierPurchaseStatisticsService.companyFirstten(dto);
             List<Map> companyFirsttenResult = companyFirstten.getResult();
-            Map map = companyFirsttenResult.get(companyFirsttenResult.size()-1);
-            if(!map.isEmpty()){
-                Object supplier_id = map.get("supplier_id");
-                dto.setSupplierId(Long.valueOf(String.valueOf(supplier_id)));
+            if(!CollectionUtils.isEmpty(companyFirsttenResult)){
+                Map map = companyFirsttenResult.get(companyFirsttenResult.size()-1);
+                if(!map.isEmpty()){
+                    Object supplier_id = map.get("supplier_id");
+                    dto.setSupplierId(Long.valueOf(String.valueOf(supplier_id)));
 
-                if(StringUtils.isNotEmpty(companyId) && StringUtils.isNotEmpty(String.valueOf(supplier_id))
-                        && StringUtils.isNotEmpty(startDate)  && StringUtils.isNotEmpty(endDate)){
+                    if(StringUtils.isNotEmpty(companyId) && StringUtils.isNotEmpty(String.valueOf(supplier_id))
+                            && StringUtils.isNotEmpty(startDate)  && StringUtils.isNotEmpty(endDate)){
 
-                    ServiceResult<List<Map>> listServiceResult = supplierPurchaseStatisticsService.companySupplier(dto);
-                    List<Map> result = listServiceResult.getResult();
-                    return result;
+                        ServiceResult<List<Map>> listServiceResult = supplierPurchaseStatisticsService.companySupplier(dto);
+                        List<Map> result = listServiceResult.getResult();
+                        return result;
+                    }
                 }
             }
         }else{
@@ -75,6 +79,6 @@ public class DashBoardWithPurchasePriceHistoryDataSource extends AbstractBaseTab
                 return result;
             }
         }
-        return null;
+        return new ArrayList();
     }
 }
