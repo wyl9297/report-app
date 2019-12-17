@@ -428,7 +428,9 @@
 <O t="DSColumn">
 <Attributes dsName="title" columnName="title"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -1053,7 +1055,9 @@
 </JoinCondition>
 </Condition>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
 <Result>
 <![CDATA[$$$]]></Result>
 <Parameters/>
@@ -1064,7 +1068,13 @@
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
 <Name>
 <![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition"/>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$)>100]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="28800000"/>
+</HighlightAction>
 </Highlight>
 </HighlightList>
 <Present class="com.fr.base.present.FormulaPresent"/>

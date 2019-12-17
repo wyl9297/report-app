@@ -185,10 +185,18 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     Map<String , Object>  formItem = (Map<String, Object>)it.get("formItemClass");*/
                     String k = String.valueOf(it.get("key"));
                     String t = String.valueOf(it.get("title"));
-                    if (t.equals("交货地点")){
-                        String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
+                    String typeValue = String.valueOf(it.get("typeValue"));
+                    if ( "2".equals(typeValue) ){
+                        String foItValue = String.valueOf(formItem.get(k + "areaString"));
                         biddingResultDynamicChangeVo.setValue(foItValue);
-
+                    } else if ( "5".equals(typeValue) ){
+                        biddingResultDynamicChangeVo.setValue(String.valueOf(formItem.get("value")));
+                    } else if (t.equals("交货地点")){
+                        String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
+                        if ( null != foItValue && "null".equals(foItValue) ) {
+                            foItValue = String.valueOf(formItem.get("value"));
+                        }
+                        biddingResultDynamicChangeVo.setValue(foItValue);
                     }else {
                         String foItValue = String.valueOf(formItem.get("value"));
                         if ( !"null".equals(foItValue) && StringUtils.isNotEmpty(foItValue)){
@@ -262,8 +270,17 @@ public class TenderProxyServiceImpl implements TenderProxyService {
 
                     String k = String.valueOf(it.get("key"));
                     String t = String.valueOf(it.get("title"));
-                    if (t.equals("交货地点")){
+                    String typeValue = String.valueOf(it.get("typeValue"));
+                    if ( "2".equals(typeValue) ){
+                        String foItValue = String.valueOf(formItem.get(k + "areaString"));
+                        biddingResultDynamicChangeVo.setValue(foItValue);
+                    } else if ( "5".equals(typeValue) ){
+                        biddingResultDynamicChangeVo.setValue(String.valueOf(formItem.get("value")));
+                    } else if (t.equals("交货地点")){
                         String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
+                        if ( null != foItValue && "null".equals(foItValue) ) {
+                            foItValue = String.valueOf(formItem.get("value"));
+                        }
                         biddingResultDynamicChangeVo.setValue(foItValue);
 
                     }else {
@@ -424,8 +441,17 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     String t = String.valueOf(it.get("title"));
                     //String foItValue = String.valueOf(formItem.get("value"));
 
-                    if (t.equals("交货地点")){
+                    String typeValue = String.valueOf(it.get("typeValue"));
+                    if ( "2".equals(typeValue) ){
+                        String foItValue = String.valueOf(formItem.get(k + "areaString"));
+                        biddingResultDynamicChangeVo.setValue(foItValue);
+                    } else if ( "5".equals(typeValue) ){
+                        biddingResultDynamicChangeVo.setValue(String.valueOf(formItem.get("value")));
+                    } else if (t.equals("交货地点")){
                         String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
+                        if ( null != foItValue && "null".equals(foItValue) ) {
+                            foItValue = String.valueOf(formItem.get("value"));
+                        }
                         biddingResultDynamicChangeVo.setValue(foItValue);
                     }else {
                         String foItValue = String.valueOf(formItem.get("value"));

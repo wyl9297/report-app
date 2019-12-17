@@ -131,6 +131,12 @@
         </dependency>
 
         <dependency>
+            <groupId>cn.bidlink.usage.supplier</groupId>
+            <artifactId>supplier_usage_statistics_cloud_service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>cn.bidlink.framework</groupId>
             <artifactId>bidlink-framework-common</artifactId>
         </dependency>
@@ -277,7 +283,42 @@
             <artifactId>asm</artifactId>
             <version>7.0</version>
         </dependency>
+        <!--悦采工作流依赖-->
+        <dependency>
+            <groupId>cn.bidlink.nyc</groupId>
+            <artifactId>workflow-interface-remote</artifactId>
+            <version>4.1811.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
+        <dependency>
+            <groupId>cn.bidlink.nyc</groupId>
+            <artifactId>nyc-core</artifactId>
+            <version>4.1811.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.nyc.saas</groupId>
+            <artifactId>workflow-service</artifactId>
+            <version>0.0.4-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!--<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

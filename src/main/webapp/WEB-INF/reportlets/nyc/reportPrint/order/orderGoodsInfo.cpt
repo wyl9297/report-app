@@ -850,7 +850,6 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
-<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -981,6 +980,12 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<Text>
+<![CDATA[E采供]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="ca567b89-57dc-47f1-bd08-a21a26940490"/>
 </TemplateIdAttMark>
