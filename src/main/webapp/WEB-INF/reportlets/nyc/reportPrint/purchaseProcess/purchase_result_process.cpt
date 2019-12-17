@@ -3781,6 +3781,39 @@
 <Background name="ColorBackground" color="-526086"/>
 <LCAttr vgap="0" hgap="0" compInterval="0"/>
 <Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
+<InnerWidget class="com.fr.form.ui.ComboBox">
+<Listener event="afterinit">
+<JavaScript class="com.fr.js.JavaScriptImpl">
+<Parameters/>
+<Content>
+<![CDATA[this.options.name4Empty = "全部供应商";]]></Content>
+</JavaScript>
+</Listener>
+<WidgetName name="sids"/>
+<WidgetAttr description="">
+<PrivilegeControl/>
+</WidgetAttr>
+<EMSG>
+<![CDATA[是的发送到发送到]]></EMSG>
+<DirectEdit>
+<![CDATA[false]]></DirectEdit>
+<Dictionary class="com.fr.data.impl.TableDataDictionary">
+<FormulaDictAttr kiName="supplierId" viName="supplierName"/>
+<TableDataDictAttr>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[supplier]]></Name>
+</TableData>
+</TableDataDictAttr>
+</Dictionary>
+<widgetValue>
+<O>
+<![CDATA[全部供应商]]></O>
+</widgetValue>
+</InnerWidget>
+<BoundsAttr x="308" y="90" width="130" height="21"/>
+</Widget>
+<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
 <InnerWidget class="com.fr.form.ui.RadioGroup">
 <Listener event="statechange">
 <JavaScript class="com.fr.js.JavaScriptImpl">
@@ -3841,34 +3874,6 @@
 </InnerWidget>
 <BoundsAttr x="865" y="36" width="80" height="21"/>
 </Widget>
-<Widget class="com.fr.form.ui.container.WAbsoluteLayout$BoundsWidget">
-<InnerWidget class="com.fr.form.ui.ComboBox">
-<WidgetName name="sids"/>
-<WidgetAttr description="">
-<PrivilegeControl/>
-</WidgetAttr>
-<EMSG>
-<![CDATA[是的发送到发送到]]></EMSG>
-<allowBlank>
-<![CDATA[false]]></allowBlank>
-<DirectEdit>
-<![CDATA[false]]></DirectEdit>
-<Dictionary class="com.fr.data.impl.TableDataDictionary">
-<FormulaDictAttr kiName="supplierId" viName="supplierName"/>
-<TableDataDictAttr>
-<TableData class="com.fr.data.impl.NameTableData">
-<Name>
-<![CDATA[supplier]]></Name>
-</TableData>
-</TableDataDictAttr>
-</Dictionary>
-<widgetValue>
-<O>
-<![CDATA[全部供应商]]></O>
-</widgetValue>
-</InnerWidget>
-<BoundsAttr x="308" y="90" width="130" height="21"/>
-</Widget>
 <Sorted sorted="false"/>
 <MobileWidgetList>
 <Widget widgetName="sup"/>
@@ -3885,7 +3890,7 @@
 <WidgetNameTagMap/>
 <ParamAttr class="com.fr.report.mobile.DefaultMobileParamStyle"/>
 </Layout>
-<DesignAttr width="960" height="116"/>
+<DesignAttr width="960" height="144"/>
 </ParameterUI>
 </ReportParameterAttr>
 <StyleList>
