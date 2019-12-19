@@ -688,6 +688,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 </ReportAttrSet>
 <PrivilegeControl/>
@@ -725,8 +726,10 @@
 </WidgetAttr>
 <DateAttr enddatefm="=now()"/>
 <widgetValue>
-<O t="Date">
-<![CDATA[1573200552103]]></O>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=null]]></Attributes>
+</O>
 </widgetValue>
 </InnerWidget>
 <BoundsAttr x="241" y="50" width="95" height="21"/>
@@ -756,8 +759,10 @@
 </WidgetAttr>
 <DateAttr/>
 <widgetValue>
-<O t="Date">
-<![CDATA[1573200544912]]></O>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=null]]></Attributes>
+</O>
 </widgetValue>
 </InnerWidget>
 <BoundsAttr x="127" y="49" width="95" height="21"/>

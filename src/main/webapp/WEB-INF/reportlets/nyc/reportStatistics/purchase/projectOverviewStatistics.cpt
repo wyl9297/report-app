@@ -203,7 +203,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="8" r="5" cs="2" s="2">
+<C c="8" r="5" cs="2" s="3">
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="deal_sum"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -332,7 +332,7 @@
 </HighlightList>
 <Expand leftParentDefault="false" left="E7"/>
 </C>
-<C c="8" r="6" cs="2" s="2">
+<C c="8" r="6" cs="2" s="3">
 <O t="DSColumn">
 <Attributes dsName="ds2" columnName="deal_sum"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -650,7 +650,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="3" r="12" cs="3" s="2">
+<C c="3" r="12" cs="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="totalPrice"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -692,7 +692,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="6" r="12" cs="3" s="2">
+<C c="6" r="12" cs="3" s="3">
 <O t="DSColumn">
 <Attributes dsName="ds3" columnName="totalPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -726,7 +726,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="9" r="12" cs="2" s="2">
+<C c="9" r="12" cs="2" s="4">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[=(G13 - D13) / D13]]></Attributes>
@@ -929,7 +929,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="3" r="14" cs="2" s="2">
+<C c="3" r="14" cs="2" s="3">
 <O t="DSColumn">
 <Attributes dsName="ds3" columnName="totalPrice"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -1004,6 +1004,7 @@
 <PaperSize width="42768000" height="30240000"/>
 <Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -1290,6 +1291,30 @@
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0.00]]></Format>
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="1"/>
+<Bottom style="1"/>
+<Left style="1"/>
+<Right style="1"/>
+</Border>
+</Style>
+<Style horizontal_alignment="0" imageLayout="1">
+<Format class="com.fr.base.CoreDecimalFormat">
+<![CDATA[#0%]]></Format>
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>

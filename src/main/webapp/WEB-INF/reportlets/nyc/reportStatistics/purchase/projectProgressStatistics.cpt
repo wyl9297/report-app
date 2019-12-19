@@ -111,7 +111,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,12153900,1219200,12534900,800100,990600,1181100,1104900,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,12153900,952500,12534900,800100,990600,1181100,1104900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[3505200,6553200,7962900,6667500,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
@@ -343,6 +343,7 @@
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
+<ShowUnitKey value="DataFunction-None"/>
 </ValueAxis>
 </yAxis>
 <secondAxis>
@@ -618,20 +619,21 @@
 <Expand/>
 </C>
 <C c="0" r="6" s="1">
-<O t="DSColumn">
-<Attributes dsName="ds2" columnName="id"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=&B7]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand dir="0"/>
+<Expand dir="0" leftParentDefault="false" left="B7" upParentDefault="false"/>
 </C>
 <C c="1" r="6" s="1">
 <O t="DSColumn">
-<Attributes dsName="ds2" columnName="name"/>
+<Attributes dsName="ds1" columnName="name"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -651,6 +653,8 @@
 </Condition>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>

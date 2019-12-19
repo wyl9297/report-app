@@ -602,18 +602,16 @@
 <Expand/>
 </C>
 <C c="0" r="6" s="1">
-<O t="DSColumn">
-<Attributes dsName="ds2" columnName="id"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=&B7]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand dir="0"/>
+<Expand dir="0" leftParentDefault="false" left="B7" upParentDefault="false"/>
 </C>
 <C c="1" r="6" s="1">
 <O t="DSColumn">
-<Attributes dsName="ds2" columnName="name"/>
+<Attributes dsName="ds1" columnName="name"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
