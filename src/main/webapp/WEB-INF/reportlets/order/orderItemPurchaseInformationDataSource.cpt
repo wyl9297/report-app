@@ -177,7 +177,7 @@
 <PrivilegeControl/>
 <Present class="com.fr.base.present.FormulaPresent">
 <Content>
-<![CDATA[=if($$$ = 1, "采购项目", if($$$ = 2, "招标项目", if($$$ = 3, "竞价项目", if($$$ = 4, "合同", if($$$ = 5, "新建", if($$$ = 6, "订单", "来源待定"))))))]]></Content>
+<![CDATA[=if($$$ = 1, "采购项目", if($$$ = 2, "招标项目", if($$$ = 3, "竞价项目", if($$$ = 4, "合同", if($$$ = 5, "新建", if($$$ = 6, "订单", "采购计划"))))))]]></Content>
 </Present>
 <Expand/>
 </C>
