@@ -539,29 +539,13 @@
 </Plot>
 </Plot>
 <ChartDefinition>
-<NormalReportDataDefinition>
-<Series>
-<SeriesDefinition>
-<SeriesName>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=A9]]></Attributes>
-</O>
-</SeriesName>
-<SeriesValue>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=B9]]></Attributes>
-</O>
-</SeriesValue>
-</SeriesDefinition>
-</Series>
-<Category>
-<O>
-<![CDATA[]]></O>
-</Category>
+<OneValueCDDefinition seriesName="name" valueName="priject_num" function="com.fr.data.util.function.NoneFunction">
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-</NormalReportDataDefinition>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[ds1]]></Name>
+</TableData>
+</OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
 </Chart>
