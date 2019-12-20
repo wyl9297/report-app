@@ -137,15 +137,15 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,722880,722880,723900,723900,723900,723900,723900,1143000,723900,723900,1143000,723900]]></RowHeight>
+<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,767644,632177,723900,723900,587022,723900,632177,857955,857955,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1866900,1866900,4896000,1295400,4896000,8039100,2476500,9504000,2705100,2514600,2743200,2095500,7200000,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
+<![CDATA[1866900,1866900,4896000,1295400,4896000,8039100,2476500,7631288,2705100,2514600,2743200,2095500,6592711,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7588155,0,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="40" s="0">
 <O>
 <![CDATA[采购结果处理]]></O>
 <PrivilegeControl/>
-<CellPageAttr/>
+<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="0" r="1" cs="8" s="1">
@@ -3288,209 +3288,78 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand/>
 </C>
-<C c="0" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="1" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="2" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="3" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="4" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="5" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="6" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="7" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="8" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="9" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="10" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="11" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="12" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="13" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="14" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="15" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="16" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="17" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="18" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="19" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="20" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="21" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="22" r="8">
-<PrivilegeControl/>
-<CellPageAttr repeat="false"/>
-<Expand/>
-</C>
-<C c="23" r="8">
+<C c="0" r="8" cs="24">
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="24" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="25" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="26" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="27" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="28" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="29" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="30" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="31" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="32" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="33" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="34" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="35" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="36" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="37" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="38" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="39" r="8">
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
 <Expand/>
 </C>
 <C c="0" r="9" cs="24" s="5">
 <O>
-<![CDATA[未中标供应商报价信息]]></O>
+<![CDATA[未中标供应商报价信息 ]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
@@ -4004,7 +3873,7 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="3" r="13" cs="20" s="9">
+<C c="3" r="13" cs="21" s="9">
 <O t="DSColumn">
 <Attributes dsName="ds5" columnName="divide_bid_mark"/>
 <Complex/>
@@ -4217,13 +4086,9 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="17" r="15" cs="6" s="5">
+<C c="17" r="15" cs="7" s="5">
 <O>
 <![CDATA[审批结果]]></O>
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="23" r="15">
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -4373,7 +4238,7 @@
 <CellPageAttr repeat="false"/>
 <Expand dir="0"/>
 </C>
-<C c="17" r="16" cs="6" s="5">
+<C c="17" r="16" cs="7" s="5">
 <O t="DSColumn">
 <Attributes dsName="ds6" columnName="approve_result"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -4385,10 +4250,6 @@
 </O>
 <PrivilegeControl/>
 <Expand dir="0"/>
-</C>
-<C c="23" r="16">
-<PrivilegeControl/>
-<Expand/>
 </C>
 <C c="24" r="16">
 <PrivilegeControl/>
@@ -4470,36 +4331,13 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="2" r="18">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="4" r="18">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="1" r="22">
-<PrivilegeControl/>
-<Expand dir="0"/>
-</C>
-<C c="2" r="22">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="1" r="23">
-<PrivilegeControl/>
-<Expand dir="0"/>
-</C>
-<C c="2" r="23">
-<PrivilegeControl/>
-<Expand/>
-</C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings pageOrder="1" headerHeight="0" footerHeight="720000">
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>

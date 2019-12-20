@@ -111,7 +111,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,12153900,1219200,12534900,800100,990600,1181100,1104900,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,11520000,952500,12534900,800100,990600,1181100,1104900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[3505200,6553200,7962900,6667500,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
@@ -343,6 +343,7 @@
 <AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
+<ShowUnitKey value="DataFunction-None"/>
 </ValueAxis>
 </yAxis>
 <secondAxis>
@@ -555,29 +556,13 @@
 </Plot>
 </Plot>
 <ChartDefinition>
-<NormalReportDataDefinition>
-<Series>
-<SeriesDefinition>
-<SeriesName>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=A9]]></Attributes>
-</O>
-</SeriesName>
-<SeriesValue>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=B9]]></Attributes>
-</O>
-</SeriesValue>
-</SeriesDefinition>
-</Series>
-<Category>
-<O>
-<![CDATA[]]></O>
-</Category>
+<OneValueCDDefinition seriesName="name" valueName="priject_num" function="com.fr.data.util.function.NoneFunction">
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-</NormalReportDataDefinition>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[ds1]]></Name>
+</TableData>
+</OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
 </Chart>
@@ -618,20 +603,21 @@
 <Expand/>
 </C>
 <C c="0" r="6" s="1">
-<O t="DSColumn">
-<Attributes dsName="ds2" columnName="id"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=&B7]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand dir="0"/>
+<Expand dir="0" leftParentDefault="false" left="B7" upParentDefault="false"/>
 </C>
 <C c="1" r="6" s="1">
 <O t="DSColumn">
-<Attributes dsName="ds2" columnName="name"/>
+<Attributes dsName="ds1" columnName="name"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -651,6 +637,8 @@
 </Condition>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -705,41 +693,6 @@
 </O>
 <PrivilegeControl/>
 <Expand/>
-</C>
-<C c="0" r="8" s="3">
-<O t="DSColumn">
-<Attributes dsName="ds1" columnName="name"/>
-<Condition class="com.fr.data.condition.ListCondition"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Result>
-<![CDATA[$$$]]></Result>
-<Parameters/>
-</O>
-<PrivilegeControl/>
-<CellGUIAttr previewContent="false" printBackground="false" printContent="false"/>
-<CellPageAttr/>
-<Expand dir="0"/>
-</C>
-<C c="1" r="8" s="3">
-<O t="DSColumn">
-<Attributes dsName="ds1" columnName="priject_num"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
-</O>
-<PrivilegeControl/>
-<CellGUIAttr previewContent="false" printBackground="false" printContent="false"/>
-<CellPageAttr/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ListCondition"/>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
-</Highlight>
-</HighlightList>
-<Expand dir="0"/>
 </C>
 </CellElementList>
 <ReportAttrSet>
@@ -983,14 +936,15 @@
 <Right style="1"/>
 </Border>
 </Style>
-<Style horizontal_alignment="0" imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border/>
-</Style>
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<Text>
+<![CDATA[E采供]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="fb5115d1-6c34-4462-b4af-bb944e2e24e0"/>
 </TemplateIdAttMark>

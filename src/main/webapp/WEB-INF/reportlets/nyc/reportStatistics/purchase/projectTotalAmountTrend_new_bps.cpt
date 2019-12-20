@@ -1141,6 +1141,12 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<Text>
+<![CDATA[E采供]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="c3f77e5f-962f-4151-bc1c-f34fbd413271"/>
 </TemplateIdAttMark>
