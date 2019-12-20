@@ -478,7 +478,7 @@
 </TextAttr>
 <AxisLabelCount value="=1"/>
 <AxisRange/>
-<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" secUnit="=0"/>
+<AxisUnit201106 isCustomMainUnit="false" isCustomSecUnit="false" mainUnit="=0" secUnit="=0"/>
 <ZoomAxisAttr isZoom="false"/>
 <axisReversed axisReversed="false"/>
 <VanChartAxisAttr mainTickLine="2" secTickLine="2" axisName="Y轴" titleUseHtml="false" autoLabelGap="true" limitSize="false" maxHeight="15.0" commonValueFormat="true" isRotation="false"/>
@@ -514,7 +514,7 @@
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
-<tools hidden="true" sort="true" export="true" fullScreen="true"/>
+<tools hidden="false" sort="false" export="false" fullScreen="false"/>
 <VanChartZoom>
 <zoomAttr zoomVisible="false" zoomGesture="true" zoomResize="true" zoomType="xy"/>
 <from>
