@@ -539,29 +539,13 @@
 </Plot>
 </Plot>
 <ChartDefinition>
-<NormalReportDataDefinition>
-<Series>
-<SeriesDefinition>
-<SeriesName>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=A9]]></Attributes>
-</O>
-</SeriesName>
-<SeriesValue>
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=B9]]></Attributes>
-</O>
-</SeriesValue>
-</SeriesDefinition>
-</Series>
-<Category>
-<O>
-<![CDATA[]]></O>
-</Category>
+<OneValueCDDefinition seriesName="name" valueName="priject_num" function="com.fr.data.util.function.NoneFunction">
 <Top topCate="-1" topValue="-1" isDiscardOtherCate="false" isDiscardOtherSeries="false" isDiscardNullCate="false" isDiscardNullSeries="false"/>
-</NormalReportDataDefinition>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name>
+<![CDATA[ds1]]></Name>
+</TableData>
+</OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
 </Chart>
@@ -602,18 +586,16 @@
 <Expand/>
 </C>
 <C c="0" r="6" s="1">
-<O t="DSColumn">
-<Attributes dsName="ds2" columnName="id"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=&B7]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand dir="0"/>
+<Expand dir="0" leftParentDefault="false" left="B7" upParentDefault="false"/>
 </C>
 <C c="1" r="6" s="1">
 <O t="DSColumn">
-<Attributes dsName="ds2" columnName="name"/>
+<Attributes dsName="ds1" columnName="name"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
@@ -1098,6 +1080,12 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<Text>
+<![CDATA[E采供]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="459e1bde-3a35-439e-aac9-c6f654f98a20"/>
 </TemplateIdAttMark>

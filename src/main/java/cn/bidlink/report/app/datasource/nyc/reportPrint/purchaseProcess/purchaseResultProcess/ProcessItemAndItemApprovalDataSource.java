@@ -5,11 +5,11 @@ package cn.bidlink.report.app.datasource.nyc.reportPrint.purchaseProcess.purchas
  * @description :cn.bidlink.nyc.report.dataSource.purchaseProcess.ProcessItemAndItemApproval
  */
 
-import cn.bidlink.base.ServiceResult;
+import cn.bidlink.nyc.workflow.service.workflow.WorkflowApproveDubboService;
 import cn.bidlink.report.app.datasource.abstracts.AbstractColumnPositionTableData;
+import cn.bidlink.report.app.datasource.nyc.ApprovalCommon;
 import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
-import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessService;
 import com.fr.base.Parameter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,7 +44,6 @@ public class ProcessItemAndItemApprovalDataSource
 
     @Override
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
-        DubboPurchaseResultProcessService dataService = dataServiceFactory.getDataService(DubboPurchaseResultProcessService.class);
         //获取报表查询的参数
         String projectId = String.valueOf(param.get("projectId"));
         String companyId = String.valueOf(param.get("companyId"));
@@ -55,13 +54,10 @@ public class ProcessItemAndItemApprovalDataSource
         if (sel == Boolean.FALSE){
             log.error("{}数据源所需必要参数不全", log.getName());
         }else {
-            ServiceResult<List<Map<String, Object>>> listServiceResult = dataService.processItemAndItemApproval(projectId, companyId);
-            if (!listServiceResult.getSuccess()) {
-                log.error("{}调用{}时发生未知异常,error Message:{}", "DubboPurchaseResultProcessService.processItemAndItemApproval",
-                        "serviceResult", listServiceResult.getCode() + "_" + listServiceResult.getMessage());
-                throw new RuntimeException("err_code:" + listServiceResult.getCode() + ",err_msg:" + listServiceResult.getMessage());
-            }
-            result = listServiceResult.getResult();
+            WorkflowApproveDubboService dataService = dataServiceFactory.getDataService(WorkflowApproveDubboService.class);
+            ApprovalCommon approvalCommon = new ApprovalCommon();
+            result = approvalCommon.processItemAndItemApproval(dataService, projectId, companyId);
+            return result;
         }
         return result;
     }
