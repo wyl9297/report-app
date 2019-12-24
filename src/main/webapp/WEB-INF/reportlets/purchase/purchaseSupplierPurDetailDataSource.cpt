@@ -126,7 +126,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </WebPageContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -282,7 +282,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </C>
 <C c="7" r="6" s="6">
 <O>
-<![CDATA[市场参考价（元）]]></O>
+<![CDATA[计划单价(元)]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -643,9 +643,12 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 </C>
 <C c="7" r="7" s="9">
 <O t="DSColumn">
-<Attributes dsName="purchase" columnName="marketPrice"/>
+<Attributes dsName="purchase" columnName="planPrice"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -1095,6 +1098,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <Widget widgetName="checkBox"/>
 <Widget widgetName="formSubmit0_c"/>
 </MobileWidgetList>
+<FrozenWidgets/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
@@ -1122,9 +1126,9 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="2" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
+<Left style="2"/>
 <Right style="2" color="-16777216"/>
 </Border>
 </Style>
@@ -1145,7 +1149,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <Top style="1"/>
 <Bottom style="1"/>
 <Left style="1"/>
-<Right style="2"/>
+<Right style="2" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -1172,9 +1176,9 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="2" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
+<Left style="2"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>
@@ -1182,8 +1186,8 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
@@ -1192,8 +1196,8 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="2"/>
 </Border>
@@ -1222,7 +1226,7 @@ nZYdlN![3C80ZU8D^7l/'*gimA7<2.;8nn^rP9%@#$93ULkC)^t~
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<WatermarkAttr fontSize="24" color="-13408513" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[=$FineWaterMark]]></Text>
 </WatermarkAttr>

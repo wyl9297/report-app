@@ -230,7 +230,7 @@
 </WebWriteContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -399,7 +399,7 @@
 </C>
 <C c="7" r="8" s="6">
 <O>
-<![CDATA[市场参考价（元）]]></O>
+<![CDATA[计划单价（元）]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -407,7 +407,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("市场参考价", split($ckbx, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("计划单价", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -792,14 +792,14 @@
 </C>
 <C c="7" r="9" s="9">
 <O t="DSColumn">
-<Attributes dsName="purchase" columnName="marketPrice"/>
+<Attributes dsName="purchase" columnName="planPrice"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
-<Expand dir="0" leftParentDefault="false" left="B10" upParentDefault="false" up="B9"/>
+<Expand dir="0"/>
 </C>
 <C c="8" r="9" s="9">
 <O t="DSColumn">
@@ -1516,7 +1516,7 @@
 </WidgetAttr>
 <Dictionary class="com.fr.data.impl.FormulaDictionary">
 <FormulaDict>
-<![CDATA[=split("市场参考价,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注,报价单价,报价总价,成交比例,成交说明",",")]]></FormulaDict>
+<![CDATA[=split("计划单价,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注,报价单价,报价总价,成交比例,成交说明",",")]]></FormulaDict>
 </Dictionary>
 <widgetValue>
 <O t="XMLable" class="com.fr.base.Formula">
@@ -1546,6 +1546,7 @@
 <Widget widgetName="showFlag"/>
 <Widget widgetName="formSubmit0"/>
 </MobileWidgetList>
+<FrozenWidgets/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
@@ -1573,9 +1574,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="2" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
+<Left style="2"/>
 <Right style="2" color="-16777216"/>
 </Border>
 </Style>
@@ -1604,9 +1605,9 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1" color="-16777216"/>
-<Bottom style="2" color="-16777216"/>
-<Left style="2" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Bottom style="2"/>
+<Left style="2"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -1623,9 +1624,9 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="2" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
+<Left style="2"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>
@@ -1633,8 +1634,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
@@ -1643,8 +1644,8 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Top style="2"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="2"/>
 </Border>
@@ -1683,7 +1684,7 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<WatermarkAttr fontSize="24" color="-13408513" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[=$FineWaterMark]]></Text>
 </WatermarkAttr>
