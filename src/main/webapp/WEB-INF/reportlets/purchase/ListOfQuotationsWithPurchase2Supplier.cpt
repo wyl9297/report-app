@@ -712,8 +712,19 @@
 <C c="7" r="6" s="0">
 <O t="DSColumn">
 <Attributes dsName="quteTitle" columnName="title"/>
+<Condition class="com.fr.data.condition.CommonCondition">
+<CNAME>
+<![CDATA[projectItemId]]></CNAME>
+<Compare op="0">
+<SimpleDSColumn dsName="purchaseProduct" columnName="projectItemId"/>
+</Compare>
+</Condition>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -833,7 +844,9 @@
 <O t="DSColumn">
 <Attributes dsName="totalTitle" columnName="title"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
 <Parameters/>
 </O>
 <PrivilegeControl/>

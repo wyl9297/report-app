@@ -6,10 +6,12 @@ import cn.bidlink.report.app.datasource.nyc.ParamUtils;
 import cn.bidlink.report.app.utils.DataServiceFactory;
 import cn.bidlink.statistics.report.service.service.report_print.purchase.DubboPurchaseResultProcessSanyouService;
 import com.fr.base.Parameter;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +24,7 @@ public class SupplierNameDataSource extends AbstractColumnPositionTableData {
         String projectId = String.valueOf(param.get("projectId"));
         String companyId = String.valueOf(param.get("companyId"));
         String bs = String.valueOf(param.get("bs"));
-
+        String sids = String.valueOf(param.get("sids"));
         List<Map<String, Object>> result = new ArrayList<>();
         //校验是否缺失必填参数
         boolean sel = ParamUtils.sel(param, "projectId", "companyId");
@@ -46,8 +48,28 @@ public class SupplierNameDataSource extends AbstractColumnPositionTableData {
                 }
             }
             result = listServiceResult.getResult();
+
+            if (StringUtils.isNotEmpty(sids)) {
+                result = filterList((ArrayList) result, sids);
+            }
         }
         return result;
+    }
+
+    //过滤 下拉选 供应商
+    private ArrayList filterList(ArrayList valueList, String supplierIds) {
+        if ("全部供应商".equals(supplierIds)) {
+            return valueList;
+        }
+        ArrayList list = new ArrayList();
+        for (int i = 0; i < valueList.size(); i++) {
+            LinkedHashMap obj = (LinkedHashMap) valueList.get(i);
+            String supplierId = obj.get("supplier_id").toString();
+            if (supplierIds.indexOf(supplierId) != -1) {
+                list.add(obj);
+            }
+        }
+        return list;
     }
 
     @Override

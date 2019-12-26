@@ -112,7 +112,7 @@
 </WebPageContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -281,7 +281,7 @@
 </C>
 <C c="7" r="6" s="0">
 <O>
-<![CDATA[市场参考价(元)]]></O>
+<![CDATA[计划单价(元)]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -637,11 +637,14 @@
 </C>
 <C c="7" r="7" s="1">
 <O t="DSColumn">
-<Attributes dsName="purchase" columnName="marketPrice"/>
+<Attributes dsName="purchase" columnName="planPrice"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
 <Attr divideMode="1"/>
 </RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -1190,6 +1193,7 @@
 <Widget widgetName="ckbx"/>
 <Widget widgetName="formSubmit0"/>
 </MobileWidgetList>
+<FrozenWidgets/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
@@ -1237,7 +1241,7 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<WatermarkAttr fontSize="24" color="-13408513" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[=$FineWaterMark]]></Text>
 </WatermarkAttr>

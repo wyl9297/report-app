@@ -29,7 +29,7 @@ public class TransactionPricingPurchasesDimDataSource extends AbstractBaseTableD
     @Override
     protected String[] getColumn() {
         return new String[]{"name", "code", "techParameters", "purchaseAmount", "spec", "needTime", "appliedPersonAndPhone", "unitName",
-                "marketPrice",  "appliedEnterprise", "purpose","comment","useDept" , "projectItemId" , "dealTotalPrice"};
+                "marketPrice",  "appliedEnterprise", "purpose","comment","useDept" , "projectItemId" , "dealTotalPrice" , "planPrice"};
     }
 
     @Override

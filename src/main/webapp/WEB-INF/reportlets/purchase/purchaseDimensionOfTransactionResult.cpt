@@ -399,7 +399,7 @@
 </C>
 <C c="7" r="8" s="6">
 <O>
-<![CDATA[市场参考价（元）]]></O>
+<![CDATA[计划单价（元）]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -407,7 +407,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[INARRAY("市场参考价", split($ckbx, ",")) = 0]]></Formula>
+<![CDATA[INARRAY("计划单价", split($ckbx, ",")) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction"/>
 </Highlight>
@@ -792,9 +792,12 @@
 </C>
 <C c="7" r="9" s="9">
 <O t="DSColumn">
-<Attributes dsName="purchase" columnName="marketPrice"/>
+<Attributes dsName="purchase" columnName="planPrice"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -1516,7 +1519,7 @@
 </WidgetAttr>
 <Dictionary class="com.fr.data.impl.FormulaDictionary">
 <FormulaDict>
-<![CDATA[=split("市场参考价,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注,报价单价,报价总价,成交比例,成交说明",",")]]></FormulaDict>
+<![CDATA[=split("计划单价,申报人、电话,申报企业,使用单位,用途,需求日期,采购品备注,报价单价,报价总价,成交比例,成交说明",",")]]></FormulaDict>
 </Dictionary>
 <widgetValue>
 <O t="XMLable" class="com.fr.base.Formula">
@@ -1574,8 +1577,8 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="2" color="-16777216"/>
+<Bottom style="1"/>
+<Left style="2"/>
 <Right style="2" color="-16777216"/>
 </Border>
 </Style>
@@ -1584,7 +1587,7 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Bottom style="1"/>
 <Left style="2"/>
 <Right style="1"/>
 </Border>
@@ -1624,8 +1627,8 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
-<Left style="2" color="-16777216"/>
+<Bottom style="1"/>
+<Left style="2"/>
 <Right style="1" color="-16777216"/>
 </Border>
 </Style>
@@ -1634,7 +1637,7 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
 </Border>
@@ -1644,7 +1647,7 @@
 <Background name="ColorBackground" color="-657929"/>
 <Border>
 <Top style="2" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="2"/>
 </Border>
@@ -1682,12 +1685,6 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
-<Text>
-<![CDATA[=$FineWaterMark]]></Text>
-</WatermarkAttr>
-</WatermarkAttr>
 <PrintSettings class="com.fr.base.print.PrintSettingsAttrMark">
 <PrintSettings printType="0" valid="true">
 <NoClientPrintAttr>
@@ -1707,6 +1704,12 @@
 </NativePrintAttr>
 </PrintSettings>
 </PrintSettings>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="f5997312-6a55-4e48-8494-846ce7096785"/>
 </TemplateIdAttMark>

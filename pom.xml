@@ -283,7 +283,42 @@
             <artifactId>asm</artifactId>
             <version>7.0</version>
         </dependency>
+        <!--悦采工作流依赖-->
+        <dependency>
+            <groupId>cn.bidlink.nyc</groupId>
+            <artifactId>workflow-interface-remote</artifactId>
+            <version>4.1811.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
+        <dependency>
+            <groupId>cn.bidlink.nyc</groupId>
+            <artifactId>nyc-core</artifactId>
+            <version>4.1811.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.bidlink.nyc.saas</groupId>
+            <artifactId>workflow-service</artifactId>
+            <version>0.0.4-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!--<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
