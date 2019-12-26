@@ -230,7 +230,7 @@
 </WebWriteContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -793,13 +793,16 @@
 <C c="7" r="9" s="9">
 <O t="DSColumn">
 <Attributes dsName="purchase" columnName="planPrice"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
-<Expand dir="0"/>
+<Expand dir="0" leftParentDefault="false" left="B10" upParentDefault="false" up="B9"/>
 </C>
 <C c="8" r="9" s="9">
 <O t="DSColumn">
@@ -1546,7 +1549,6 @@
 <Widget widgetName="showFlag"/>
 <Widget widgetName="formSubmit0"/>
 </MobileWidgetList>
-<FrozenWidgets/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
@@ -1574,7 +1576,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2"/>
+<Top style="2" color="-16777216"/>
 <Bottom style="1"/>
 <Left style="2"/>
 <Right style="2" color="-16777216"/>
@@ -1585,7 +1587,7 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1" color="-16777216"/>
-<Bottom style="1" color="-16777216"/>
+<Bottom style="1"/>
 <Left style="2"/>
 <Right style="1"/>
 </Border>
@@ -1605,9 +1607,9 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1" color="-16777216"/>
-<Bottom style="2"/>
-<Left style="2"/>
-<Right style="1"/>
+<Bottom style="2" color="-16777216"/>
+<Left style="2" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -1624,7 +1626,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2"/>
+<Top style="2" color="-16777216"/>
 <Bottom style="1"/>
 <Left style="2"/>
 <Right style="1" color="-16777216"/>
@@ -1634,7 +1636,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2"/>
+<Top style="2" color="-16777216"/>
 <Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="1" color="-16777216"/>
@@ -1644,7 +1646,7 @@
 <FRFont name="微软雅黑" style="1" size="72"/>
 <Background name="ColorBackground" color="-657929"/>
 <Border>
-<Top style="2"/>
+<Top style="2" color="-16777216"/>
 <Bottom style="1"/>
 <Left style="1" color="-16777216"/>
 <Right style="2"/>
@@ -1683,12 +1685,6 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
-<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" horizontalGap="200" verticalGap="100" valid="true">
-<Text>
-<![CDATA[=$FineWaterMark]]></Text>
-</WatermarkAttr>
-</WatermarkAttr>
 <PrintSettings class="com.fr.base.print.PrintSettingsAttrMark">
 <PrintSettings printType="0" valid="true">
 <NoClientPrintAttr>
@@ -1708,6 +1704,12 @@
 </NativePrintAttr>
 </PrintSettings>
 </PrintSettings>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="f5997312-6a55-4e48-8494-846ce7096785"/>
 </TemplateIdAttMark>
