@@ -228,7 +228,7 @@
 </WebWriteContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -240,13 +240,13 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,722880,723900,1005840,875520,723900,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,722880,723900,1005840,875520,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[2895600,4229100,2743200,2743200,4114800,3444240,3543300,4457700,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="8" s="0">
 <O>
-<![CDATA[成交结果(采购品供应商维度)123]]></O>
+<![CDATA[成交结果(采购品供应商维度)]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
@@ -512,6 +512,8 @@
 <O t="DSColumn">
 <Attributes dsName="quteTitle" columnName="title"/>
 <Condition class="com.fr.data.condition.CommonCondition">
+<CNUMBER>
+<![CDATA[0]]></CNUMBER>
 <CNAME>
 <![CDATA[projectItemId]]></CNAME>
 <Compare op="0">
@@ -635,13 +637,13 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="0" r="10" cs="6" s="4">
+<C c="0" r="9" cs="6" s="4">
 <O>
 <![CDATA[总报价项]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="10" s="3">
+<C c="6" r="9" s="3">
 <O t="DSColumn">
 <Attributes dsName="totalTitle" columnName="title"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -667,7 +669,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="7" r="10" s="1">
+<C c="7" r="9" s="1">
 <O t="DSColumn">
 <Attributes dsName="totalValue" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -707,7 +709,7 @@
 <CellPageAttr/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="11" cs="7" s="4">
+<C c="0" r="10" cs="7" s="4">
 <O t="DSColumn">
 <Attributes dsName="colTitle" columnName="title"/>
 <Complex/>
@@ -717,7 +719,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="11" s="1">
+<C c="7" r="10" s="1">
 <O t="DSColumn">
 <Attributes dsName="colPrice" columnName="value"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -738,7 +740,7 @@
 <PrivilegeControl/>
 <Expand dir="1"/>
 </C>
-<C c="0" r="13" cs="7" s="0">
+<C c="0" r="12" cs="7" s="0">
 <O>
 <![CDATA[审批记录]]></O>
 <PrivilegeControl/>
@@ -755,11 +757,11 @@
 </HighlightList>
 <Expand/>
 </C>
-<C c="7" r="13">
+<C c="7" r="12">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="14" cs="7" s="0">
+<C c="0" r="13" cs="7" s="0">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="第" + serialNumber.select("serialNumber") + "次审批"]]></Attributes>
@@ -778,7 +780,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="0" r="15" s="0">
+<C c="0" r="14" s="0">
 <O>
 <![CDATA[序号]]></O>
 <PrivilegeControl/>
@@ -795,51 +797,51 @@
 </HighlightList>
 <Expand/>
 </C>
-<C c="1" r="15" s="0">
+<C c="1" r="14" s="0">
 <O>
 <![CDATA[审批模式]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="15" s="0">
+<C c="2" r="14" s="0">
 <O>
 <![CDATA[业务节点]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="15" s="0">
+<C c="3" r="14" s="0">
 <O>
 <![CDATA[审批人]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="15" s="0">
+<C c="4" r="14" s="0">
 <O>
 <![CDATA[审批时间]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="15" s="0">
+<C c="5" r="14" s="0">
 <O>
 <![CDATA[审批意见]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="15" s="0">
+<C c="6" r="14" s="0">
 <O>
 <![CDATA[审批结果]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="16" s="1">
+<C c="0" r="15" s="1">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=&B17]]></Attributes>
+<![CDATA[=&B16]]></Attributes>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B17"/>
+<Expand dir="0" leftParentDefault="false" left="B16"/>
 </C>
-<C c="1" r="16" s="1">
+<C c="1" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetail" columnName="nodeTypeName"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -886,9 +888,9 @@
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
 </Highlight>
 </HighlightList>
-<Expand dir="0" leftParentDefault="false" left="A15" upParentDefault="false" up="A15"/>
+<Expand dir="0" leftParentDefault="false" left="A14" upParentDefault="false" up="A14"/>
 </C>
-<C c="2" r="16" s="1">
+<C c="2" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetail" columnName="moduleNodeName"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -901,7 +903,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="16" s="1">
+<C c="3" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="userName"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -972,7 +974,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="16" s="1">
+<C c="4" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="approveTime"/>
 <Complex/>
@@ -982,7 +984,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="5" r="16" s="1">
+<C c="5" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="approveSuggestion"/>
 <Complex/>
@@ -992,7 +994,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="16" s="1">
+<C c="6" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="taskApproveResult"/>
 <Complex/>
@@ -1094,6 +1096,7 @@
 <Widget widgetName="showNoDeal"/>
 <Widget widgetName="formSubmit0"/>
 </MobileWidgetList>
+<FrozenWidgets/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
@@ -1166,7 +1169,7 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<WatermarkAttr fontSize="24" color="-13408513" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[=$FineWaterMark]]></Text>
 </WatermarkAttr>

@@ -154,7 +154,7 @@
 </WebPageContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -1306,17 +1306,6 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) = 0]]></Formula>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
-</Highlight>
-</HighlightList>
 <Expand dir="0" leftParentDefault="false" left="A11" upParentDefault="false" up="A11"/>
 </C>
 <C c="0" r="15" cs="25" s="18">
@@ -1339,17 +1328,6 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) = 0]]></Formula>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
-</Highlight>
-</HighlightList>
 <Expand dir="0" leftParentDefault="false" left="A11" upParentDefault="false" up="A11"/>
 </C>
 <C c="0" r="17" cs="7" s="11">
@@ -1725,6 +1703,7 @@
 <Widget widgetName="showFlag"/>
 <Widget widgetName="formSubmit0"/>
 </MobileWidgetList>
+<FrozenWidgets/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
@@ -1791,9 +1770,9 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1" color="-16777216"/>
-<Bottom style="2" color="-16777216"/>
-<Left style="2" color="-16777216"/>
-<Right style="1" color="-16777216"/>
+<Bottom style="2"/>
+<Left style="2"/>
+<Right style="1"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -1801,7 +1780,7 @@
 <Background name="NullBackground"/>
 <Border>
 <Top style="1" color="-16777216"/>
-<Bottom style="2" color="-16777216"/>
+<Bottom style="2"/>
 <Left style="1"/>
 <Right style="2"/>
 </Border>
@@ -1930,17 +1909,17 @@
 <FRFont name="华文细黑" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
+<Top style="1" color="-16777216"/>
 <Bottom style="2" color="-16777216"/>
 <Left style="2" color="-16777216"/>
-<Right style="2"/>
+<Right style="2" color="-16777216"/>
 </Border>
 </Style>
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
+<WatermarkAttr fontSize="24" color="-13408513" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[=$FineWaterMark]]></Text>
 </WatermarkAttr>
