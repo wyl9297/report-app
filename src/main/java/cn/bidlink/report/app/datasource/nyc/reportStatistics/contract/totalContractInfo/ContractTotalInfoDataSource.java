@@ -50,8 +50,8 @@ public class ContractTotalInfoDataSource extends AbstractColumnPositionTableData
         String keyValue = (String.valueOf(param.get("keyValue")).equals(""))?null:String.valueOf(param.get("keyValue"));
         String filiale = (String.valueOf(param.get("filiale")).equals(""))?null:String.valueOf(param.get("filiale"));
         String agreement = (String.valueOf(param.get("agreement")).equals(""))?null:String.valueOf(param.get("agreement"));
-        //agreement 只有为 ( 1:协议 2:非协议 ) 时 参与过滤
-        // agreement = agreement.length() > 1 ? null: agreement;
+        //agreement 不选或全部值为null ;（ 1:协议 2:非协议 ) 值为1 or 2
+         agreement = agreement == null ? null : (agreement.length() > 1 ? null: agreement);
 
         List<Map<String, Object>> result = new ArrayList<>();
         boolean sel = ParamUtils.sel(param, "compId");
