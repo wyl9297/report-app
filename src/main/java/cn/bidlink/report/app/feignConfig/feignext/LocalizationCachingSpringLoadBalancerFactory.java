@@ -6,6 +6,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.ILoadBalancer;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.feign.ribbon.CachingSpringLoadBalancerFactory;
 import org.springframework.cloud.netflix.feign.ribbon.FeignLoadBalancer;
 import org.springframework.cloud.netflix.ribbon.ServerIntrospector;
@@ -37,6 +39,8 @@ public class LocalizationCachingSpringLoadBalancerFactory extends CachingSpringL
 
     private static Map<Long, String> eurekaHostMap = new HashMap<>();
 
+    private Logger logger = LoggerFactory.getLogger(LocalizationCachingSpringLoadBalancerFactory.class);
+
     static {
         //本地化的注册中心地址
         eurekaHostMap.put(11113174597L , "20.8.0.222:8035");
@@ -55,8 +59,14 @@ public class LocalizationCachingSpringLoadBalancerFactory extends CachingSpringL
         IClientConfig config = this.factory.getClientConfig(clientName);
         ILoadBalancer lb = this.factory.getLoadBalancer(clientName);
         ServerIntrospector serverIntrospector = this.factory.getInstance(clientName, ServerIntrospector.class);
+        Long companyId = 0L;
+        try {
+            companyId = UserContext.getCompanyId();
+        } catch (Exception e){
+            logger.error("获取公司信息失败");
+            return new LocalizationFeignLoadBalancer(lb, config, serverIntrospector);
+        }
 
-        Long companyId = UserContext.getCompanyId();
         //如果 eurekaHostMap中有相应的公司Id 说明该公司是本地化部署 需要去目标注册中心查询服务
         if ( eurekaHostMap.containsKey(companyId) ){
             String ipAddr = getIpAddr(clientName , companyId);
