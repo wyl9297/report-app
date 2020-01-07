@@ -32,7 +32,7 @@ public class PurchaseClinchDealPricePurProductDataSource extends AbstractBaseTab
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"projectItemId" ,"directoryId" , "name", "spec", "purchaseAmount","unitName", "marketPrice", "planPrice"};
+        return new String[]{"projectItemId" ,"directoryId" , "name", "spec", "purchaseAmount","unitName", "marketPrice", "planPrice" , "techParameters"};
     }
 
     @Override
