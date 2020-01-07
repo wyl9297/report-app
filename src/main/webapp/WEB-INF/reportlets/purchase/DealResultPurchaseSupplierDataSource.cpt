@@ -240,11 +240,11 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,722880,723900,1005840,875520,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,722880,723900,1005840,875520,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2895600,4229100,2743200,2743200,4114800,3444240,3543300,4457700,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2895600,4229100,2743200,3276600,2743200,4114800,3444240,3543300,4457700,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="8" s="0">
+<C c="0" r="0" cs="9" s="0">
 <O>
 <![CDATA[成交结果(采购品供应商维度)]]></O>
 <PrivilegeControl/>
@@ -256,7 +256,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="1" cs="7" s="1">
+<C c="1" r="1" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="name"/>
 <Complex/>
@@ -272,7 +272,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="2" cs="7" s="1">
+<C c="1" r="2" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="code"/>
 <Complex/>
@@ -288,7 +288,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="3" cs="7" s="1">
+<C c="1" r="3" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createUserName"/>
 <Complex/>
@@ -304,7 +304,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="4" cs="7" s="1">
+<C c="1" r="4" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="createTimeStr"/>
 <Complex/>
@@ -320,7 +320,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="1" r="5" cs="7" s="1">
+<C c="1" r="5" cs="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectBase" columnName="dealTotalPrice"/>
 <Complex/>
@@ -350,27 +350,33 @@
 </C>
 <C c="3" r="7" s="0">
 <O>
-<![CDATA[数量]]></O>
+<![CDATA[技术参数]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="4" r="7" s="0">
 <O>
-<![CDATA[计量单位]]></O>
+<![CDATA[数量]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
 <C c="5" r="7" s="0">
 <O>
+<![CDATA[计量单位]]></O>
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="6" r="7" s="0">
+<O>
 <![CDATA[计划单价（元）]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="7" s="2">
+<C c="7" r="7" s="2">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="7" s="0">
+<C c="8" r="7" s="0">
 <O t="DSColumn">
 <Attributes dsName="supplierTitle" columnName="dealStatusStr"/>
 <Complex/>
@@ -477,9 +483,12 @@
 </C>
 <C c="3" r="8" s="1">
 <O t="DSColumn">
-<Attributes dsName="purchaseProject" columnName="purchaseAmount"/>
+<Attributes dsName="purchaseProject" columnName="techParameters"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -488,7 +497,7 @@
 </C>
 <C c="4" r="8" s="1">
 <O t="DSColumn">
-<Attributes dsName="purchaseProject" columnName="unitName"/>
+<Attributes dsName="purchaseProject" columnName="purchaseAmount"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
@@ -499,6 +508,17 @@
 </C>
 <C c="5" r="8" s="1">
 <O t="DSColumn">
+<Attributes dsName="purchaseProject" columnName="unitName"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<PrivilegeControl/>
+<CellPageAttr breakOnPaginate="false"/>
+<Expand dir="0"/>
+</C>
+<C c="6" r="8" s="1">
+<O t="DSColumn">
 <Attributes dsName="purchaseProject" columnName="planPrice"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
@@ -508,7 +528,7 @@
 <CellPageAttr breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="8" s="3">
+<C c="7" r="8" s="3">
 <O t="DSColumn">
 <Attributes dsName="quteTitle" columnName="title"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -543,7 +563,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="7" r="8" s="1">
+<C c="8" r="8" s="1">
 <O t="DSColumn">
 <Attributes dsName="quteValue" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -637,13 +657,13 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="0" r="9" cs="6" s="4">
+<C c="0" r="9" cs="7" s="4">
 <O>
 <![CDATA[总报价项]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="9" s="3">
+<C c="7" r="9" s="3">
 <O t="DSColumn">
 <Attributes dsName="totalTitle" columnName="title"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -669,7 +689,7 @@
 </HighlightList>
 <Expand dir="0"/>
 </C>
-<C c="7" r="9" s="1">
+<C c="8" r="9" s="1">
 <O t="DSColumn">
 <Attributes dsName="totalValue" columnName="value"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -709,7 +729,7 @@
 <CellPageAttr/>
 <Expand dir="0"/>
 </C>
-<C c="0" r="10" cs="7" s="4">
+<C c="0" r="10" cs="8" s="4">
 <O t="DSColumn">
 <Attributes dsName="colTitle" columnName="title"/>
 <Complex/>
@@ -719,7 +739,7 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="7" r="10" s="1">
+<C c="8" r="10" s="1">
 <O t="DSColumn">
 <Attributes dsName="colPrice" columnName="value"/>
 <Condition class="com.fr.data.condition.CommonCondition">
@@ -740,7 +760,7 @@
 <PrivilegeControl/>
 <Expand dir="1"/>
 </C>
-<C c="0" r="12" cs="7" s="0">
+<C c="0" r="12" cs="8" s="0">
 <O>
 <![CDATA[审批记录]]></O>
 <PrivilegeControl/>
@@ -757,11 +777,11 @@
 </HighlightList>
 <Expand/>
 </C>
-<C c="7" r="12">
+<C c="8" r="12">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="0" r="13" cs="7" s="0">
+<C c="0" r="13" cs="8" s="0">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
 <![CDATA[="第" + serialNumber.select("serialNumber") + "次审批"]]></Attributes>
@@ -809,25 +829,25 @@
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="3" r="14" s="0">
+<C c="3" r="14" cs="2" s="0">
 <O>
 <![CDATA[审批人]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="4" r="14" s="0">
+<C c="5" r="14" s="0">
 <O>
 <![CDATA[审批时间]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="14" s="0">
+<C c="6" r="14" s="0">
 <O>
 <![CDATA[审批意见]]></O>
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="6" r="14" s="0">
+<C c="7" r="14" s="0">
 <O>
 <![CDATA[审批结果]]></O>
 <PrivilegeControl/>
@@ -903,7 +923,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="3" r="15" s="1">
+<C c="3" r="15" cs="2" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="userName"/>
 <Condition class="com.fr.data.condition.ListCondition">
@@ -974,7 +994,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="4" r="15" s="1">
+<C c="5" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="approveTime"/>
 <Complex/>
@@ -984,7 +1004,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="5" r="15" s="1">
+<C c="6" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="approveSuggestion"/>
 <Complex/>
@@ -994,7 +1014,7 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="6" r="15" s="1">
+<C c="7" r="15" s="1">
 <O t="DSColumn">
 <Attributes dsName="projectDetailTwo" columnName="taskApproveResult"/>
 <Complex/>
