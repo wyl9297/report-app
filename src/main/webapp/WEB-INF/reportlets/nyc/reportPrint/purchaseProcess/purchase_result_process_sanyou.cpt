@@ -2669,11 +2669,35 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="0" r="10" cs="11" s="6">
+<C c="0" r="10" cs="17" s="6">
 <O>
 <![CDATA[未中标供应商报价信息]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<Expand/>
+</C>
+<C c="17" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="10">
+<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="23" r="10">
@@ -2748,18 +2772,37 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="2" r="11" cs="8" s="6">
+<C c="2" r="11" cs="10" s="6">
 <O>
 <![CDATA[供应商名称]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="10" r="11" s="6">
+<C c="12" r="11" cs="5" s="6">
 <O>
 <![CDATA[所报总价]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<Expand/>
+</C>
+<C c="18" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="11">
+<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="23" r="11">
@@ -2836,7 +2879,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="C13"/>
 </C>
-<C c="2" r="12" cs="8" s="6">
+<C c="2" r="12" cs="10" s="6">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="supplier_name"/>
 <Complex/>
@@ -2847,7 +2890,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="10" r="12" s="6">
+<C c="12" r="12" cs="5" s="6">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="deal_total_price"/>
 <Complex/>
@@ -2855,8 +2898,27 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
+</C>
+<C c="18" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="12">
+<PrivilegeControl/>
+<Expand/>
 </C>
 <C c="23" r="12">
 <PrivilegeControl/>
@@ -3869,7 +3931,12 @@
 <![CDATA[#0]]></Format>
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
-<Border/>
+<Border>
+<Top color="-16777216"/>
+<Bottom color="-16777216"/>
+<Left color="-16777216"/>
+<Right color="-16777216"/>
+</Border>
 </Style>
 <Style horizontal_alignment="2" imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
