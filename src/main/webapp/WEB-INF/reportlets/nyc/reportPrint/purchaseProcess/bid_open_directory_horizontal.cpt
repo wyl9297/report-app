@@ -114,9 +114,9 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1152000,864000,864000,864000,864000,1333500,722880,723900,723900,723900,723900]]></RowHeight>
+<![CDATA[1152000,864000,864000,864000,864000,1333500,722880,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[495300,1828800,4896000,1028700,4896000,8648700,2057400,9504000,3543300,3048000,3314700,2743200,7200000,4896000,2552700,2400300,2933700,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2743200]]></ColumnWidth>
+<![CDATA[495300,1828800,4896000,1028700,4896000,7581900,2057400,6400800,3543300,3048000,3314700,2743200,7200000,4896000,2552700,2400300,2933700,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2471040,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="32" s="0">
 <O>
@@ -1621,7 +1621,7 @@
 <C c="16" r="6" s="7">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=if(G7>0 && P7>0,G7 * P7,'')]]></Attributes>
+<![CDATA[=if(G7 > 0 && P7 > 0, G7 * P7, '')]]></Attributes>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
@@ -2188,6 +2188,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
