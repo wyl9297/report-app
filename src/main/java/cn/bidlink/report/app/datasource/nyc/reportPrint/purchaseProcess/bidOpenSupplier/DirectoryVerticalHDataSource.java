@@ -43,7 +43,7 @@ public class DirectoryVerticalHDataSource extends AbstractColumnPositionTableDat
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         DubboBidOpenSupplierService dataService = dataServiceFactory.getDataService(DubboBidOpenSupplierService.class);
         String projectId = String.valueOf(param.get("projectId"));
-        String companyId = String.valueOf(param.get("comp_id"));
+        String companyId = String.valueOf(param.get("companyId"));
 
         boolean panduan = ParamUtils.panduan(param, "projectId", "companyId");
 
