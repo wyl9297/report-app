@@ -371,7 +371,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[875520,722880,722880,722880,722880,1005840,875520,723900,875520,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2895600,2743200,2743200,3924300,2743200,2743200,4053840,3657600,3848100,4145280,2743200,2743200]]></ColumnWidth>
+<![CDATA[2895600,2743200,2743200,3924300,2743200,2743200,4053840,3657600,3848100,4145280,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="10" s="0">
 <O>
@@ -572,11 +572,9 @@
 <Expand/>
 </C>
 <C c="9" r="5" s="0">
-<O t="DSColumn">
-<Attributes dsName="supplierTitle" columnName="title"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=supplierTitle.group(title) + "  (联系方式: " + supplierTitle.group(linkPhone) +" )"]]></Attributes>
 </O>
 <PrivilegeControl/>
 <HighlightList>
