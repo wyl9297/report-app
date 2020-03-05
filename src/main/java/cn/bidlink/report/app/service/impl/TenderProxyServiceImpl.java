@@ -510,6 +510,9 @@ public class TenderProxyServiceImpl implements TenderProxyService {
         List<Map<String, Object>> decideBidSupplierView = bidViewRestService.getDecideBidSupplierView(subProjectId);
 
         List<BiddingResultDynamicChangeVo> bidding = new ArrayList<>();
+        if ( CollectionUtils.isEmpty(decideBidSupplierView) ) {
+            return bidding;
+        }
         Map<String, Object> decideBid = decideBidSupplierView.get(0);
         LinkedHashMap<String , Object>  item = (LinkedHashMap<String, Object>)decideBid.get("bidSupplier");
 
