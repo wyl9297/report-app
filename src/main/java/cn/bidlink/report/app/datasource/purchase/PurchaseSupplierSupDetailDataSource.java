@@ -34,7 +34,7 @@ public class PurchaseSupplierSupDetailDataSource extends AbstractBaseTableData {
         return new String[]{"id" ,"code" ,"name" ,"purchaseAmount" ,"quoteAmount", "supplierName", "supplierType",
                 "quoteResult", "quoteStatus", "quoteValidNum", "quoteUnitPrice", "quoteTotalPrice", "quoteComment",
                 "quoteTime", "isUploadQuoteFile", "businessId", "inviteFlag" , "supplierSource", "quoteItem", "sourceId",
-                "companyId", "projectId" , "supplierProjectId", "supplierId", "projectItemId", "lowestFlag", "currency"};
+                "companyId", "projectId" , "supplierProjectId", "supplierId", "projectItemId", "lowestFlag", "currency" , "linkPhone"};
     }
 
     @Override

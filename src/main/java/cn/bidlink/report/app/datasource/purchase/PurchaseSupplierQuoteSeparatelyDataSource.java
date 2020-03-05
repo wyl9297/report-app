@@ -40,7 +40,7 @@ public class PurchaseSupplierQuoteSeparatelyDataSource extends AbstractBaseTable
     protected List getQueryData(DataServiceFactory dataServiceFactory, Map<String, String> param) {
         PurchaseProxyService purchaseProxyService = dataServiceFactory.getDataService(PurchaseProxyService.class);
         List<QuoteSeparatelyVo> itemSupplierQuoteInfoWithTableDate =
-                purchaseProxyService.findItemSupplierQuoteInfoWithTableDate(UserContext.getCompanyId(), Long.valueOf(Long.valueOf(param.get("projectId"))), Boolean.getBoolean(param.get("quoteResult")),0, 100);
+                purchaseProxyService.findItemSupplierQuoteInfoWithTableDate(UserContext.getCompanyId(), Long.valueOf(Long.valueOf(param.get("projectId"))), Boolean.getBoolean(param.get("quoteResult")),null, null);
         return itemSupplierQuoteInfoWithTableDate;
     }
 

@@ -132,7 +132,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[1152000,864000,864000,864000,864000,722880,1219200,722880,722880,722880,723900,722880,722880,723900,722880,722880,1143000,722880,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[609600,1866900,4896000,3695700,4896000,8039100,2476500,5067300,2705100,2514600,4876800,2095500,3467100,4838700,0,2438400,2552700,2362200,1943100,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
+<![CDATA[838200,1714500,2667000,1066800,3505200,4800600,3695700,2628900,2209800,2781300,2476500,2286000,2552700,2476500,0,2019300,2324100,7200000,9504000,2514600,2400300,2705100,4152900,7200000,1790700,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="36" s="0">
 <O>
@@ -702,13 +702,13 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[LEN(B6)==0]]></Formula>
+<![CDATA[LEN(B6) = 0]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[LEN(B6)==0|| B6=='()']]></Formula>
+<![CDATA[LEN(B6) = 0 || B6 = '()']]></Formula>
 </Condition>
 </JoinCondition>
 </Condition>
@@ -720,7 +720,7 @@
 <C c="1" r="5" cs="6" s="4">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=if(LEN(ds3.select(中标商))>0 ,ds3.select(中标商)+"("+ds3.select(mobile)+")",'')]]></Attributes>
+<![CDATA[=if(LEN(ds3.select(中标商)) > 0, ds3.select(中标商) + "(" + ds3.select(mobile) + ")", '')]]></Attributes>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
@@ -729,7 +729,7 @@
 <C c="7" r="5" cs="13" s="5">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[="  报价合计："+sum(J8)+"  成交合计："+sum(L8)+"  节约总额："+sum(P8)+"  节约率："+if(sum(J8) = 0, 0, FORMAT(sum(P8) / ((sum(P8) + sum(L8))),"0.00%"))]]></Attributes>
+<![CDATA[="  报价合计：" + sum(J8) + "  成交合计：" + sum(L8) + "  节约总额：" + sum(P8) + "  节约率：" + if(sum(J8) = 0, 0, FORMAT(sum(P8) / ((sum(P8) + sum(L8))), "0.00%"))]]></Attributes>
 </O>
 <PrivilegeControl/>
 <Expand/>
@@ -953,7 +953,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len(B6)==0]]></Formula>
+<![CDATA[len(B6) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
 </Highlight>
@@ -1694,7 +1694,7 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len(B6)==0]]></Formula>
+<![CDATA[len(B6) = 0]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.RowHeightHighlightAction"/>
 </Highlight>
@@ -2000,7 +2000,7 @@
 <C c="16" r="7" s="6">
 <O t="XMLable" class="com.fr.base.Formula">
 <Attributes>
-<![CDATA[=if(ds2.select(bid_status) = 3, "已中标", "")+""+if(and(ds2.select(中标状态)==1,ds2.select(bid_status)==1),"预中标","")+""+if(and(ds2.select(bid_status)!=3,ds2.select(中标状态)!=1),"未中标","")]]></Attributes>
+<![CDATA[=if(ds2.select(bid_status) = 3, "已中标", "") + "" + if(and(ds2.select(中标状态) = 1, ds2.select(bid_status) = 1), "预中标", "") + "" + if(and(ds2.select(bid_status) != 3, ds2.select(中标状态) != 1), "未中标", "")]]></Attributes>
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
@@ -2057,13 +2057,13 @@
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)> 50]]></Formula>
+<![CDATA[len($$$) > 50]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="0">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)<= 200]]></Formula>
+<![CDATA[len($$$) <= 200]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="0">
@@ -2126,6 +2126,27 @@
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
 <ColumnWidth i="11520000"/>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性4]]></Name>
+<Condition class="com.fr.data.condition.ListCondition">
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[len($$$) < 50]]></Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[INARRAY("用途", split($sup, ",")) != 0]]></Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
+<ColumnWidth i="4320000"/>
 </HighlightAction>
 </Highlight>
 </HighlightList>
@@ -2658,11 +2679,35 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="0" r="10" cs="11" s="6">
+<C c="0" r="10" cs="17" s="6">
 <O>
 <![CDATA[未中标供应商报价信息]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
+<Expand/>
+</C>
+<C c="17" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="18" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="10">
+<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="23" r="10">
@@ -2737,18 +2782,37 @@
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="2" r="11" cs="8" s="6">
+<C c="2" r="11" cs="10" s="6">
 <O>
 <![CDATA[供应商名称]]></O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
 <Expand/>
 </C>
-<C c="10" r="11" s="6">
+<C c="12" r="11" cs="5" s="6">
 <O>
 <![CDATA[所报总价]]></O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false"/>
+<Expand/>
+</C>
+<C c="18" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="11">
+<PrivilegeControl/>
 <Expand/>
 </C>
 <C c="23" r="11">
@@ -2825,7 +2889,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand leftParentDefault="false" left="C13"/>
 </C>
-<C c="2" r="12" cs="8" s="6">
+<C c="2" r="12" cs="10" s="6">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="supplier_name"/>
 <Complex/>
@@ -2836,7 +2900,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="10" r="12" s="6">
+<C c="12" r="12" cs="5" s="6">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="deal_total_price"/>
 <Complex/>
@@ -2844,8 +2908,27 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
+</C>
+<C c="18" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="19" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="20" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="21" r="12">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="22" r="12">
+<PrivilegeControl/>
+<Expand/>
 </C>
 <C c="23" r="12">
 <PrivilegeControl/>
@@ -3631,6 +3714,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
