@@ -2900,7 +2900,7 @@
 <CellPageAttr repeat="false" breakOnPaginate="false"/>
 <Expand dir="0"/>
 </C>
-<C c="12" r="12" cs="5" s="6">
+<C c="12" r="12" cs="5" s="8">
 <O t="DSColumn">
 <Attributes dsName="ds4" columnName="deal_total_price"/>
 <Complex/>
