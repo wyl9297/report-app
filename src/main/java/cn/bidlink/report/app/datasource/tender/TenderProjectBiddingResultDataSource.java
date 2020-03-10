@@ -28,7 +28,7 @@ public class TenderProjectBiddingResultDataSource extends AbstractBaseTableData 
     @Override
     protected String[] getColumn() {
         return new String[]{"orderId","id","supplierId","projectId","subProjectId","supplierName","winBidStatusName",
-                "winBidTotalPrice","winFallReason"};
+                "winBidTotalPrice","winFallReason" , "savingTotalRation" ,"savingTotalPrice" , "allPrice" , "savingAllTotalPrice" , "savingAllTotalRation"};
     }
 
     @Override

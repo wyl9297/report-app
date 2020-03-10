@@ -597,6 +597,32 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                     biddingResultVo.setWinFallReason(winFallReason);
                 }
 
+                String savingTotalPrice = String.valueOf(decideBid.get("savingTotalPrice"));
+                if ( !"".equals(savingTotalPrice) && savingTotalPrice != null && !"null".equals(savingTotalPrice)){
+                    biddingResultVo.setSavingTotalPrice(savingTotalPrice);
+                }
+
+                String savingTotalRation = String.valueOf(decideBid.get("savingTotalRation"));
+                if ( !"".equals(savingTotalRation) && savingTotalRation != null && !"null".equals(savingTotalRation)){
+                    biddingResultVo.setSavingTotalRation(savingTotalRation);
+                }
+
+
+                String savingAllTotalPrice = String.valueOf(decideBidSupplier.get("savingAllTotalPrice"));
+                if ( !"".equals(savingAllTotalPrice) && savingAllTotalPrice != null && !"null".equals(savingAllTotalPrice)){
+                    biddingResultVo.setSavingAllTotalPrice(savingAllTotalPrice);
+                }
+
+                String savingAllTotalRation = String.valueOf(decideBidSupplier.get("savingAllTotalRation"));
+                if ( !"".equals(savingAllTotalRation) && savingAllTotalRation != null && !"null".equals(savingAllTotalRation)){
+                    biddingResultVo.setSavingAllTotalRation(savingAllTotalRation);
+                }
+
+                String allPrice = String.valueOf(decideBidSupplier.get("allPrice"));
+                if ( !"".equals(allPrice) && allPrice != null && !"null".equals(allPrice)){
+                    biddingResultVo.setAllPrice(allPrice);
+                }
+
                 bidding.add(biddingResultVo);
 
             }
