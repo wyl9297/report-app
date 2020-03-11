@@ -40,6 +40,31 @@ public class BiddingResultVo {
      */
     private String fileName;
 
+    /**
+     *  节资额
+     * */
+    private String savingTotalPrice;
+
+    /**
+     *  节资率
+     * */
+    private String savingTotalRation;
+
+    /**
+     *  节资总额
+     * */
+    private String savingAllTotalPrice;
+
+    /**
+     *  总节资率
+     * */
+    private String savingAllTotalRation;
+
+    /**
+     * 总价
+     * */
+    private String allPrice;
+
     public Long getOrderID() {
         return orderID;
     }
@@ -118,5 +143,45 @@ public class BiddingResultVo {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+    public String getSavingTotalPrice() {
+        return savingTotalPrice;
+    }
+
+    public void setSavingTotalPrice(String savingTotalPrice) {
+        this.savingTotalPrice = savingTotalPrice;
+    }
+
+    public String getSavingTotalRation() {
+        return savingTotalRation;
+    }
+
+    public void setSavingTotalRation(String savingTotalRation) {
+        this.savingTotalRation = savingTotalRation;
+    }
+
+    public String getSavingAllTotalPrice() {
+        return savingAllTotalPrice;
+    }
+
+    public void setSavingAllTotalPrice(String savingAllTotalPrice) {
+        this.savingAllTotalPrice = savingAllTotalPrice;
+    }
+
+    public String getSavingAllTotalRation() {
+        return savingAllTotalRation;
+    }
+
+    public void setSavingAllTotalRation(String savingAllTotalRation) {
+        this.savingAllTotalRation = savingAllTotalRation;
+    }
+
+    public String getAllPrice() {
+        return allPrice;
+    }
+
+    public void setAllPrice(String allPrice) {
+        this.allPrice = allPrice;
     }
 }
