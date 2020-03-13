@@ -108,9 +108,9 @@
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
-<HR/>
+<HR F="6" T="6"/>
 <FR/>
-<HC/>
+<HC F="0" T="1"/>
 <FC/>
 </ReportPageAttr>
 <ColumnPrivilegeControl/>
@@ -395,7 +395,7 @@
 </C>
 </CellElementList>
 <ReportAttrSet>
-<ReportSettings isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
+<ReportSettings pageOrder="1" isHorizontalCenterOnPage="true" headerHeight="0" footerHeight="720000">
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
