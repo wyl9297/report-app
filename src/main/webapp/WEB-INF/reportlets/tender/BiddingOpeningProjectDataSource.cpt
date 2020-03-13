@@ -104,7 +104,7 @@
 </WebPageContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -116,9 +116,9 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[723900,723900,723900,723900,723900,723900,723900,800100,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,723900,723900,723900,723900,723900,723900,800100,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2895600,3600000,3888000,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2895600,3600000,3888000,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="3" s="0">
 <O>
@@ -293,23 +293,6 @@
 <![CDATA[条件属性1]]></Name>
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[len($$$)>100]]></Formula>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
-<ColumnWidth i="28800000"/>
-</HighlightAction>
-</Highlight>
-</HighlightList>
-<Expand dir="1"/>
-</C>
-<C c="9" r="12">
-<PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
 <![CDATA[len($$$) > 100]]></Formula>
 </Condition>
 <HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
@@ -317,7 +300,7 @@
 </HighlightAction>
 </Highlight>
 </HighlightList>
-<Expand/>
+<Expand dir="1"/>
 </C>
 </CellElementList>
 <ReportAttrSet>
@@ -396,6 +379,12 @@
 </StyleList>
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
+<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
+<WatermarkAttr fontSize="24" color="-13408513" horizontalGap="200" verticalGap="100" valid="true">
+<Text>
+<![CDATA[=$FineWaterMark]]></Text>
+</WatermarkAttr>
+</WatermarkAttr>
 <PrintSettings class="com.fr.base.print.PrintSettingsAttrMark">
 <PrintSettings printType="0" valid="true">
 <NoClientPrintAttr>
@@ -415,12 +404,6 @@
 </NativePrintAttr>
 </PrintSettings>
 </PrintSettings>
-<WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13408513" valid="true">
-<Text>
-<![CDATA[=$FineWaterMark]]></Text>
-</WatermarkAttr>
-</WatermarkAttr>
 <TemplateIdAttMark class="com.fr.base.iofile.attr.TemplateIdAttrMark">
 <TemplateIdAttMark TemplateId="b3ff963a-4e98-45b0-bedf-8e47a101101a"/>
 </TemplateIdAttMark>
