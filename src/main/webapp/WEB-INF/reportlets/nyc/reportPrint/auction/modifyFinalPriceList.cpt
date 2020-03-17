@@ -21,6 +21,7 @@
 <ToolBar>
 <Widget class="com.fr.report.web.button.page.First">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -30,6 +31,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Previous">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -39,11 +41,13 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.PageNavi">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Next">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -53,6 +57,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Last">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -62,6 +67,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.PDFPrint">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -71,13 +77,14 @@
 </Widget>
 <Widget class="com.fr.report.web.button.Export">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
 <![CDATA[${i18n('导出')}]]></Text>
 <IconName>
 <![CDATA[export]]></IconName>
-<Buttons pdf="true" excelP="true" excelO="true" excelS="true" word="true" image="true" html="true"/>
+<Buttons pdf="true" excelP="false" excelO="true" excelS="true" word="true" image="true" html="true"/>
 </Widget>
 </ToolBar>
 </ToolBarManager>
@@ -388,6 +395,7 @@
 <PaperSetting orientation="1">
 <Margin top="986400" left="1303200" bottom="986400" right="1303200"/>
 </PaperSetting>
+<Background name="ColorBackground" color="-1"/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -454,7 +462,7 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<WatermarkAttr fontSize="24" color="-13421773" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[E采供]]></Text>
 </WatermarkAttr>

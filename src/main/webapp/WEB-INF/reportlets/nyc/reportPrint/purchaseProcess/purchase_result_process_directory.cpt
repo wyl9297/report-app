@@ -56,6 +56,7 @@
 <ToolBar>
 <Widget class="com.fr.report.web.button.page.First">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -65,6 +66,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Previous">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -74,11 +76,13 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.PageNavi">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Next">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -88,6 +92,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Last">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -97,6 +102,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.PDFPrint">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -106,13 +112,14 @@
 </Widget>
 <Widget class="com.fr.report.web.button.Export">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
 <![CDATA[${i18n('导出')}]]></Text>
 <IconName>
 <![CDATA[export]]></IconName>
-<Buttons pdf="true" excelP="true" excelO="true" excelS="true" word="true" image="true" html="true"/>
+<Buttons pdf="true" excelP="false" excelO="true" excelS="true" word="true" image="true" html="true"/>
 </Widget>
 </ToolBar>
 </ToolBarManager>
@@ -137,7 +144,7 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,767644,632177,723900,723900,587022,723900,632177,857955,857955,723900,723900]]></RowHeight>
+<![CDATA[1152000,864000,864000,864000,864000,876300,1219200,722880,767644,632177,723900,723900,587022,723900,632177,857955,857955,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
 <![CDATA[609600,1866900,4896000,1295400,4896000,8191500,2476500,6896100,2705100,2514600,2743200,2095500,7200000,4896000,1143000,2438400,2552700,1295400,1333500,2019300,0,2057400,2019300,7200000,0,2743200]]></ColumnWidth>
 <CellElementList>
@@ -4373,6 +4380,7 @@
 <Layout class="com.fr.form.ui.container.WParameterLayout">
 <WidgetName name="sup"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Margin top="1" left="1" bottom="1" right="1"/>
@@ -4392,6 +4400,7 @@
 <InnerWidget class="com.fr.form.ui.CheckBoxGroup">
 <WidgetName name="dd"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Dictionary class="com.fr.data.impl.FormulaDictionary">
@@ -4414,6 +4423,7 @@
 <InnerWidget class="com.fr.form.parameter.FormSubmitButton">
 <WidgetName name="formSubmit1"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -4423,11 +4433,14 @@
 </InnerWidget>
 <BoundsAttr x="874" y="30" width="80" height="21"/>
 </Widget>
+<ShowBookmarks showBookmarks="true"/>
 <Sorted sorted="false"/>
 <MobileWidgetList>
 <Widget widgetName="dd"/>
 <Widget widgetName="formSubmit1"/>
 </MobileWidgetList>
+<FrozenWidgets/>
+<MobileBookMarkStyle class="com.fr.form.ui.mobile.impl.DefaultMobileBookMarkStyle"/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="false"/>
@@ -4523,7 +4536,7 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<WatermarkAttr fontSize="24" color="-13421773" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[E采供]]></Text>
 </WatermarkAttr>
