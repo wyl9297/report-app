@@ -195,6 +195,9 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                         String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
                         if ( null != foItValue && "null".equals(foItValue) ) {
                             foItValue = String.valueOf(formItem.get("value"));
+                            if( "null".equals(foItValue) ){
+                                foItValue = "";
+                            }
                         }
                         biddingResultDynamicChangeVo.setValue(foItValue);
                     }else {
@@ -280,6 +283,9 @@ public class TenderProxyServiceImpl implements TenderProxyService {
                         String foItValue = String.valueOf(formItem.get("totalDeliveryPlaceareaString"));
                         if ( null != foItValue && "null".equals(foItValue) ) {
                             foItValue = String.valueOf(formItem.get("value"));
+                            if( "null".equals(foItValue) ){
+                                foItValue = "";
+                            }
                         }
                         biddingResultDynamicChangeVo.setValue(foItValue);
 
