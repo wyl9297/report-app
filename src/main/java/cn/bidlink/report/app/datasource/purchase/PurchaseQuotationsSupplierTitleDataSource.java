@@ -30,7 +30,7 @@ public class PurchaseQuotationsSupplierTitleDataSource extends AbstractBaseTable
 
     @Override
     protected String[] getColumn() {
-        return new String[]{"supplierId", "key", "title"};
+        return new String[]{"supplierId", "key", "title" , "linkPhone"};
     }
 
     @Override

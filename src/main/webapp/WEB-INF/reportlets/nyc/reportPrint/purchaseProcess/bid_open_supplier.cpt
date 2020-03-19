@@ -164,9 +164,9 @@
 <ColumnPrivilegeControl/>
 <RowPrivilegeControl/>
 <RowHeight defaultValue="723900">
-<![CDATA[1714500,1028700,876300,731520,731520,1828800,723900,762000,723900,723900,723900]]></RowHeight>
+<![CDATA[1714500,1028700,876300,731520,731520,731520,723900,731520,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[1638300,2781300,2857500,2362200,2781300,2819400,2628900,2438400,3352800,2552700,4610100,2400300,2208960,2209800,2208960,2208960,2208960,2208960,2208960,2208960,2208960,2208960,2743200]]></ColumnWidth>
+<![CDATA[1638300,2781300,2857500,2362200,2781300,2819400,2628900,2438400,3352800,2552700,2209800,2400300,2208960,2209800,2208960,2208960,2208960,2208960,2208960,2208960,2208960,2208960,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="4" s="0">
 <O t="XMLable" class="com.fr.base.Formula">
@@ -1161,22 +1161,6 @@
 </O>
 <PrivilegeControl/>
 <CellPageAttr repeat="false"/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.FormulaCondition">
-<Formula>
-<![CDATA[len($$$) > 250]]></Formula>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ColWidthHighlightAction">
-<ColumnWidth i="6480000"/>
-</HighlightAction>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.FRFontHighlightAction">
-<FRFont name="SimSun" style="0" size="72"/>
-</HighlightAction>
-</Highlight>
-</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="13" r="5" s="6">
@@ -1328,43 +1312,23 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
-<C c="1" r="7">
+<C c="1" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="2" r="7">
+<C c="2" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="5" r="7">
+<C c="5" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="9" r="7">
+<C c="9" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>
-<C c="10" r="7">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="1" r="9">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="2" r="9">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="5" r="9">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="9" r="9">
-<PrivilegeControl/>
-<Expand/>
-</C>
-<C c="10" r="9">
+<C c="10" r="8">
 <PrivilegeControl/>
 <Expand/>
 </C>

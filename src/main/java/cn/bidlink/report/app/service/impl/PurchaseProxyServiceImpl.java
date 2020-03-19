@@ -618,38 +618,45 @@ public class PurchaseProxyServiceImpl implements PurchaseProxyService {
             List<Map<String, Object>> mapListJson = (List<Map<String, Object>>) jsonObject;
             for (int i = 0; i < mapListJson.size(); i++) {
                 Map<String, Object> col = mapListJson.get(i);
-                for (String c : col.keySet()) {
-                    QuoteSeparatelyVo quoteSeparatelyVo = new QuoteSeparatelyVo();
-                    String key = String.valueOf(col.get("key"));
-                    quoteSeparatelyVo.setKey(key);
-                    String title = String.valueOf(col.get("title"));
-                    if(null != title && !" ".equals(title)){
-                        quoteSeparatelyVo.setTitle(title);
-                    }
+                if(null != col.get("title") && !" ".equals(col.get("title"))){
+                    for (String c : col.keySet()) {
+                        QuoteSeparatelyVo quoteSeparatelyVo = new QuoteSeparatelyVo();
+                        String key = String.valueOf(col.get("key"));
+                        quoteSeparatelyVo.setKey(key);
+                        String title = String.valueOf(col.get("title"));
+                        if(null != title && !" ".equals(title)){
+                            quoteSeparatelyVo.setTitle(title);
+                        }
 
-                    if (key.contains("_")){
-                        Long supplierId = Long.valueOf(key.substring(15));
-                        quoteSeparatelyVo.setSupplierId(supplierId);
-                    }
+                        if (key.contains("_")){
+                            String[] split = key.split("_");
+                            Long supplierId = Long.valueOf(split[2]);
+                            quoteSeparatelyVo.setSupplierId(supplierId);
+                        }
 
-                    //增加供应商成交状态
-                    String dealStatus = String.valueOf(col.get("dealStatus"));
-                    if(null != dealStatus && !" ".equals(dealStatus)){
-                        quoteSeparatelyVo.setDealStatus((Integer)(col.get("dealStatus")));
-                    }
+                        //增加供应商成交状态
+                        String dealStatus = String.valueOf(col.get("dealStatus"));
+                        if(null != dealStatus && !" ".equals(dealStatus)){
+                            quoteSeparatelyVo.setDealStatus((Integer)(col.get("dealStatus")));
+                        }
 
-                    //增加供应商名称状态
-                    if(null != title && !" ".equals(title)){
-                        if (col.get("dealStatus") != null && col.get("dealStatus") != "") {
-                            if((Integer)(col.get("dealStatus")) == 1){
-                                quoteSeparatelyVo.setDealStatusStr(title+"(未成交)");
-                            }else {
-                                quoteSeparatelyVo.setDealStatusStr(title+"(已成交)");
+                        //增加供应商名称状态
+                        if(null != title && !" ".equals(title)){
+                            if (col.get("dealStatus") != null && col.get("dealStatus") != "") {
+                                if((Integer)(col.get("dealStatus")) == 1){
+                                    quoteSeparatelyVo.setDealStatusStr(title+"(未成交)");
+                                }else {
+                                    quoteSeparatelyVo.setDealStatusStr(title+"(已成交)");
+                                }
                             }
                         }
-                    }
 
-                    objects.add(quoteSeparatelyVo);
+                        if ( null != col.get("linkPhone") && !"".equals( col.get("linkPhone") )) {
+                            quoteSeparatelyVo.setLinkPhone(String.valueOf( col.get("linkPhone") ));
+                        }
+
+                        objects.add(quoteSeparatelyVo);
+                    }
                 }
             }
             return objects;

@@ -65,20 +65,25 @@ public class ChartsDataSource extends AbstractColumnPositionTableData {
 
     private List<Map<String, Object>> revertList(List<Map<String, Object>> valueList){
         int num = valueList.size();
+        //累加所有考评供应商的比例 乘100之后的
         BigDecimal total =new BigDecimal(0);
-        BigDecimal all =new BigDecimal(1.00);
+        //考评供应商的比例+其他供应商比例=100
+        BigDecimal all =new BigDecimal(1);
         List list = new ArrayList<>();
+        log.info("开始遍历供应商考评成交率,累加成交率");
         for(int j=0;j<num;j++){
             Map<String, Object> firstSup = valueList.get(j);
             int totalMoney = ((BigDecimal)firstSup.get("totalMoney")).intValue();
             BigDecimal persent = (BigDecimal)firstSup.get("rate");
             if(totalMoney != 0){
+                //累加
                 total= total.add(persent);
                 firstSup.put("rate", persent.multiply(new BigDecimal(100)));
                 list.add(firstSup);
             }
         }
-
+        log.info("结束遍历供应商考评成交率,累加的成交率:{},其他供应商的成交率:{}",total,all.subtract(total));
+        //只要考评的供应商比例小于100  剩下的都是其他供应商的
         if(all.compareTo(total) != 0){
             Map<String, Object> otherSup = new LinkedHashMap<>();
             otherSup.put("id",null);
@@ -92,9 +97,7 @@ public class ChartsDataSource extends AbstractColumnPositionTableData {
             otherSup.put("evaluationNum",null);
             otherSup.put("totalMoney",null);
             otherSup.put("orderNum",null);
-            BigDecimal num2 = new BigDecimal(100);
-            BigDecimal rate = (BigDecimal)valueList.get(0).get("rate");
-            otherSup.put("rate",(num2.subtract(rate)));
+            otherSup.put("rate",(all.subtract(total)).multiply(new BigDecimal(100)));
             list.add(otherSup);
         }
         return list;

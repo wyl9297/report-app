@@ -58,6 +58,7 @@ public class PurchaseQuotationItemSupplierChekBoxValue extends AbstractBaseTable
         Map typeData = (Map) jsonObject.get("typeData");
         List<String> list = new ArrayList();
         list.add("规格型号");
+        list.add("技术参数");
         list.add("数量");
         list.add("计量单位");
         if (typeData.size() > 0) {

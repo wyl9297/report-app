@@ -51,6 +51,11 @@ public class QuoteSeparatelyVo {
      */
     private String dealStatusStr;
 
+    /**
+     * 供应商联系方式
+     */
+    private String linkPhone;
+
     public QuoteSeparatelyVo() {
     }
 
@@ -124,5 +129,13 @@ public class QuoteSeparatelyVo {
 
     public void setSupplierId(Long supplierId) {
         this.supplierId = supplierId;
+    }
+
+    public String getLinkPhone() {
+        return linkPhone;
+    }
+
+    public void setLinkPhone(String linkPhone) {
+        this.linkPhone = linkPhone;
     }
 }
