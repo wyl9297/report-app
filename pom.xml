@@ -319,6 +319,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- 采购需求 cloud Start -->
+        <dependency>
+            <groupId>cn.bidlink.demand</groupId>
+            <artifactId>demand-cloud-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!--<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
