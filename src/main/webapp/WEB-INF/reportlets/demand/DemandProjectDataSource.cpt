@@ -441,7 +441,9 @@
 <Attributes dsName="DemandProjectItemDataSource" columnName="name"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
 <Result>
 <![CDATA[$$$]]></Result>
 <Parameters/>
@@ -452,8 +454,13 @@
 <C c="2" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="code"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -462,8 +469,13 @@
 <C c="3" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="spec"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -472,8 +484,13 @@
 <C c="4" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="techParameters"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -482,8 +499,13 @@
 <C c="5" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="amount"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -492,8 +514,13 @@
 <C c="6" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="unitName"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -502,8 +529,13 @@
 <C c="7" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="planPrice"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -512,8 +544,13 @@
 <C c="8" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="appliedEnterprise"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -522,8 +559,13 @@
 <C c="9" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="appliedPersonAndPhone"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -532,8 +574,13 @@
 <C c="10" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="useDept"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -542,8 +589,13 @@
 <C c="11" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="needTime"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -552,8 +604,13 @@
 <C c="12" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="purpose"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -562,18 +619,58 @@
 <C c="13" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="source"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.ObjectCondition">
+<Compare op="0">
+<O>
+<![CDATA[1]]></O>
+</Compare>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O>
+<![CDATA[采购品目录]]></O>
+</HighlightAction>
+</Highlight>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性2]]></Name>
+<Condition class="com.fr.data.condition.ObjectCondition">
+<Compare op="0">
+<O>
+<![CDATA[2]]></O>
+</Compare>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O>
+<![CDATA[我的采购品]]></O>
+</HighlightAction>
+</Highlight>
+</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="14" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="createTime"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
@@ -582,8 +679,13 @@
 <C c="15" r="9" s="0">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="remark"/>
+<Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
+<Attr divideMode="1"/>
+</RG>
+<Result>
+<![CDATA[$$$]]></Result>
 <Parameters/>
 </O>
 <PrivilegeControl/>
