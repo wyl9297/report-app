@@ -110,7 +110,7 @@
 <RowHeight defaultValue="723900">
 <![CDATA[723900,723900,723900,723900,723900,723900,723900,723900,1143000,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[2743200,2933700,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0" cs="12" rs="2" s="0">
 <O>
@@ -436,7 +436,7 @@
 </HighlightList>
 <Expand dir="0" leftParentDefault="false" left="B10"/>
 </C>
-<C c="1" r="9" s="0">
+<C c="1" r="9" s="1">
 <O t="DSColumn">
 <Attributes dsName="DemandProjectItemDataSource" columnName="name"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
@@ -449,7 +449,23 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<Expand dir="0" leftParentDefault="false" left="B6"/>
+<HighlightList>
+<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
+<Name>
+<![CDATA[条件属性1]]></Name>
+<Condition class="com.fr.data.condition.FormulaCondition">
+<Formula>
+<![CDATA[DemandProjectItemDataSource.select(isDelete)=1]]></Formula>
+</Condition>
+<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
+<O t="XMLable" class="com.fr.base.Formula">
+<Attributes>
+<![CDATA[=DemandProjectItemDataSource.select(name)+"(已删除)"]]></Attributes>
+</O>
+</HighlightAction>
+</Highlight>
+</HighlightList>
+<Expand dir="0"/>
 </C>
 <C c="2" r="9" s="0">
 <O t="DSColumn">
@@ -691,6 +707,14 @@
 <PrivilegeControl/>
 <Expand dir="0"/>
 </C>
+<C c="1" r="10">
+<PrivilegeControl/>
+<Expand/>
+</C>
+<C c="1" r="11">
+<PrivilegeControl/>
+<Expand/>
+</C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
@@ -788,6 +812,16 @@
 <Bottom style="2"/>
 <Left style="2"/>
 <Right style="2"/>
+</Border>
+</Style>
+<Style imageLayout="1">
+<FRFont name="SimSun" style="0" size="72"/>
+<Background name="NullBackground"/>
+<Border>
+<Top style="5"/>
+<Bottom style="5"/>
+<Left style="5"/>
+<Right style="5"/>
 </Border>
 </Style>
 </StyleList>

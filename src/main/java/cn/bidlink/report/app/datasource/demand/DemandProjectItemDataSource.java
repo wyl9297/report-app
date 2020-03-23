@@ -40,6 +40,6 @@ public class DemandProjectItemDataSource extends AbstractBaseTableData {
     protected String[] getColumn() {
         return new String[]{"name", "code", "spec", "techParameters", "amount", "unitName", "planPrice",
                             "appliedPersonAndPhone", "useDept", "remark", "purpose", "appliedEnterprise",
-                            "needTime", "source", "createTime"};
+                            "needTime", "source", "createTime", "isDelete"};
     }
 }
