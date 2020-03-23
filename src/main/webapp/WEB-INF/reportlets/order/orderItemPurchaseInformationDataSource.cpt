@@ -420,7 +420,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) =1, orderInvoiceDetail.select(cargoStatus) != 3, orderInvoiceDetail.select(cargoStatus) != 7, orderInvoiceDetail.select(cargoStatus) != 8, orderInvoiceDetail.select(cargoStatus) != 9)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) =1, orderInvoiceDetail.select(cargoStatus) != 3, orderInvoiceDetail.select(cargoStatus) != 7, orderInvoiceDetail.select(cargoStatus) != 8, orderInvoiceDetail.select(cargoStatus) != 6)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -432,7 +432,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 9)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 6)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -486,7 +486,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) =1, orderInvoiceDetail.select(cargoStatus) != 3, orderInvoiceDetail.select(cargoStatus) != 7, orderInvoiceDetail.select(cargoStatus) != 8, orderInvoiceDetail.select(cargoStatus) != 9)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) =1, orderInvoiceDetail.select(cargoStatus) != 3, orderInvoiceDetail.select(cargoStatus) != 7, orderInvoiceDetail.select(cargoStatus) != 8, orderInvoiceDetail.select(cargoStatus) != 6)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -498,7 +498,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 9)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 6)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -853,7 +853,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) =1, orderInvoiceDetail.select(cargoStatus) != 3, orderInvoiceDetail.select(cargoStatus) != 7, orderInvoiceDetail.select(cargoStatus) != 8, orderInvoiceDetail.select(cargoStatus) != 9)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 4, orderInvoiceDetail.select(cargoStatus) =1, orderInvoiceDetail.select(cargoStatus) != 3, orderInvoiceDetail.select(cargoStatus) != 7, orderInvoiceDetail.select(cargoStatus) != 8, orderInvoiceDetail.select(cargoStatus) != 6)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
@@ -865,7 +865,7 @@
 <JoinCondition join="1">
 <Condition class="com.fr.data.condition.FormulaCondition">
 <Formula>
-<![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 9)]]></Formula>
+<![CDATA[and(orderDetail.select(orderStatus) = 7, orderInvoiceDetail.select(cargoStatus) != 6)]]></Formula>
 </Condition>
 </JoinCondition>
 <JoinCondition join="1">
