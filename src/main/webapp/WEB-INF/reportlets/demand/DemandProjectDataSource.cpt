@@ -634,7 +634,7 @@
 </C>
 <C c="13" r="9" s="0">
 <O t="DSColumn">
-<Attributes dsName="DemandProjectItemDataSource" columnName="source"/>
+<Attributes dsName="DemandProjectItemDataSource" columnName="sourceStr"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
@@ -645,36 +645,6 @@
 <Parameters/>
 </O>
 <PrivilegeControl/>
-<HighlightList>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性1]]></Name>
-<Condition class="com.fr.data.condition.ObjectCondition">
-<Compare op="0">
-<O>
-<![CDATA[1]]></O>
-</Compare>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O>
-<![CDATA[采购品目录]]></O>
-</HighlightAction>
-</Highlight>
-<Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
-<Name>
-<![CDATA[条件属性2]]></Name>
-<Condition class="com.fr.data.condition.ObjectCondition">
-<Compare op="0">
-<O>
-<![CDATA[2]]></O>
-</Compare>
-</Condition>
-<HighlightAction class="com.fr.report.cell.cellattr.highlight.ValueHighlightAction">
-<O>
-<![CDATA[我的采购品]]></O>
-</HighlightAction>
-</Highlight>
-</HighlightList>
 <Expand dir="0"/>
 </C>
 <C c="14" r="9" s="0">
