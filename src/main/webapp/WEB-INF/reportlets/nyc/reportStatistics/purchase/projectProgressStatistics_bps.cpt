@@ -21,6 +21,7 @@
 <ToolBar>
 <Widget class="com.fr.report.web.button.page.First">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -30,6 +31,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Previous">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -39,11 +41,13 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.PageNavi">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Next">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -53,6 +57,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Last">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -62,6 +67,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.FlashPrint">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -71,13 +77,14 @@
 </Widget>
 <Widget class="com.fr.report.web.button.Export">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
 <![CDATA[${i18n('导出')}]]></Text>
 <IconName>
 <![CDATA[export]]></IconName>
-<Buttons pdf="true" excelP="true" excelO="true" excelS="true" word="true" image="true" html="true"/>
+<Buttons pdf="true" excelP="false" excelO="true" excelS="true" word="true" image="true" html="true"/>
 </Widget>
 </ToolBar>
 </ToolBarManager>
@@ -545,6 +552,7 @@
 <Name>
 <![CDATA[ds1]]></Name>
 </TableData>
+<CategoryName value=""/>
 </OneValueCDDefinition>
 </ChartDefinition>
 </Chart>
@@ -877,6 +885,7 @@
 <Layout class="com.fr.form.ui.container.WParameterLayout">
 <WidgetName name="para"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Margin top="1" left="1" bottom="1" right="1"/>
@@ -896,6 +905,7 @@
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="Labelendtime"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -912,6 +922,7 @@
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="end"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <EMSG>
@@ -932,6 +943,7 @@
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="begin"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <EMSG>
@@ -952,6 +964,7 @@
 <InnerWidget class="com.fr.form.parameter.FormSubmitButton">
 <WidgetName name="Search"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -965,6 +978,7 @@
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label0"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -981,6 +995,7 @@
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label1_c_c"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -997,6 +1012,7 @@
 <InnerWidget class="com.fr.form.ui.TreeComboBoxEditor">
 <WidgetName name="deptCode"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <TreeAttr selectLeafOnly="false"/>
@@ -1016,6 +1032,7 @@
 </InnerWidget>
 <BoundsAttr x="431" y="16" width="150" height="21"/>
 </Widget>
+<ShowBookmarks showBookmarks="true"/>
 <Sorted sorted="false"/>
 <MobileWidgetList>
 <Widget widgetName="begin"/>
@@ -1023,6 +1040,8 @@
 <Widget widgetName="deptCode"/>
 <Widget widgetName="Search"/>
 </MobileWidgetList>
+<FrozenWidgets/>
+<MobileBookMarkStyle class="com.fr.form.ui.mobile.impl.DefaultMobileBookMarkStyle"/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="false"/>
@@ -1081,7 +1100,7 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<WatermarkAttr fontSize="24" color="-13421773" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[E采供]]></Text>
 </WatermarkAttr>

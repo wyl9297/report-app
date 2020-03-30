@@ -103,6 +103,7 @@
 <ToolBar>
 <Widget class="com.fr.report.web.button.page.First">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -112,6 +113,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Previous">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -121,11 +123,13 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.PageNavi">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 </Widget>
 <Widget class="com.fr.report.web.button.page.Next">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -135,6 +139,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.page.Last">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -144,6 +149,7 @@
 </Widget>
 <Widget class="com.fr.report.web.button.NewPrint">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -153,13 +159,14 @@
 </Widget>
 <Widget class="com.fr.report.web.button.Export">
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
 <![CDATA[${i18n('Export')}]]></Text>
 <IconName>
 <![CDATA[export]]></IconName>
-<Buttons pdf="true" excelP="true" excelO="true" excelS="true" word="true" image="true" html="true"/>
+<Buttons pdf="true" excelP="false" excelO="true" excelS="true" word="true" image="true" html="true"/>
 </Widget>
 </ToolBar>
 </ToolBarManager>
@@ -168,7 +175,7 @@
 </WebPageContent>
 </ReportWebAttr>
 <ElementCaseMobileAttr>
-<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false"/>
+<ElementCaseMobileAttrProvider horizontal="1" vertical="1" zoom="true" refresh="false" isUseHTML="false" isMobileCanvasSize="false" appearRefresh="false" allowFullScreen="false" allowDoubleClickOrZoom="true" functionalWhenUnactivated="false"/>
 </ElementCaseMobileAttr>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
@@ -874,6 +881,7 @@
 <Layout class="com.fr.form.ui.container.WParameterLayout">
 <WidgetName name="para"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Margin top="0" left="0" bottom="0" right="0"/>
@@ -893,6 +901,7 @@
 <InnerWidget class="com.fr.form.parameter.FormSubmitButton">
 <WidgetName name="Search"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <Text>
@@ -907,6 +916,7 @@
 <WidgetName name="contrastEnd"/>
 <LabelName name="~"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <DateAttr/>
@@ -924,6 +934,7 @@
 <WidgetName name="label2_c"/>
 <LabelName name="对比统计周期："/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -940,6 +951,7 @@
 <InnerWidget class="com.fr.form.ui.DateEditor">
 <WidgetName name="contrastBegin"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <DateAttr/>
@@ -956,6 +968,7 @@
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label1_c"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -972,6 +985,7 @@
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="label0_c"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -989,6 +1003,7 @@
 <WidgetName name="begin"/>
 <LabelName name="统计周期："/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <EMSG>
@@ -1010,6 +1025,7 @@
 <WidgetName name="end"/>
 <LabelName name="~"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <EMSG>
@@ -1030,6 +1046,7 @@
 <InnerWidget class="com.fr.form.ui.Label">
 <WidgetName name="Labelendtime_c"/>
 <WidgetAttr description="">
+<MobileBookMark useBookMark="false" bookMarkName="" frozen="false"/>
 <PrivilegeControl/>
 </WidgetAttr>
 <widgetValue>
@@ -1042,6 +1059,7 @@
 </InnerWidget>
 <BoundsAttr x="37" y="13" width="80" height="21"/>
 </Widget>
+<ShowBookmarks showBookmarks="true"/>
 <Sorted sorted="false"/>
 <MobileWidgetList>
 <Widget widgetName="begin"/>
@@ -1050,6 +1068,8 @@
 <Widget widgetName="contrastEnd"/>
 <Widget widgetName="Search"/>
 </MobileWidgetList>
+<FrozenWidgets/>
+<MobileBookMarkStyle class="com.fr.form.ui.mobile.impl.DefaultMobileBookMarkStyle"/>
 <Display display="true"/>
 <DelayDisplayContent delay="false"/>
 <UseParamsTemplate use="true"/>
@@ -1129,10 +1149,10 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
+<Top style="1" color="-16777216"/>
+<Bottom style="1" color="-16777216"/>
+<Left style="1" color="-16777216"/>
+<Right style="1" color="-16777216"/>
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
@@ -1151,7 +1171,7 @@
 <DesignerVersion DesignerVersion="KAA"/>
 <PreviewType PreviewType="0"/>
 <WatermarkAttr class="com.fr.base.iofile.attr.WatermarkAttr">
-<WatermarkAttr fontSize="24" color="-13421773" valid="true">
+<WatermarkAttr fontSize="24" color="-13421773" horizontalGap="200" verticalGap="100" valid="true">
 <Text>
 <![CDATA[E采供]]></Text>
 </WatermarkAttr>
