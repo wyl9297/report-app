@@ -788,10 +788,10 @@
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>
-<Top style="5"/>
-<Bottom style="5"/>
-<Left style="5"/>
-<Right style="5"/>
+<Top style="2"/>
+<Bottom style="2"/>
+<Left style="2"/>
+<Right style="2"/>
 </Border>
 </Style>
 </StyleList>
