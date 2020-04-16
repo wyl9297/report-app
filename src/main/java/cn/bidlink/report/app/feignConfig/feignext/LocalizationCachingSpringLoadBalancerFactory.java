@@ -46,6 +46,7 @@ public class LocalizationCachingSpringLoadBalancerFactory extends CachingSpringL
         eurekaHostMap.put(11113174597L , "20.8.0.222:8035");
         eurekaHostMap.put(11113212204L , "20.8.0.222:8035");
         eurekaHostMap.put(11113213708L , "eureka-01.smorganic.cn:8035");
+        eurekaHostMap.put(11113212305L , "200.200.0.8:8035");
     }
 
 
